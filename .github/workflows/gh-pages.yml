@@ -1,0 +1,48 @@
+name: github pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout source code.
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+        working-directory: ./tech_blog
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+        
+      # - name: Use Github Secrets
+      #   run: echo "REACT_APP_GITHUB_TOKEN = ${{ secrets.PORTFOLIO_GITHUB_TOKEN }}" > ./tech_blog/.env.local
+
+      # - name: Build
+      #   run: npm run build
+      #   working-directory: ./tech_blog
+
+      - name: Build
+        env:
+          REACT_APP_GITHUB_TOKEN: ${{ secrets.TECH_BLOG_GITHUB_TOKEN }}
+        run: npm run build
+        working-directory: ./tech_blog
+
+      - name: Remove Used Github Secrets
+        run: rm -rf .env.local
+        working-directory: ./tech_blog
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.TECH_BLOG_GITHUB_TOKEN }}
+          publish_dir: ./tech_blog/build
