@@ -1,0 +1,108 @@
+{
+  "header":{
+    "title": "CarefreeLife98's Tech Blog",
+    "subtitle": "< Build Carefree Life !! >",
+    "navbar":{
+      "writer": "CarefreeLife98",
+      "categories": [
+        "About",
+        "Projects",
+        "Portfolio",
+        "Contact"
+      ]
+    }
+  },
+
+  "posts": {
+    "sidebar_title": "Total Posts",
+    "categories": [
+      {
+        "INU": [
+          "C",
+          "Python",
+          "Data Structure",
+          "OS",
+          "Computer Vision"
+        ]
+      },
+      {
+        "Toy Projects": [
+          "Carefree OCR"
+        ]
+      },
+      {
+        "Side Projects": [
+          "GS21 CMS",
+          "Tech Blog"
+        ]
+      },
+      {
+        "Programming languages": [
+          "C",
+          "Java",
+          "Python",
+          "Kotlin",
+          "TypeScript"
+        ]
+      },
+      {
+        "Backend": [
+          "Spring",
+          "Spring Boot",
+          "Spring JPA",
+          "Node.js"
+        ]
+      },
+      {
+        "Database / Storage": [
+          "MySQL",
+          "Couchbase",
+          "Redis",
+          "Memcached"
+        ]
+      },
+      {
+        "Front End": [
+          "React"
+        ]
+      },
+      {
+        "Infrastructure": [
+          "EC2",
+          "Synology NAS",
+          "Terraform",
+          "Ansible"
+        ]
+      },
+      {
+        "DevOps": [
+          "Public Cloud",
+          "CI/CD",
+          "Docker / Kubernetes"
+        ]
+      },
+      {
+        "Trouble Shootings": [
+          "Error",
+          "Debugging",
+          "Test"
+        ]
+      }
+    ]
+  },
+
+  "writer_info": {
+    "name": "Backend Engineer 채 승 민",
+    "description": "만나서 반갑습니다. 채승민입니다.",
+    "contact": {
+      "email": "csm12180318@gmail.com",
+      "tel": "+82) 1025324903",
+      "address": "N Tower, 3F, 129, Teheran-ro, Gangnam-Gu, Seoul, 06133 Republic of Korea"
+    },
+    "sns": {
+      "github": "https://github.com/CarefreeLife98",
+      "instagram": "https://www.instagram.com/carefreelife._.98/",
+      "portfolio": "https://carefreelife98.github.io/portfolio/"
+    }
+  }
+}
