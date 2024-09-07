@@ -7,8 +7,8 @@ export default function SideBar() {
 
     // const navigate = useNavigate();
 
-    const onSubCategoryButtonClickHandler = (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
-        alert('category clicked: ' + event.currentTarget.textContent);
+    const onSubCategoryButtonClickHandler = (subCategory: string) => {
+        alert('category clicked: ' + subCategory);
     };
 
     return (
@@ -19,6 +19,9 @@ export default function SideBar() {
                         <img className='cfl-tech-blog-sidebar-author-profile-image' src={`${process.env.PUBLIC_URL}/assets/image/author.jpeg`} alt='author-image'/>
                     </div>
                     <div className='cfl-tech-blog-sidebar-author-desc-box'>
+                        <div className='cfl-tech-blog-sidebar-author-name'>
+                            {config.writer_info.job ? config.writer_info.job : ""}
+                        </div>
                         <div className='cfl-tech-blog-sidebar-author-name'>
                             {config.writer_info.name ? config.writer_info.name : ""}
                         </div>
@@ -39,15 +42,15 @@ export default function SideBar() {
                                 <div key={index} className='cfl-tech-blog-sidebar-big-category'>
                                     <h3>{categoryName}</h3> {/* 상위 카테고리 */}
                                     <div className='divider' />
-                                    <ul className='cfl-tech-blog-sidebar-sub-category-box'>
+                                    <div className='cfl-tech-blog-sidebar-sub-category-box'>
                                         {subCategories &&
                                             subCategories.map((subCategory: string, subIndex: number) => (
-                                                <li key={subIndex} className='cfl-tech-blog-sidebar-sub-category' onClick={onSubCategoryButtonClickHandler}>
+                                                <div key={subIndex} className='cfl-tech-blog-sidebar-sub-category' onClick={() => onSubCategoryButtonClickHandler(subCategory)}>
                                                     {subCategory} {/* 하위 카테고리 */}
-                                                </li>
+                                                </div>
                                             ))
                                         }
-                                    </ul>
+                                    </div>
                                 </div>
                             );
                         })

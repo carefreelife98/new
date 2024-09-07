@@ -14,7 +14,7 @@
   },
 
   "posts": {
-    "sidebar_title": "Total Posts",
+    "sidebar_title": "My Posts",
     "categories": [
       {
         "INU": [
@@ -92,7 +92,8 @@
   },
 
   "writer_info": {
-    "name": "Backend Engineer 채 승 민",
+    "job": "Backend Engineer",
+    "name": "채 승 민",
     "description": "만나서 반갑습니다. 채승민입니다.",
     "contact": {
       "email": "csm12180318@gmail.com",

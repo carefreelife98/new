@@ -1,0 +1,24 @@
+#cfl-tech-blog-common-view {
+    min-width: 1440px;
+    width: 100%;
+    min-height: 2048px;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.sidebar-main-container {
+    width: 95%;
+    min-height: 2048px;
+    height: 100%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 1);
+}

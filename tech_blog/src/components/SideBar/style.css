@@ -1,7 +1,8 @@
 #cfl-tech-blog-sidebar-wrapper {
-    width: 400px;
+    width: 100%;
     min-height: 2048px;
     height: 100%;
+    flex: 1;
     align-items: center;
     justify-content: center;
 }
@@ -33,7 +34,7 @@
 }
 
 .cfl-tech-blog-sidebar-author-profile-image {
-    width: 300px;
+    width: 100px;
     align-items: center;
     justify-content: center;
     object-fit: cover;
@@ -52,12 +53,15 @@
 .cfl-tech-blog-sidebar-author-name {
     font-family: GimhaeGaya;
     font-weight: 900;
-    font-size: x-large;
 }
 
 .cfl-tech-blog-sidebar-author-desc {
     font-family: GimhaeGaya;
     font-weight: 600;
+    font-size: small;
+    word-break: keep-all;
+    align-items: center;
+    justify-content: center;
     color: rgba(0, 0, 0, 0.5);
 }
 
@@ -68,18 +72,19 @@
 }
 
 .cfl-tech-blog-sidebar-category-title {
-    font-family: GimhaeGaya;
+    font-family: TmonMonsori;
     font-weight: 900;
-    font-size: xx-large;
+    font-size: large;
 }
 
 .cfl-tech-blog-sidebar-big-category {
-    font-size: large;
-    padding: 20px;
+    font-size: small;
+    padding-bottom: 30px;
 }
 
 .cfl-tech-blog-sidebar-sub-category-box {
     display: flex;
+    padding: 5px;
     flex-direction: column;
     gap: 10px;
 }
