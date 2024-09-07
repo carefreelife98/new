@@ -1,3 +1,13 @@
+/* react-markdown code (백틱) 스타일 지정 */
+code {
+    padding: 3px 6px;
+    border: none;
+    border-radius: 3px;
+    background-color: #e9ecef;
+    font-size: 1rem;
+    font-family: "Pretendard", "Malgun Gothic", sans-serif;
+}
+
 .divider {
     border-top: 3px solid rgba(0, 0, 0, 0.2);
     width: 100%;

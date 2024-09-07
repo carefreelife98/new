@@ -36,7 +36,7 @@ export default function SideBar() {
                         config.posts.categories.map((category : Category, index) => {
                             // 각 카테고리 객체의 첫 번째 키를 가져옴
                             const categoryName = Object.keys(category)[0];
-                            const subCategories = category[categoryName];
+                            const subCategories = category.subcategories;
 
                             return (
                                 <div key={index} className='cfl-tech-blog-sidebar-big-category'>

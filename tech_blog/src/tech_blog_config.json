@@ -17,80 +17,51 @@
     "sidebar_title": "My Posts",
     "categories": [
       {
-        "INU": [
-          "C",
-          "Python",
-          "Data Structure",
-          "OS",
-          "Computer Vision"
-        ]
+        "category": "testCategory",
+        "subcategories": ["testSubCategory"]
       },
       {
-        "Toy Projects": [
-          "Carefree OCR"
-        ]
+        "category": "INU",
+        "subcategories": ["C", "Python", "Data Structure", "OS", "Computer Vision"]
       },
       {
-        "Side Projects": [
-          "GS21 CMS",
-          "Tech Blog"
-        ]
+        "category": "Toy Projects",
+        "subcategories": ["Carefree OCR"]
       },
       {
-        "Programming languages": [
-          "C",
-          "Java",
-          "Python",
-          "Kotlin",
-          "TypeScript"
-        ]
+        "category": "Side Projects",
+        "subcategories": ["GS21 CMS", "Tech Blog"]
       },
       {
-        "Backend": [
-          "Spring",
-          "Spring Boot",
-          "Spring JPA",
-          "Node.js"
-        ]
+        "category": "Programming Languages",
+        "subcategories": ["C", "Java", "Python", "Kotlin", "TypeScript"]
       },
       {
-        "Database / Storage": [
-          "MySQL",
-          "Couchbase",
-          "Redis",
-          "Memcached"
-        ]
+        "category": "Backend",
+        "subcategories": ["Spring", "Spring Boot", "Spring JPA", "Node.js"]
       },
       {
-        "Front End": [
-          "React"
-        ]
+        "category": "Database / Storage",
+        "subcategories": ["MySQL", "Couchbase", "Redis", "Memcached"]
       },
       {
-        "Infrastructure": [
-          "EC2",
-          "Synology NAS",
-          "Terraform",
-          "Ansible"
-        ]
+        "category": "Frontend",
+        "subcategories": ["React"]
       },
       {
-        "DevOps": [
-          "Public Cloud",
-          "CI/CD",
-          "Docker / Kubernetes"
-        ]
+        "category": "Infrastructure",
+        "subcategories": ["EC2", "Synology NAS", "Terraform", "Ansible"]
       },
       {
-        "Trouble Shootings": [
-          "Error",
-          "Debugging",
-          "Test"
-        ]
+        "category": "DevOps",
+        "subcategories": ["Public Cloud", "CI/CD", "Docker / Kubernetes"]
+      },
+      {
+        "category": "Trouble Shootings",
+        "subcategories": ["Error", "Debugging", "Test"]
       }
     ]
   },
-
   "writer_info": {
     "job": "Backend Engineer",
     "name": "채 승 민",
