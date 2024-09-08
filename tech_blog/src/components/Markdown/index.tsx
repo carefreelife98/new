@@ -11,11 +11,11 @@ interface MarkdownData {
     data: FrontMatter;
 }
 
-export default function Markdown(postMarkdownProps: PostMarkdown) {
+export default function Markdown({category, subCategory, fileName}: PostMarkdown) {
 
     // state: gray-matter 을 사용하여 front-matter 을 파싱한 markdown 파일 내용.
     const [parsedMarkdown, setParsedMarkdown] = useState<MarkdownData | null>(null);
-    const { category, subCategory, fileName } = postMarkdownProps;
+    // const { category, subCategory, fileName } = postMarkdownProps;
 
     useEffect(() => {
 
@@ -48,7 +48,7 @@ export default function Markdown(postMarkdownProps: PostMarkdown) {
             .catch((error) => {
                 console.error('Error loading markdown file:', error);
             });
-    }, [postMarkdownProps]);
+    }, [category, subCategory, fileName]);
 
     return (
         <div style={{width: "100%", justifyContent: "center", display: "flex"}}>
