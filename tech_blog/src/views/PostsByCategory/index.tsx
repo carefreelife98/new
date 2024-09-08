@@ -40,7 +40,7 @@ export default function PostsByCategory() {
             const validResults = results.filter((res) => res !== null); // null을 제외
             setPostMetaDataList(validResults as FrontMatter[]);
         });
-    }, []);
+    }, [categoryName, subCategoryName]);
 
     return (
         //TODO: 카드 형태 스타일 설정
