@@ -1,10 +1,16 @@
 import './style.css';
 import config from '../../tech_blog_config.json'
+import {useNavigate} from "react-router-dom";
+import {MAIN_PATH} from "../../constants";
 
 export default function Header() {
 
     // function: 네비게이트 함수
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
+
+    const onWriterNameClickEventHandler = () => {
+        navigate(MAIN_PATH());
+    };
 
     const onNavbarButtonClickEventHandler = (index: number) => {
         let category = config.header.navbar.categories[index];
@@ -23,7 +29,11 @@ export default function Header() {
         <div id='cfl-tech-blog-header-wrapper'>
             <div className='cfl-tech-blog-header-container'>
                 <div className='cfl-tech-blog-header-navbar-box'>
-                    <div className='cfl-tech-blog-header-navbar-writer-name'>{config.header.navbar.writer}</div>
+                    <div className='cfl-tech-blog-header-navbar-writer-name-box' onClick={onWriterNameClickEventHandler}>
+                        <div className='cfl-tech-blog-header-navbar-writer-name'>
+                            {config.header.navbar.writer}
+                        </div>
+                    </div>
                     <div className='cfl-tech-blog-header-navbar-category-box'>
                         {config.header.navbar.categories &&
                             config.header.navbar.categories.map((category, index) => {

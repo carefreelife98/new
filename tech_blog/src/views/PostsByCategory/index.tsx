@@ -2,13 +2,16 @@ import config from '../../tech_blog_config.json';
 import {useEffect, useState} from "react";
 import FrontMatter from "../../interfaces/frontmatter";
 import fm from "front-matter";
+import {useParams} from "react-router-dom";
 
-interface Props {
-    categoryName: string;
-    subCategoryName: string;
-}
+// interface Props {
+//     categoryName: string;
+//     subCategoryName: string;
+// }
 
-export default function PostsByCategory({categoryName, subCategoryName}: Props) {
+export default function PostsByCategory() {
+    const {categoryName, subCategoryName} = useParams();
+
     // state: 각 subCategory 별 모든 포스트의 Front matter 정보 리스트 상태
     const [postMetaDataList, setPostMetaDataList] = useState<FrontMatter[] | null>(null);
 
@@ -32,32 +35,36 @@ export default function PostsByCategory({categoryName, subCategoryName}: Props) 
 
         if (targetFiles.length <= 0) return;
 
-        const result: FrontMatter[] = [];
-        Promise.all(
-            targetFiles.map((postPath, index) => {
-                fetch(postPath)
-                    .then((response) => response.text())
-                    .then((text) => {
-                        const parsed = fm(text); // front-matter로 메타데이터와 본문을 파싱
-                        console.log(parsed.body)
-                        // 여기서 타입 단언을 통해 front matter 데이터를 명시적으로 타입 캐스팅 후 결과 배열에 저장.
-                        result.push(parsed.attributes as FrontMatter);
-                    })
-                    .catch((error) => {
-                        console.error('Error loading markdown file:', error);
-                    });
-            })
-        ).then(() => setPostMetaDataList(result));
+        // 모든 파일을 Promise.all로 한 번에 처리
+        const fetchMarkdownFiles = targetFiles.map((postPath, index) => {
+            const markdownPath = markdownContext(postPath);
+            return fetch(markdownPath)
+                .then((response) => response.text())
+                .then((text) => {
+                    const parsed = fm(text);
+                    return parsed.attributes as FrontMatter;
+                })
+                .catch((error) => {
+                    console.error('Error loading markdown file:', error);
+                    return null; // 실패한 경우 null을 반환하여 제외 처리 가능
+                });
+        });
+
+        // 모든 파일이 로드된 후에만 상태 업데이트
+        Promise.all(fetchMarkdownFiles).then((results) => {
+            const validResults = results.filter((res) => res !== null); // null을 제외
+            setPostMetaDataList(validResults as FrontMatter[]);
+        });
     }, []);
 
     return (
-        <div>
+        <div id='cfl-tech-blog-posts-by-cat-page-wrapper'>
             {postMetaDataList &&
                 postMetaDataList.map((postMetaData, index) => {
-
+                    // 카드 형태로 변경
                     return (
-                        <div>
-                            <div>{postMetaData.title}</div>
+                        <div key={index}>
+                            <div>{postMetaData.title.toString()}</div>
                             <div>{postMetaData.date}</div>
                             <div>{postMetaData.categories?.join(', ')}</div>
                             <div>{postMetaData.tags?.join(', ')}</div>

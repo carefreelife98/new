@@ -1,3 +1,16 @@
+---
+title: "[Front-Matter] Title"
+date: "24.09.08"
+categories:
+  - Category1
+  - Category2
+tags:
+  - Tag1
+  - Tag2
+
+# Created by CarefreeLife98. Visit My Tech blog: 'https://carefreelife98.github.io/new' 
+---
+
 # 목표
 - **Github Pages 에 배포 중인 Client-Side-Redering 환경의 React 프로젝트**에서 **마크다운 파일을 렌더링**하기.
 - 서버를 Manage 할 수 없으므로 React 프로젝트 소스 내에 마크다운 파일을 저장하고, 해당 파일을 불러오도록 해야한다.
@@ -15,10 +28,10 @@ npm install rehype-raw
 
 
 ```jsx
-import PostMarkdown from "../../interfaces/postMarkdown";  
-import {useEffect, useState} from "react";  
-import ReactMarkdown from "react-markdown";  
-import rehypeHighlight from "rehype-highlight";  
+import PostMarkdown from "../../interfaces/postMarkdown";
+import {useEffect, useState} from "react";
+import ReactMarkdown from "react-markdown";
+import rehypeHighlight from "rehype-highlight";
 import rehypeRaw from "rehype-raw";
 ```
 - Markdown 렌더링을 위한 `react-markdown`
@@ -28,19 +41,19 @@ import rehypeRaw from "rehype-raw";
 ## interface: PostMarkdown
 ```js
 // interfaces/postMarkdown.ts
-export default interface PostMarkdown {  
-    category: string;
-    subCategory: string;
-    fileName: string;
+export default interface PostMarkdown {
+  category: string;
+  subCategory: string;
+  fileName: string;
 }
 
 export default function Markdown(postMarkdownProps: PostMarkdown){...}
 ```
 - 각 포스트 (블로그 게시물) 는 `최상위 카테고리 > 하위 카테고리 > 게시물 리스트` 와 같은 구조를 가진다.
 - 따라서 하나의 마크다운 파일은 하나의 게시물 역할을 하며, 해당 마크다운 파일을 구분하기 위해 다음과 같은 정보를 Prop 으로 받아오도록 했다.
-    - **최상위 카테고리** (예: Backend, Frontend, Database, Programming Language ... )
-    - **하위 카테고리** (예: Java, Spring, Typescript, MySQL ... )
-    - **마크다운 파일 이름** (확장자 .md 제외)
+  - **최상위 카테고리** (예: Backend, Frontend, Database, Programming Language ... )
+  - **하위 카테고리** (예: Java, Spring, Typescript, MySQL ... )
+  - **마크다운 파일 이름** (확장자 .md 제외)
 
 ## 1. "posts" 폴더 내의 전체 마크다운 파일 추출
 ```js
@@ -163,3 +176,14 @@ export default function Markdown(postMarkdownProps: PostMarkdown) {
 ```
 
 # 동작 모습
+
+![[스크린샷 2024-09-08 오전 2.25.59.png]]
+- 위와 같이 블로그를 설정하는 공통 config 파일을 만들었다.
+
+![[스크린샷 2024-09-08 오전 2.27.22.png]]
+- 이후 해당 config 내용 중 어떤 카테고리의 포스트 들을 노출할 것인지 상단에서 가공한 후에 상단 카테고리 이름, 하위 카테고리 이름, 파일 이름을 내려주면..!
+
+![[스크린샷 2024-09-08 오전 2.24.47.png]]
+- 음.. 추후에 css 를 조금 손보긴 해야 할 것 같다.
+
+끝!

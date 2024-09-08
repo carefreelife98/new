@@ -25,15 +25,15 @@
         "subcategories": ["C", "Python", "Data Structure", "OS", "Computer Vision"]
       },
       {
-        "category": "Toy Projects",
+        "category": "Toy_Projects",
         "subcategories": ["Carefree OCR"]
       },
       {
-        "category": "Side Projects",
+        "category": "Side_Projects",
         "subcategories": ["GS21 CMS", "Tech Blog"]
       },
       {
-        "category": "Programming Languages",
+        "category": "Programming_Languages",
         "subcategories": ["C", "Java", "Python", "Kotlin", "TypeScript"]
       },
       {
@@ -41,7 +41,7 @@
         "subcategories": ["Spring", "Spring Boot", "Spring JPA", "Node.js"]
       },
       {
-        "category": "Database / Storage",
+        "category": "Database_Storage",
         "subcategories": ["MySQL", "Couchbase", "Redis", "Memcached"]
       },
       {
@@ -57,7 +57,7 @@
         "subcategories": ["Public Cloud", "CI/CD", "Docker / Kubernetes"]
       },
       {
-        "category": "Trouble Shootings",
+        "category": "Trouble_Shootings",
         "subcategories": ["Error", "Debugging", "Test"]
       }
     ]

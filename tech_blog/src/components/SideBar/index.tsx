@@ -2,13 +2,16 @@ import './style.css'
 import config from '../../tech_blog_config.json'
 import Category from "../../interfaces/category";
 import React from "react";
+import {useNavigate} from "react-router-dom";
+import {POST_BY_CAT_PATH} from "../../constants";
 
 export default function SideBar() {
 
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
-    const onSubCategoryButtonClickHandler = (subCategory: string) => {
+    const onSubCategoryButtonClickHandler = (categoryName: string, subCategory: string) => {
         alert('category clicked: ' + subCategory);
+        navigate(POST_BY_CAT_PATH(categoryName, subCategory));
     };
 
     return (
@@ -35,7 +38,7 @@ export default function SideBar() {
                     {config.posts.categories &&
                         config.posts.categories.map((category : Category, index) => {
                             // 각 카테고리 객체의 첫 번째 키를 가져옴
-                            const categoryName = Object.keys(category)[0];
+                            const categoryName = category.category;
                             const subCategories = category.subcategories;
 
                             return (
@@ -45,7 +48,7 @@ export default function SideBar() {
                                     <div className='cfl-tech-blog-sidebar-sub-category-box'>
                                         {subCategories &&
                                             subCategories.map((subCategory: string, subIndex: number) => (
-                                                <div key={subIndex} className='cfl-tech-blog-sidebar-sub-category' onClick={() => onSubCategoryButtonClickHandler(subCategory)}>
+                                                <div key={subIndex} className='cfl-tech-blog-sidebar-sub-category' onClick={() => onSubCategoryButtonClickHandler(categoryName, subCategory)}>
                                                     {subCategory} {/* 하위 카테고리 */}
                                                 </div>
                                             ))
