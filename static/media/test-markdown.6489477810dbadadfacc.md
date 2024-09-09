@@ -180,7 +180,7 @@ export default function Markdown(postMarkdownProps: PostMarkdown) {
 
 # 동작 모습
 
-![path](/assets/images/test-post-image.png)
+![path](/new/assets/images/test-post-image.png)
 - 위와 같이 블로그를 설정하는 공통 config 파일을 만들었다.
 
 ![[스크린샷 2024-09-08 오전 2.27.22.png]]
