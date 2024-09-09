@@ -71,67 +71,73 @@ export default function PostsByCategory() {
 
     return (
         <div id='cfl-tech-blog-posts-by-cat-wrapper'>
-            <div className='cfl-tech-blog-posts-by-cat-title-box'>
-                <h1 className='cfl-tech-blog-posts-by-cat-title'>
-                    {subCategoryName}
-                </h1>
-                <div className='cfl-tech-blog-posts-by-cat-title-count-box'>
-                    <div className='cfl-tech-blog-posts-by-cat-title-count-desc'>와 관련된 포스팅 수: </div>
-                    <div className='cfl-tech-blog-posts-by-cat-title-count'>{totalCount}</div>
-                </div>
+            {(postMetaDataList !== null && postMetaDataList.length > 1) ?
+                <>
+                    <div className='cfl-tech-blog-posts-by-cat-title-box'>
+                        <h1 className='cfl-tech-blog-posts-by-cat-title'>
+                            {subCategoryName}
+                        </h1>
+                        <div className='cfl-tech-blog-posts-by-cat-title-count-box'>
+                            <div className='cfl-tech-blog-posts-by-cat-title-count-desc'>와 관련된 포스팅 수: </div>
+                            <div className='cfl-tech-blog-posts-by-cat-title-count'>{totalCount}</div>
+                        </div>
 
-            </div>
-            <div className='divider'/>
-            <div className='divider'/>
-            <div className='cfl-tech-blog-posts-by-cat-container'>
-                <div className='cfl-tech-blog-posts-by-cat-card-container'>
-                    {postMetaDataList && categoryName && subCategoryName &&
-                        postMetaDataList.map((postMetaData, index) => {
-                            // 카드 형태로 변경
-                            return (
-                                <div key={index} className='cfl-tech-blog-posts-by-cat-card' onClick={() => onPostCardClickHandler(filePathList[index])}>
-                                    {postMetaData.teaser &&
-                                        <div className='cfl-tech-blog-posts-by-cat-card-teaser-img-box'>
-                                            <img className='cfl-tech-blog-posts-by-cat-card-teaser-img'
-                                                 src={process.env.PUBLIC_URL + postMetaData.teaser}
-                                                 alt={'teaser_image'}/>
-                                        </div>
-                                    }
-                                    <div className='cfl-tech-blog-posts-by-cat-card-metadata-box'>
-                                        <div className='cfl-tech-blog-posts-by-cat-card-title'>{postMetaData.title.toString()}</div>
-                                        <div className='cfl-tech-blog-posts-by-cat-card-date'>{postMetaData.date}</div>
-                                        <div className='cfl-tech-blog-posts-by-cat-card-category-box'>
-                                            {postMetaData.categories.length > 0 &&
-                                                postMetaData.categories.map((category, index) => {
-                                                    return (
-                                                        <div className='cfl-tech-blog-posts-by-cat-card-category' key={index}>
-                                                            {category}
-                                                        </div>
-                                                    )
-                                                })
+                    </div>
+                    <div className='divider'/>
+                    <div className='divider'/>
+                    <div className='cfl-tech-blog-posts-by-cat-container'>
+                        <div className='cfl-tech-blog-posts-by-cat-card-container'>
+                            {postMetaDataList && categoryName && subCategoryName &&
+                                postMetaDataList.map((postMetaData, index) => {
+                                    // 카드 형태로 변경
+                                    return (
+                                        <div key={index} className='cfl-tech-blog-posts-by-cat-card' onClick={() => onPostCardClickHandler(filePathList[index])}>
+                                            {postMetaData.teaser &&
+                                                <div className='cfl-tech-blog-posts-by-cat-card-teaser-img-box'>
+                                                    <img className='cfl-tech-blog-posts-by-cat-card-teaser-img'
+                                                         src={process.env.PUBLIC_URL + postMetaData.teaser}
+                                                         alt={'teaser_image'}/>
+                                                </div>
                                             }
-                                        </div>
-                                        <div className='cfl-tech-blog-posts-by-cat-card-tag-box'>
-                                            <div className='cfl-tech-blog-posts-by-cat-card-tag-icon-box'>
-                                                <div className='icon hashtag-icon'/>
+                                            <div className='cfl-tech-blog-posts-by-cat-card-metadata-box'>
+                                                <div className='cfl-tech-blog-posts-by-cat-card-title'>{postMetaData.title.toString()}</div>
+                                                <div className='cfl-tech-blog-posts-by-cat-card-date'>{postMetaData.date}</div>
+                                                <div className='cfl-tech-blog-posts-by-cat-card-category-box'>
+                                                    {postMetaData.categories.length > 0 &&
+                                                        postMetaData.categories.map((category, index) => {
+                                                            return (
+                                                                <div className='cfl-tech-blog-posts-by-cat-card-category' key={index}>
+                                                                    {category}
+                                                                </div>
+                                                            )
+                                                        })
+                                                    }
+                                                </div>
+                                                <div className='cfl-tech-blog-posts-by-cat-card-tag-box'>
+                                                    <div className='cfl-tech-blog-posts-by-cat-card-tag-icon-box'>
+                                                        <div className='icon hashtag-icon'/>
+                                                    </div>
+                                                    {postMetaData.tags.length > 0 &&
+                                                        postMetaData.tags.map((tag, index) => {
+                                                            return (
+                                                                <div className='cfl-tech-blog-posts-by-cat-card-tag' key={index}>
+                                                                    {tag}
+                                                                </div>
+                                                            )
+                                                        })
+                                                    }
+                                                </div>
                                             </div>
-                                            {postMetaData.tags.length > 0 &&
-                                                postMetaData.tags.map((tag, index) => {
-                                                    return (
-                                                        <div className='cfl-tech-blog-posts-by-cat-card-tag' key={index}>
-                                                            {tag}
-                                                        </div>
-                                                    )
-                                                })
-                                            }
                                         </div>
-                                    </div>
-                                </div>
-                            );
-                        })
-                    }
-                </div>
-            </div>
+                                    );
+                                })
+                            }
+                        </div>
+                    </div>
+                </>
+                :
+                <div>{'해당 데이터가 존재하지 않습니다.'}</div>
+            }
         </div>
     );
 }

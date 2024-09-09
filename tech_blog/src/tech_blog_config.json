@@ -22,7 +22,7 @@
       },
       {
         "category": "INU",
-        "subcategories": ["C", "Python", "Data_Structure", "OS", "Computer_Vision"]
+        "subcategories": ["Capstone_Design", "Computer_Architecture", "Mobile_Software", "Data_Structure", "OS", "Computer_Vision"]
       },
       {
         "category": "Toy_Projects",
@@ -34,11 +34,11 @@
       },
       {
         "category": "Programming_Languages",
-        "subcategories": ["C", "Java", "Python", "Kotlin", "TypeScript"]
+        "subcategories": ["Java", "Python", "Kotlin", "TypeScript"]
       },
       {
         "category": "Backend",
-        "subcategories": ["Spring", "Spring_Boot", "Spring_JPA", "Node.js"]
+        "subcategories": ["Spring", "Spring_JPA", "Node.js"]
       },
       {
         "category": "Database_Storage",
@@ -50,15 +50,19 @@
       },
       {
         "category": "Infrastructure",
-        "subcategories": ["EC2", "Synology_NAS", "Terraform", "Ansible"]
+        "subcategories": ["EC2", "Synology_NAS", "Terraform"]
       },
       {
         "category": "DevOps",
-        "subcategories": ["Public_Cloud", "CI/CD", "Docker_Kubernetes"]
+        "subcategories": ["Public_Cloud", "CI_CD", "Docker_Kubernetes"]
       },
       {
         "category": "Trouble_Shootings",
-        "subcategories": ["Error", "Debugging", "Test"]
+        "subcategories": ["Errors", "Debugging", "Test"]
+      },
+      {
+        "category": "Education",
+        "subcategories": ["Certificate", "CloudWave"]
       }
     ]
   },
