@@ -51,3 +51,9 @@ code {
     /*background-color: rgba(0, 0, 0, 1);*/
     background-image: url("assets/image/default-profile-image.png");
 }
+
+.hashtag-icon {
+    border-radius: 50% 50%;
+    /*background-color: rgba(0, 0, 0, 1);*/
+    background-image: url("assets/image/slack_hash_icon.png");
+}

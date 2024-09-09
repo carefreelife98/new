@@ -3,4 +3,5 @@ export default interface FrontMatter {
     date: string;
     categories: string[];
     tags: string[];
+    teaser: string;
 };

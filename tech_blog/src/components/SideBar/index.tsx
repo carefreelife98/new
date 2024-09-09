@@ -10,7 +10,7 @@ export default function SideBar() {
     const navigate = useNavigate();
 
     const onSubCategoryButtonClickHandler = (categoryName: string, subCategory: string) => {
-        alert('category clicked: ' + subCategory);
+        // alert('category clicked: ' + subCategory);
         navigate(POST_BY_CAT_PATH(categoryName, subCategory));
     };
 

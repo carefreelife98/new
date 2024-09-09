@@ -22,15 +22,15 @@
       },
       {
         "category": "INU",
-        "subcategories": ["C", "Python", "Data Structure", "OS", "Computer Vision"]
+        "subcategories": ["C", "Python", "Data_Structure", "OS", "Computer_Vision"]
       },
       {
         "category": "Toy_Projects",
-        "subcategories": ["Carefree OCR"]
+        "subcategories": ["Carefree_OCR"]
       },
       {
         "category": "Side_Projects",
-        "subcategories": ["GS21 CMS", "Tech Blog"]
+        "subcategories": ["GS21_CMS", "Tech_Blog"]
       },
       {
         "category": "Programming_Languages",
@@ -38,7 +38,7 @@
       },
       {
         "category": "Backend",
-        "subcategories": ["Spring", "Spring Boot", "Spring JPA", "Node.js"]
+        "subcategories": ["Spring", "Spring_Boot", "Spring_JPA", "Node.js"]
       },
       {
         "category": "Database_Storage",
@@ -50,11 +50,11 @@
       },
       {
         "category": "Infrastructure",
-        "subcategories": ["EC2", "Synology NAS", "Terraform", "Ansible"]
+        "subcategories": ["EC2", "Synology_NAS", "Terraform", "Ansible"]
       },
       {
         "category": "DevOps",
-        "subcategories": ["Public Cloud", "CI/CD", "Docker / Kubernetes"]
+        "subcategories": ["Public_Cloud", "CI/CD", "Docker_Kubernetes"]
       },
       {
         "category": "Trouble_Shootings",
