@@ -1,0 +1,24 @@
+#cfl-tech-blog-main-page-wrapper {
+    width: 50%;
+    height: 100%;
+    flex: 7;
+    align-items: center;
+    justify-content: center;
+    min-width: 0; /* 필요한 경우 작은 크기로도 축소 가능 */
+    max-width: 100%; /* 부모의 크기를 넘지 않도록 제한 */
+    box-sizing: border-box; /* 패딩, 보더가 포함된 크기를 유지 */
+}
+
+.cfl-tech-blog-post-detail-container {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.cfl-tech-blog-post-detail-content-box {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}

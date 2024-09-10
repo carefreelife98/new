@@ -13,6 +13,7 @@
 
 .sidebar-main-container {
     width: 95%;
+    max-width: 1024px;
     min-height: 2048px;
     height: 100%;
     display: flex;

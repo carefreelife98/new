@@ -1,3 +1,4 @@
+import './style.css';
 import PostMarkdown from "../../interfaces/postMarkdown";
 import {useEffect, useState} from "react";
 import Markdown from "../../components/Markdown";
