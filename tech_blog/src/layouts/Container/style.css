@@ -13,11 +13,11 @@
 
 .sidebar-main-container {
     width: 95%;
-    max-width: 1024px;
+    /*max-width: 1440px;*/
     min-height: 2048px;
     height: 100%;
     display: flex;
-    gap: 30px;
+    gap: 50px;
     align-items: start;
     justify-content: center;
     padding: 30px;

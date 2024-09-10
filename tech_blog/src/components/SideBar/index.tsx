@@ -60,6 +60,7 @@ export default function SideBar() {
                     }
                 </div>
             </div>
+            <div className='divider-vertical'></div>
         </div>
     );
 }

@@ -1,6 +1,7 @@
-#cfl-tech-blog-main-page-wrapper {
+#cfl-tech-blog-post-detail-wrapper {
     width: 50%;
     height: 100%;
+    /*overflow: auto;            !* 내용이 넘칠 때 스크롤 추가 *!*/
     flex: 7;
     align-items: center;
     justify-content: center;

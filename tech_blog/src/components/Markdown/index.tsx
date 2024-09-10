@@ -1,3 +1,4 @@
+import './style.css';
 import {useEffect, useState} from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
@@ -51,14 +52,43 @@ export default function Markdown({category, subCategory, fileName}: PostMarkdown
     }, [category, subCategory, fileName]);
 
     return (
-        <div style={{width: "100%", justifyContent: "center", display: "flex"}}>
-            <div style={{maxWidth: "2048px", width: "100%"}}>
-                <div>
-                    <h1>{parsedMarkdown?.data.title}</h1>
-                    <p>Date: {parsedMarkdown?.data.date}</p>
-                    <p>Categories: {parsedMarkdown?.data.categories?.join(', ')}</p>
-                    <p>Tags: {parsedMarkdown?.data.tags?.join(', ')}</p>
-                </div>
+        <div id='cfl-tech-blog-react-markdown-wrapper'>
+            <div className='cfl-tech-blog-react-markdown-container'>
+                {parsedMarkdown &&
+                    <div className='cfl-tech-blog-react-markdown-front-matter-box'>
+                        <div className='cfl-tech-blog-react-markdown-write-date'>{parsedMarkdown.data.date}</div>
+                        <h1 className='cfl-tech-blog-react-markdown-title'>{parsedMarkdown.data.title}</h1>
+                        {parsedMarkdown.data.categories &&
+                            <div className='cfl-tech-blog-react-markdown-category-box'>
+                                {parsedMarkdown.data.categories.length > 0 &&
+                                    parsedMarkdown.data.categories.map((category, index) => {
+                                        return (
+                                            <div className='cfl-tech-blog-react-markdown-category' key={index}>
+                                                {category}
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </div>
+                        }
+                        {parsedMarkdown.data.tags &&
+                            <div className='cfl-tech-blog-react-markdown-tag-box'>
+                                <div className='cfl-tech-blog-postsreact-markdown-tag-icon-box'>
+                                    <div className='icon hashtag-icon'/>
+                                </div>
+                                {parsedMarkdown.data.tags.length > 0 &&
+                                    parsedMarkdown.data.tags.map((tag, index) => {
+                                        return (
+                                            <div className='cfl-tech-blog-react-markdown-tag' key={index}>
+                                                {tag}
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </div>
+                        }
+                    </div>
+                }
                 <div className='divider'/>
                 <ReactMarkdown rehypePlugins={[rehypeHighlight, rehypeRaw]}>
                     {parsedMarkdown?.content}
