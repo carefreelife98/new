@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/new/static/css/main.ca972130.css",
-    "main.js": "/new/static/js/main.efdb9264.js",
-    "static/media/2024-05-01-capstone-admin-server.md": "/new/static/media/2024-05-01-capstone-admin-server.6fbb605250f4e12a99e9.md",
+    "main.css": "/new/static/css/main.c3a83943.css",
+    "main.js": "/new/static/js/main.1779f44f.js",
+    "static/media/2024-05-01-capstone-admin-server.md": "/new/static/media/2024-05-01-capstone-admin-server.19db6fb6acfc57b77b2e.md",
     "static/media/2023-05-17-DataStructure-Tree.md": "/new/static/media/2023-05-17-DataStructure-Tree.d302e4fdafc9e2855386.md",
     "static/media/2023-04-21-DataStructure-LinkedList.md": "/new/static/media/2023-04-21-DataStructure-LinkedList.70dc7473eba5c8400a42.md",
     "static/media/2023-04-13-DataStructure-Stack.md": "/new/static/media/2023-04-13-DataStructure-Stack.e2730da8747575ff8b90.md",
@@ -32,7 +32,7 @@
     "static/media/2023-09-05-project2.md": "/new/static/media/2023-09-05-project2.b7a004c3e733df35b5c9.md",
     "static/media/2023-11-01-Kotlin_Class.md": "/new/static/media/2023-11-01-Kotlin_Class.b96e0dfb69b8f997357e.md",
     "static/media/2023-04-22-Python.md": "/new/static/media/2023-04-22-Python.d9e490f5854503ac5c6d.md",
-    "static/media/2023-11-14-androidArray.md": "/new/static/media/2023-11-14-androidArray.5fae9cd5b7f2808ef14a.md",
+    "static/media/2023-11-14-androidArray.md": "/new/static/media/2023-11-14-androidArray.00032bdecc7698e5495e.md",
     "static/media/2023-04-10-DaraStructure-Resursion.md": "/new/static/media/2023-04-10-DaraStructure-Resursion.72ffc86c75c8533dd61a.md",
     "static/media/2023-04-11-DataStructure-Array,Structure.md": "/new/static/media/2023-04-11-DataStructure-Array,Structure.9ebb548220b0c64e18a8.md",
     "static/media/2023-04-06-DataStructure_Analysis.md": "/new/static/media/2023-04-06-DataStructure_Analysis.38ae17d895e8133a77fc.md",
@@ -101,11 +101,11 @@
     "static/media/2023-09-10-aws-saa2.md": "/new/static/media/2023-09-10-aws-saa2.4a0498c1793de664c0b5.md",
     "index.html": "/new/index.html",
     "static/media/2024-03-24-capstoneCalcVelocity.md": "/new/static/media/2024-03-24-capstoneCalcVelocity.60b25f9375ffd8e51175.md",
-    "main.ca972130.css.map": "/new/static/css/main.ca972130.css.map",
-    "main.efdb9264.js.map": "/new/static/js/main.efdb9264.js.map"
+    "main.c3a83943.css.map": "/new/static/css/main.c3a83943.css.map",
+    "main.1779f44f.js.map": "/new/static/js/main.1779f44f.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca972130.css",
-    "static/js/main.efdb9264.js"
+    "static/css/main.c3a83943.css",
+    "static/js/main.1779f44f.js"
   ]
 }
