@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/new/static/css/main.f0098b80.css",
-    "main.js": "/new/static/js/main.5eed21f3.js",
+    "main.css": "/new/static/css/main.0ab061a4.css",
+    "main.js": "/new/static/js/main.efdb9264.js",
     "static/media/2024-05-01-capstone-admin-server.md": "/new/static/media/2024-05-01-capstone-admin-server.6fbb605250f4e12a99e9.md",
     "static/media/2023-05-17-DataStructure-Tree.md": "/new/static/media/2023-05-17-DataStructure-Tree.d302e4fdafc9e2855386.md",
     "static/media/2023-04-21-DataStructure-LinkedList.md": "/new/static/media/2023-04-21-DataStructure-LinkedList.70dc7473eba5c8400a42.md",
@@ -101,11 +101,11 @@
     "static/media/2023-09-10-aws-saa2.md": "/new/static/media/2023-09-10-aws-saa2.4a0498c1793de664c0b5.md",
     "index.html": "/new/index.html",
     "static/media/2024-03-24-capstoneCalcVelocity.md": "/new/static/media/2024-03-24-capstoneCalcVelocity.60b25f9375ffd8e51175.md",
-    "main.f0098b80.css.map": "/new/static/css/main.f0098b80.css.map",
-    "main.5eed21f3.js.map": "/new/static/js/main.5eed21f3.js.map"
+    "main.0ab061a4.css.map": "/new/static/css/main.0ab061a4.css.map",
+    "main.efdb9264.js.map": "/new/static/js/main.efdb9264.js.map"
   },
   "entrypoints": [
-    "static/css/main.f0098b80.css",
-    "static/js/main.5eed21f3.js"
+    "static/css/main.0ab061a4.css",
+    "static/js/main.efdb9264.js"
   ]
 }
