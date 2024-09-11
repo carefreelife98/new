@@ -4,7 +4,6 @@ import Footer from "../Footer";
 import Header from "../Header";
 import SideBar from "../../components/SideBar";
 import {useEffect, useState} from "react";
-import {POST_BY_CAT_PATH, POST_DETAIL_PATH} from "../../constants";
 import TableOfContents from "../../components/TableOfContents";
 
 export default function Container() {
