@@ -21,7 +21,6 @@ export default function PostsByCategory() {
     // event handler: 포스트 카드 클릭 핸들러
     const onPostCardClickHandler = (fileName: string) => {
         if (categoryName && subCategoryName && fileName) {
-            console.log("categoryName: " + categoryName + "subCategoryName: " + subCategoryName + "fileName: " + fileName);
             navigate(POST_DETAIL_PATH(categoryName, subCategoryName, fileName));
             return;
         }

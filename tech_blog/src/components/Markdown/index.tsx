@@ -3,6 +3,8 @@ import {useEffect, useState} from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import rehypeRaw from "rehype-raw";
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import fm from 'front-matter';
 import PostMarkdown from '../../interfaces/postMarkdown';
 import FrontMatter from "../../interfaces/frontmatter";
@@ -90,7 +92,7 @@ export default function Markdown({category, subCategory, fileName}: PostMarkdown
                     </div>
                 }
                 <div className='divider'/>
-                <ReactMarkdown rehypePlugins={[rehypeHighlight, rehypeRaw]}>
+                <ReactMarkdown rehypePlugins={[rehypeHighlight, rehypeRaw, rehypeSlug, rehypeAutolinkHeadings]}>
                     {parsedMarkdown?.content}
                 </ReactMarkdown>
             </div>

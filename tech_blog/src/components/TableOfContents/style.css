@@ -1,0 +1,102 @@
+/* 전체 TOC 스타일 */
+.cfl-tech-blog-toc {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    background: grey;
+    border-radius: 8px;
+    width: 300px;
+    max-height: 600px;
+    font-family: Arial, sans-serif;
+    position: fixed;
+    right: 0;
+    top: 100px; /* 상단에서 약간의 여백 */
+    /*height: calc(100% - 50px); !* 화면 상단에서 TOC까지의 거리 *!*/
+    overflow-y: auto;
+    transition: transform 0.3s ease; /* 애니메이션 추가 */
+}
+
+/* 숨김 상태일 때 TOC 스타일 */
+.cfl-tech-blog-toc.hidden {
+    transform: translateX(100%); /* TOC를 화면 밖으로 밀어냄 */
+}
+
+/* 표시 상태일 때 TOC 스타일 */
+.cfl-tech-blog-toc.visible {
+    transform: translateX(0); /* TOC가 보이도록 화면 안으로 이동 */
+}
+
+/* 목록 스타일 */
+.cfl-tech-blog-toc-list {
+    list-style-type: none; /* 기본 리스트 스타일 제거 */
+    padding-left: 0;
+    margin: 0;
+}
+
+/* 하위 항목에 대한 들여쓰기 추가 */
+.cfl-tech-blog-toc-list ul {
+    padding-left: 20px; /* 중첩된 목록에 대한 들여쓰기 */
+}
+
+/* 각 항목 스타일 */
+.cfl-tech-blog-toc-list-item {
+    margin-bottom: 0.5rem;
+}
+
+/* 링크 스타일 */
+.cfl-tech-blog-toc-link {
+    text-decoration: none; /* 밑줄 제거 */
+    color: rgba(0, 0, 0, 0.3); /* 파란색 텍스트 */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* 링크에 마우스를 올렸을 때 스타일 */
+.cfl-tech-blog-toc-link:hover {
+    color: rgba(0, 0, 0, 1); /* 호버 시 색상 변경 */
+}
+
+/* 버튼 스타일 */
+.cfl-tech-blog-toc-toggle-right {
+    position: fixed;
+    right: 30px;
+    top: 60px;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px 25px;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../assets/image/expand-right.png");
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+/* 버튼 스타일 */
+.cfl-tech-blog-toc-toggle-left {
+    position: fixed;
+    right: 20px;
+    top: 60px;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px 25px;
+    width: 32px;
+    height: 32px;
+    background-image: url("../../assets/image/expand-left.png");
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+/* 버튼 호버 스타일 */
+.cfl-tech-blog-toc-toggle-right:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* 버튼 호버 스타일 */
+.cfl-tech-blog-toc-toggle-left:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
