@@ -63,8 +63,11 @@ export default function TableOfContents() {
                         handleClick(entry.id);
                     }}
                     className="cfl-tech-blog-toc-link" // 링크에 클래스 추가
+
                 >
-                    {entry.value}
+                    <div className='cfl-tech-blog-toc-link-value'>
+                        {entry.value}
+                    </div>
                 </a>
                 {entry.items && (
                     <ul className="cfl-tech-blog-toc-sublist"> {/* 하위 항목에 대한 클래스 추가 */}
@@ -130,6 +133,7 @@ export default function TableOfContents() {
                 aria-label="Table of Contents"
                 className={`cfl-tech-blog-toc ${isVisible ? 'visible' : 'hidden'}`} // visible/hidden 상태에 따라 스타일 적용
             >
+                <h3 className='cfl-tech-blog-toc-title'>{'AGENDA'}</h3>
                 <ul className="cfl-tech-blog-toc-list">
                     {headings.map((heading) => (
                         <li key={heading.id} className="cfl-tech-blog-toc-list-item">
