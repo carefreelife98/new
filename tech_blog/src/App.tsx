@@ -5,8 +5,18 @@ import Container from "./layouts/Container";
 import Main from "./views/Main";
 import PostsByCategory from "./views/PostsByCategory";
 import PostDetail from "./views/PostDetail";
+import {useEffect} from "react";
 
 function App() {
+
+    const trackPageView = () => {
+
+    };
+
+    useEffect(() => {
+
+        trackPageView();
+    }, []);
 
   return (
       <Routes>

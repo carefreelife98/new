@@ -1,10 +1,15 @@
-import { getGoogleAnalyticsData } from "../../apis";
-import { useEffect, useState } from "react";
-import GoogleAnalyticsResponseDto from "../../apis/response/google/google-analytics.response.dto";
-import {setLocalStorageItem, validLocalStorageItem} from "../../util/localStorage/manageLocalStorageItem";
+// import { getGoogleAnalyticsData } from "../../apis";
+// import { useEffect, useState } from "react";
+// import GoogleAnalyticsResponseDto from "../../apis/response/google/google-analytics.response.dto";
+// import {setLocalStorageItem, validLocalStorageItem} from "../../util/localStorage/manageLocalStorageItem";
+
+import getViewCount from "../../util/file/viewCount";
 
 export default function GoogleAnalytics() {
 
+    const viewCount = getViewCount(); // TODO: 임시로 카운트 파일 사용..
+
+    /* TODO: Client-Side-Rendering (githup pages) + CRA (Create-React-App) 환경 이슈로.. Secret 사용불가...
     // state: Google Analytics 사용자 분석 데이터 상태
     const [googleAnalyticsData, setGoogleAnalyticsData] = useState<GoogleAnalyticsResponseDto | null | void>(null);
 
@@ -55,23 +60,28 @@ export default function GoogleAnalytics() {
             console.error('Google Analytics 데이터 호출 에러:', error);
         });
     }
+    */
 
     return (
         <div id='cfl-tech-blog-google-analytics-data'>
-            {googleAnalyticsData ?
-                <div>
-                    {googleAnalyticsData.totals && googleAnalyticsData.totals.length > 0 ? (
-                        <div>
-                            <div>총 방문 횟수: {googleAnalyticsData.totals[0].metricValues[0]?.value}</div>
-                            <div>전체 조회수: {googleAnalyticsData.totals[0].metricValues[1]?.value}</div>
-                        </div>
-                    ) : (
-                        <div>Google Analytics 데이터 호출 에러입니다.</div>
-                    )}
-                </div>
-                :
-                <div>아직 데이터가 존재하지 않습니다.</div>
-            }
+            <div>
+                <div>전체 조회수: {viewCount}</div>
+            </div>
+
+            {/*{googleAnalyticsData ?*/}
+            {/*    <div>*/}
+            {/*        {googleAnalyticsData.totals && googleAnalyticsData.totals.length > 0 ? (*/}
+            {/*            <div>*/}
+            {/*                <div>총 방문 횟수: {googleAnalyticsData.totals[0].metricValues[0]?.value}</div>*/}
+            {/*                <div>전체 조회수: {googleAnalyticsData.totals[0].metricValues[1]?.value}</div>*/}
+            {/*            </div>*/}
+            {/*        ) : (*/}
+            {/*            <div>Google Analytics 데이터 호출 에러입니다.</div>*/}
+            {/*        )}*/}
+            {/*    </div>*/}
+            {/*    :*/}
+            {/*    <div>아직 데이터가 존재하지 않습니다.</div>*/}
+            {/*}*/}
         </div>
     );
 }

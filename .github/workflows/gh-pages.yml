@@ -12,12 +12,13 @@ jobs:
       - name: Checkout source code.
         uses: actions/checkout@v2
 
-      - name: Create a file with GitHub Secret
-        run: |
-            echo "$TECH_BLOG_SECRETS" > .env
-        working-directory: ./tech_blog
-        env:
-          TECH_BLOG_SECRETS: ${{ secrets.TECH_BLOG_SECRETS }}
+#      Client-Side-Rendering 환경 이슈로 시크릿 사용 불가..
+#      - name: Create a file with GitHub Secret
+#        run: |
+#            echo "$TECH_BLOG_SECRETS" > .env
+#        working-directory: ./tech_blog
+#        env:
+#          TECH_BLOG_SECRETS: ${{ secrets.TECH_BLOG_SECRETS }}
 
       - name: Install dependencies
         run: npm install --legacy-peer-deps

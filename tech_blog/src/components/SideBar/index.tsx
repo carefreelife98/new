@@ -34,7 +34,9 @@ export default function SideBar() {
                         </div>
                     </div>
                 </div>
-                <GoogleAnalytics />
+
+                {/*<GoogleAnalytics /> //TODO: Client Side Render 환경 이슈에 어떤 꼼수로도 조회수 기능 불가.. */}
+
                 <div className='cfl-tech-blog-sidebar-category-box'>
                     <div className='cfl-tech-blog-sidebar-category-title'>{config.posts.sidebar_title}</div>
                     {config.posts.categories &&
