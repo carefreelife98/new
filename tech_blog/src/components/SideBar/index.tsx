@@ -4,6 +4,7 @@ import Category from "../../interfaces/category";
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import {POST_BY_CAT_PATH} from "../../constants";
+import GoogleAnalytics from "../GoogleAnalytics/GoogleAnalytics";
 
 export default function SideBar() {
 
@@ -33,6 +34,7 @@ export default function SideBar() {
                         </div>
                     </div>
                 </div>
+                <GoogleAnalytics />
                 <div className='cfl-tech-blog-sidebar-category-box'>
                     <div className='cfl-tech-blog-sidebar-category-title'>{config.posts.sidebar_title}</div>
                     {config.posts.categories &&
