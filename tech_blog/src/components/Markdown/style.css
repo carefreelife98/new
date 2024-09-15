@@ -72,3 +72,10 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+blockquote {
+    color: rgba(0, 0, 0, 1);
+    margin: 0;
+    padding-left: 3em;
+    border-left: 0.5em rgba(0, 0, 0, 1) solid;
+}
