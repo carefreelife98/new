@@ -36,7 +36,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 **대표적인 것이 결정 트리(decision tree)이다.**<br>
 **결정 트리는 인간의 의사 결정 구조를 표현하는 한 가지 방법이다.**<br>
 {: .notice--info}
-{: style="text-align: center;"}
+
 
 <br><br>
 
@@ -206,11 +206,11 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 >노드 i의 왼쪽 자식 노드 인덱스 = 2 * i<br>
 >노드 i의 부모노드 인덱스 = 2 * i + 1<br>
 {: .notice--info}
-{: style="text-align: center;"}
+
 
 >인덱스 0을 사용하지 않는 편이 계산을 간단하게 만들기 때문에 index[0]은 사용하지 않는다.
 {: .notice--danger}
-{: style="text-align: center;"}
+
 
 <br><br>
 
@@ -243,7 +243,7 @@ typedef struct TreeNode {
 
 링크로 표현된 트리는 루트노드(최상단 노드)를 가리키는 포인터만 있으면 트리 내부의 모든 노드들에 접근할 수 있다.
 {: .notice--info}
-{: style="text-align: center;"}
+
 
 <br><br>
 
@@ -349,7 +349,7 @@ int main(void) {
 ><strong><span style="color:palevioletred"><u>중위 순회(inorder traversal) - LVR</u></span></strong> : 왼쪽 서브 트리(L) -> <span style="color:darkorange">루트(V)</span> -> 오른쪽 서브 트리(R)<br><br>
 ><strong><span style="color:palevioletred"><u>후위 순회(postorder traversal) - LRV</u></span></strong> : 왼쪽 서브 트리(L) -> 오른쪽 서브 트리(R) -> <span style="color:darkorange">루트(V)</span><br><br>
 {: .notice--info}
-{: style="text-align: center;"}
+
 
 ><img src="/assets/images/INU/datastructure/Btreetraversal.png" alt="Btreetraversal_Procdess" width="100%" min-width="200px" itemprop="image"><br>`이진 트리의 순회 방법`<br>
 
@@ -395,8 +395,8 @@ int main(void) {
       - 왼쪽 서브트리처럼 오른쪽 서브트리의 각 노드마다의 LVR이 끝나게 되면 전위 순회가 종료 된다. 
 
 ><h1>즉, 모든 서브트리에 대하여 같은 알고리즘을 반복하는 것이다.</h1>
-{: .notice--success}
-{: style="text-align: center;"}
+
+
 
 ><img src="/assets/images/INU/datastructure/preorderusage.png" alt="preorderusage_Procdess" width="100%" min-width="200px" itemprop="image"><br><br>`전위 순회는 구조화된 문서와 같은 자료를 관리하는 것에 유용하게 사용된다.` <br>
 
@@ -446,7 +446,7 @@ int main(void) {
 >함수의 매개변수는 루트를 가리키는 포인터<br>
 >좌, 우 서브트리 방문 함수 = 전체트리 방문 함수를 재호출 (다른점 : 매개변수 - 서브 트리의 루트노드를 매개변수로)
 {: .notice--info}
-{: style="text-align: center;"}
+
 
 ```c
 #include<stdio.h>
@@ -654,8 +654,8 @@ int main(void) {
 >(1.) **<span style="color:royalblue">자식노드를 처리한 후에 부모노드를 처리 -> 후위 순회</span>**<br>(디렉토리의 용량 계산 - 하위 디렉토리의 용량부터 계산하며 올라와 전체 용량을 계산)<br><br>
 >(2.) **<span style="color:royalblue">부모노드를 처리한 후에 자식노드를 처리 -> 전위 순회</span>**<br>(구조화 된 문서의 출력 - 제목 -> 목차 -> 챕터 -> 내용)<br><br>
 >(3.) **<span style="color:royalblue">자식노드의 처리 중간에 부모노드의 처리가 필요한 경우 -> 중위 순회</span>**<br>(수식 트리 - 두 피연산자 사이에 연산자 필요 전위, 중위, 후위 모두 가능)<br><br>
-{: .notice--success}
-{: style="text-align: center;"}
+
+
 
 <br><br>
 
@@ -926,7 +926,7 @@ void thread_inorder(TreeNode* root){
 <span style="color:green">``</span>
 
 {: .notice--danger}
-{: style="text-align: center;"}
+
 
 <details>
 <summary><span style="color:blue">(클릭)</span></summary>
@@ -941,12 +941,12 @@ void thread_inorder(TreeNode* root){
 최대한의 설명을 코드 블럭 내의 주석으로 달아 놓았습니다.<br><br>
 혹시 이해가 안가거나 추가적인 설명이 필요한 부분, 오류 등의 피드백은 언제든지 환영합니다!<br><br>
 긴 글 읽어주셔서 감사합니다. 포스팅을 마칩니다.<br>
-{: .notice--success}
-{: style="text-align: center;"}
+
+
 
 <br><br>
 
-[처음으로~](#){: .btn .btn--primary }
+[처음으로~](#)
 
 <span style="color:grey">`참고: C언어로 쉽게 풀어쓴 자료구조 <개정 3판> 천인국, 공용해, 하상국 지음`</span><br><br><br>
 

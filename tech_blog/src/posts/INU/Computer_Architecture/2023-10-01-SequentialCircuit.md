@@ -226,15 +226,16 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 <br><br>
 
+```bash
 지식 공유 및 기록을 위한 컴퓨터 구조 개인 학습 포스트입니다.
 피드백은 항상 환영합니다!
 긴 글 읽어주셔서 감사합니다.
-{: .notice--success}
-{: style="text-align: center;"}
+```
+
 
 <br><br>
 
-[처음으로~](#){: .btn .btn--primary }
+[처음으로~](#)
 
 ### Task Lists
 

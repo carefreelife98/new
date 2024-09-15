@@ -64,11 +64,11 @@ AWS 클라우드 배포를 검토하여 Amazon S3 버킷에 무단 구성 변경
 **AWS-SAA 개인 공부 관련 포스트입니다.** <br>
 **문제 될 시 삭제 하겠습니다.** <br>
 {: .notice--info}
-{: style="text-align: center;"}
+
 
 <br><br>
 
-[처음으로~](#){: .btn .btn--primary }
+[처음으로~](#)
 
 ### Task Lists
 

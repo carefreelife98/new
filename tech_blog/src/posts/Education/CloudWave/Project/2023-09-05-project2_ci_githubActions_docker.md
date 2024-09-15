@@ -78,7 +78,7 @@ jobs:
 > 현재 `latest` 로 버전을 명시 하였으므로 `manifest file` 옵션 중 `imagePullPolicy: "Always"` 로 설정해주어야 항상 해당 이미지의 latest 버전을 새로 배포해준다.<br>
 > 또한, 이전에 작성한 `Dockerfile` 은 `Github Repository` 의 최상단(루트)에 존재해야 한다.
 {: .notice--danger}
-{: style="text-align: center;"}
+
 
 <br><br>
 
@@ -86,7 +86,7 @@ jobs:
 
 본 진행 과정은 AWS EC2 로 생성된 `Bastion server` 에서 진행됩니다.
 {: .notice--info}
-{: style="text-align: center;"}
+
 
 <img src="/assets/images/CloudWave/project/argoCD.png" alt="argoCD_Procdess2" width="100%" min-width="200px" itemprop="image"><br>`ArgoCD의 작동 모습`<br>
 
@@ -362,12 +362,12 @@ jobs:
 
 **[CJ Olivenetworks - Cloud Wave 1기] 활동 중 진행한 팀 프로젝트입니다.** <br>
 **무단 복제 및 게시는 삼가주시기 바랍니다.** <br>
-{: .notice--success}
-{: style="text-align: center;"}
+
+
 
 <br><br>
 
-[처음으로~](#){: .btn .btn--primary }
+[처음으로~](#)
 
 ### Task Lists
 

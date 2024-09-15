@@ -201,12 +201,12 @@ Protection Ring 은 시스템 아키텍쳐 내에서 둘 이상의 계층으로 
 
 혹시 이해가 안가거나 추가적인 설명이 필요한 부분, 오류 등의 피드백은 언제든지 환영합니다!<br><br>
 긴 글 읽어주셔서 감사합니다. 포스팅을 마칩니다.<br>
-{: .notice--success}
-{: style="text-align: center;"} -->
+
+ -->
 
 <br><br>
 
-[처음으로~](#){: .btn .btn--primary }
+[처음으로~](#)
 
 ### Task Lists
 

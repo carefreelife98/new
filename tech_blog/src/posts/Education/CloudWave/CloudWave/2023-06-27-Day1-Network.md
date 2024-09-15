@@ -17,7 +17,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 본 게시물은 홍보물이 아닌 공익을 위해 작성된 글임을 사전에 알립니다.
 {: .notice--info}
-{: style="text-align: center;"}
+
 
 # [CJ OliveNetworks] - Cloud Wave 1기 합격 수기
 
@@ -129,7 +129,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 ```
 > 
 {: .notice--danger}
-{: style="text-align: center;"}
+
 
 
 <details>
@@ -144,12 +144,12 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 허용 가능한 만큼의 학습 내용을 복습 겸 이곳에 포스팅 해보려고 합니다.<br>
 긴 글 읽어주셔서 감사합니다. 포스팅을 마칩니다.<br>
-{: .notice--success}
-{: style="text-align: center;"}
+
+
 
 <br><br>
 
-[처음으로~](#){: .btn .btn--primary }
+[처음으로~](#)
 
 ### Task Lists
 

@@ -24,7 +24,7 @@ Data Structure : 순환(Recursion) 이란?
 > **<span style="color:red">"순환이란, 어떤 알고리즘이나 함수가 자기 자신을 호출하여 문제를 해결하는 프로그래밍 기법이다."</span>**<br>
 📣 순환은 본질적으로 순환적인 문제나, 그러한 자료구조를 다루는 프로그램에 적합하다. 📣
 {: .notice--warning}
-{: style="text-align: center;"}
+
 
 ## 순환의 예
 ```
@@ -91,7 +91,7 @@ int factorial(int n){
 
 🔥만약 순환 호출을 멈추는 부분이 없다면 시스템오류가 발생할 때까지 무한정 호출하게 된다.🔥
 {: .notice--warning}
-{: style="text-align: center;"}
+
 
 ## **순환 / 반복**
 >
@@ -111,8 +111,8 @@ Factorial 함수를 잘 보자. 문제를 하나씩 해결한 후에 다음 순�
 이처럼 순환은 주어진 문제를 조금씩 해결한 후 동일하지만 더 작은 문제들로 분해하여 해결한다.<br>
 이를 우리는 분할정복(Divide and conquer) 이라고 한다.<br>
 ***<span style="color:red">`순환의 가장 중요한 점은 순환호출이 일어날 때마다 문제의 크기가 작아져 결국엔 아주 풀기 쉬운 문제가 된다는 점이다.`</span>***<br>
-{: .notice--success}
-{: style="text-align: center;"}
+
+
 
 <br>
 > <img src="/assets/images/INU/faciter.png" alt="faciter_Procdess" width="100%" min-width="200px" itemprop="image">`Factorial 함수를 Iterator 로 작성한 모습.`<br>
@@ -124,8 +124,8 @@ Factorial 함수를 잘 보자. 문제를 하나씩 해결한 후에 다음 순�
 
 기본적으로 반복과 순환은 문제 해결 능력이 같다.<br>
 모든 순환은 반복으로 작성 할 수 있으며, 대부분의 반복은 순환으로 작성할 수 있다. 😀
-{: .notice--success}
-{: style="text-align: center;"}
+
+
 
 ## 반복 사용의 예 - 피보나치 수열
 
@@ -165,8 +165,8 @@ fib_iter(int n) {
 ```
 
 시간복잡도를 근거로, 피보나치 수열은 순환이 아닌 반복을 사용할 경우 가장 이상적인 것을 알 수 있다. 😊
-{: .notice--success}
-{: style="text-align: center;"}
+
+
 
 ## 순환 사용의 예 - 하노이 탑
 
@@ -180,7 +180,7 @@ fib_iter(int n) {
 크기가 작은 원판위에 큰 원판이 쌓일 수 없다.<br>
 중간의 막대를 임시적으로 이용할 수 있으나 앞의 조건들을 지켜야 한다.<br>
 {: .notice--info}
-{: style="text-align: center;"}
+
 
 > <span style="color:red">`앞서 알아봤던 것처럼, 순환이 일어날수록 문제의 크기가 작아져야 한다.`</span><br>
 - 여기서 문제의 크기는 `이동하여야 하는 디스크의 개수` 가 된다.
@@ -200,7 +200,7 @@ N개의 원판이 막대 A에 쌓여있는 경우,
 
 🤬 아직 이해가 안된다면, 아래 코드를 같이 보도록 하자.
 {: .notice--danger}
-{: style="text-align: center;"}
+
 ## C언어: 하노이 탑 구현
 ```c
 // sudo 코드로 구현한 하노이 탑
@@ -260,11 +260,11 @@ void main() {
 <img src="/assets/images/INU/rshanoi.png" alt="rshanoi_Procdess" width="100%" min-width="200px" itemprop="image"><br>`C 언어로 구현한 하노이 탑`<br>
 
 `이상으로 자료구조 - 순환 포스팅을 마친다.`
-{: .notice--success}
-{: style="text-align: center;"}
 
 
-[처음으로~](#){: .btn .btn--primary }
+
+
+[처음으로~](#)
 
 
 

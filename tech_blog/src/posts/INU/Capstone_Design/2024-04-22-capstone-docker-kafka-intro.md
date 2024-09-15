@@ -177,15 +177,15 @@ kafka-console-producer.sh --topic Smart-Barricade --broker-list kafka:9092
 
 <br><br>
 
+```bash
 지식 공유 및 기록을 위한 캡스톤 디자인 졸업 과제 진행 기록입니다.
 피드백은 항상 환영합니다!
 긴 글 읽어주셔서 감사합니다.
-{: .notice--success}
-{: style="text-align: center;"}
+```
 
 <br><br>
 
-[처음으로~](#){: .btn .btn--primary }
+[처음으로~](#)
 
 ### Task Lists
 

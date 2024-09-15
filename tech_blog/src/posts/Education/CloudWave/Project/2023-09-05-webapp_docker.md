@@ -102,7 +102,7 @@ $ apt-get install curl # 필수 x
 
 아래부터는 본인이 시도했던 방법들 중 하나입니다.
 {: .notice--primary}
-{: style="text-align: center;"}
+
 
 ## 1. Docker 에서 Httpd Container 실행 및 접속
 
@@ -263,12 +263,12 @@ worker.jkstatus.type=status
 
 **[CJ Olivenetworks - Cloud Wave 1기] 활동 중 진행한 팀 프로젝트입니다.** <br>
 **무단 복제 및 게시는 삼가주시기 바랍니다.** <br>
-{: .notice--success}
-{: style="text-align: center;"}
+
+
 
 <br><br>
 
-[처음으로~](#){: .btn .btn--primary }
+[처음으로~](#)
 
 ### Task Lists
 

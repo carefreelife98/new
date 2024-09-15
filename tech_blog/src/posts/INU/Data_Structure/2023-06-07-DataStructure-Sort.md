@@ -76,7 +76,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 ‼️주의‼️ i값은 0부터 n-2 까지만 변화한다.<br>
 list[0] 부터 list[n-2] 까지 정렬이 되었다면, 이미 list[n-1]이 가장 큰 값이기 때문에 정렬해 줄 필요가 없다!
 {: .notice--danger}
-{: style="text-align: center;"}
+
 
 ```c
 // 선택 정렬 알고리즘 - pseudo code
@@ -333,7 +333,7 @@ void bubble_sort(int list[], int n){
 ```
 > 
 {: .notice--danger}
-{: style="text-align: center;"}
+
 
 
 <details>
@@ -349,12 +349,12 @@ void bubble_sort(int list[], int n){
 최대한의 설명을 코드 블럭 내의 주석으로 달아 놓았습니다.<br><br>
 혹시 이해가 안가거나 추가적인 설명이 필요한 부분, 오류 등의 피드백은 언제든지 환영합니다!<br><br>
 긴 글 읽어주셔서 감사합니다. 포스팅을 마칩니다.<br>
-{: .notice--success}
-{: style="text-align: center;"}
+
+
 
 <br><br>
 
-[처음으로~](#){: .btn .btn--primary }
+[처음으로~](#)
 
 <span style="color:grey">`참고: C언어로 쉽게 풀어쓴 자료구조 <개정 3판> 천인국, 공용해, 하상국 지음`</span><br><br><br>
 

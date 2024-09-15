@@ -83,7 +83,7 @@ CGV는 국내 멀티플렉스 극장 상영을 담당하는 CJ의 주요 계열�
 ※ 위 내용들은 프로젝트 진행 시 참고할 수 있도록 주요 고려사항들을 기재한 것이며, 모든 항목들을 반드시 구현해야 하는 것은 아닙니다.<br><br>
 ※ 주요 항목들 구성 시 목적, 이유 등에 대하여 팀원들과 충분히 논의하고 고민해보시기 바랍니다.<br>
 {: .notice--danger}
-{: style="text-align: center;"}
+
 
 ---
 
@@ -196,12 +196,12 @@ CGV는 국내 멀티플렉스 극장 상영을 담당하는 CJ의 주요 계열�
 
 **[CJ Olivenetworks - Cloud Wave 1기] 활동 중 진행한 팀 프로젝트입니다.** <br>
 **무단 복제 및 게시는 삼가주시기 바랍니다.** <br>
-{: .notice--success}
-{: style="text-align: center;"}
+
+
 
 <br><br>
 
-[처음으로~](#){: .btn .btn--primary }
+[처음으로~](#)
 
 ### Task Lists
 

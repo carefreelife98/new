@@ -26,7 +26,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 > ip를 잘못 부여하면 같은 (동일) 네트워크라도 통신이 되지 않는다.<br>
 > L3 장비는 무조건 서로 다른 네트워크가 연결되어야 한다. (동일 네트워크끼리 연결 불가)
 {: .notice--danger}
-{: style="text-align: center;"}
+
 
 <br><br>
 
@@ -86,7 +86,7 @@ PC 0, 1 (192.168.200.~)과 PC 2 (10.~) 을 연결하기 위해 라우터0을 설
 > 
 > 동일 네트워크 내에서 이렇게 많은 네트워크를 사용하지 않으므로 **Subnetting을 통해 네트워크를 분할하여 사용해야 함.**
 {: .notice--danger}
-{: style="text-align: center;"}
+
 
 <br><br>
 
@@ -324,7 +324,7 @@ IPv4 : x.x.x.x
 <br>
 **(3) BGP 란?**
 {: .notice--info}
-{: style="text-align: center;"}
+
 
 
 
@@ -345,7 +345,7 @@ IPv4 : x.x.x.x
 ```
 > 
 {: .notice--danger}
-{: style="text-align: center;"}
+
 
 
 <details>
@@ -361,12 +361,12 @@ IPv4 : x.x.x.x
 
 허용 가능한 만큼의 학습 내용을 복습 겸 이곳에 포스팅 해보려고 합니다.<br>
 긴 글 읽어주셔서 감사합니다. 포스팅을 마칩니다.<br>
-{: .notice--success}
-{: style="text-align: center;"}
+
+
 
 <br><br>
 
-[처음으로~](#){: .btn .btn--primary }
+[처음으로~](#)
 
 ### Task Lists
 

@@ -30,7 +30,7 @@ Data Structure : 리스트의 소개
 리스트에는 항목(자료)들이 "차례대로" 정리되어있다. 리스트를 구성하고 있는 항목들은 순서 or 위치 를 가진다.<br>
 📣 <span style="color:red">각 항목간에 순서가 없는 집합은 리스트가 아니다!!</span> 📣 
 {: .notice--primary}
-{: style="text-align: center;"}
+
 <br>
 <img src="/assets/images/INU/listdef.png" alt="listdef_Procdess" width="100%" min-width="200px" itemprop="image">`수식으로 표현된 리스트`<br>
 - 지금까지 소개한 리스트로는 어떤 연산을 할 수 있을까?
@@ -332,7 +332,7 @@ int main(void)
 4. 30 -> 20 -> 10 -> 40
 5. delete 를 호출, 0번째 항목 삭제
 6. 20 -> 10 -> 40
-{: .notice--success}
+
 {: style="text-align: left;"}
 
 
@@ -346,12 +346,12 @@ int main(void)
 최대한의 설명을 코드 블럭 내의 주석으로 달아 놓았습니다.<br><br>
 혹시 이해가 안가거나 추가적인 설명이 필요한 부분, 오류 등의 피드백은 언제든지 환영합니다!<br><br>
 긴 글 읽어주셔서 감사합니다. 스택 (Stack) 포스팅을 마칩니다.<br>
-{: .notice--success}
-{: style="text-align: center;"}
+
+
 
 <br><br>
 
-[처음으로~](#){: .btn .btn--primary }
+[처음으로~](#)
 
 
 

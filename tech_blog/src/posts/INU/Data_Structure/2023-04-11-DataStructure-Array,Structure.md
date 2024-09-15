@@ -41,7 +41,7 @@ toc_label: "Carefree to See"
 **retrieve(A, i)** ::= 배열 A의 i번째 요소 반환.<br>
 **store(A, i, item)** ::= 배열 A의 i번째 위치에 item 저장.<br>
 {: .notice--info}
-{: style="text-align: center;"}
+
 
 ## 배열의 응용 : 다항식 (1)
 
@@ -162,7 +162,7 @@ int main(void) {
 위의 방법 1은 간단하고 쉽지만, 만약 대부분의 항의 계수가 0인 다항식의 계산에서는 메모리 낭비가 심하다는 단점이 있다.<br>
 (10x^100 + 6 과 같은 다항식에선 101개의 공간 중에서 오직 2개만 사용한다.)
 {: .notice--warning}
-{: style="text-align: center;"}
+
 
 
 ## 배열의 응용 2 : 다항식 (2)
@@ -195,7 +195,7 @@ A와 B의 각 항의 차수를 비교 후 같으면 계수를 더해 C의 첫번
 (각 배열의 첫번째 칸이 최고차 항)<br>
 이 과정을 어느 한 쪽의 다항식이 끝날 때까지 계속한다.
 {: .notice--info}
-{: style="text-align: center;"}
+
 
 
 ## 다항식 덧셈 프로그램 #2
@@ -337,14 +337,14 @@ typedef struct ListNode {
 
 📣 배열(Array)는 타입이 같은 데이터들을 하나로 묶는 방법이므로 구조체(Structure)과는 다르다 📣
 {: .notice--warning}
-{: style="text-align: center;"}
+
 
 이상으로 배열, 구조체 (Array & Structure) 포스팅을 마치겠다.
-{: .notice--success}
-{: style="text-align: center;"}
 
 
-[처음으로~](#){: .btn .btn--primary }
+
+
+[처음으로~](#)
 
 
 

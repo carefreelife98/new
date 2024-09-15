@@ -8,6 +8,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import fm from 'front-matter';
 import PostMarkdown from '../../interfaces/postMarkdown';
 import FrontMatter from "../../interfaces/frontmatter";
+import remarkGfm from "remark-gfm";
 
 interface MarkdownData {
     content: string;
@@ -91,7 +92,9 @@ export default function Markdown({category, subCategory, fileName}: PostMarkdown
                     </div>
                 }
                 <div className='divider'/>
-                <ReactMarkdown rehypePlugins={[rehypeHighlight, rehypeRaw, rehypeSlug, rehypeAutolinkHeadings]}>
+                <ReactMarkdown
+                    rehypePlugins={[rehypeHighlight, rehypeRaw, rehypeSlug, rehypeAutolinkHeadings]}
+                    remarkPlugins={[remarkGfm]}>
                     {parsedMarkdown?.content}
                 </ReactMarkdown>
             </div>

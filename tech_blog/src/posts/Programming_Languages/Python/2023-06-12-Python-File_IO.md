@@ -86,7 +86,7 @@ with open('파일명', '모드') as fileObj:
 
 [‼️주의 ‼️] 반드시 "w" 모드로 파일 객체가 Open 되어 있어야 한다.
 {: .notice--danger}
-{: style="text-align: center;"}
+
 
 > - **write(value) : value의 값을 파일에 출력**
 > - **writelines(list) : list의 각 요소를 한 줄씩 파일에 출력**<br>
@@ -120,7 +120,7 @@ with open('파일명', '모드') as fileObj:
 ```
 > 
 {: .notice--danger}
-{: style="text-align: center;"}
+
 
 
 <details>
@@ -138,12 +138,12 @@ with open('파일명', '모드') as fileObj:
 최대한의 설명을 코드 블럭 내의 주석으로 달아 놓았습니다.<br><br>
 혹시 이해가 안가거나 추가적인 설명이 필요한 부분, 오류 등의 피드백은 언제든지 환영합니다!<br><br>
 긴 글 읽어주셔서 감사합니다. 포스팅을 마칩니다.<br>
-{: .notice--success}
-{: style="text-align: center;"}
+
+
 
 <br><br>
 
-[처음으로~](#){: .btn .btn--primary }
+[처음으로~](#)
 
 
 ### Task Lists

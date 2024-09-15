@@ -191,7 +191,7 @@ ArrayMax(A,n){
 
 
 <br><br><br>
-[처음으로~](#){: .btn .btn--primary }
+[처음으로~](#)
 
 
 

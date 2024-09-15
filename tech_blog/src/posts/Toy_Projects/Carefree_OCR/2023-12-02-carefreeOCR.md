@@ -403,7 +403,7 @@ public class uploadController {
 > ![path](/assets/images/Projects/ToyProjects/CarefreeOCR4.png)<br>
 > - **EC2 log 에서도 프로그램이 잘 동작하고 있는 것을 볼 수 있다.**
 
-```
+```bash
 해당 프로젝트를 진행함으로서 어머니께서 유용하게 잘 사용하시니 뿌듯하다.
 이렇듯 실제 삶에서 작지만 편한 도구를 원하는 대로 만들어 사용할 수 있는 점이
 개발 분야의 최대 장점이자 재미이지 않을까 싶다. 
@@ -411,15 +411,17 @@ public class uploadController {
 
 <br><br>
 
+```bash
 지식 공유 및 기록을 위한 개인 프로젝트 포스트입니다.
 피드백은 항상 환영합니다!
 긴 글 읽어주셔서 감사합니다.
-{: .notice--success}
-{: style="text-align: center;"}
+```
+
+
 
 <br><br>
 
-[처음으로~](#){: .btn .btn--primary }
+[처음으로~](#)
 
 ### Task Lists
 

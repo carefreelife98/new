@@ -84,8 +84,8 @@ EC2 가 S3 에 액세스 하도록 어떤 솔루션을 제공?
 **AWS-SAA 개인 공부 관련 포스트입니다.** <br>
 **문제 될 시 삭제 하겠습니다.** <br>
 {: .notice--info}
-{: style="text-align: center;"}
+
 
 <br><br>
 
-[처음으로~](#){: .btn .btn--primary }
+[처음으로~](#)

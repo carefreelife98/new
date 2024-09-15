@@ -117,7 +117,7 @@ typedef struct {
 위의 코드는 노드의 정의일 뿐이다. 아직 노드가 생성된 것이 아님에 주의하자.<br>
 노드를 생성하려면 ListNode 변수를 생성해야 한다.
 {: .notice--danger}
-{: style="text-align: center;"}
+
 <br><br>
 
 **공백 리스트의 생성**
@@ -578,7 +578,7 @@ int main(void) {
 이중 연결 리스트는 사용하기 전에 반드시 초기화 해야 한다.<br>
 -> 헤더 노드의 링크 필드들이 자기 자신을 가리키고 있도록 초기화.<br>
 {: .notice--info}
-{: style="text-align: center;"}
+
 
 <br><br>
 
@@ -612,7 +612,7 @@ p = p->llink->rlink = p->rlink->llink
 이는 이중 연결 리스트에서 앞뒤로 똑같이 이동 할 수 있음을 나타낸다.<br>
 공백 리스트에서도 헤드 노드가 존재하기 때문에 성립한다.
 {: .notice--info}
-{: style="text-align: center;"}
+
 
 <br><br>
 
@@ -756,8 +756,8 @@ C 언어를 활용하여 연결리스트를 생성하고, 알고리즘에 따라
 하지만 이 또한 내 자신이 그만큼 성장을 했고 보이는 것이 많아졌기 때문이라는 확신이 든다.<br>
 본인이 자료구조 수업을 처음 접하거나 C언어, 특히 포인터를 잘 모른다면<br>
 개인적으로 꼭 한번 자신의 힘으로 구현해보길 추천한다. 😊)
-{: .notice--success}
-{: style="text-align: center;"}
+
+
 
 <br><br>
 
@@ -776,7 +776,7 @@ delete_same_nodes 의 구현
 이렇게 생성된 단순 연결 리스트의 숫자들을 처음부터 끝까지 출력해보시오.
 ```
 {: .notice--info}
-{: style="text-align: center;"}
+
 
 <br><br>
 
@@ -1012,12 +1012,12 @@ int main() {
 최대한의 설명을 코드 블럭 내의 주석으로 달아 놓았습니다.<br><br>
 혹시 이해가 안가거나 추가적인 설명이 필요한 부분, 오류 등의 피드백은 언제든지 환영합니다!<br><br>
 긴 글 읽어주셔서 감사합니다. 연결 리스트 (Linked List) 포스팅을 마칩니다.<br>
-{: .notice--success}
-{: style="text-align: center;"}
+
+
 
 <br><br>
 
-[처음으로~](#){: .btn .btn--primary }
+[처음으로~](#)
 
 
 

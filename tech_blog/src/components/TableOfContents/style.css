@@ -45,7 +45,8 @@
 /* 링크 스타일 */
 .cfl-tech-blog-toc-link {
     text-decoration: none; /* 밑줄 제거 */
-    color: rgba(0, 0, 0, 0.3); /* 파란색 텍스트 */
+    color: rgba(0, 0, 0, 0.3);
+    margin: 3px;
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -53,6 +54,7 @@
 /* 링크에 마우스를 올렸을 때 스타일 */
 .cfl-tech-blog-toc-link:hover {
     color: rgba(0, 0, 0, 1); /* 호버 시 색상 변경 */
+    background-color: rgba(255, 255, 255, 1);
 }
 
 /* 버튼 스타일 */
