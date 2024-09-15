@@ -1,4 +1,3 @@
-import React, {useEffect, useState} from 'react';
 import './App.css';
 import {Route, Routes} from "react-router-dom";
 import {MAIN_PATH, POST_BY_CAT_PATH, POST_DETAIL_PATH} from "./constants";
