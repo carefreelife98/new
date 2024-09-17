@@ -1,7 +1,8 @@
-#cfl-tech-blog-main-popular-posts-wrapper {
+#cfl-tech-blog-main-posts-wrapper {
+    margin-top: 70px;
     padding: 32px;
     width: 100%;
-    height: 512px;
+    height: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,6 +10,11 @@
 }
 
 .cfl-tech-blog-main-popular-posts-desc {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: GimhaeGaya;
 }
 
@@ -19,6 +25,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 30px
 }
 
 .cfl-tech-blog-main-popular-posts-1st-container {
@@ -28,7 +35,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 30px;
 }
 
 .cfl-tech-blog-main-popular-posts-1st-left-container {
@@ -80,7 +87,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    gap: 10px;
+    gap: 30px;
 }
 
 .cfl-tech-blog-main-popular-posts-1st-right {
@@ -118,14 +125,56 @@
 
 .cfl-tech-blog-main-popular-posts-2st-container {
     flex: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
-img {
+.cfl-tech-blog-main-popular-posts-2st-image-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cfl-tech-blog-main-popular-posts-2st-info-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     border-radius: 25px 25px;
+    padding: 10px;
+    gap: 5px;
+    font-family: GimhaeGaya;
+    font-size: small;
+}
+
+.cfl-tech-blog-main-popular-posts-2st-date {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 600;
 }
 
 .cfl-tech-blog-main-popular-posts-tag-box {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.cfl-tech-blog-main-popular-posts-desc {
+    padding-top: 70px;
+}
+
+
+
+
+
+img {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 25px 25px;
 }

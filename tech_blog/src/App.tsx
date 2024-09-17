@@ -6,6 +6,7 @@ import Main from "./views/Main";
 import PostsByCategory from "./views/PostsByCategory";
 import PostDetail from "./views/PostDetail";
 import {useEffect} from "react";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
 
@@ -19,14 +20,17 @@ function App() {
     }, []);
 
   return (
-      <Routes>
-        <Route element={<Container />}>
-            <Route path={MAIN_PATH()} element={<Main />} />
-            <Route path={POST_BY_CAT_PATH(':categoryName', ':subCategoryName')} element={<PostsByCategory />} />
-            <Route path={POST_DETAIL_PATH(':categoryName', ':subCategoryName', ':fileName')} element={<PostDetail />} />
-        </Route>
-        <Route path='*' element={<h1>404 Not Found: URL 경로가 잘못 되었습니다.</h1>} />
-      </Routes>
+      <>
+          <ScrollToTop />
+          <Routes>
+            <Route element={<Container />}>
+                <Route path={MAIN_PATH()} element={<Main />} />
+                <Route path={POST_BY_CAT_PATH(':categoryName', ':subCategoryName')} element={<PostsByCategory />} />
+                <Route path={POST_DETAIL_PATH(':categoryName', ':subCategoryName', ':fileName')} element={<PostDetail />} />
+            </Route>
+            <Route path='*' element={<h1>404 Not Found: URL 경로가 잘못 되었습니다.</h1>} />
+          </Routes>
+      </>
   );
 }
 

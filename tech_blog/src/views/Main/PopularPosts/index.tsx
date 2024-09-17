@@ -72,14 +72,16 @@ export default function PopularPosts() {
     }, [categoryName, subCategoryName]);
 
     return (
-        <div id='cfl-tech-blog-main-popular-posts-wrapper'>
+        <div id='cfl-tech-blog-main-posts-wrapper'>
             <h2 className='cfl-tech-blog-main-popular-posts-desc'>{'👍🏻 인기 TOP 포스트'}</h2>
             {(popularPostMetaDataList !== null && popularPostMetaDataList.length > 1) ?
                 <div className='cfl-tech-blog-main-popular-posts-container'>
                     <div className='cfl-tech-blog-main-popular-posts-1st-container'>
-                        <div className='cfl-tech-blog-main-popular-posts-1st-left-container' onClick={() => onPopularPostClickHandler(filePathList[0])}>
+                        <div className='cfl-tech-blog-main-popular-posts-1st-left-container'
+                             onClick={() => onPopularPostClickHandler(filePathList[0])}>
                             <div className='cfl-tech-blog-main-popular-posts-1st-left-image-box'>
-                                <img src={`${process.env.PUBLIC_URL}${popularPostMetaDataList[0].teaser}`} alt={'popular-post-image'}/>
+                                <img src={`${process.env.PUBLIC_URL}${popularPostMetaDataList[0].teaser}`}
+                                     alt={'popular-post-image'}/>
                             </div>
                             <div className='cfl-tech-blog-main-popular-posts-1st-left-info-box'>
                                 <div className='cfl-tech-blog-main-popular-posts-1st-left-date'>
@@ -88,12 +90,13 @@ export default function PopularPosts() {
                                 <div className='cfl-tech-blog-main-popular-posts-1st-left-title'>
                                     {popularPostMetaDataList[0].title}
                                 </div>
-                                <CategoryList categoryList={popularPostMetaDataList[0].categories} />
-                                <TagList tagList={popularPostMetaDataList[0].tags} />
+                                <CategoryList categoryList={popularPostMetaDataList[0].categories}/>
+                                <TagList tagList={popularPostMetaDataList[0].tags}/>
                             </div>
                         </div>
                         <div className='cfl-tech-blog-main-popular-posts-1st-right-container'>
-                            <div className='cfl-tech-blog-main-popular-posts-1st-right' onClick={() => onPopularPostClickHandler(filePathList[1])}>
+                            <div className='cfl-tech-blog-main-popular-posts-1st-right'
+                                 onClick={() => onPopularPostClickHandler(filePathList[1])}>
                                 <div className='cfl-tech-blog-main-popular-posts-1st-right-image-box'>
                                     <img src={`${process.env.PUBLIC_URL}${popularPostMetaDataList[1].teaser}`}
                                          alt={'popular-post-image'}/>
@@ -109,10 +112,12 @@ export default function PopularPosts() {
                                     <TagList tagList={popularPostMetaDataList[1].tags}/>
                                 </div>
                             </div>
-                            <div className='divider'style={{width: "80%"}}/>
-                            <div className='cfl-tech-blog-main-popular-posts-1st-right' onClick={() => onPopularPostClickHandler(filePathList[2])}>
+                            <div className='divider' style={{width: "90%"}}/>
+                            <div className='cfl-tech-blog-main-popular-posts-1st-right'
+                                 onClick={() => onPopularPostClickHandler(filePathList[2])}>
                                 <div className='cfl-tech-blog-main-popular-posts-1st-right-image-box'>
-                                    <img src={`${process.env.PUBLIC_URL}${popularPostMetaDataList[2].teaser}`} alt={'popular-post-image'}/>
+                                    <img src={`${process.env.PUBLIC_URL}${popularPostMetaDataList[2].teaser}`}
+                                         alt={'popular-post-image'}/>
                                 </div>
                                 <div className='cfl-tech-blog-main-popular-posts-1st-right-info-box'>
                                     <div className='cfl-tech-blog-main-popular-posts-1st-right-date'>
@@ -130,11 +135,31 @@ export default function PopularPosts() {
                             </div>
                         </div>
                     </div>
-                    <div className='cfl-tech-blog-main-popular-posts-2st-container'></div>
+                    <div className='divider'/>
+                    <div className='cfl-tech-blog-main-popular-posts-2st-container'
+                         onClick={() => onPopularPostClickHandler(filePathList[3])}>
+                        {popularPostMetaDataList[3].teaser &&
+                            <div className='cfl-tech-blog-main-popular-posts-2st-image-box'>
+                                <img src={`${process.env.PUBLIC_URL}${popularPostMetaDataList[3].teaser}`}
+                                     alt={'popular-post-image'}/>
+                            </div>
+                        }
+                        <div className='cfl-tech-blog-main-popular-posts-2st-info-box'>
+                            <div className='cfl-tech-blog-main-popular-posts-2st-date'>
+                                {popularPostMetaDataList[3].date}
+                            </div>
+                            <div className='cfl-tech-blog-main-popular-posts-2st-title'>
+                                {popularPostMetaDataList[3].title}
+                            </div>
+                            <CategoryList categoryList={popularPostMetaDataList[3].categories}/>
+                            <TagList tagList={popularPostMetaDataList[3].tags}/>
+                        </div>
+                    </div>
                 </div>
                 :
                 <div>{'해당 데이터가 존재하지 않습니다.'}</div>
             }
+            <h2 className='cfl-tech-blog-main-popular-posts-desc'>{'최근 게시된 글 🔥'}</h2>
         </div>
     );
 }
