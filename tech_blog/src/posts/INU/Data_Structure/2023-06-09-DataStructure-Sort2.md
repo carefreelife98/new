@@ -344,8 +344,8 @@ void quick_sort(int list[], int left, int right)
 > 2. 서로 부적절한 데이터를 만나면 교환.
 > 3. low와 high의 index가 엇갈린 직후 pivot과 high의 요소 및 위치를 교환.
 > 4. pivot 기준 좌, 우 리스트가 작은 값, 큰 값으로 분할됨.
-{: .notice--info}
-{: style="text-align: left;"}
+
+
 
 <br><br>
 

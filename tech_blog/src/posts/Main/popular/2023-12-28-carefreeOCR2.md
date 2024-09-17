@@ -1,9 +1,13 @@
 ---
 title: "[Naver Clova OCR API & Google Sheet API] Carefree OCR 2 - 우체국 등기 영수증 / 사업자 등록증 자동 관리 시스템"
+date: 23. 12. 28
 categories:
   - toy-project
 tags:
-  - toy-project
+  - AWS
+  - Java
+  - Spring
+  - API
 teaser: "/assets/images/Projects/ToyProjects/carefreeocrV2_teaser.png"
 youtubeurl: https://youtu.be/ZPrLB_rOsJY
 ---
@@ -17,7 +21,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 > 회사에서 **매년 우편물 등기 영수증을 일일히 Excel 에 수작업으로 옮기는 작업**을 하고 있는데, <br>
 > 담당자께서 다음과 같은 프로그램이 있다면 편리할 것 같다 하심에 진행한 개인 Toy Project 입니다.
 > 
-> ```
+> ```bash
 >   요구 사항
 >   
 >   1. 공통
@@ -745,9 +749,9 @@ public class uploadController {
 
 # 8. 프로그램 시연 영상
 
-{% raw %}
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/w_yWncXfCRM?si=Rd4S8e3vZR8Equz1" frameborder="0" allowfullscreen></iframe>
-{% endraw %}
+
 
 <br><br>
 

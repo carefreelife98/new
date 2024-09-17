@@ -65,8 +65,8 @@ toc_label: "Carefree to See"
 2. 활성 레코드에는 프로그램 카운터 뿐만 아니라 함수 호출시의 매개변수와 함수 내부에서 선언된 지역변수들이 같이 생성된다.
 3. 자기 자신을 호출하는 재귀 함수 (recursion) 도 동일한 방법으로 활성 레코드가 생성된 후 사라진다.<br>
    순환(recursion)에 대해 더 궁금하다면? [➡️ 순환 - Recursion](https://carefreelife98.github.io/inu-datastructure/c/DaraStructure-Resursion/)
-{: .notice--info}
-{: style="text-align: left;"}
+
+
 
 <br><br>
 
@@ -132,8 +132,8 @@ toc_label: "Carefree to See"
 - Linked List를 이용해 구현
   - 구현하는 과정이 복잡하다.
   - 스택의 크기를 동적으로 할당 가능.
-{: .notice--info}
-{: style="text-align: left;"}
+
+
 
 ## 스택의 구현 : 배열
 
@@ -317,8 +317,8 @@ int main(void) {
 		(a(b)<br>
 		a(b)c)<br>
 		a{b(c[d]e}f)<br>
-{: .notice--info}
-{: style="text-align: left;"}
+
+
 > **<span style="color:blue">괄호 검사 프로그램의 알고리즘</span>**<br><br>
 <img src="/assets/images/INU/stackmatching.png" alt="stackmatching_Procdess" width="100%" min-width="200px" itemprop="image">`괄호 검사 프로그램의 알고리즘`
 <br><br>

@@ -1,88 +1,96 @@
 ---
 title: "[Naver Clova OCR API & Google Sheet API] Carefree OCR 2 - 우체국 등기 영수증 / 사업자 등록증 자동 관리 시스템"
+date: 23. 12. 28
 categories:
   - toy-project
 tags:
-  - toy-project
+  - AWS
+  - Java
+  - Spring
+  - API
 teaser: "/assets/images/Projects/ToyProjects/carefreeocrV2_teaser.png"
 youtubeurl: https://youtu.be/ZPrLB_rOsJY
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
-Visit my Programming blog: https://carefreelife98.github.io --> 
+Visit my Programming blog: https://carefreelife98.github.io -->
 ---
 
 # 1. Agenda
 
-> ![path](/assets/images/Projects/ToyProjects/carefreeocrV2_teaser.png)<br>
-> 회사에서 **매년 우편물 등기 영수증을 일일히 Excel 에 수작업으로 옮기는 작업**을 하고 있는데, <br>
-> 담당자께서 다음과 같은 프로그램이 있다면 편리할 것 같다 하심에 진행한 개인 Toy Project 입니다.
-> 
-> ```
->   요구 사항
->   
->   1. 공통
-> 	    - 사진 촬영 / 스캔본 과 같은 각 이미지 파일을 OCR 하여 Text 를 Detect.
->       - Google Sheet 에 자동으로 Numbering 되어 입력 되었으면 좋겠다.
-> 	    - 여러 장의 이미지 파일을 한번에 Upload 가능해야 한다.
-> 
->   2. 등기 영수증 OCR
-> 	    - 등기 영수증으로부터 사용할 정보
-> 		    - 일자
-> 		    - 개수
-> 		    - 등기 번호
-> 		    - 각 등기 별 배송 조회 링크
-> 		    - 우편 번호
-> 		    - 법인 명
-> 		    - 수신인
-> 		    - 주소
-> 
->   3. 사업자 등록증 OCR
-> 	    - 사업자 등록증으로부터 사용할 정보
-> 		    - 개수
-> 		    - 사업자명
-> 		    - 대표자
-> 		    - 등록번호
-> 		    - 주소
-> 		    - 법인번호
-> 		    - 업태
-> 		    - 종목
-> 		    - 전화번호
-> 		    - 팩스번호
-> ```
+![path](/assets/images/Projects/ToyProjects/carefreeocrV2_teaser.png)
+
+회사에서 **매년 우편물 등기 영수증을 일일히 Excel 에 수작업으로 옮기는 작업** 을 하고 있는데,
+
+담당자께서 다음과 같은 프로그램이 있다면 편리할 것 같다 하심에 진행한 개인 Toy Project 입니다.
+
+```
+  요구 사항
+  
+  1. 공통
+	    - 사진 촬영 / 스캔본 과 같은 각 이미지 파일을 OCR 하여 Text 를 Detect.
+      - Google Sheet 에 자동으로 Numbering 되어 입력 되었으면 좋겠다.
+	    - 여러 장의 이미지 파일을 한번에 Upload 가능해야 한다.
+
+  2. 등기 영수증 OCR
+	    - 등기 영수증으로부터 사용할 정보
+		    - 일자
+		    - 개수
+		    - 등기 번호
+		    - 각 등기 별 배송 조회 링크
+		    - 우편 번호
+		    - 법인 명
+		    - 수신인
+		    - 주소
+
+  3. 사업자 등록증 OCR
+	    - 사업자 등록증으로부터 사용할 정보
+		    - 개수
+		    - 사업자명
+		    - 대표자
+		    - 등록번호
+		    - 주소
+		    - 법인번호
+		    - 업태
+		    - 종목
+		    - 전화번호
+		    - 팩스번호
+```
 
 <br><br>
 
 # 2. 전체 구조 / Architecture
 
 ## 2-1. AWS Cloud Infrastructure
-> ![path](/assets/images/Projects/ToyProjects/carefreeocrV2_1.png)<br>
-> - 회사 내부 관리자만 사용하는 프로그램이므로 최대한 가볍고 안정적이며 저렴한 클라우드 리소스 만을 사용하여 간단하게 구축 하였습니다.
+![path](/assets/images/Projects/ToyProjects/carefreeocrV2_1.png)<br>
+- 회사 내부 관리자만 사용하는 프로그램이므로 최대한 가볍고 안정적이며 저렴한 클라우드 리소스 만을 사용하여 간단하게 구축 하였습니다.
 
 <br><br>
 
 ## 2-2. Spring Boot Application Structure
-> ![path](/assets/images/Projects/ToyProjects/carefreeocrV2_2.png)<br>
+![path](/assets/images/Projects/ToyProjects/carefreeocrV2_2.png)<br>
 
 <br><br>
 
 ## 2-3. 전체 구성도 (Architecture)
-> ![path](/assets/images/Projects/ToyProjects/carefreeocrV2_3.png)<br>
+![path](/assets/images/Projects/ToyProjects/carefreeocrV2_3.png)<br>
 
 <br><br>
 
 # 3. CI / CD Pipeline 구축 (Github Actions / AWS CodeDeploy)
-> **개발 및 배포 테스트 과정에서 CI/CD Pipeline 이 구축되어 있으면 매우 편리하므로** <br> 
-> **항상 개인 프로젝트 시작 전 CI/CD Pipeline 부터 간단하게 구축하고 시작하는 경향이 있습니다.**
+**개발 및 배포 테스트 과정에서 CI/CD Pipeline 이 구축되어 있으면 매우 편리하므로**,
+
+**항상 개인 프로젝트 시작 전 CI/CD Pipeline 부터 간단하게 구축하고 시작하는 경향이 있습니다.**
 
 <br><br>
 
 ## 3-1. Github Actions
-> ![path](/assets/images/Projects/ToyProjects/carefreeocrV2_4.png)<br>
-> **Github Actions 에서 프로그램에서 사용할 Secret 을 Github secret 을 통해 코드에 삽입하고, <br>
-> Build 된 JAR 파일을 .zip 압축하여 AWS S3 에 저장 후 AWS CodeDeploy 를 실행하여 EC2 에 배포하게 됩니다.**
-> - **대부분의 secret 정보가 담겨 있는 application.properties 는 Github Secrets 에 넣어두고 Github Actions 과정에서 Secrets 을 통해 직접 생성하여 사용.**
-> - **Google API 를 사용하기 위한 사용자 인증 정보인 JSON 파일**은 Github Secret 에 **복붙 후 그냥 꺼내어 사용 시 모든 "" 가 사라짐.**
-> 	- **따라서 create-json 을 사용하여 생성.**
+![path](/assets/images/Projects/ToyProjects/carefreeocrV2_4.png)
+
+**Github Actions 에서 프로그램에서 사용할 Secret 을 Github secret 을 통해 코드에 삽입하고, <br>
+Build 된 JAR 파일을 .zip 압축하여 AWS S3 에 저장 후 AWS CodeDeploy 를 실행하여 EC2 에 배포하게 됩니다.**
+- **대부분의 secret 정보가 담겨 있는 application.properties 는 Github Secrets 에 넣어두고 Github Actions 과정에서 Secrets 을 통해 직접 생성하여 사용.**
+- **Google API 를 사용하기 위한 사용자 인증 정보인 JSON 파일**은 Github Secret 에 **복붙 후 그냥 꺼내어 사용 시 모든 "" 가 사라짐.**
+	- **따라서 create-json 을 사용하여 생성.**
 
 <br><br>
 
@@ -129,7 +137,7 @@ jobs:
     # Github Secrets 를 통해 application.properties 생성 및 삽입
     - uses: actions/checkout@v2
     - run: touch ./src/main/resources/application.properties
-    - run: echo "${{ env.PROPERTIES }}" > ./src/main/resources/application.properties
+    - run: echo "${{ env.PROPERTIES }}" ./src/main/resources/application.properties
     
     - uses: actions/upload-artifact@v2
       with:
@@ -183,77 +191,85 @@ jobs:
 <br><br>
 
 ## 3-2. AWS CodeDeploy
-> ![path](/assets/images/Projects/ToyProjects/carefreeocrV2_5.png)<br>
-> **CodeDeploy 의 DeployGroup 에 지정된 EC2에 AllAtOnce 방식으로 애플리케이션을 배포합니다.**
-> - 여러 개의 EC2 를 띄우지 않았으므로 **애초에 무중단 배포가 불가능.** AllAtOnce 방식으로 한번에 배포.
+![path](/assets/images/Projects/ToyProjects/carefreeocrV2_5.png)
+
+**CodeDeploy 의 DeployGroup 에 지정된 EC2에 AllAtOnce 방식으로 애플리케이션을 배포합니다.**
+
+여러 개의 EC2 를 띄우지 않았으므로,  **애초에 무중단 배포가 불가능**. AllAtOnce 방식으로 한번에 배포.
 
 <br><br>
 
-> ![path](/assets/images/Projects/ToyProjects/carefreeocrV2_6.png)<br>
-> 수많은 삽질 및 리팩토링의 흔적..
+![path](/assets/images/Projects/ToyProjects/carefreeocrV2_6.png)
+
+수많은 삽질 및 리팩토링의 흔적..
 
 <br><br>
 
 # 4. APIs
 
 ## 4-1. NCP Clova OCR API
-> ![path](/assets/images/Projects/ToyProjects/carefreeocrV2_7.png)<br>
+![path](/assets/images/Projects/ToyProjects/carefreeocrV2_7.png)
+
 [`NCP Clova OCR API 바로가기`](https://console.ncloud.com/ocr/domain)
-> **NCP Clova OCR API 같은 경우에는 다양한 서비스와 모델을 지원합니다.**
-> - **등기 영수증의 경우 매우 다양한 내용이 담겨 있고, 텍스트의 크기도 작아 더욱 정밀한 OCR 결과를 얻기 위해서 General OCR - Premium Model 을 사용했습니다.**
-> - **사업자 등록증의 경우 NCP 자체에서 사업자 등록증과 같은 특정 서류에 대하여 Template 을 생성할 수 있는 OCR service 를 지원합니다.**
-> 	- 따라서 회사의 사업자 등록증을 Template Sample 로 등록 후, 요구 사항을 바탕으로 원하는 정보를 얻어낼 Field 를 지정하여 OCR service 를 더욱 정밀하게 사용할 수 있도록 의도했습니다.
+
+**NCP Clova OCR API 같은 경우에는 다양한 서비스와 모델을 지원합니다.**
+- **등기 영수증의 경우 매우 다양한 내용이 담겨 있고, 텍스트의 크기도 작아 더욱 정밀한 OCR 결과를 얻기 위해서 General OCR - Premium Model 을 사용했습니다.**
+- **사업자 등록증의 경우 NCP 자체에서 사업자 등록증과 같은 특정 서류에 대하여 Template 을 생성할 수 있는 OCR service 를 지원합니다.**
+	- 따라서 회사의 사업자 등록증을 Template Sample 로 등록 후, 요구 사항을 바탕으로 원하는 정보를 얻어낼 Field 를 지정하여 OCR service 를 더욱 정밀하게 사용할 수 있도록 의도했습니다.
 
 <br><br>
 
 ## 4-2. GCP Google Sheet API
-> ![path](/assets/images/Projects/ToyProjects/carefreeocrV2_8.png)<br>
+![path](/assets/images/Projects/ToyProjects/carefreeocrV2_8.png)
+
 [`GCP Google Sheet API 바로가기`](https://developers.google.com/sheets/api/reference/rest?hl=ko)
+
 **Google Sheet API 를 사용하는 것은 어렵지 않으나, API 를 사용하기 위한 과정(사용자 인증 정보 생성)이 조금 까다로울 수 있습니다.**
 
 <br><br>
 
-> ![path](/assets/images/Projects/ToyProjects/carefreeocrV2_9.png)<br>
-> **위와 같이 API 키, OAuth 2.0 Client ID, Service Account 세 가지를 각 용도에 맞추어 생성한 후 정상적으로 Google Sheet API 를 사용 할 수 있습니다.**
-> - 만약 CI/CD Pipeline 이 구축되어 있다면, **해당 정보를 숨기기 위해 Github Actions 및 Github Secret** 에 미리 지정하여 배포하는 방법이 제겐 편리하고 가장 무난한 방법이었습니다.
+![path](/assets/images/Projects/ToyProjects/carefreeocrV2_9.png)
+
+**위와 같이 API 키, OAuth 2.0 Client ID, Service Account 세 가지를 각 용도에 맞추어 생성한 후 정상적으로 Google Sheet API 를 사용 할 수 있습니다.**
+- 만약 CI/CD Pipeline 이 구축되어 있다면, **해당 정보를 숨기기 위해 Github Actions 및 Github Secret** 에 미리 지정하여 배포하는 방법이 제겐 편리하고 가장 무난한 방법이었습니다.
 
 <br><br>
 
 # 5. Spring Boot Application 개발
-> **프로젝트 진행하면서 개인적으로 기록했던 사항 및 설명은 소스코드 내부에 주석으로 달아두었습니다.**
+**프로젝트 진행하면서 개인적으로 기록했던 사항 및 설명은 소스코드 내부에 주석으로 달아두었습니다.**
 
 ## 5-1. 전체 흐름
 
-> **전체적인 흐름은 다음과 같습니다.**
-> 
-> <br><br>
-> 
-> 1. **사용자가 /upload-form 으로 GET 요청. -> upload-form 반환.**
-> 2. **사용자가 등기 영수증 / 사업자 등록증 이미지 파일을 upload 후 /uploadAndOcr 으로 POST 요청.**
-> 3. **NCP Clova OCR API Call 후 List\<String> 형태로 결과 값 반환.**
-> 4. **OCR 결과를 Iterator 를 사용하여 순회하며 Data 가공.**
-> 	- **총 개수 파악**
-> 	- **정규 표현식을 사용하여 날짜 저장. (추후 해당 날짜 별로 Google Sheet 생성)**
-> 	- **정규 표현식을 사용하여 등기 번호 탐색 및 저장.**
-> 		- **탐색한 등기 번호를 통한 우체국 등기 발송 조회 링크 생성**
-> 			- 우체국 등기 조회 로직을 살펴보니 "https://service.epost.go.kr/trace.RetrieveDomRigiTraceList.comm?sid1=(등기 번호)&displayHeader=" 와 같이 수행됨.
-> 			- 등기 번호에서 - (dash) 를 정규표현식을 통해 지우고 숫자만 남긴 후 URL Format 에 삽입하여 해당 등기 우편 조회 링크를 생성.
-> 	- **우편 번호, 기업 명 저장**
-> 	- **수신인 저장**
-> 		- 두 자 이름인 경우 고려
-> 	- **"익일 특급" / "합계" / "통상" 발견 전까지 주소로 간주하여 저장**
-> 		- **"합계" 발견 시 Loop 종료.**
-> 5. **가공된 Data 를 HTML Template 으로 반환하는 동시에 Google Sheet 로 전달하기 위해 List<List\<Object>> 형식으로 재가공.**
-> 	- 기존 Data 를 Number, 등기 번호, 조회 링크, 우편 번호, 법인 명, 수신자, 주소 의 총 7개씩 나눠 2차원 배열 형태로 가공.
-> 6. **재 가공된 Data를 Google Sheet API 를 사용해서 지정된 Google Sheet 에 저장.**
-> 	- **Google Sheet API 사용자 인증은 Github Actions 에 의해 생성된 프로젝트 루트 위치의 JSON 파일 사용.**
-> 	- **addSheet()**
-> 		- OCR 에서 Detect 한 날짜를 Title 로 Sheet 생성. (날짜 별 등기 영수증 내용 분리 저장)
-> 		- 만약 동일한 날짜 (시트 이름) 가 존재하면 해당 시트를 반환.
-> 	- **updateValues()**
-> 		- **데이터 반환 타입만 변경해주면 기능 변경 가능.**
-> 			- **Update**ValuesResponse : 기존 셀에 덮어 쓰기
-> 			- **Append**ValuesResponse : 기존 셀 끝에 이어 쓰기
+**전체적인 흐름은 다음과 같습니다.**
+
+<br><br>
+
+1. **사용자가 /upload-form 으로 GET 요청. -upload-form 반환.**
+2. **사용자가 등기 영수증 / 사업자 등록증 이미지 파일을 upload 후 /uploadAndOcr 으로 POST 요청.**
+3. **NCP Clova OCR API Call 후 List\<String형태로 결과 값 반환.**
+4. **OCR 결과를 Iterator 를 사용하여 순회하며 Data 가공.**
+	- **총 개수 파악**
+	- **정규 표현식을 사용하여 날짜 저장. (추후 해당 날짜 별로 Google Sheet 생성)**
+	- **정규 표현식을 사용하여 등기 번호 탐색 및 저장.**
+		- **탐색한 등기 번호를 통한 우체국 등기 발송 조회 링크 생성**
+			- 우체국 등기 조회 로직을 살펴보니 `"https://service.epost.go.kr/trace.RetrieveDomRigiTraceList.comm?sid1=(등기번호)&displayHeader="` 와 같이 수행됨.
+			- 등기 번호에서 `-` (dash) 를 정규표현식을 통해 지우고 숫자만 남긴 후 URL Format 에 삽입하여 해당 등기 우편 조회 링크를 생성.
+	- **우편 번호, 기업 명 저장**
+	- **수신인 저장**
+		- 두 자 이름인 경우 고려
+	- **"익일 특급" / "합계" / "통상" 발견 전까지 주소로 간주하여 저장**
+		- **"합계" 발견 시 Loop 종료.**
+5. **가공된 Data 를 HTML Template 으로 반환하는 동시에 Google Sheet 로 전달하기 위해 List<List\<Object>형식으로 재가공.**
+	- 기존 Data 를 Number, 등기 번호, 조회 링크, 우편 번호, 법인 명, 수신자, 주소 의 총 7개씩 나눠 2차원 배열 형태로 가공.
+6. **재 가공된 Data를 Google Sheet API 를 사용해서 지정된 Google Sheet 에 저장.**
+	- **Google Sheet API 사용자 인증은 Github Actions 에 의해 생성된 프로젝트 루트 위치의 JSON 파일 사용.**
+	- **addSheet()**
+		- OCR 에서 Detect 한 날짜를 Title 로 Sheet 생성. (날짜 별 등기 영수증 내용 분리 저장)
+		- 만약 동일한 날짜 (시트 이름) 가 존재하면 해당 시트를 반환.
+	- **updateValues()**
+		- **데이터 반환 타입만 변경해주면 기능 변경 가능.**
+			- **Update**ValuesResponse : 기존 셀에 덮어 쓰기
+			- **Append**ValuesResponse : 기존 셀 끝에 이어 쓰기
 
 <br><br>
 
@@ -266,11 +282,11 @@ public class NaverOcrApi {
     @Value("${naver.service.url}")  
     private String url;  
   
-    public List<String> callApi(String type, String filePath, String naver_secretKey, String ext) {  
+    public List<StringcallApi(String type, String filePath, String naver_secretKey, String ext) {  
         String apiURL = url;  
         String secretKey = naver_secretKey;  
         String imageFile = filePath;  
-        List<String> parseData = null;  
+        List<StringparseData = null;  
   
         log.info("callApi Start! " + "type:" + type + " file path:" + filePath + " ext:" + ext);  
   
@@ -364,8 +380,8 @@ public class NaverOcrApi {
         out.flush();  
     }  
   
-    // Data 가공 (OCR 결과를 List<String> 형식으로 반환)  
-    private static List<String> jsonparse(StringBuffer response) throws org.json.simple.parser.ParseException {  
+    // Data 가공 (OCR 결과를 List<String형식으로 반환)  
+    private static List<Stringjsonparse(StringBuffer response) throws org.json.simple.parser.ParseException {  
         //json 파싱  
         JSONParser jp = new JSONParser();  
         JSONObject jobj = (JSONObject) jp.parse(response.toString());  
@@ -374,9 +390,9 @@ public class NaverOcrApi {
         JSONObject JSONObjImage = (JSONObject)JSONArrayPerson.get(0);  
         JSONArray s = (JSONArray) JSONObjImage.get("fields");  
         //  
-        List<Map<String, Object>> m = getListMapFromJsonArray(s);  
-        List<String> result = new ArrayList<>();  
-        for (Map<String, Object> as : m) {  
+        List<Map<String, Object>m = getListMapFromJsonArray(s);  
+        List<Stringresult = new ArrayList<>();  
+        for (Map<String, Objectas : m) {  
             result.add((String) as.get("inferText"));  
         }  
   
@@ -409,7 +425,7 @@ public class GoogleSheet {
                                                     String spreadsheetId,  
                                                     String range,  
                                                     String valueInputOption,  
-                                                    List<List<Object>> values) throws IOException {  
+                                                    List<List<Object>values) throws IOException {  
         Sheets service = new Sheets.Builder(new NetHttpTransport(),  
                 GsonFactory.getDefaultInstance(),  
                 requestInitializer)  
@@ -458,7 +474,7 @@ public class GoogleSheet {
   
     private static SheetProperties getSheet(Sheets service, String sheetTitle, String spreadsheetId) throws IOException {  
         Spreadsheet spreadsheet = service.spreadsheets().get(spreadsheetId).execute();  
-        List<Sheet> sheets = spreadsheet.getSheets();  
+        List<Sheetsheets = spreadsheet.getSheets();  
         for (Sheet sheet : sheets) {  
             if (sheet.getProperties().getTitle().equals(sheetTitle)) {  
                 return sheet.getProperties();  
@@ -472,8 +488,8 @@ public class GoogleSheet {
 <br><br>
 
 ## 5-4. uploadController
-> 간단한 프로그램이 이렇게 커질 줄 몰라 controller 와 service 구분을 하지 않아서,,,<br>
-> 추후 Refactoring 예정입니다.
+간단한 프로그램이 이렇게 커질 줄 몰라 controller 와 service 구분을 하지 않아서,,,<br>
+추후 Refactoring 예정입니다.
 
 ```java
 @Controller  
@@ -486,11 +502,11 @@ public class uploadController {
     @Value("${naver.business.secretKey}")  
     private String secretKeyBusiness;  
   
-    private List<String> exceptions = new ArrayList<>();  
+    private List<Stringexceptions = new ArrayList<>();  
   
     private final NaverOcrApi naverApi;  
     private final NaverOcrApiBusiness naverBusinessApi;  
-    ArrayList<String> afterFmt = new ArrayList<>();  
+    ArrayList<StringafterFmt = new ArrayList<>();  
     String date = "";  
     private static final String[] REGIONS = {  
             "서울특별시",  
@@ -520,7 +536,7 @@ public class uploadController {
   
     // 파일 업로드 및 OCR 수행을 위한 POST 요청 핸들러 메서드  
     @PostMapping("/uploadAndOcr")  
-    public String uploadAndOcr(@RequestParam("files") List<MultipartFile> files, Model model) throws IOException {  
+    public String uploadAndOcr(@RequestParam("files") List<MultipartFilefiles, Model model) throws IOException {  
         for (MultipartFile file : files) {  
             if (file.isEmpty()) {  
                 return "error"; // 파일이 비어있을 경우 에러를 처리하는 HTML 템플릿으로 이동  
@@ -535,14 +551,14 @@ public class uploadController {
             if (!afterFmt.isEmpty()) afterFmt.clear();  
   
             // NCP Clova OCR API Call  
-            List<String> result = naverApi.callApi("POST", tempFile.getPath(), naverSecretKey, "jpeg");  
+            List<Stringresult = naverApi.callApi("POST", tempFile.getPath(), naverSecretKey, "jpeg");  
   
             // api 호출 실패 시 exception 에 기록하고 pass.            if (errors(result, tempFile)) continue;  
   
             tempFile.delete(); // 임시 파일 삭제  
   
             // Iterator 를 사용하여 OCR 결과를 순회.  
-            ListIterator<String> iter = result.listIterator();  
+            ListIterator<Stringiter = result.listIterator();  
             int total = 0;  
             while (iter.hasNext()) {  
                 String text = iter.next();  
@@ -610,11 +626,11 @@ public class uploadController {
             }  
             model.addAttribute("ocrResult", afterFmt); // OCR 결과를 HTML 템플릿에 전달  
   
-            List<List<Object>> toGSheet = new ArrayList<>();  
+            List<List<Object>toGSheet = new ArrayList<>();  
             int idx = 0;  
             log.info("size: " + afterFmt.size());  
             for (int i = 0; i < afterFmt.size(); i++) {  
-                List<Object> temp = new ArrayList<>();  
+                List<Objecttemp = new ArrayList<>();  
                 for (int j = 0; j < 7 && idx < afterFmt.size(); j++) {  
                     temp.add(afterFmt.get(idx));  
                     idx++;  
@@ -629,7 +645,7 @@ public class uploadController {
     }  
   
     @PostMapping("/ocrBusiness")  
-    public String uploadAndOcrBusiness(@RequestParam("files") List<MultipartFile> files, Model model) throws IOException {  
+    public String uploadAndOcrBusiness(@RequestParam("files") List<MultipartFilefiles, Model model) throws IOException {  
         for (MultipartFile file : files) {  
             if (file.isEmpty()) {  
                 return "error"; // 파일이 비어있을 경우 에러를 처리하는 HTML 템플릿으로 이동  
@@ -641,7 +657,7 @@ public class uploadController {
             file.transferTo(tempFile);  
   
             // NCP Clova OCR API Call  
-            List<String> result = naverBusinessApi.callApiBusiness("POST", tempFile.getPath(), naverSecretKey, "jpeg");  
+            List<Stringresult = naverBusinessApi.callApiBusiness("POST", tempFile.getPath(), naverSecretKey, "jpeg");  
   
             // api 호출 실패 시 exception 에 기록하고 pass.            
             if (errors(result, tempFile)) continue;  
@@ -657,9 +673,9 @@ public class uploadController {
             }  
             model.addAttribute("ocrBusinessResult", result);  
   
-            List<List<Object>> toGSheet = new ArrayList<>();  
+            List<List<Object>toGSheet = new ArrayList<>();  
             int idx = 0;  
-            List<Object> temp = new ArrayList<>();  
+            List<Objecttemp = new ArrayList<>();  
             for (int i = 0; i < 7 && idx < result.size(); i++) {  
                 temp.add(result.get(idx));  
                 idx++;  
@@ -673,7 +689,7 @@ public class uploadController {
         return "ocr-result-business";  
     }  
   
-    private Boolean errors(List<String> tg, File f) {  
+    private Boolean errors(List<Stringtg, File f) {  
         if (tg == null) {  
             log.info("!! OCR 불가능한 이미지 입니다. result 에 NULL 값 확인됨 !!");  
             exceptions.add(f.getName());  
@@ -682,7 +698,7 @@ public class uploadController {
         return false;  
     }  
   
-    private static String concatString(List<String> stringList) {  
+    private static String concatString(List<StringstringList) {  
         StringBuilder stringBuilder = new StringBuilder();  
         for (String str : stringList) stringBuilder.append(str);  
         return stringBuilder.toString();  
@@ -695,59 +711,66 @@ public class uploadController {
 # 6. DNS 연결 AWS Route53 + 가비아
 
 ## 6-1. 가비아 도메인 구매
-> ![path](/assets/images/Projects/ToyProjects/carefreeocrV2_10.png)<br>
+![path](/assets/images/Projects/ToyProjects/carefreeocrV2_10.png)
+
 [`가비아`](https://www.gabia.com/)
-> 회사 이름과 OCR 을 붙여 가장 저렴한 이벤트 도메인을 구매했습니다.
-> - **도메인 구매 후 사진 하단의 `"네임서버 설정"` 에서 1 ~ 4 차 네임 서버 항목을 다음 단계 (6-2) 에서 얻는 <br> AWS Route53 의 NS 유형 값 4개를 채워주고 기다리면 도메인 등록이 완료됩니다.**
+
+회사 이름과 OCR 을 붙여 가장 저렴한 이벤트 도메인을 구매했습니다.
+- **도메인 구매 후 사진 하단의 `"네임서버 설정"` 에서 1 ~ 4 차 네임 서버 항목을 다음 단계 (6-2) 에서 얻는 <brAWS Route53 의 NS 유형 값 4개를 채워주고 기다리면 도메인 등록이 완료됩니다.**
 
 <br><br>
 
 ## 6-2. AWS Route53 레코드 생성
-> ![path](/assets/images/Projects/ToyProjects/carefreeocrV2_11.png)<br>
+![path](/assets/images/Projects/ToyProjects/carefreeocrV2_11.png)
+
 [`AWS Route53`](https://aws.amazon.com/ko/route53/)
-> 1. **AWS Route53 에서 호스팅 영역 생성 -> 6-1 에서 구매한 도메인 입력**
-> 2. **레코드 생성 -> 값 부분에 EC2 의 IP 주소를 입력. -> 생성**
-> 3. **NS(NameServer) 유형 값 4개를 도메인 구매처의 도메인 네임 서버 설정에 입력하여 연결.**
+
+1. **AWS Route53 에서 호스팅 영역 생성 -6-1 에서 구매한 도메인 입력**
+2. **레코드 생성 -값 부분에 EC2 의 IP 주소를 입력. -생성**
+3. **NS(NameServer) 유형 값 4개를 도메인 구매처의 도메인 네임 서버 설정에 입력하여 연결.**
 >
-> <br>
-> - **[참고] 가비아에서 도메인 구매 후 등록하고 (6-2 까지 진행) 기다리다 보면 도메인 등록이 완료 되었다고 문자가 온다. <br> 문자가 오면 해당 도메인으로 접근 시 EC2로 연결된다.**
+<br>
+- **[참고] 가비아에서 도메인 구매 후 등록하고 (6-2 까지 진행) 기다리다 보면 도메인 등록이 완료 되었다고 문자가 온다. <br문자가 오면 해당 도메인으로 접근 시 EC2로 연결된다.**
 
 <br><br>
 
 # 7. Trouble Shooting
 
 ## 7-1. Use JsonReader.setLenient(true) to accept malformed JSON
-> ![path](/assets/images/Projects/ToyProjects/carefreeocrV2_12.png)<br>
-> Google Sheet API 를 사용하기 위한 계정 인증을 위한 JSON 파일을 CI/CD 환경에서 안전하게 사용하기 위해 Github Secrets 를 사용했다.
-> - 하지만 Google Sheet API 를 요청하자, 이전에 발생하지 않던 에러가 발생했다.
-> - **발생한 에러: <br> `com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 2 column 4 path $.`**
-> 	- Malformed (흉한) Json Exception 이라는 에러 이름에서 JSON 파일의 형식이 잘못되었음을 유추하고 EC2 에 접속하여 해당 JSON 파일을 열어보았다.
->
-> **해당 JSON 파일의 모습.** <br>
-> ![path](/assets/images/Projects/ToyProjects/carefreeocrV2_13.png)<br>
-> - 위처럼 JSON 파일에서 "" 가 전부 빠져 있어 에러가 발생한 모습을 볼 수 있었다.
-> <br><br>
-> **해결 방법**
-> - Github Actions 의 Workflow file 의 옵션 중 create-json 을 사용하여 해결.
-> 
-> ```yml
-> - name: create-json
->       id: create-json
->       uses: jsdaniell/create-json@1.1.2
->       with:
->         name: "secrets.json"
->         json: ${{ secrets.SECERT_JSON }}
-> ```
+![path](/assets/images/Projects/ToyProjects/carefreeocrV2_12.png)
 
-> **위 코드를 Workflow 파일에 추가하여 Github secrets 에 저장된 JSON 형식의 secret 을 정상적으로 사용할 수 있었다.**
+Google Sheet API 를 사용하기 위한 계정 인증을 위한 JSON 파일을 CI/CD 환경에서 안전하게 사용하기 위해 Github Secrets 를 사용했다.
+- 하지만 Google Sheet API 를 요청하자, 이전에 발생하지 않던 에러가 발생했다.
+- **발생한 에러: `com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 2 column 4 path $.`**
+	- Malformed (흉한) Json Exception 이라는 에러 이름에서 JSON 파일의 형식이 잘못되었음을 유추하고 EC2 에 접속하여 해당 JSON 파일을 열어보았다.
+
+**해당 JSON 파일의 모습.**
+
+![path](/assets/images/Projects/ToyProjects/carefreeocrV2_13.png)
+
+- 위처럼 JSON 파일에서 "" 가 전부 빠져 있어 에러가 발생한 모습을 볼 수 있었다.
+
+**해결 방법**
+- Github Actions 의 Workflow file 의 옵션 중 create-json 을 사용하여 해결.
+
+```yml
+- name: create-json
+      id: create-json
+      uses: jsdaniell/create-json@1.1.2
+      with:
+        name: "secrets.json"
+        json: ${{ secrets.SECERT_JSON }}
+```
+
+**위 코드를 Workflow 파일에 추가하여 Github secrets 에 저장된 JSON 형식의 secret 을 정상적으로 사용할 수 있었다.**
 
 <br><br>
 
 # 8. 프로그램 시연 영상
 
-{% raw %}
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/w_yWncXfCRM?si=Rd4S8e3vZR8Equz1" frameborder="0" allowfullscreen></iframe>
-{% endraw %}
+
 
 <br><br>
 

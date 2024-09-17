@@ -11,7 +11,9 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 ---
 
 # \[Toy Project] Carefree OCR
-![path](/assets/images/Projects/ToyProjects/CarefreeOCR0.png)<br>
+![path](/assets/images/Projects/ToyProjects/CarefreeOCR0.png)
+
+<br>
 > 어머니께서 평소 Excel 을 사용하여 작업하시는데, <br>
 > **책자 내부에 존재하는 Data 들을 일일히 손으로 Typing 하여 Excel 에 옮기시는 모습이 힘들어 보였다.**
 > - **이에 이번 토이 프로젝트 - [Carefree OCR] 을 진행하게 되었다.**
@@ -43,7 +45,9 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 <br><br>
 
 ## \[Carefree OCR] Project Structure
-![path](/assets/images/Projects/ToyProjects/CarefreeOCR1.png)<br>
+![path](/assets/images/Projects/ToyProjects/CarefreeOCR1.png)
+
+<br>
 > 초기 계획은 Docker Hub 에 버전 별 이미지 저장 후 ArgoCD 를 통해 배포할 계획이었으나 AWS ECR / EKS 와 같은 컨테이너 서비스를 사용하자니 비용이 발생함.
 > - **Github Actions 를 통해 특정 Tag 를 가진 EC2 에 직접 Application을 Build 하여 Spring Boot 내장 Tomcat 서버에 띄우기로 했다.**
 > - Docker Hub 에는 Image 만 Build 후 업로드.
@@ -386,17 +390,23 @@ public class uploadController {
 # \[Carefree OCR] 완성 모습
 
 > **th:each 를 통해 결과 리스트를 순환하며 결과를 출력.**<br>
-> ![path](/assets/images/Projects/ToyProjects/CarefreeOCR2.png)<br>
+> ![path](/assets/images/Projects/ToyProjects/CarefreeOCR2.png)
+
+<br>
 > - **upload-form 에서 정상적으로 파일을 받아주는 모습.**
 >
 > <br><br>
 > 
-> ![path](/assets/images/Projects/ToyProjects/CarefreeOCR3.png)<br>
+> ![path](/assets/images/Projects/ToyProjects/CarefreeOCR3.png)
+
+<br>
 > - **ocr-result 에서 정상적으로 Clova OCR API 호출 및 결과를 반환해주는 모습.**
 >
 > <br><br>
 > 
-> ![path](/assets/images/Projects/ToyProjects/CarefreeOCR4.png)<br>
+> ![path](/assets/images/Projects/ToyProjects/CarefreeOCR4.png)
+
+<br>
 > - **EC2 log 에서도 프로그램이 잘 동작하고 있는 것을 볼 수 있다.**
 
 ```bash

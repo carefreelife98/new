@@ -9,6 +9,8 @@ import fm from 'front-matter';
 import PostMarkdown from '../../interfaces/postMarkdown';
 import FrontMatter from "../../interfaces/frontmatter";
 import remarkGfm from "remark-gfm";
+import CategoryList from "../CategoryList";
+import TagList from "../TagList";
 
 interface MarkdownData {
     content: string;
@@ -63,29 +65,17 @@ export default function Markdown({category, subCategory, fileName}: PostMarkdown
                         {parsedMarkdown.data.categories &&
                             <div className='cfl-tech-blog-react-markdown-category-box'>
                                 {parsedMarkdown.data.categories.length > 0 &&
-                                    parsedMarkdown.data.categories.map((category, index) => {
-                                        return (
-                                            <div className='cfl-tech-blog-react-markdown-category' key={index}>
-                                                {category}
-                                            </div>
-                                        )
-                                    })
+                                    <CategoryList categoryList={parsedMarkdown.data.categories} />
                                 }
                             </div>
                         }
                         {parsedMarkdown.data.tags &&
                             <div className='cfl-tech-blog-react-markdown-tag-box'>
-                                <div className='cfl-tech-blog-postsreact-markdown-tag-icon-box'>
+                                <div className='cfl-tech-blog-react-markdown-tag-icon-box'>
                                     <div className='icon hashtag-icon'/>
                                 </div>
                                 {parsedMarkdown.data.tags.length > 0 &&
-                                    parsedMarkdown.data.tags.map((tag, index) => {
-                                        return (
-                                            <div className='cfl-tech-blog-react-markdown-tag' key={index}>
-                                                {tag}
-                                            </div>
-                                        )
-                                    })
+                                    <TagList tagList={parsedMarkdown.data.tags} />
                                 }
                             </div>
                         }

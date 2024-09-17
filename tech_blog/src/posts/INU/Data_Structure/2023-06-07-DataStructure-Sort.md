@@ -17,33 +17,33 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 # 정렬(Sorting) 이란?
 
-```
+```bash
 정렬(sorting)은 
 어떠한 대상을 오름차순 (ascending order) 및 내림차순 (descending order) 으로 나열하는 것.
 ```
 
-> <img src="/assets/images/INU/datastructure/Sort.png" alt="Sort_Procdess" width="100%" min-width="200px" itemprop="image"><br>`[출처]``(https://engoo.co.kr/app/lessons/sort-out-settle-for-count-on-fall-behind-do-over/_H6h7FHeEeetxgef8rkGgA)``정렬 (Sorting)`<br>
-> - 정렬은 컴퓨터 공학에서 가장 기본적이고 중요한 알고리즘 중의 하나.
-> - 자료 탐색에 있어 필수적 - 탐색의 효율성 증대.
-> - 정렬시켜야 할 대상 : 레코드(record)
->   - record 내부의 요소 : 필드 (ex. 이름. 학번. 주소. 주민번호.)
->   - **레코드와 레코드를 식별해주는 역할을 하는 필드 : 키(key)**
->   - 정렬이란: 레코드들을 key값의 순서로 재배열 하는 것.
+<img src="/assets/images/INU/datastructure/Sort.png" alt="Sort_Procdess" width="100%" min-width="200px" itemprop="image"><br>`[출처]``(https://engoo.co.kr/app/lessons/sort-out-settle-for-count-on-fall-behind-do-over/_H6h7FHeEeetxgef8rkGgA)``정렬 (Sorting)`<br>
+- 정렬은 컴퓨터 공학에서 가장 기본적이고 중요한 알고리즘 중의 하나.
+- 자료 탐색에 있어 필수적 - 탐색의 효율성 증대.
+- 정렬시켜야 할 대상 : 레코드(record)
+  - record 내부의 요소 : 필드 (ex. 이름. 학번. 주소. 주민번호.)
+  - **레코드와 레코드를 식별해주는 역할을 하는 필드 : 키(key)**
+  - 정렬이란: 레코드들을 key값의 순서로 재배열 하는 것.
 >
-> <img src="/assets/images/INU/datastructure/Sort_record.png" alt="Sort_record_Procdess" width="100%" min-width="200px" itemprop="image"><br>`레코드(record)와 필드의 모습.`<br><br>
-> 
-> **내부 정렬 (internal sorting)**:
->   - 모든 데이터가 주 기억장치 내부에 저장된 상태에서 정렬.
-> 
-> <br>
-> **외부 정렬 (external sorting)**:
->   - 외부 기억 장치에 대부분의 데이터가 존재.
->   - 일부만 주 기억장치에 저장된 상태에서 정렬.
-> 
-> <img src="/assets/images/INU/datastructure/in_ex_sorting.png" alt="in_ex_sorting_Procdess" width="100%" min-width="200px" itemprop="image"><br>`[출처]``(https://cs186.fandom.com/wiki/External_Sorting)``내부 정렬과 외부 정렬의 모습`<br><br>
-> 
-> **정렬 알고리즘의 안정성 (Stability)**
->   - 동일 한 키 값을 갖는 레코드들의 상대적인 위치가 정렬 후에도 같은 것.
+<img src="/assets/images/INU/datastructure/Sort_record.png" alt="Sort_record_Procdess" width="100%" min-width="200px" itemprop="image"><br>`레코드(record)와 필드의 모습.`<br><br>
+
+**내부 정렬 (internal sorting)**:
+  - 모든 데이터가 주 기억장치 내부에 저장된 상태에서 정렬.
+
+<br>
+**외부 정렬 (external sorting)**:
+  - 외부 기억 장치에 대부분의 데이터가 존재.
+  - 일부만 주 기억장치에 저장된 상태에서 정렬.
+
+<img src="/assets/images/INU/datastructure/in_ex_sorting.png" alt="in_ex_sorting_Procdess" width="100%" min-width="200px" itemprop="image"><br>`[출처]``(https://cs186.fandom.com/wiki/External_Sorting)``내부 정렬과 외부 정렬의 모습`<br><br>
+
+**정렬 알고리즘의 안정성 (Stability)**
+  - 동일 한 키 값을 갖는 레코드들의 상대적인 위치가 정렬 후에도 같은 것.
 >     - 안정하지 못한 정렬의 예<br>
 >     <img src="/assets/images/INU/datastructure/Sort_stability.png" alt="Sort_stability_Procdess" width="40%" min-width="200px" itemprop="image"><br>`안정하지 못한 정렬`<br><br>
 
@@ -51,7 +51,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 # 선택 정렬 (Selection Sort) 이란?
 
-```
+```bash
 가장 기초적인 정렬
 ```
 
@@ -151,8 +151,8 @@ int main(void) {
 >       SWAP(list[i], list[least], temp);
 >}
 >```
-{: .notice--info}
-{: style="text-align: left;"}
+
+
 
 <br><br>
 

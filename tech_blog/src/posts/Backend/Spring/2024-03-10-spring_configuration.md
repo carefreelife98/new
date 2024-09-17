@@ -23,7 +23,9 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 - Groovy
 ```
 
-> ![path](/assets/images/Spring/SpringBasic/spring_conf_1.png)<br>
+> ![path](/assets/images/Spring/SpringBasic/spring_conf_1.png)
+
+<br>
 - **AnnotationConfigApplicationContext**
     - Java 의 설정 클래스를 사용하여 스프링의 설정 정보를 구성.
 - **GenericXmlApplicationContext**
@@ -81,7 +83,9 @@ GenericXmlApplicationContext xac = new GenericXmlApplicationContext("classpath:a
 
 # 스프링 빈 설정 메타 정보 - BeanDefinition
 
-> ![path](/assets/images/Spring/SpringBasic/spring_conf_2.png)<br>
+> ![path](/assets/images/Spring/SpringBasic/spring_conf_2.png)
+
+<br>
 - 스프링은 `BeanDefinition` 을 통한 `추상화` 로서 다양한 설정 형식을 지원한다.
     - `추상화 : 역할과 구현을 개념적으로 나눈 것.`
         - XML 을 읽어서 BeanDefinition 을 생성.
@@ -95,9 +99,7 @@ GenericXmlApplicationContext xac = new GenericXmlApplicationContext("classpath:a
 
 ## AnnotationConfigApplicationContext - AnnotatedBeanDefinitionReader
 
-> ![path](/assets/images/Spring/SpringBasic/spring_conf_3.png)<br>
-
-```
+> ![path](/assets/images/Spring/SpringBasic/spring_conf_3.png)```
 조금 더 깊이 있게 들어가보자.
 ```
 

@@ -20,10 +20,6 @@
     "sidebar_title": "My Posts",
     "categories": [
       {
-        "category": "testCategory",
-        "subcategories": ["testSubCategory"]
-      },
-      {
         "category": "INU",
         "subcategories": ["Capstone_Design", "Computer_Architecture", "Mobile_Software", "Data_Structure", "OS", "Computer_Vision"]
       },

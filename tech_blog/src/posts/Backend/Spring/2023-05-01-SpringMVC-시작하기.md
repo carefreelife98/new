@@ -94,8 +94,8 @@ public class CarefreeLifeMemberControllerV3 {
 >- - 메서드 레벨 @RequestMapping("<span style="color:red">/save</span>") ➡️ <span style="color:green">/springmvc/v2/members</span><span style="color:red">/save</span>
 >- - 메서드 레벨 @RequestMapping ➡️ <span style="color:green">/springmvc/v2/members</span><br>
 >      (추가적인 URL을 지정하지 않으면 클래스 레벨에 지정된 상위 URL 자체로 지정됨.)
-{: .notice--info}
-{: style="text-align: left;"}
+
+
 
 <br><br>
 

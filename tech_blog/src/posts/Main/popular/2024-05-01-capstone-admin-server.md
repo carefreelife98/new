@@ -1,9 +1,16 @@
 ---
 title: "[2024 INU CSE 졸업작품] Smart Barricade: 우회전 교통사고 방지를 위한 전자 방지턱 시스템 (Spring Boot, Thymeleaf, Docker, Kafka, YoloV8, OpenCV)"
+date: 24. 05. 01
 categories:
   - INU-Capstone
 tags:
-  - INU-Capstone
+  - Java
+  - Python
+  - Spring
+  - OpenCV
+  - Yolo
+  - Kafka
+  - JPA
   
 teaser: "/assets/images/INU/CapstoneDesign/adminserver_album.png"
 ---
@@ -1724,16 +1731,16 @@ AlbumModel albumModel = new AlbumModel(
 
 # 4. \[Smart-Barricade] 시연 영상
 ## 4-1. RC카를 이용한 Smart-Barricade 작동 시연 영상
-{% raw %}
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tbND3XpsFoI" frameborder="0" allowfullscreen></iframe>
-{% endraw %}
+
 [RC카를 이용한 Smart-Barricade 작동 시연 영상](https://youtu.be/tbND3XpsFoI)
 
 
 ## 4-2. 객체 탐지 서버 - 어드민 모니터링 서버 간의 내부 동작 시연 영상
-{% raw %}
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4NDNVLkg2UI" frameborder="0" allowfullscreen></iframe>
-{% endraw %}
+
 [객체 탐지 서버 - 어드민 모니터링 서버 간의 내부 동작 시연 영상](https://youtu.be/4NDNVLkg2UI)
 
 

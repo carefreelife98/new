@@ -1,26 +1,31 @@
 export enum Tags {
     // Programming Languages
-    Java = "#FF9800", // 선명한 주황색
-    Kotlin = "#9C27B0",    // 강렬한 보라색
-    JavaScript = "#FFEB3B",// 밝은 노란색
+    Java = "#955901",
+    Kotlin = "#9C27B0",
+    JavaScript = "#FFEB3B",
+    Python = "#0388fa",
 
     // Framework
-    Spring = "#4CAF50",    // 밝은 초록색
+    Spring = "#4CAF50",
 
     // Database
-    Database = "#FF5722",  // 선명한 오렌지색
+    Database = "#FF5722",
+    JPA = "#4CAF50",
 
     // Cloud & IoC
-    Terraform = "#9C27B0",    // 강렬한 보라색
-    AWS = "#FF6F61",      // 밝고 강한 오렌지
+    Terraform = "#9C27B0",
+    AWS = "#FF6F61",
 
     // Container
-    NodeJs = "#4CAF50",    // 같은 초록색 (Spring과 동일)
-    Kubernetes = "#2196F3",// 강렬한 파란색
+    Kubernetes = "#2196F3",
 
     // etc
-    PASTEL_PINK = "#E91E63",// 강렬한 핑크색
-    PASTEL_YELLOW = "#FFC107" // 밝은 황금색
+    API = "#916d01",
+    Yolo = "#df39fb",
+    NodeJs = "#4CAF50",
+    Kafka = "#2196F3",
+    OpenCV = "#FF5722",
+    PASTEL_PINK = "#E91E63",
 }
 
 export enum TagsBackground {
@@ -28,12 +33,14 @@ export enum TagsBackground {
     Java = "#F7B199",
     Kotlin = "#D4A5E2",
     JavaScript = "#F5D7B2",
+    Python = "#81baf3",
 
     // Framework
     Spring = "#B3E5AB",
 
     // Database
     Database = "#FFB5B5",
+    JPA = "#B3E5AB",
 
     // Cloud & IoC
     AWS = "#F8E5A6",
@@ -43,7 +50,10 @@ export enum TagsBackground {
     Kubernetes = "#A7C7E7",
 
     // etc
+    API = "#F8E5A6",
+    Yolo = "#c09ef6",
+    Kafka = "#A7C7E7",
     NodeJs = "#A1E3D8",
-    PASTEL_PINK = "#F8C8DC",
-    PASTEL_YELLOW = "#F8E5A6"
+    OpenCV = "#F5D7B2",
+    PASTEL_PINK = "#F8C8DC"
 }

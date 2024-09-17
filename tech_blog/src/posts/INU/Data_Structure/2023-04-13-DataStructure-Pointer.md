@@ -263,8 +263,8 @@ p-1  	// 포인터 p가 가리키는 객체의 바로 앞 객체
   b.data[bindex].value = a.data[i].value; // b의 값과 a의 값을 가리키는 포인터를 바꾼다
   bindex++; // 다음 저장 위치로 넘어간다.
 ```
-{: .notice--info}
-{: style="text-align: left;"}
+
+
 
 ```c
 #include<stdio.h>

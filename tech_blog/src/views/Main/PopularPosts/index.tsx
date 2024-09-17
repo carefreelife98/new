@@ -93,8 +93,41 @@ export default function PopularPosts() {
                             </div>
                         </div>
                         <div className='cfl-tech-blog-main-popular-posts-1st-right-container'>
-                            <div className='cfl-tech-blog-main-popular-posts-1st-primary'></div>
-                            <div className='cfl-tech-blog-main-popular-posts-1st-secondary'></div>
+                            <div className='cfl-tech-blog-main-popular-posts-1st-right' onClick={() => onPopularPostClickHandler(filePathList[1])}>
+                                <div className='cfl-tech-blog-main-popular-posts-1st-right-image-box'>
+                                    <img src={`${process.env.PUBLIC_URL}${popularPostMetaDataList[1].teaser}`}
+                                         alt={'popular-post-image'}/>
+                                </div>
+                                <div className='cfl-tech-blog-main-popular-posts-1st-right-info-box'>
+                                    <div className='cfl-tech-blog-main-popular-posts-1st-right-date'>
+                                        {popularPostMetaDataList[1].date}
+                                    </div>
+                                    <div className='cfl-tech-blog-main-popular-posts-1st-right-title'>
+                                        {popularPostMetaDataList[1].title}
+                                    </div>
+                                    <CategoryList categoryList={popularPostMetaDataList[1].categories}/>
+                                    <TagList tagList={popularPostMetaDataList[1].tags}/>
+                                </div>
+                            </div>
+                            <div className='divider'style={{width: "80%"}}/>
+                            <div className='cfl-tech-blog-main-popular-posts-1st-right' onClick={() => onPopularPostClickHandler(filePathList[2])}>
+                                <div className='cfl-tech-blog-main-popular-posts-1st-right-image-box'>
+                                    <img src={`${process.env.PUBLIC_URL}${popularPostMetaDataList[2].teaser}`} alt={'popular-post-image'}/>
+                                </div>
+                                <div className='cfl-tech-blog-main-popular-posts-1st-right-info-box'>
+                                    <div className='cfl-tech-blog-main-popular-posts-1st-right-date'>
+                                        {popularPostMetaDataList[2].date}
+                                    </div>
+                                    <div className='cfl-tech-blog-main-popular-posts-1st-right-title'>
+                                        {popularPostMetaDataList[2].title}
+                                    </div>
+                                    <CategoryList categoryList={popularPostMetaDataList[2].categories}/>
+                                    <div className='cfl-tech-blog-main-popular-posts-tag-box'>
+                                        <div className='icon hashtag-icon'/>
+                                        <TagList tagList={popularPostMetaDataList[2].tags}/>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className='cfl-tech-blog-main-popular-posts-2st-container'></div>
