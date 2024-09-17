@@ -69,7 +69,7 @@ export default function PopularPosts() {
             const validResults = results.filter((res) => res !== null); // null을 제외
             setPopularPostMetaDataList(validResults as FrontMatter[]);
         });
-    }, []);
+    }, [categoryName, subCategoryName]);
 
     return (
         <div id='cfl-tech-blog-main-popular-posts-wrapper'>
