@@ -1,9 +1,9 @@
 ---
 title: "[CJ Olivenetworks - Cloud Wave] CGV Fast Order 시스템 인프라 구축 3-1. [Httpd, Spring Boot, Aurora MySQL] 3 Tier Web Application - Github Actions, Docker"
 categories:
-  - Cloud-Wave-Project
+  - Cloud-Wave
 tags:
-  - Cloud-Wave-Project
+  - AWS
 teaser: "/assets/images/CloudWave/project/simpleapp.png"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife

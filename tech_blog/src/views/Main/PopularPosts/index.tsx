@@ -5,6 +5,8 @@ import config from '../../../tech_blog_config.json';
 import CategoryList from "../../../components/CategoryList";
 import './style.css';
 import TagList from "../../../components/TagList";
+import {useNavigate} from "react-router-dom";
+import {POST_DETAIL_PATH} from "../../../constants";
 
 export default function PopularPosts() {
 
@@ -14,11 +16,19 @@ export default function PopularPosts() {
     // state: 각 subCategory 별 모든 포스트의 Front matter 정보 리스트 상태
     const [popularPostMetaDataList, setPopularPostMetaDataList] = useState<FrontMatter[] | null>(null);
     // state: 해당 카테고리에 속한 전체 포스팅 파일의 경로 리스트 상태
-    // const [filePathList, setFilePathList] = useState<string[]>([]);
-    // state: 총 게시물 수 상태
-    // const [totalCount, setTotalCount] = useState<number>(0);
+    const [filePathList, setFilePathList] = useState<string[]>([]);
 
     // function: navigate 함수
+    const navigate = useNavigate();
+
+    // event handler: Popular Post 클릭 핸들러
+    const onPopularPostClickHandler = (fileName: string) => {
+        if (categoryName && subCategoryName && fileName) {
+            console.log(categoryName + subCategoryName + fileName);
+            navigate(POST_DETAIL_PATH(categoryName, subCategoryName, fileName));
+            return;
+        }
+    }
 
     useEffect(() => {
         // require.context를 사용하여 특정 폴더 내의 파일을 가져오기
@@ -37,8 +47,7 @@ export default function PopularPosts() {
             return filename.replace(BASE_PATH, '/');
         });
 
-        // setFilePathList(cleanedFilePaths);
-        // setTotalCount(targetFiles.length);
+        setFilePathList(cleanedFilePaths);
 
         // 모든 파일을 Promise.all로 한 번에 처리
         const fetchMarkdownFiles = targetFiles.map((postPath, index) => {
@@ -68,7 +77,7 @@ export default function PopularPosts() {
             {(popularPostMetaDataList !== null && popularPostMetaDataList.length > 1) ?
                 <div className='cfl-tech-blog-main-popular-posts-container'>
                     <div className='cfl-tech-blog-main-popular-posts-1st-container'>
-                        <div className='cfl-tech-blog-main-popular-posts-1st-left-container'>
+                        <div className='cfl-tech-blog-main-popular-posts-1st-left-container' onClick={() => onPopularPostClickHandler(filePathList[0])}>
                             <div className='cfl-tech-blog-main-popular-posts-1st-left-image-box'>
                                 <img src={`${process.env.PUBLIC_URL}${popularPostMetaDataList[0].teaser}`} alt={'popular-post-image'}/>
                             </div>

@@ -11,12 +11,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 1rem 1rem 1rem;
+    padding: 0 1rem 1rem 1rem;
     background: lightgrey;
     font-family: GimhaeGaya;
-    /*height: calc(100% - 50px); !* 화면 상단에서 TOC까지의 거리 *!*/
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden; /* Prevents content from overflowing outside the TOC */
     transition: transform 0.3s ease; /* 애니메이션 추가 */
 }
 
@@ -32,7 +30,7 @@
 
 .cfl-tech-blog-toc-title {
     width: 100%;
-    flex: 1;
+    flex-shrink: 0; /* Keeps the title fixed in place */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +39,8 @@
 /* 목록 스타일 */
 .cfl-tech-blog-toc-list {
     width: 100%;
-    flex: 7;
+    flex-grow: 1; /* Makes the list take up the remaining space */
+    overflow-y: auto; /* Enables scrolling for the list */
     padding-right: 1rem;
     list-style-type: none; /* 기본 리스트 스타일 제거 */
     padding-left: 0;
@@ -127,4 +126,8 @@
 /* 버튼 호버 스타일 */
 .cfl-tech-blog-toc-toggle-left:hover {
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+ul {
+    list-style-type: none;
 }

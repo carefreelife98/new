@@ -1,5 +1,5 @@
 import './style.css';
-import {Tags} from "../../constants/tags";
+import {Tags, TagsBackground} from "../../constants/tags";
 
 interface TagListProps{
     tagList: string[]
@@ -16,6 +16,10 @@ export default function TagList({tagList}: TagListProps) {
         return Tags[tagName as keyof typeof Tags];
     }
 
+    function getTagBackgroundColor(tagName: string): string | undefined {
+        return TagsBackground[tagName as keyof typeof Tags];
+    }
+
     return (
         <div id='cfl-tech-blog-tag-box'>
             {tagList && tagList.length > 0 &&
@@ -23,7 +27,7 @@ export default function TagList({tagList}: TagListProps) {
                     console.log(getTagColor(item));
                     return (
                         // Tag enum 에 정의된 tag 값에 따라 컬러 설정.
-                        <div key={index} className='cfl-tech-blog-tag' style={{color: `${getTagColor(item)}`}}>
+                        <div key={index} className='cfl-tech-blog-tag' style={{color: `${getTagColor(item)}`, backgroundColor: `${getTagBackgroundColor(item)}`}}>
                             {item}
                         </div>
                     )

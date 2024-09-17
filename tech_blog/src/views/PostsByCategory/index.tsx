@@ -4,6 +4,8 @@ import FrontMatter from "../../interfaces/frontmatter";
 import fm from "front-matter";
 import {useNavigate, useParams} from "react-router-dom";
 import {POST_DETAIL_PATH} from "../../constants";
+import TagList from "../../components/TagList";
+import CategoryList from "../../components/CategoryList";
 
 export default function PostsByCategory() {
     // state: 최상위 카테고리 이름 상태
@@ -104,13 +106,7 @@ export default function PostsByCategory() {
                                                 <div className='cfl-tech-blog-posts-by-cat-card-date'>{postMetaData.date}</div>
                                                 <div className='cfl-tech-blog-posts-by-cat-card-category-box'>
                                                     {postMetaData.categories.length > 0 &&
-                                                        postMetaData.categories.map((category, index) => {
-                                                            return (
-                                                                <div className='cfl-tech-blog-posts-by-cat-card-category' key={index}>
-                                                                    {category}
-                                                                </div>
-                                                            )
-                                                        })
+                                                        <CategoryList categoryList={postMetaData.categories} />
                                                     }
                                                 </div>
                                                 <div className='cfl-tech-blog-posts-by-cat-card-tag-box'>
@@ -118,13 +114,7 @@ export default function PostsByCategory() {
                                                         <div className='icon hashtag-icon'/>
                                                     </div>
                                                     {postMetaData.tags.length > 0 &&
-                                                        postMetaData.tags.map((tag, index) => {
-                                                            return (
-                                                                <div className='cfl-tech-blog-posts-by-cat-card-tag' key={index}>
-                                                                    {tag}
-                                                                </div>
-                                                            )
-                                                        })
+                                                        <TagList tagList={postMetaData.tags} />
                                                     }
                                                 </div>
                                             </div>

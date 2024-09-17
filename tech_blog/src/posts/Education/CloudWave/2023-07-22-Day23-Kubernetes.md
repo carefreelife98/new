@@ -1,9 +1,9 @@
 ---
 title: "[CJ Olivenetworks - Cloud Wave] Cloud Native & Kubernetes 시작하기"
 categories:
-  - Cloud-Wave-Kubernetes
+  - Cloud-Wave
 tags:
-  - Cloud-Wave-Kubernetes
+  - AWS
 toc: true
 toc_sticky: true
 toc_label: "Carefree to See"

@@ -1,9 +1,9 @@
 ---
 title: "[CJ Olivenetworks - Cloud Wave] 도커 (Docker) 기초"
 categories:
-  - Cloud-Wave-Virtualization
+  - Cloud-Wave
 tags:
-  - Cloud-Wave-Virtualization
+  - AWS
 toc: true
 toc_sticky: true
 toc_label: "Carefree to See"
