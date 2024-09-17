@@ -379,8 +379,8 @@ $ docker cp (복사 대상의 이름) (복사할 위치)
 > ```
 >
 > 의 **세 단계가 모두 일치해야 한다.**
-{: .notice--info}
-{: style="text-align: left;"}
+
+
 
 <br><br>
 

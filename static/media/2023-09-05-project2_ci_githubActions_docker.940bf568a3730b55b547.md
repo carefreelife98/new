@@ -350,9 +350,9 @@ jobs:
 
 # CI / CD 시연 영상 (배속)
 
-{% raw %}
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZPrLB_rOsJY" frameborder="0" allowfullscreen></iframe>
-{% endraw %}
+
 
 <br><br>
 

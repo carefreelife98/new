@@ -16,14 +16,14 @@ toc_label: "Carefree to See"
 ---
 # Data Structure : List 란?
 
-```
+```bash
 Data Structure : 리스트의 소개
 ```
 <img src="/assets/images/INU/list.png" alt="list_Procdess" width="100%" min-width="200px" itemprop="image">`사진출처:`[jimmyglenos](https://jimmyglenos.com/2021/01/19/make-your-to-do-list-a-ta-da-list/)<br>
 
-> <span style="color:green">"리스트"라고 하면 어떤 것이 가장 먼저 떠오르는가? 버켓리스트? 회원 및 상품 리스트?</span><br><br>
+<span style="color:green">"리스트"라고 하면 어떤 것이 가장 먼저 떠오르는가? 버켓리스트? 회원 및 상품 리스트?</span><br><br>
 어떤 것을 떠올리더라도 대부분은 리스트라 함에 틀렸다고 할 수 없을 것이다. 방금 당신이 떠올린 그것이 바로 리스트이다.<br>
-```
+```bash
 리스트(List)란, 우리들이 자료(data)를 정리하는 방법중에 하나이다.
 ```
 <br>
@@ -41,19 +41,19 @@ Data Structure : 리스트의 소개
 
 ## 리스트 ADT
 
-```
+```bash
 리스트 ADT(Abstract Data Type) - 추상 데이터 타입
 ```
-> 다음은 리스트를 추상데이터 타입으로 정의한 것이다.<br><br>
+다음은 리스트를 추상데이터 타입으로 정의한 것이다.<br><br>
 <img src="/assets/images/INU/ADT.png" alt="ADT_Procdess" width="100%" min-width="200px" itemprop="image">`ADT로 정의된 리스트.`<br><br>
 
 ## 리스트의 구현
 
-```
+```bash
 리스트의 구현
 ```
 
-> **리스트ADT는 배열과 연결리스트를 이용하여 구현이 가능하다.**<br>
+**리스트ADT는 배열과 연결리스트를 이용하여 구현이 가능하다.**<br>
 - **<span style="color:red">배열</span>**을 이용할 시 구현 과정이 매우 간단해지지만, 크기가 고정(static)된다.<br><br>
 - 포인터(~~으윽..~~)를 이용하여 **<span style="color:blue">연결리스트</span>**를 만들어 구현하는 방법은 상대적으로 더 복잡하지만,<br>
 malloc 과 포인터의 조합으로 **동적으로 크기를 조정**할 수 있을 뿐 아니라<br>
@@ -62,20 +62,20 @@ malloc 과 포인터의 조합으로 **동적으로 크기를 조정**할 수 �
 
 ## 배열로 구현된 리스트 (Array List)
 
-```
+```bash
 배열로 연결리스트를 구현해보자.
 ```
-> - 배열로 리스트를 구현하면 순차적인 메모리 공간이 할당된다.
+- 배열로 리스트를 구현하면 순차적인 메모리 공간이 할당된다.
 - 이것을 **<span style="color:green">`리스트의 순차적 표현(Sequential Representation)`</span>**이라고 한다.
 <img src="/assets/images/INU/seqrepresentation.png" alt="seqrepresentation_Procdess" width="60%" min-width="200px" itemprop="image">`Sequential Representation`
 
 <br><br>
 
-```
+```bash
 리스트의 정의
 ```
 
-> - 배열 리스트를 구현하기 위해 배열과 항목의 개수를 구조체로 정의해보자.
+- 배열 리스트를 구현하기 위해 배열과 항목의 개수를 구조체로 정의해보자.
 
 ```c
 #define MAX_LIST_SIZE 100 // 리스트의 최대 크기
@@ -90,7 +90,7 @@ typedef struct {
 
 <br><br>
 
-```
+```bash
 기초 연산 with ArrayList
 ```
 
@@ -159,7 +159,7 @@ void insert_last(ArrayListType *L, element item) {
 
 <br><br>
 
-```
+```bash
 배열 리스트의 항목 삽입 연산
 ```
 
@@ -192,7 +192,7 @@ void insert(ArrayListType *L, int pos, element item) {
 
 <br><br>
 
-```
+```bash
 배열 리스트의 항목 삭제 연산
 ```
 
@@ -221,7 +221,7 @@ element delete(ArrayListType *L, int pos) {
 
 ## 배열 리스트 테스트 프로그램
 
-```
+```bash
 앞서 알아본 배열 리스트를 프로그램을 통해 테스트 해보자.
 ```
 

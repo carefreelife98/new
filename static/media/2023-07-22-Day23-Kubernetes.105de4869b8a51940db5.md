@@ -45,8 +45,8 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 > Steve Mellor, Ken Schwaber, Jeff Sutherland, Dave Thomas<br>
 > © 2001, 상기 저자들<br>
 > 이 선언문은 어떤 형태로든 자유로이 복사할 수 있지만, 본 고지와 함께 전문으로서만 가능하다.<br>
-{: .notice--info}
-{: style="text-align: left;"}
+
+
 
 - 작게 일해라 -> 작은 것부터 개발해나가자.
 - 지속 가능한 속도로 개발하자.

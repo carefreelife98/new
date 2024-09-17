@@ -294,8 +294,8 @@ public class _3_RollString {
 • 연산은 덧셈과 뺄셈만 가능<br>
 • 앞에 있는 연산부터 순차적으로 진행<br>
 • 35++40과 같이 입력되면 프로그램 종료<br>
-{: .notice--info}
-{: style="text-align: left;"}
+
+
 
 > - 출력 예시
 > - <img src="/assets/images/INU/java/hw2/4_inputStringCalculate.png" alt="4_inputStringCalculate_Procdess" width="60%" min-width="200px" itemprop="image"><br>`Practice 4 출력 예시 / 결과`<br>
