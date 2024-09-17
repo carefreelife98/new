@@ -14,9 +14,9 @@ export default function PopularPosts() {
     // state: 각 subCategory 별 모든 포스트의 Front matter 정보 리스트 상태
     const [popularPostMetaDataList, setPopularPostMetaDataList] = useState<FrontMatter[] | null>(null);
     // state: 해당 카테고리에 속한 전체 포스팅 파일의 경로 리스트 상태
-    const [filePathList, setFilePathList] = useState<string[]>([]);
+    // const [filePathList, setFilePathList] = useState<string[]>([]);
     // state: 총 게시물 수 상태
-    const [totalCount, setTotalCount] = useState<number>(0);
+    // const [totalCount, setTotalCount] = useState<number>(0);
 
     // function: navigate 함수
 
@@ -37,8 +37,8 @@ export default function PopularPosts() {
             return filename.replace(BASE_PATH, '/');
         });
 
-        setFilePathList(cleanedFilePaths);
-        setTotalCount(targetFiles.length);
+        // setFilePathList(cleanedFilePaths);
+        // setTotalCount(targetFiles.length);
 
         // 모든 파일을 Promise.all로 한 번에 처리
         const fetchMarkdownFiles = targetFiles.map((postPath, index) => {
