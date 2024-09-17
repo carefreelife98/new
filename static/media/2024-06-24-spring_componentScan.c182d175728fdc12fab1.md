@@ -1,14 +1,12 @@
 ---
 title: "[Spring Basic] Spring - 컴포넌트 스캔 (Component Scan) 이란 ?"
+date: "24. 06. 24"
 categories:
   - Spring-Basic
 tags:
-  - Spring-Basic
-toc: true
-toc_sticky: true
-toc_label: "Carefree to See"
-header:
-  teaser: "/assets/images/Spring/SpringBasic/spring_component_teaser.png"
+  - Spring
+  - Java
+teaser: "/assets/images/Spring/SpringBasic/spring_component_teaser.png"
 ---
 <!-- Created by Chae Seungm Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 
