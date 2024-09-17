@@ -6,7 +6,7 @@ import {useNavigate, useParams} from "react-router-dom";
 import {POST_DETAIL_PATH} from "../../constants";
 
 export default function PostsByCategory() {
-    // state: 최상위 카테고링 이름 상태
+    // state: 최상위 카테고리 이름 상태
     const {categoryName, subCategoryName} = useParams();
     // state: 해당 카테고리에 속한 전체 포스팅 파일의 경로 리스트 상태
     const [filePathList, setFilePathList] = useState<string[]>([]);
@@ -21,6 +21,7 @@ export default function PostsByCategory() {
     // event handler: 포스트 카드 클릭 핸들러
     const onPostCardClickHandler = (fileName: string) => {
         if (categoryName && subCategoryName && fileName) {
+            console.log(categoryName + subCategoryName + fileName);
             navigate(POST_DETAIL_PATH(categoryName, subCategoryName, fileName));
             return;
         }

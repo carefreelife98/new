@@ -1,7 +1,7 @@
 {
   "header":{
     "title": "CarefreeLife98's Tech Blog",
-    "subtitle": "< Build Carefree Life !! >",
+    "subtitle": "< Build Carefree Life >",
     "navbar":{
       "writer": "CarefreeLife98",
       "categories": [
@@ -12,7 +12,10 @@
       ]
     }
   },
-
+  "popular_post_list": {
+    "category": "Main",
+    "subcategory": "popular"
+  },
   "posts": {
     "sidebar_title": "My Posts",
     "categories": [
@@ -67,6 +70,11 @@
     ]
   },
   "writer_info": {
+    "markdown": {
+      "category": "Main",
+      "subcategories": ["main"],
+      "filename": "author-main"
+    },
     "job": "Backend Engineer",
     "name": "채 승 민",
     "description": "만나서 반갑습니다. 채승민입니다.",

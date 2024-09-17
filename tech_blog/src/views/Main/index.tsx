@@ -4,6 +4,7 @@ import {useEffect, useState} from "react";
 import "highlight.js/styles/a11y-dark.css";
 import Markdown from "../../components/Markdown";
 import PostMarkdown from "../../interfaces/postMarkdown";
+import PopularPosts from "./PopularPosts";
 
 export default function Main() {
 
@@ -11,13 +12,14 @@ export default function Main() {
 
     useEffect(() => {
 
-        const category = config.posts.categories[0];
-        const subCategory = category.subcategories;
+        const category = config.writer_info.markdown.category;
+        const subCategory = config.writer_info.markdown.subcategories[0];
+        const filename = config.writer_info.markdown.filename;
 
         const testProps: PostMarkdown = {
-            category: category.category,
-            subCategory: subCategory[0],
-            fileName: 'test-markdown.md'
+            category: category,
+            subCategory: subCategory,
+            fileName: filename
         };
 
         setMarkdownProps(testProps);
@@ -31,6 +33,7 @@ export default function Main() {
                     {markdownProps &&
                         <Markdown category={markdownProps.category} subCategory={markdownProps.subCategory} fileName={markdownProps.fileName} />
                     }
+                    <PopularPosts />
                 </div>
             </div>
         </div>
