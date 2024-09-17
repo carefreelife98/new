@@ -28,7 +28,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 ## 0-1-1. 주제 선정 배경
 ![path](/assets/images/INU/CapstoneDesign/smart_barricade3.png)
-- 최근 사회에 발생하고 있는 여러 이슈들을 모아 프로그래밍을 통해 해결 할 수 있을지에 대한 브레인 스토밍 진행 결과, 여러 대책 도입 이후에도 꾸준히 발생하며 사회적으로 큰 화두가 된 **"우회전 시 발생하는 교통사고"** 를 프로그래밍적으로 해결해보기로 하였다.
+- 최근 사회에 발생하고 있는 여러 이슈들을 모아 프로그래밍을 통해 해결 할 수 있을지에 대한 브레인 스토밍 진행 결과, 여러 대책 도입 이후에도 꾸준히 발생하며 사회적으로 큰 화두가 된 **"우회전 시 발생하는 교통사고"** 를 프로그래밍적으로 해결해보기로 하였다.
 
 ## 0-1-2. 사고 위험 요인
 ![path](/assets/images/INU/CapstoneDesign/smart_barricade4.png)
@@ -61,7 +61,11 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 
 ![path](/assets/images/INU/CapstoneDesign/smart_barricade7.png)
-`구현하며 직접 그려본 흐름도`
+
+```bash
+구현하며 직접 그려본 흐름도
+```
+
 - 이번 프로젝트에서 내가 맡아 구현한 부분은 다음과 같다.
   - **Yolo v8 모델을 사용한 Python 기반의 실시간 객체 탐지 서버 구축**
   - **Spring Boot 기반의 Admin Monitoring Server 구축**
