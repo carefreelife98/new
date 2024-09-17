@@ -4,11 +4,7 @@ categories:
   - aws-saa
 tags:
   - AWS-SAA
-toc: true
-toc_sticky: true
-toc_label: "Carefree to See"
-header:
-   teaser: "/assets/images/aws-saa2.png"
+teaser: "/assets/images/aws-saa2.png"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 

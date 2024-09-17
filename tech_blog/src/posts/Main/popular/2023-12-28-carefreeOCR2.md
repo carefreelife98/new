@@ -4,11 +4,7 @@ categories:
   - toy-project
 tags:
   - toy-project
-toc: true
-toc_sticky: true
-toc_label: "Carefree to See"
-header:
-   teaser: "/assets/images/Projects/ToyProjects/carefreeocrV2_teaser.png"
+teaser: "/assets/images/Projects/ToyProjects/carefreeocrV2_teaser.png"
 youtubeurl: https://youtu.be/ZPrLB_rOsJY
 ---
 <!-- Created by Chae Seung Min - CarefreeLife

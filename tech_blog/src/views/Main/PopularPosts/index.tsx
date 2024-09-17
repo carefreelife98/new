@@ -2,6 +2,9 @@ import {useEffect, useState} from "react";
 import FrontMatter from "../../../interfaces/frontmatter";
 import fm from "front-matter";
 import config from '../../../tech_blog_config.json';
+import CategoryList from "../../../components/CategoryList";
+import './style.css';
+import TagList from "../../../components/TagList";
 
 export default function PopularPosts() {
 
@@ -61,13 +64,35 @@ export default function PopularPosts() {
 
     return (
         <div id='cfl-tech-blog-main-popular-posts-wrapper'>
-            <div id='cfl-tech-blog-main-popular-posts-container'>
-                {(popularPostMetaDataList !== null && popularPostMetaDataList.length > 1) ?
-                    <div>{'메인 포스트'}</div>
-                    :
-                    <div>{'해당 데이터가 존재하지 않습니다.'}</div>
-                }
-            </div>
+            <h2 className='cfl-tech-blog-main-popular-posts-desc'>{'👍🏻 인기 TOP 포스트'}</h2>
+            {(popularPostMetaDataList !== null && popularPostMetaDataList.length > 1) ?
+                <div className='cfl-tech-blog-main-popular-posts-container'>
+                    <div className='cfl-tech-blog-main-popular-posts-1st-container'>
+                        <div className='cfl-tech-blog-main-popular-posts-1st-left-container'>
+                            <div className='cfl-tech-blog-main-popular-posts-1st-left-image-box'>
+                                <img src={`${process.env.PUBLIC_URL}${popularPostMetaDataList[0].teaser}`} alt={'popular-post-image'}/>
+                            </div>
+                            <div className='cfl-tech-blog-main-popular-posts-1st-left-info-box'>
+                                <div className='cfl-tech-blog-main-popular-posts-1st-left-date'>
+                                    {popularPostMetaDataList[0].date}
+                                </div>
+                                <div className='cfl-tech-blog-main-popular-posts-1st-left-title'>
+                                    {popularPostMetaDataList[0].title}
+                                </div>
+                                <CategoryList categoryList={popularPostMetaDataList[0].categories} />
+                                <TagList tagList={popularPostMetaDataList[0].tags} />
+                            </div>
+                        </div>
+                        <div className='cfl-tech-blog-main-popular-posts-1st-right-container'>
+                            <div className='cfl-tech-blog-main-popular-posts-1st-primary'></div>
+                            <div className='cfl-tech-blog-main-popular-posts-1st-secondary'></div>
+                        </div>
+                    </div>
+                    <div className='cfl-tech-blog-main-popular-posts-2st-container'></div>
+                </div>
+                :
+                <div>{'해당 데이터가 존재하지 않습니다.'}</div>
+            }
         </div>
     );
 }

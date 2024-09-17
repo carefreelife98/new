@@ -4,11 +4,7 @@ categories:
   - Kotlin
 tags:
   - Kotlin
-toc: true
-toc_sticky: true
-toc_label: "Carefree to See"
-header:
-   teaser: "/assets/images/INU/Kotlin/kotlinTeaser.svg"
+teaser: "/assets/images/INU/Kotlin/kotlinTeaser.svg"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 

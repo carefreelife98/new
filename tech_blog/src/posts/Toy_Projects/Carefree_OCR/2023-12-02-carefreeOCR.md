@@ -4,11 +4,7 @@ categories:
   - toy-project
 tags:
   - toy-project
-toc: true
-toc_sticky: true
-toc_label: "Carefree to See"
-header:
-   teaser: "/assets/images/Projects/ToyProjects/CarefreeOCR0.png"
+teaser: "/assets/images/Projects/ToyProjects/CarefreeOCR0.png"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 

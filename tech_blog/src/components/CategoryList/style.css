@@ -1,0 +1,15 @@
+#cfl-tech-blog-category-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    overflow-wrap: break-word;
+}
+
+.cfl-tech-blog-category {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 3px;
+    /*border: 1px solid #ddd;*/
+    border-radius: 8px;
+}

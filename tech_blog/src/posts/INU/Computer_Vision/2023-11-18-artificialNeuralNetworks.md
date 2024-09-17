@@ -4,11 +4,7 @@ categories:
   - INU-ComputerVision
 tags:
   - INU-ComputerVision
-toc: true
-toc_sticky: true
-toc_label: "Carefree to See"
-header:
-   teaser: "/assets/images/INU/ComputerVision/artificialNeuralNetworks12.png"
+teaser: "/assets/images/INU/ComputerVision/artificialNeuralNetworks12.png"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 

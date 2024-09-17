@@ -4,11 +4,7 @@ categories:
   - INU-ComputerArchitecture
 tags:
   - INU-ComputerArchitecture
-toc: true
-toc_sticky: true
-toc_label: "Carefree to See"
-header:
-   teaser: "/assets/images/INU/ComputerArchitecture/SequentialCircuit3.png"
+teaser: "/assets/images/INU/ComputerArchitecture/SequentialCircuit3.png"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 

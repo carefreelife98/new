@@ -4,11 +4,7 @@ categories:
   - Cloud-Wave-Project
 tags:
   - Cloud-Wave-Project
-toc: true
-toc_sticky: true
-toc_label: "Carefree to See"
-header:
-   teaser: "/assets/images/CloudWave/project/ci_gitact.png"
+teaser: "/assets/images/CloudWave/project/ci_gitact.png"
 youtubeurl: https://youtu.be/ZPrLB_rOsJY
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
