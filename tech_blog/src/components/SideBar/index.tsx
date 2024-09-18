@@ -8,8 +8,8 @@ import {POST_BY_CAT_PATH} from "../../constants";
 
 export default function SideBar() {
 
-    // state: 각 서브 카테고리 별 게시물 수 상태
-    const [postCount, setPostCount] = useState<number>(0);
+    // state: 전체 게시물 수 상태
+    const [totalCount, setTotalCount] = useState<number>(0);
 
     const navigate = useNavigate();
 
@@ -30,6 +30,14 @@ export default function SideBar() {
 
         return targetFiles.length;
     }
+
+    useEffect(() => {
+
+        // require.context를 사용하여 전체 마크다운 파일 개수 가져오기
+        const totalCount = require.context('../../posts', true, /\.md$/).keys().length;
+        setTotalCount(totalCount);
+
+    }, []);
 
     return (
         <div id='cfl-tech-blog-sidebar-wrapper'>
@@ -54,7 +62,7 @@ export default function SideBar() {
                 {/*<GoogleAnalytics /> //TODO: Client Side Render 환경 이슈에 어떤 꼼수로도 조회수 기능 불가.. */}
 
                 <div className='cfl-tech-blog-sidebar-category-box'>
-                    <div className='cfl-tech-blog-sidebar-category-title'>{config.posts.sidebar_title}</div>
+                    <div className='cfl-tech-blog-sidebar-category-title'>{config.posts.sidebar_title} <span className='cfl-tech-blog-sidebar-category-title-count'>({totalCount})</span></div>
                     {config.posts.categories &&
                         config.posts.categories.map((category : Category, index) => {
                             // 각 카테고리 객체의 첫 번째 키를 가져옴
@@ -68,7 +76,9 @@ export default function SideBar() {
                                     <div className='cfl-tech-blog-sidebar-sub-category-box'>
                                         {subCategories &&
                                             subCategories.map((subCategory: string, subIndex: number) => {
+                                                // 각 서브 카테고리 별 게시물 수 노출
                                                 const count: number = getTotalCountBySubCategory(categoryName, subCategory);
+
                                                 return (
                                                     <div key={subIndex} className='cfl-tech-blog-sidebar-sub-category' onClick={() => onSubCategoryButtonClickHandler(categoryName, subCategory)}>
                                                         {subCategory} {/* 하위 카테고리 */}

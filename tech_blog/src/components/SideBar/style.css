@@ -72,9 +72,15 @@
 }
 
 .cfl-tech-blog-sidebar-category-title {
+    display: flex;
+    gap: 5px;
     font-family: TmonMonsori;
     font-weight: 900;
     font-size: large;
+}
+
+.cfl-tech-blog-sidebar-category-title-count {
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .cfl-tech-blog-sidebar-big-category {
