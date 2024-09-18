@@ -1,12 +1,15 @@
 import './style.css'
 import config from '../../tech_blog_config.json'
 import Category from "../../interfaces/category";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {POST_BY_CAT_PATH} from "../../constants";
 // import GoogleAnalytics from "../GoogleAnalytics/GoogleAnalytics";
 
 export default function SideBar() {
+
+    // state: 각 서브 카테고리 별 게시물 수 상태
+    const [postCount, setPostCount] = useState<number>(0);
 
     const navigate = useNavigate();
 
@@ -14,6 +17,19 @@ export default function SideBar() {
         // alert('category clicked: ' + subCategory);
         navigate(POST_BY_CAT_PATH(categoryName, subCategory));
     };
+
+    function getTotalCountBySubCategory (categoryName: string, subCategoryName: string): number {
+        // require.context를 사용하여 특정 폴더 내의 파일을 가져오기
+        const markdownContext = require.context('../../posts', true, /\.md$/);
+        const BASE_PATH: string = `./${categoryName}/${subCategoryName}/`;
+
+        // 동적으로 카테고리와 서브카테고리로 필터링
+        const targetFiles = markdownContext.keys().filter((filename: string) => {
+            return filename.includes(BASE_PATH);
+        });
+
+        return targetFiles.length;
+    }
 
     return (
         <div id='cfl-tech-blog-sidebar-wrapper'>
@@ -51,11 +67,15 @@ export default function SideBar() {
                                     <div className='divider' />
                                     <div className='cfl-tech-blog-sidebar-sub-category-box'>
                                         {subCategories &&
-                                            subCategories.map((subCategory: string, subIndex: number) => (
-                                                <div key={subIndex} className='cfl-tech-blog-sidebar-sub-category' onClick={() => onSubCategoryButtonClickHandler(categoryName, subCategory)}>
-                                                    {subCategory} {/* 하위 카테고리 */}
-                                                </div>
-                                            ))
+                                            subCategories.map((subCategory: string, subIndex: number) => {
+                                                const count: number = getTotalCountBySubCategory(categoryName, subCategory);
+                                                return (
+                                                    <div key={subIndex} className='cfl-tech-blog-sidebar-sub-category' onClick={() => onSubCategoryButtonClickHandler(categoryName, subCategory)}>
+                                                        {subCategory} {/* 하위 카테고리 */}
+                                                        <span className='cfl-tech-blog-sidebar-sub-category-count'>({count})</span>
+                                                    </div>
+                                                )
+                                            })
                                         }
                                     </div>
                                 </div>

@@ -90,6 +90,8 @@
 }
 
 .cfl-tech-blog-sidebar-sub-category {
+    display: flex;
+    gap: 2px;
     padding: 5px;
     border-radius: 25px 25px;
     cursor: pointer;
@@ -97,4 +99,8 @@
 
 .cfl-tech-blog-sidebar-sub-category:hover {
     background-color: rgba(0, 0, 0, 0.05);
+}
+
+.cfl-tech-blog-sidebar-sub-category-count {
+    color: rgba(0, 0, 0, 0.5);
 }
