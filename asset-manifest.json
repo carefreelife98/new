@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/new/static/css/main.0e039a33.css",
-    "main.js": "/new/static/js/main.37d223cc.js",
+    "main.js": "/new/static/js/main.5daa2828.js",
     "static/media/2024-05-01-capstone-admin-server.md": "/new/static/media/2024-05-01-capstone-admin-server.a11d71187be140274a81.md",
     "static/media/2023-05-17-DataStructure-Tree.md": "/new/static/media/2023-05-17-DataStructure-Tree.1cd4fe2938cf39a31868.md",
     "static/media/2023-04-21-DataStructure-LinkedList.md": "/new/static/media/2023-04-21-DataStructure-LinkedList.0a73ede58ef8dbc82d25.md",
@@ -87,6 +87,7 @@
     "static/media/2023-09-10-IAM-Security.md": "/new/static/media/2023-09-10-IAM-Security.957f5078911d95660e75.md",
     "static/media/2023-09-10-AWS-Services.md": "/new/static/media/2023-09-10-AWS-Services.b8498de45e7d32e44723.md",
     "static/media/2023-06-12-Python-File_IO.md": "/new/static/media/2023-06-12-Python-File_IO.b71690802b23f3e8b525.md",
+    "static/media/author-main.md": "/new/static/media/author-main.483b789a364b9ff850a0.md",
     "static/media/2023-06-30-Day-5_Linux.md": "/new/static/media/2023-06-30-Day-5_Linux.47b5959d4899e523c850.md",
     "static/media/2023-09-10-Kotlin_when.md": "/new/static/media/2023-09-10-Kotlin_when.381f30788dceff45ac3f.md",
     "static/media/2023-09-10-Traffic.md": "/new/static/media/2023-09-10-Traffic.b25473a707a19dc4d219.md",
@@ -97,12 +98,11 @@
     "index.html": "/new/index.html",
     "static/media/2023-09-10-Network.md": "/new/static/media/2023-09-10-Network.808e7ba11602d301a829.md",
     "static/media/2023-09-10-aws-saa2.md": "/new/static/media/2023-09-10-aws-saa2.051c3471c8bd622f7de6.md",
-    "static/media/author-main.md": "/new/static/media/author-main.e992ecbe18da83baa5c3.md",
     "main.0e039a33.css.map": "/new/static/css/main.0e039a33.css.map",
-    "main.37d223cc.js.map": "/new/static/js/main.37d223cc.js.map"
+    "main.5daa2828.js.map": "/new/static/js/main.5daa2828.js.map"
   },
   "entrypoints": [
     "static/css/main.0e039a33.css",
-    "static/js/main.37d223cc.js"
+    "static/js/main.5daa2828.js"
   ]
 }
