@@ -16,7 +16,8 @@ const eslintConfig = [
       rules: {
         "@typescript-eslint/no-duplicate-enum-values": "off",
         "@next/next/no-img-element": "off",
-        "@typescript-eslint/no-unused-vars": "off"
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-explicit-any": "off",
       }
     })
 ];

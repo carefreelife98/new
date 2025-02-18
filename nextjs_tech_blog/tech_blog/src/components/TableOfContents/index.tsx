@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronRight } from "lucide-react";
+import {List} from "mdast-util-toc/lib";
 
 interface TableOfContentsProps {
     content: string;
@@ -26,7 +27,7 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
             .replace(/^-+|-+$/g, "");
     }
 
-    function renderToc(node: any, depth = 0): React.ReactNode {
+    function renderToc(node: List | undefined, depth = 0): React.ReactNode {
         if (!node || !node.children) return null;
 
         return (
