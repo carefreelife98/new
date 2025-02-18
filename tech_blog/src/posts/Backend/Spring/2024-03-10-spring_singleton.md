@@ -3,7 +3,8 @@ title: "[Spring Basic] Spring Singleton - 싱글톤 디자인 패턴 (스프링 
 categories:
   - Spring-Basic
 tags:
-  - Spring-Basic
+  - Spring
+  
 toc: true
 toc_sticky: true
 toc_label: "Carefree to See"

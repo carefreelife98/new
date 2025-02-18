@@ -13,7 +13,7 @@ export default function PopularPosts() {
     const categoryName = config.popular_post_list.category;
     const subCategoryName = config.popular_post_list.subcategory;
 
-    // state: 각 subCategory 별 모든 포스트의 Front matter 정보 리스트 상태
+    // state: 각 [subCategory] 별 모든 포스트의 Front matter 정보 리스트 상태
     const [popularPostMetaDataList, setPopularPostMetaDataList] = useState<FrontMatter[] | null>(null);
     // state: 해당 카테고리에 속한 전체 포스팅 파일의 경로 리스트 상태
     const [filePathList, setFilePathList] = useState<string[]>([]);

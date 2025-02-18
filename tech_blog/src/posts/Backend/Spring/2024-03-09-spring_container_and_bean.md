@@ -3,7 +3,8 @@ title: "[Spring Basic] Spring Container & Bean - ApplicationContext 와 BeanFact
 categories:
   - Spring-Basic
 tags:
-  - Spring-Basic
+  - Spring
+  
 toc: true
 toc_sticky: true
 toc_label: "Carefree to See"

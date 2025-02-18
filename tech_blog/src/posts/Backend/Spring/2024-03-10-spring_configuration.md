@@ -3,7 +3,8 @@ title: "[Spring Basic] Spring Configuration - 설정 정보 구성"
 categories:
   - Spring-Basic
 tags:
-  - Spring-Basic
+  - Spring
+  
 toc: true
 toc_sticky: true
 toc_label: "Carefree to See"

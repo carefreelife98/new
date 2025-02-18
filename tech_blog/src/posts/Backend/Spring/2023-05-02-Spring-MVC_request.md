@@ -1,9 +1,10 @@
 ---
 title: "Spring-MVC (4) 요청(Request)"
 categories:
-  - Spring-MVC
+  - Spring
 tags:
-  - Spring-MVC
+  - Spring
+  - Java
 toc: true
 toc_sticky: true
 toc_label: "Carefree to See"

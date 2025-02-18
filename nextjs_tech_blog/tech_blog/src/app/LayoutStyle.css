@@ -1,0 +1,32 @@
+#cfl-tech-blog-common-view {
+    min-width: 1440px;
+    width: 100%;
+    min-height: 2048px;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/*.sidebar-main-container {*/
+/*    width: 100%;*/
+/*    min-height: 100vh;*/
+/*    height: 100%;*/
+/*    display: flex;*/
+/*    !*flex-wrap: wrap; !* 자식 요소가 넘칠 경우 다음 줄로 이동 *!*!*/
+/*    box-sizing: border-box; !* 패딩과 크기 계산 포함 *!*/
+/*    gap: 50px;*/
+/*    justify-content: center;*/
+/*    padding-bottom: 30px;*/
+/*    background-color: rgba(255, 255, 255, 1);*/
+/*}*/
+
+.sidebar-main-container > * {
+    max-width: 100%; /* 부모 컨테이너 초과 방지 */
+    overflow-wrap: break-word; /* 긴 단어 줄바꿈 */
+    flex-shrink: 1; /* 부모 크기에 따라 축소 가능 */
+    box-sizing: border-box;
+}

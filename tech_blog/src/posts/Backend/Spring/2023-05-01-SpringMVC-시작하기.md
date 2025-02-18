@@ -1,9 +1,10 @@
 ---
 title: "Spring-MVC (2) 컨트롤러"
 categories:
-  - Spring-MVC
+  - Spring
 tags:
-  - Spring-MVC
+  - Spring
+  - Java
 toc: true
 toc_sticky: true
 toc_label: "Carefree to See"
