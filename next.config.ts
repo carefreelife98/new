@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
     // GitHub Pages에서 제공되는 서브 디렉토리 경로를 설정
     basePath: '/new',
     assetPrefix: '/new/',
+    env: {
+        NEXT_PUBLIC_IMAGE_URL: process.env.NEXT_PUBLIC_IMAGE_URL || '/assets/images',
+    },
 };
 
 module.exports = {
