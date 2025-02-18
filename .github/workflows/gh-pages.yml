@@ -18,17 +18,18 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: new/nextjs_tech_blog/tech_blog
+        working-directory: nextjs_tech_blog/tech_blog
 
       - name: Build
-        run: npm run build
-        working-directory: new/nextjs_tech_blog/tech_blog
+        run: npm run build && npm run export
+        working-directory: nextjs_tech_blog/tech_blog
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: new/nextjs_tech_blog/tech_blog/out
+          publish_dir: nextjs_tech_blog/tech_blog/out
+
 
 #name: github pages
 #
