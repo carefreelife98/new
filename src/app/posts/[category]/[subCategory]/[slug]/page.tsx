@@ -40,7 +40,7 @@ export default async function Post({ params }: PostPageProps) {
     );
 };
 
-interface path {
+interface pathInterface {
     category: string;
     subCategory: string;
     slug: string;
@@ -52,7 +52,7 @@ export async function generateStaticParams() {
 
     // posts 디렉토리 내의 category 디렉토리들을 가져옴
     const categories = fs.readdirSync(postsDir);
-    const paths: path[] = [];
+    const paths: pathInterface[] = [];
 
     categories.forEach((category) => {
         const categoryPath = path.join(postsDir, category);

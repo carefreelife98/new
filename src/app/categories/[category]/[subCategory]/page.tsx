@@ -1,3 +1,4 @@
+import techBlogConfig from '../../../../../tech_blog_config.json';
 import path from "path";
 import fs from "fs";
 import fm from "front-matter";
@@ -103,4 +104,25 @@ export default async function PostsByCategory({params}: PostsByCategoryPageProps
         </div>
 
     );
+}
+interface pathInterface {
+    category: string;
+    subCategory: string;
+}
+
+export async function generateStaticParams() {
+    const paths: pathInterface[] = [];
+
+    // config.posts.categories 배열을 순회합니다.
+    techBlogConfig.posts.categories.forEach((item) => {
+        const { category, subcategories } = item;
+        subcategories.forEach((subCategory) => {
+            paths.push({
+                category,
+                subCategory,
+            });
+        });
+    });
+
+    return paths;
 }
