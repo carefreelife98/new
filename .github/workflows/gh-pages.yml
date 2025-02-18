@@ -1,4 +1,4 @@
-name: github pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -7,50 +7,80 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout source code.
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-#      Client-Side-Rendering 환경 이슈로 시크릿 사용 불가..
-#      - name: Create a file with GitHub Secret
-#        run: |
-#            echo "$TECH_BLOG_SECRETS" > .env
-#        working-directory: ./tech_blog
-#        env:
-#          TECH_BLOG_SECRETS: ${{ secrets.TECH_BLOG_SECRETS }}
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
-        working-directory: ./tech_blog
-
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-        
-      # - name: Use Github Secrets
-      #   run: echo "REACT_APP_GITHUB_TOKEN = ${{ secrets.PORTFOLIO_GITHUB_TOKEN }}" > ./tech_blog/.env.local
-
-      # - name: Build
-      #   run: npm run build
-      #   working-directory: ./tech_blog
+        run: npm install
 
       - name: Build
-        env:
-          REACT_APP_GITHUB_TOKEN: ${{ secrets.TECH_BLOG_GITHUB_TOKEN }}
         run: npm run build
-        working-directory: ./tech_blog
-
-      - name: Remove Used Github Secrets
-        run: rm -rf .env.local
-        working-directory: ./tech_blog
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./tech_blog/build
+          publish_dir: ./out
+
+#name: github pages
+#
+#on:
+#  push:
+#    branches:
+#      - main
+#
+#jobs:
+#  deploy:
+#    runs-on: ubuntu-20.04
+#    steps:
+#      - name: Checkout source code.
+#        uses: actions/checkout@v2
+#
+##      Client-Side-Rendering 환경 이슈로 시크릿 사용 불가..
+##      - name: Create a file with GitHub Secret
+##        run: |
+##            echo "$TECH_BLOG_SECRETS" > .env
+##        working-directory: ./tech_blog
+##        env:
+##          TECH_BLOG_SECRETS: ${{ secrets.TECH_BLOG_SECRETS }}
+#
+#      - name: Install dependencies
+#        run: npm install --legacy-peer-deps
+#        working-directory: ./tech_blog
+#
+#      - name: Cache dependencies
+#        uses: actions/cache@v2
+#        with:
+#          path: ~/.npm
+#          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+#          restore-keys: |
+#            ${{ runner.os }}-node-
+#
+#      # - name: Use Github Secrets
+#      #   run: echo "REACT_APP_GITHUB_TOKEN = ${{ secrets.PORTFOLIO_GITHUB_TOKEN }}" > ./tech_blog/.env.local
+#
+#      # - name: Build
+#      #   run: npm run build
+#      #   working-directory: ./tech_blog
+#
+#      - name: Build
+#        env:
+#          REACT_APP_GITHUB_TOKEN: ${{ secrets.TECH_BLOG_GITHUB_TOKEN }}
+#        run: npm run build
+#        working-directory: ./tech_blog
+#
+#      - name: Remove Used Github Secrets
+#        run: rm -rf .env.local
+#        working-directory: ./tech_blog
+#
+#      - name: Deploy
+#        uses: peaceiris/actions-gh-pages@v3
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          publish_dir: ./tech_blog/build

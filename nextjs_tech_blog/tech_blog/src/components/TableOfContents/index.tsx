@@ -48,16 +48,15 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
                                         className="w-4 h-4 absolute -left-5 top-1 text-gray-400 transition-transform group-hover:text-gray-600 group-hover:rotate-90 duration-200"
                                     />
                                 )}
-                                <a
-                                    href={url}
-                                    className={`
-                    block py-1 px-2 rounded-md text-sm w-full
-                    hover:bg-gray-100 dark:hover:bg-gray-800
-                    text-gray-700 dark:text-gray-300
-                    hover:text-gray-900 dark:hover:text-gray-100
-                    transition-all duration-200
-                    ${depth === 0 ? 'font-medium' : 'font-normal'}
-                  `}
+                                <a href={url}
+                                   className={`
+                                       block py-1 px-2 rounded-md text-sm w-full
+                                       hover:bg-gray-100 dark:hover:bg-gray-800
+                                       text-gray-700 dark:text-gray-300
+                                       hover:text-gray-900 dark:hover:text-gray-100
+                                       transition-all duration-200
+                                       ${depth === 0 ? 'font-medium' : 'font-normal'}
+                                   `}
                                 >
                                     {headingText}
                                 </a>
@@ -74,7 +73,7 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
         <Card className="w-64">
             <CardHeader className="px-4 py-3 border-b">
                 <div className="flex items-center justify-between">
-                    <CardTitle className="text-lg font-semibold">Contents</CardTitle>
+                    <CardTitle className="text-lg font-semibold">목차</CardTitle>
                     <Button
                         variant="ghost"
                         size="sm"
