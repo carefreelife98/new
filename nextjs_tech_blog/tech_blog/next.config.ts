@@ -6,7 +6,9 @@ const nextConfig: NextConfig = {
     images: {
         unoptimized: true, // GitHub Pages 배포를 위해 필요
     },
-    basePath: '/new', // GitHub repository 이름
+    // GitHub Pages에서 제공되는 서브 디렉토리 경로를 설정
+    basePath: '/new',
+    assetPrefix: '/new/',
 };
 
 module.exports = {
