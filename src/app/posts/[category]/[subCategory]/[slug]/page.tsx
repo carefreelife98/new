@@ -71,6 +71,7 @@ export async function generateStaticParams() {
             files.forEach((file) => {
                 // 마크다운 파일인지 확인 (필요에 따라 확장자 처리)
                 if (file.endsWith('.md')) {
+                    file.replace('.md', '');
                     // slug는 파일 이름 그대로 사용 (원한다면 확장자를 제거할 수도 있음)
                     paths.push({
                         category,
