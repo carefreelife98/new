@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     images: {
         unoptimized: true, // GitHub Pages 배포를 위해 필요
     },
-    basePath: '/new/nextjs_tech_blog/tech_blog', // GitHub repository 이름
+    basePath: '/new', // GitHub repository 이름
 };
 
 module.exports = {
