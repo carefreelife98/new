@@ -31,26 +31,20 @@ img {
 
 .github-icon {
     border-radius: 50% 50%;
-    background-image: url("/assets/icons/github-mark-white.png");
+    background-image: url("/new/assets/icons/github-mark-white.png");
     background-color: rgba(0, 0, 0, 1);
 }
 
 .instagram-icon {
     border-radius: 50% 50%;
     background-color: rgba(0, 0, 0, 1);
-    background-image: url("/assets/icons/insta.png");
+    background-image: url("/new/assets/icons/insta.png");
 }
 
 .portfolio-icon {
     border-radius: 50% 50%;
     /*background-color: rgba(0, 0, 0, 1);*/
-    background-image: url("/assets/icons/default-profile-image.png");
-}
-
-.hashtag-icon {
-    border-radius: 50% 50%;
-    /*background-color: rgba(0, 0, 0, 1);*/
-    background-image: url("/assets/icons/slack_hash_icon.png");
+    background-image: url("/new/assets/icons/default-profile-image.png");
 }
 
 @layer base {
