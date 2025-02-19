@@ -8,7 +8,7 @@ export default function MainPage() {
 
     return (
         <div id='main-page-container' className='flex'>
-            <div id='main-page-wrapper' className='flex flex-col w-full gap-[100px] align-center justify-around'>
+            <div id='main-page-wrapper' className='flex flex-col w-full gap-[100px] items-center justify-around'>
                 <img
                     className="object-cover w-full h-full"
                     src={'https://capsule-render.vercel.app/api?type=waving&text=CarefreeLife!&color=gradient'}

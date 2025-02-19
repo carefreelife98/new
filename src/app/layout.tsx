@@ -5,7 +5,7 @@ import Footer from "@/components/Layouts/Footer";
 import BlogSideBar from "../components/SideBar/BlogSideBar";
 import { getMarkdownFileCount, getMarkdownFileCountByCategory } from "@/lib/MarkdownUtils";
 import MarkdownFileCount from "@/interfaces/markdownFileCount";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
 
 export const metadata = {
     title: "CarefreeLife98's Tech Blog",
@@ -28,11 +28,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     <div id="tech-blog-common-view" className="flex w-full min-w-[1440px]">
                         <BlogSideBar markdownFileCount={markdownFileCount}/>
                         <div className='flex flex-col'>
-                            {/*<div className="flex flex-col gap-2 px-2 py-2 h-screen bg-white shadow-lg rounded-lg p-6 flex-grow">*/}
-                                <Header />
-                                <main>{children}</main>
-                                <Footer/>
-                            {/*</div>*/}
+                            <Header />
+                            <main>{children}</main>
+                            <Footer/>
                         </div>
                     </div>
                 </SidebarProvider>
