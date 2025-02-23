@@ -5,13 +5,13 @@ categories:
   - Kotlin
 tags:
   - Kotlin
-teaser: "/assets/images/INU/Kotlin/kotlinTeaser.svg"
+thumbnail: "/assets/images/INU/Kotlin/kotlinthumbnail.svg"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 
 ---
 
-![path](/assets/images/INU/Kotlin/kotlinTeaser.svg)
+![path](/assets/images/INU/Kotlin/kotlinthumbnail.svg)
 
 # When
 > When 문 사용 시 조건식에 사용된 변수의 모든 경우의 수를 나열해주어야 함.

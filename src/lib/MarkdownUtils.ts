@@ -7,11 +7,13 @@ export function getFrontMatterByPath(filePath: string) {
     const target = fs.readFileSync(filePath, "utf-8");
     const {data} = matter(target);
     const frontMatter: FrontMatter = {
-        title: data.title || "Untitled",
-        date: data.date || "1970-01-01",
+        title: data.title || "CarefreeLife98's Tech Post Title",
+        author: data.author || "CarefreeLife98",
+        description: data.description || data.title || "CarefreeLife98's Tech Post",
+        date: data.date || "1998-01-16",
         categories: data.categories || [],
         tags: data.tags || [],
-        teaser: data.teaser || "",
+        thumbnail: data.thumbnail || "",
     };
 
     return frontMatter;
@@ -23,11 +25,13 @@ export function getPopularPosts(): FrontMatter[] {
         const fileContents = fs.readFileSync(filePath, "utf-8");
         const { data } = matter(fileContents); // Frontmatter 데이터 추출
         const frontMatter: FrontMatter = {
-            title: data.title || "Untitled",
-            date: data.date || "1970-01-01",
+            title: data.title || "CarefreeLife98's Tech Post Title",
+            author: data.author || "CarefreeLife98",
+            description: data.description || data.title || "CarefreeLife98's Tech Post",
+            date: data.date || "1998-01-16",
             categories: data.categories || [],
             tags: data.tags || [],
-            teaser: data.teaser || "",
+            thumbnail: data.thumbnail || "",
         };
 
         return frontMatter;
@@ -69,11 +73,13 @@ export function getLatestMarkdownFiles(): FrontMatterWithFilePath[] {
             const { data } = matter(fileContents); // Frontmatter 데이터 추출
             const frontMatter: FrontMatterWithFilePath = {
                 filepath: filePath.replace(postsDir, "posts").replace(/\.md$/, ""),
-                title: data.title || "Untitled",
-                date: data.date || "1970-01-01",
+                title: data.title || "CarefreeLife98's Tech Post Title",
+                author: data.author || "CarefreeLife98",
+                description: data.description || data.title || "CarefreeLife98's Tech Post",
+                date: data.date || "1998-01-16",
                 categories: data.categories || [],
                 tags: data.tags || [],
-                teaser: data.teaser || "",
+                thumbnail: data.thumbnail || "",
             };
             return frontMatter;
         })

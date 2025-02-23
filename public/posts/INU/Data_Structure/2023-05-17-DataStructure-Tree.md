@@ -7,7 +7,7 @@ categories:
 tags:
   - DataStructure
   - Tree
-teaser: "/assets/images/INU/datastructure/tree-in-data-structure.png"
+thumbnail: "/assets/images/INU/datastructure/tree-in-data-structure.png"
 ---
 <!-- Created by Chae Seungm Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io -->

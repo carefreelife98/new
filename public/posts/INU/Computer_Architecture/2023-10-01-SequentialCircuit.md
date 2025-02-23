@@ -5,7 +5,7 @@ categories:
   - INU-ComputerArchitecture
 tags:
   - INU-ComputerArchitecture
-teaser: "/assets/images/INU/ComputerArchitecture/SequentialCircuit3.png"
+thumbnail: "/assets/images/INU/ComputerArchitecture/SequentialCircuit3.png"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 

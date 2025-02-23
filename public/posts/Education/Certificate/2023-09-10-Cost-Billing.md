@@ -5,7 +5,7 @@ categories:
   - aws-saa
 tags:
   - AWS-SAA
-teaser: "/assets/images/aws-saa2.png"
+thumbnail: "/assets/images/aws-saa2.png"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 
@@ -13,7 +13,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 <div style="text-align: center;">
   <img src="/assets/images/aws-saa.png" alt="aws-saa_Procdess" /><br>
-  <a href="https://www.gcp-examquestions.com/course/aws-certified-solutions-architect-associate-saa-c02-actual-exam/">Teaser 사진 출처 : gcp-examquestions.com</a>
+  <a href="https://www.gcp-examquestions.com/course/aws-certified-solutions-architect-associate-saa-c02-actual-exam/">thumbnail 사진 출처 : gcp-examquestions.com</a>
 </div>
 
 # Cost / Billing

@@ -10,7 +10,7 @@ tags:
   - Deque
   - Array
   - C/C++
-teaser: "/assets/images/INU/queue.png"
+thumbnail: "/assets/images/INU/queue.png"
 ---
 
 # Data Structure :: 큐 (Queue)

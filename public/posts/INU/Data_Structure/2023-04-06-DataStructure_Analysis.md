@@ -5,7 +5,7 @@ categories:
   - INU-DataStructure
 tags:
   - DataStructure
-teaser: "/assets/images/INU/analysis.png"
+thumbnail: "/assets/images/INU/analysis.png"
 ---
 
 # Data Structure: Analysis

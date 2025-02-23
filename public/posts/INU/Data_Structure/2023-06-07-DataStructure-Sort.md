@@ -4,7 +4,7 @@ date: 23. 06. 07
 categories:
   - DataStructure
 
-teaser: "/assets/images/INU/datastructure/Pick_card.png"
+thumbnail: "/assets/images/INU/datastructure/Pick_card.png"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 

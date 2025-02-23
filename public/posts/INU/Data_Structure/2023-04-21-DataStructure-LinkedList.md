@@ -10,7 +10,7 @@ tags:
   - Array List
   - Linked List
   - C/C++
-teaser: "/assets/images/INU/linkedlist.png"
+thumbnail: "/assets/images/INU/linkedlist.png"
 ---
 
 ## 연결리스트 (Linked List)

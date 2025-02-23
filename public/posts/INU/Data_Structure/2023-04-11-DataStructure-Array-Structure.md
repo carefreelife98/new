@@ -8,7 +8,7 @@ tags:
   - Array
   - Structure
   - C/C++
-teaser: "/assets/images/INU/arraydef.png"
+thumbnail: "/assets/images/INU/arraydef.png"
 ---
 
 # Data Structure :: 배열 (Array)

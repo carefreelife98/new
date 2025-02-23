@@ -8,7 +8,7 @@ tags:
   - Java
   - Spring
   - API
-teaser: "/assets/images/Projects/ToyProjects/carefreeocrV2_teaser.png"
+thumbnail: "/assets/images/Projects/ToyProjects/carefreeocrV2_thumbnail.png"
 youtubeurl: https://youtu.be/ZPrLB_rOsJY
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
@@ -17,7 +17,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 # 1. Agenda
 
-![path](/assets/images/Projects/ToyProjects/carefreeocrV2_teaser.png)
+![path](/assets/images/Projects/ToyProjects/carefreeocrV2_thumbnail.png)
 
 회사에서 **매년 우편물 등기 영수증을 일일히 Excel 에 수작업으로 옮기는 작업** 을 하고 있는데,
 

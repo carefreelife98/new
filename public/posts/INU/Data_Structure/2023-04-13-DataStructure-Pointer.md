@@ -7,7 +7,7 @@ tags:
   - DataStructure
   - Pointer
   - C/C++
-teaser: "/assets/images/INU/pointer.png"
+thumbnail: "/assets/images/INU/pointer.png"
 ---
 
 # Data Structure :: 포인터 (Pointer)

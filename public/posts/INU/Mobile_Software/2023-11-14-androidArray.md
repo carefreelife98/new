@@ -5,7 +5,7 @@ categories:
   - INU-MobileSoftware
 tags:
   - Kotlin
-teaser: "/assets/images/INU/MobileSoftware/androidArray2.png"
+thumbnail: "/assets/images/INU/MobileSoftware/androidArray2.png"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 

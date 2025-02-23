@@ -31,11 +31,11 @@ export default function LatestPostCard({frontMatter}: LatestPostCardProps) {
     return (
         <Card className='flex flex-col items-center justify-between gap-4 hover:bg-gray-100 cursor-pointer contain-layout contain-paint relative' onClick={onPostCardClickHandler}>
             <CardHeader className='flex-1 flex items-center justify-center'>
-                {frontMatter.teaser &&
-                    <div className='relative' aria-description='teaser'>
+                {frontMatter.thumbnail &&
+                    <div className='relative' aria-description='thumbnail'>
                         <Image className='min-h-20'
-                               src={frontMatter.teaser}
-                               alt={`${frontMatter.title}-teaser`}
+                               src={frontMatter.thumbnail}
+                               alt={`${frontMatter.title}-thumbnail`}
                                width={0}
                                height={0}
                                sizes="50vw"

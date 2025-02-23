@@ -6,7 +6,7 @@ categories:
 tags:
   - INU-ComputerArchitecture
 
-teaser: "/assets/images/INU/ComputerArchitecture/microProgramEx3.png"
+thumbnail: "/assets/images/INU/ComputerArchitecture/microProgramEx3.png"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 

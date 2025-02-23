@@ -9,7 +9,7 @@ tags:
   - Iteration
   - Tower of Hanoi
   - C/C++
-teaser: "/assets/images/INU/recursion.png"
+thumbnail: "/assets/images/INU/recursion.png"
 ---
 ---
 # Data Structure :: 순환 (Recursion)

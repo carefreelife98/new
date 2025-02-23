@@ -6,7 +6,7 @@ categories:
 tags:
   - Spring
   - Java
-teaser: "/assets/images/Spring/SpringBasic/spring_component_teaser.png"
+thumbnail: "/assets/images/Spring/SpringBasic/spring_component_thumbnail.png"
 ---
 <!-- Created by Chae Seungm Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 

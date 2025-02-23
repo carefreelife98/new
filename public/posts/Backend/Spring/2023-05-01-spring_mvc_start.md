@@ -6,7 +6,7 @@ categories:
 tags:
   - Spring
   - Java
-teaser: "/assets/images/Spring/SpringMVC/rest_controller_1.png"
+thumbnail: "/assets/images/Spring/SpringMVC/rest_controller_1.png"
 ---
 <!-- Created by Chae Seungm Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 

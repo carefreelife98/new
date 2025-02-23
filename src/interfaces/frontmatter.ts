@@ -1,9 +1,11 @@
 export default interface FrontMatter {
     title: string;
+    description: string;
+    author: string;
     date: string;
     categories: string[];
     tags: string[];
-    teaser: string;
+    thumbnail?: string;
 };
 
 export interface FrontMatterWithFilename extends FrontMatter {

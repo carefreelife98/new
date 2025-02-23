@@ -6,7 +6,7 @@ categories:
 tags:
   - AWS
 
-teaser: "/assets/images/CloudWave/poster.png"
+thumbnail: "/assets/images/CloudWave/poster.png"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 

@@ -6,7 +6,7 @@ categories:
 tags:
   - DataStructure
 
-teaser: "/assets/images/INU/datastructure.png"
+thumbnail: "/assets/images/INU/datastructure.png"
 ---
 
 ## 자료구조(Data Structure)란?

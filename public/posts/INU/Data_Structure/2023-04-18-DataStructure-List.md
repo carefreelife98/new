@@ -10,7 +10,7 @@ tags:
   - Array List
   - Linked List
   - C/C++
-teaser: "/assets/images/INU/list.png"
+thumbnail: "/assets/images/INU/list.png"
 ---
 
 # Data Structure : List 란?

@@ -31,12 +31,12 @@ export default function PopularPostCarousel({latestPosts}: PopularPostCarouselPr
                     <CarouselItem key={index} >
                         <Card className="flex flex-col h-[720px]">
                             <CardHeader className="flex-1 flex items-center justify-center h-[560px]">
-                                {frontMatter.teaser && (
-                                    <div className="relative w-full h-full" aria-description="teaser">
+                                {frontMatter.thumbnail && (
+                                    <div className="relative w-full h-full" aria-description="thumbnail">
                                         <Image
                                             className="object-cover w-full h-full"
-                                            src={frontMatter.teaser}
-                                            alt={`${frontMatter.title}-teaser`}
+                                            src={frontMatter.thumbnail}
+                                            alt={`${frontMatter.title}-thumbnail`}
                                             layout="fill" // 부모의 크기에 맞춤
                                         />
                                     </div>

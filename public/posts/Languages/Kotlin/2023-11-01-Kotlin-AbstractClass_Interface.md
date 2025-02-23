@@ -5,7 +5,7 @@ categories:
   - Kotlin
 tags:
   - Kotlin
-teaser: "/assets/images/INU/Kotlin/kotlinTeaser.svg"
+thumbnail: "/assets/images/INU/Kotlin/kotlinthumbnail.svg"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 

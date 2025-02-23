@@ -8,7 +8,7 @@ tags:
   - Array
   - Stack
   - C/C++
-teaser: "/assets/images/INU/danbistack.jpeg"
+thumbnail: "/assets/images/INU/danbistack.jpeg"
 ---
 
 # Data Structure :: 스택 (Stack)

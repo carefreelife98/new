@@ -7,7 +7,7 @@ categories:
 tags:
   - DataStructure
   - Tree
-teaser: "/assets/images/INU/datastructure/Prim.png"
+thumbnail: "/assets/images/INU/datastructure/Prim.png"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 

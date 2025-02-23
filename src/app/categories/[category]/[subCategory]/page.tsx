@@ -65,12 +65,12 @@ export default async function PostsByCategory({params}: PostsByCategoryPageProps
                                     return (
                                         <Link key={index} href={`/posts/${category}/${subCategory}/${postMetaData.filename.replace(".md", "")}`}>
                                             <div className="flex flex-col gap-2 bg-gray-50 p-5 border border-gray-300 rounded-lg shadow-md hover:bg-black/10 cursor-pointer h-[400px]"> {/* 고정 높이 추가 */}
-                                                {postMetaData.teaser && (
+                                                {postMetaData.thumbnail && (
                                                     <div className="flex-2 w-full h-1/2 flex items-center justify-center overflow-hidden rounded-t-2xl">
                                                         <img
                                                             className="w-full h-full object-cover"
-                                                            src={postMetaData.teaser}
-                                                            alt="teaser_image"
+                                                            src={postMetaData.thumbnail}
+                                                            alt="thumbnail_image"
                                                         />
                                                     </div>
                                                 )}

@@ -5,7 +5,7 @@ categories:
   - Cloud-Wave
 tags:
   - AWS
-teaser: "/assets/images/CloudWave/project/ci_gitact.png"
+thumbnail: "/assets/images/CloudWave/project/ci_gitact.png"
 youtubeurl: https://youtu.be/ZPrLB_rOsJY
 ---
 <!-- Created by Chae Seung Min - CarefreeLife

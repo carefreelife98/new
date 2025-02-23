@@ -8,7 +8,6 @@ import {useRouter} from "next/navigation";
 import {
     Sidebar,
     SidebarContent,
-    SidebarFooter,
     SidebarGroup,
     SidebarGroupContent,
     SidebarGroupLabel,
@@ -16,11 +15,8 @@ import {
     SidebarMenu,
     SidebarMenuBadge,
     SidebarMenuButton,
-    SidebarMenuItem,
     SidebarMenuSub,
     SidebarMenuSubButton,
-    SidebarMenuSubItem,
-    SidebarRail,
     SidebarTrigger
 } from "@/components/ui/sidebar";
 import {Collapsible, CollapsibleContent, CollapsibleTrigger} from "@/components/ui/collapsible";

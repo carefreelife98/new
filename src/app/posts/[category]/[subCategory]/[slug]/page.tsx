@@ -3,6 +3,7 @@ import path from "path";
 import fs from "fs";
 import FrontMatter from "@/interfaces/frontmatter";
 import matter from "gray-matter";
+import {Metadata} from "next";
 
 type Params = Promise<{ category: string; subCategory: string; slug: string }>;
 export interface PostPageProps {
@@ -16,14 +17,16 @@ export interface MarkdownProps {
 
 // ✅ Markdown 파일을 읽어와서 페이지에 렌더링
 export default async function Post({ params }: PostPageProps) {
-
     const { category, subCategory, slug } = await params;
+
+    // 파일명 디코딩
+    const decodedSlug = decodeURIComponent(slug as string);
     const filePath = path.join(
         process.cwd(),
         'public/posts',
         category,
         subCategory,
-        `${slug}.md`
+        `${decodedSlug}.md`
     );
 
     if (!fs.existsSync(filePath)) {
@@ -33,54 +36,111 @@ export default async function Post({ params }: PostPageProps) {
     const fileContent = fs.readFileSync(filePath, 'utf-8');
     const { content, data: metadata } = matter(fileContent);
 
+    // JSON-LD 데이터 추가
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: metadata.title,
+        datePublished: metadata.date,
+        author: {
+            '@type': 'Person',
+            name: metadata.author
+        },
+        description: metadata.description,
+        category: `${category}/${subCategory}`,
+    };
+
     return (
-        <div className='flex flex-shrink'>
-            <Markdown content={content} metadata={metadata as FrontMatter} />
-        </div>
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <div className='flex flex-shrink'>
+                <Markdown content={content} metadata={metadata as FrontMatter} />
+            </div>
+        </>
     );
 };
 
-interface pathInterface {
+export interface pathInterface {
     category: string;
     subCategory: string;
     slug: string;
 }
 
 export async function generateStaticParams() {
-    // posts 폴더 경로 설정 (프로젝트 루트 기준)
     const postsDir = path.join(process.cwd(), 'public', 'posts');
-
-    // posts 디렉토리 내의 category 디렉토리들을 가져옴
-    const categories = fs.readdirSync(postsDir);
     const paths: pathInterface[] = [];
 
-    categories.forEach((category) => {
-        const categoryPath = path.join(postsDir, category);
-        // category가 디렉토리인지 확인
-        if (!fs.statSync(categoryPath).isDirectory()) return;
+    try {
+        const categories = fs.readdirSync(postsDir);
 
-        // category 내의 subCategory 디렉토리들을 가져옴
-        const subCategories = fs.readdirSync(categoryPath);
-        subCategories.forEach((subCategory) => {
-            const subCategoryPath = path.join(categoryPath, subCategory);
-            // subCategory가 디렉토리인지 확인
-            if (!fs.statSync(subCategoryPath).isDirectory()) return;
+        for (const category of categories) {
+            const categoryPath = path.join(postsDir, category);
+            if (!fs.statSync(categoryPath).isDirectory()) continue;
 
-            // subCategory 내의 파일들을 읽음
-            const files = fs.readdirSync(subCategoryPath);
-            files.forEach((file) => {
-                // 마크다운 파일인지 확인 (필요에 따라 확장자 처리)
-                if (file.endsWith('.md')) {
-                    // slug는 파일 이름 그대로 사용 (원한다면 확장자를 제거할 수도 있음)
-                    paths.push({
-                        category,
-                        subCategory,
-                        slug: file.replace('.md', '')
-                    });
+            const subCategories = fs.readdirSync(categoryPath);
+            for (const subCategory of subCategories) {
+                const subCategoryPath = path.join(categoryPath, subCategory);
+                if (!fs.statSync(subCategoryPath).isDirectory()) continue;
+
+                const files = fs.readdirSync(subCategoryPath);
+                for (const file of files) {
+                    if (file.endsWith('.md')) {
+                        paths.push({
+                            category,
+                            subCategory,
+                            // URL 인코딩된 slug 사용
+                            slug: encodeURIComponent(file.replace('.md', ''))
+                        });
+                    }
                 }
-            });
-        });
-    });
+            }
+        }
+    } catch (error) {
+        console.error('Error generating static params:', error);
+    }
 
     return paths;
+}
+
+// Metadata 생성 함수 추가
+export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
+    const { category, subCategory, slug } = await params;
+    const filePath = path.join(
+        process.cwd(),
+        'public/posts',
+        category,
+        subCategory,
+        `${slug}.md`
+    );
+
+    const fileContent = fs.readFileSync(filePath, 'utf-8');
+    const { data: metadata } = matter(fileContent);
+
+    return {
+        title: metadata.title || "CarefreeLife98's Tech Post Title",
+        description: metadata.description || metadata.title || "CarefreeLife98's Tech Post",
+        authors: [{ name: metadata.author || "CarefreeLife98" }],
+        openGraph: {
+            title: metadata.title || "CarefreeLife98's Tech Post Title",
+            description: metadata.description || metadata.title || "CarefreeLife98's Tech Post",
+            type: 'article',
+            authors: metadata.author || "CarefreeLife98",
+            publishedTime: metadata.date,
+            images: metadata.thumbnail ? [
+                {
+                    url: metadata.thumbnail,
+                    alt: metadata.title,
+                }
+            ] : [],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: metadata.title || "CarefreeLife98's Tech Post Title",
+            description: metadata.description || metadata.title || "CarefreeLife98's Tech Post",
+            images: metadata.thumbnail ? [metadata.thumbnail] : [],
+        }
+    };
 }

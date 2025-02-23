@@ -12,7 +12,7 @@ tags:
   - Kafka
   - JPA
 
-teaser: "/assets/images/INU/CapstoneDesign/adminserver_album.png"
+thumbnail: "/assets/images/INU/CapstoneDesign/adminserver_album.png"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 

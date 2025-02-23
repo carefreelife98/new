@@ -5,7 +5,7 @@ categories:
   - INU-ComputerVision
 tags:
   - INU-ComputerVision
-teaser: "/assets/images/INU/ComputerVision/linearModel3.png"
+thumbnail: "/assets/images/INU/ComputerVision/linearModel3.png"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 

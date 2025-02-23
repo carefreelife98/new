@@ -5,7 +5,7 @@ categories:
   - toy-project
 tags:
   - toy-project
-teaser: "/assets/images/Projects/ToyProjects/CarefreeOCR0.png"
+thumbnail: "/assets/images/Projects/ToyProjects/CarefreeOCR0.png"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 

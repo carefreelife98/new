@@ -3,7 +3,7 @@ title: "[Data Structure] 정렬(Sort)(2) - 쉘 정렬(Shell Sort) / 합병 정�
 date: 23. 06. 09
 categories:
   - DataStructure
-teaser: "/assets/images/INU/datastructure/Shell_Sort_process.png"
+thumbnail: "/assets/images/INU/datastructure/Shell_Sort_process.png"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 

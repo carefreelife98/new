@@ -6,9 +6,14 @@ import BlogSideBar from "../components/SideBar/BlogSideBar";
 import { getMarkdownFileCount, getMarkdownFileCountByCategory } from "@/lib/MarkdownUtils";
 import MarkdownFileCount from "@/interfaces/markdownFileCount";
 import { SidebarProvider } from "@/components/ui/sidebar";
+import {Metadata} from "next";
 
-export const metadata = {
-    title: "CarefreeLife98's Tech Blog",
+export const metadata: Metadata = {
+    metadataBase: new URL('https://carefreelife98.github.io/new'),
+    title: {
+        default: "CarefreeLife98's Tech Blog",
+        template: '%s | CarefreeLife98\'s Tech Blog',
+    },
     description: "Managed by CarefreeLife98",
 };
 
