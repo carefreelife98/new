@@ -362,7 +362,7 @@ fun string4() {
 
 <br><br>
 
-[처음으로~](#)
+
 
 ### Task Lists
 

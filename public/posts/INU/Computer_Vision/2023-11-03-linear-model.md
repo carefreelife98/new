@@ -239,7 +239,7 @@ return 𝒘;
 
 <br><br>
 
-[처음으로~](#)
+
 
 ### Task Lists
 

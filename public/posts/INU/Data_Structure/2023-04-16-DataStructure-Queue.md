@@ -10,29 +10,27 @@ tags:
   - Deque
   - Array
   - C/C++
+teaser: "/assets/images/INU/queue.png"
+---
 
----
----
 # Data Structure :: 큐 (Queue)
 
 ```
 큐 (Queue) 란?
 ```
-<img src="/assets/images/INU/queue.png" alt="queue_Procdess" width="100%" min-width="200px" itemprop="image">`사진출처:`[freepik](https://www.freepik.com/free-photos-vectors/people-queue)<br><br>
-**<span style="color:red">`"먼저 들어온 데이터가 먼저 나가는 FIFO(First-In First-Out) 특성을 가진 자료구조이다."`</span>**<br>
-- **<span style="color:green">큐 (Queue)는 새로운 데이터가 뒤에서 추가되고, 앞에서 데이터가 하나씩 삭제되는 구조를 가지고 있다.</span>**
+<img src="/assets/images/INU/queue.png" alt="queue_Procdess" />`사진출처:`[freepik](https://www.freepik.com/free-photos-vectors/people-queue)<br><br>
+- **큐 (Queue)는 새로운 데이터가 뒤에서 추가되고, 앞에서 데이터가 하나씩 삭제되는 구조를 가지고 있다.**
+  - **`"먼저 들어온 데이터가 먼저 나가는 FIFO(First-In First-Out) 특성을 가진 자료구조이다."`**
 - 스택(Stack)과의 구조상으로 다른 점
   - 스택: 데이터의 삽입과 삭제가 같은 위치(top)에서 일어난다.
   - 큐: 데이터의 삽입은 후단(rear)에서, 삭제는 전단(front) 에서 일어난다.
 - 큐도 스택과 마찬가지로 배열과 연결 리스트를 이용하여 구현할 수 있다.
-<img src="/assets/images/INU/queuestrc.png" alt="queuestrc_Procdess" width="100%" min-width="200px" itemprop="image">`사진출처:`[geeksforgeeks](https://www.geeksforgeeks.org/queue-data-structure/)
+
+<img src="/assets/images/INU/queuestrc.png" alt="queuestrc_Procdess" />`사진출처:`[geeksforgeeks](https://www.geeksforgeeks.org/queue-data-structure/)
+
 <br><br>
 
 ## 큐의 ADT
-
-```
-큐 ADT
-```
 
 ```c#
 // 큐의 ADT는 스택의 ADT 와 거의 유사하다.
@@ -68,16 +66,13 @@ tags:
 
 <br><br>
 
-```
-큐의 삽입(enqueue) , 삭제(dequeue) 연산
-```
+## 큐의 삽입(enqueue) , 삭제(dequeue) 연산
 
-> <img src="/assets/images/INU/endequeue.png" alt="endequeue_Procdess" width="100%" min-width="200px" itemprop="image">`큐의 삽입(enqueue) , 삭제(dequeue) 연산 과정`<br><br>
-- **삽입(enqueue):**
+<img src="/assets/images/INU/endequeue.png" alt="endequeue_Procdess">`큐의 삽입(enqueue) , 삭제(dequeue) 연산 과정`<br><br>
+- **`삽입(enqueue):`**
   - 큐에 요소를 추가하는 연산.
   - 큐의 제일 뒤에(rear) 새로운 요소를 추가한다.
-<br>
-- **삭제(dequeue):**
+- **`삭제(dequeue):`**
   - 큐의 요소를 삭제하는 연산.
   - 큐의 제일 앞의(front) 요소를 꺼내서 외부로 반환.
 
@@ -87,14 +82,13 @@ tags:
 선형 큐의 구현
 ```
 
->
+<img src="/assets/images/INU/arrqueue.png" alt="arrqueue_Procdess" />`선형 큐의 Process 과정`<br><br>
 - 정수형 1차원 배열을 정의한다.
 - enqueue, dequeue ADT를 위한 변수 front, rear를 선언한다.
-- **<span style="color:blue">`front는 큐에 삽입된 첫번째 요소, rear는 큐에 가장 마지막으로 삽입된 요소를 가리킨다.`</span>**
+- **`front는 큐에 삽입된 첫번째 요소, rear는 큐에 가장 마지막으로 삽입된 요소를 가리킨다.`**
   - front와 rear의 초기값은 -1 이다.
   - 큐에 데이터가 enqueue 되면 rear를 하나 증가시킨후 해당 위치에 데이터를 저장한다.
   - 큐에 데이터가 dequeue 되면 front를 하나 증가시킨후 front가 가리키는 위치에 있는 데이터를 삭제한다.
-<img src="/assets/images/INU/arrqueue.png" alt="arrqueue_Procdess" width="100%" min-width="200px" itemprop="image">`선형 큐의 Process 과정`<br><br>
 
 ```c
 // 간단한 선형 큐의 구현
@@ -183,52 +177,43 @@ int main(void) {
 
 }
 ```
-<img src="/assets/images/INU/queue1.png" alt="queue1_Procdess" width="100%" min-width="200px" itemprop="image">`선형 큐 실행 결과`<br><br>
+
+<img src="/assets/images/INU/queue1.png" alt="queue1_Procdess">`선형 큐 실행 결과`<br><br>
 
 ## 원형 큐 (Circular Queue)
 
-```
-원형 큐의 구현
-```
+### 원형 큐?
 
->
+<img src="/assets/images/INU/circularq.png" alt="circularq_Procdess">`원형 큐 (Circular queue)`<br><br>
 - 선형 큐의 ADT를 보면 찝찝한 부분이 보인다.
-- 큐의 삽입과 삭제 연산을 도와주는 front 와 rear 변수의 값이 연산이 이루어질수록 한없이 증가한다는 것이다.
-- 이 경우 data[] 배열의 끝에 도달하게 되면 front 변수가 증가하며 지나온 비어있는 이전 배열 공간을 사용하지 못한다.
+  - 큐의 삽입과 삭제 연산을 도와주는 front 와 rear 변수의 값이 연산이 이루어질수록 한없이 증가한다는 것이다.
+  - 이 경우 data[] 배열의 끝에 도달하게 되면 front 변수가 증가하며 지나온 비어있는 이전 배열 공간을 사용하지 못한다.
 - 배열내의 요소들을 이동시켜 해결할 수 있지만 비효율적이기에 원형 큐가 개발되었다.
-<img src="/assets/images/INU/circularq.png" alt="circularq_Procdess" width="100%" min-width="200px" itemprop="image">`원형 큐 (Circular queue)`<br><br>
 
-☝🏻 위 그림처럼 배열을 선형이 아닌 원형으로 생각해보자. ☝🏻<br><br>
-front와 rear의 값이 배열의 끝인(MAX_QUEUE_SIZE - 1)에 도달하게 되면<br>다음에 증가되는 값은 data[0] 에 저장되도록 구현하는 것이다.<br><br>
-실제 배열이 원형으로 변화 되는 것은 아니지만 개념상으로 배열 data[]의 인덱스에 변화를 주는 것이다.<br>
+<br><br>
 
-
-
->
+**`☝🏻 위 그림처럼 배열을 선형이 아닌 원형으로 생각해보자. ☝🏻`**
+- front와 rear의 값이 배열의 끝인(MAX_QUEUE_SIZE - 1)에 도달하게 되면, 다음에 증가되는 값은 data[0] 에 저장되도록 구현하는 것이다.
+  - 실제 배열이 원형으로 변화 되는 것은 아니지만 개념상으로 배열 data[]의 인덱스에 변화를 주는 것이다.
 - 원형 큐에서는 front와 rear의 개념에 약간의 변화가 생긴다.
-- front와 rear의 초기값은 -1 이 아닌 0 으로 설정.
-- 따라서 첫 데이터도 data[0] 이 아닌 data[1]부터 저장.
-- **<span style="color:blue">front는 항상 첫번째 요소의 하나 앞을 가리키며 rear는 마지막 요소를 가리킨다.</span>**
-<br><br>
-- 삽입 시: rear의 값 1증가 후 해당 위치에 요소 저장.
-- 삭제 시: front의 값 1증가 후 해당 위치의 요소 삭제 및 반환.
-<br><br>
+  - front와 rear의 초기값은 -1 이 아닌 0 으로 설정.
+  - 따라서 첫 데이터도 data[0] 이 아닌 data[1]부터 저장.
+- **`front는 항상 첫번째 요소의 하나 앞을 가리키며 rear는 마지막 요소를 가리킨다.`**
+  - 삽입 시: rear의 값 1증가 후 해당 위치에 요소 저장.
+  - 삭제 시: front의 값 1증가 후 해당 위치의 요소 삭제 및 반환.
 - 원형 큐의 공백 상태: front와 rear의 값이 같을 시.
 - 원형 큐의 포화 상태: front가 rear보다 한칸 앞에 있을 시.
-<br><br>
-<img src="/assets/images/INU/cirqproc.png" alt="cirqproc_Procdess" width="100%" min-width="200px" itemprop="image">`원형 큐 (Circular queue)의 동작`<br><br>
 
-> **<span style="color:red">원형 큐의 포화 상태 검사</span>**
-<br><br>
+<img src="/assets/images/INU/cirqproc.png" alt="cirqproc_Procdess">`원형 큐 (Circular queue)의 동작`<br><br>
+
+### 원형 큐의 포화 상태 검사
+
+<img src="/assets/images/INU/circularqfullemp.png" alt="circularqfullemp_Procdess">`원형 큐 (Circular queue) 의 상태 검사`<br><br>
 - 원형 큐는 한 칸의 자리를 비워둔다.
   - 배열의 모든 칸을 사용하게 되면 포화 및 공백 상태일때 모두 front와 rear의 값이 같아져 구분 할 수 없게 된다.
-<br><br>
-- 후에 요소들의 개수를 저장하고 있는 count 변수를 사용하게 되면 비워두지 않아도 된다.<br><br>
-- 원형 큐의 공백 상태 : front == rear
-- 원형 큐의 포화 상태 : front == (rear + 1) % MAX_QUEUE_SIZE
-<img src="/assets/images/INU/circularqfullemp.png" alt="circularqfullemp_Procdess" width="100%" min-width="200px" itemprop="image">`원형 큐 (Circular queue) 의 상태 검사`<br><br>
-
-
+  - 후에 요소들의 개수를 저장하고 있는 count 변수를 사용하게 되면 비워두지 않아도 된다.
+- `원형 큐의 공백 상태 :` front == rear
+- `원형 큐의 포화 상태 :` front == (rear + 1) % MAX_QUEUE_SIZE
 
 ```c
 // 공백 상태 검출 함수
@@ -243,19 +228,16 @@ int is_full(QueueType *q) {
 }
 ```
 
-## 원형 큐의 삽입, 삭제 알고리즘
+### 원형 큐의 삽입, 삭제 알고리즘
 
-```
-원형 큐의 삽입, 삭제 알고리즘
-```
-
-> - 원형 큐에서의 삽입, 삭제 알고리즘에서 중요한 점은<br>
-**<span style="color:blue">`삽입이나 삭제를 하기전에 front 와 rear 를 원형으로 회전시켜야 한다는 것이다.`</span>**
+- 원형 큐에서의 삽입, 삭제 알고리즘에서 중요한 점은 **`삽입이나 삭제를 하기전에 front 와 rear 를 원형으로 회전시켜야 한다는 것이다.`**
 - 원형 회전은 나머지 연산자 %를 이용하여 쉽게 구현 가능하다.
+
 ```
 front <- (front + 1) % MAX_QUEUE_SIZE;
 rear <- (rear + 1) % MAX_QUEUE_SIZE;
 ```
+
 - 위의 식에 의하여 front와 rear 값은 (MAX_QUEUE_SIZE - 1)에서 하나가 증가되면 0이 된다.
 - 즉, MAX_QUEUE_SIZE 가 5이면 front 와 rear 값은 0,1,2,3,4,0 과 같이 변화한다.
 
@@ -270,7 +252,7 @@ dequeue(Q):
   return Q[front];
 ```
 
-## 원형 큐의 구현
+### 원형 큐의 구현
 
 ```
 원형 큐를 C언어로 구현해보자.
@@ -379,33 +361,19 @@ int main(void) {
 }
 ```
 
+<img src="/assets/images/INU/rscirq.png" alt="rscirq_Procdess"/>`원형 큐 (Circular queue) 의 실행 결과`<br><br>
+
+## 덱 (deque)?
+<img src="/assets/images/INU/deque.png" alt="deque_Procdess"/>`덱의 구조`<br>
+- **`덱(deque)`** 은 double-ended queue의 줄임말 
+- **`큐의 전단(front)과 후단(rear) 에서 모두 삽입과 삭제가 가능한 큐.`**
+
 ```
-실행 결과
-```
-
-<img src="/assets/images/INU/rscirq.png" alt="rscirq_Procdess" width="100%" min-width="200px" itemprop="image">`원형 큐 (Circular queue) 의 실행 결과`<br><br>
-
-## 덱 (deque) 이란?
-
-```
-덱 (deque)
-```
-
-> - **`덱(deque)`**은 double-ended queue의 줄임말 
-- **<span style="color:green">`큐의 전단(front)과 후단(rear) 에서 모두 삽입과 삭제가 가능한 큐.`</span>**<br>
-<img src="/assets/images/INU/deque.png" alt="deque_Procdess" width="100%" min-width="200px" itemprop="image">`덱의 구조`<br>
-
 📣 하지만 여전히 큐의 중간에서 데이터의 삽입 및 삭제 등의 수정은 구현되지 않는다!! 📣
-
-
-<br>
-## 덱의 ADT
-
-```
-덱 ADT
 ```
 
->
+### 덱의 ADT
+
 ```c
 ∙객체: n개의 element형으로 구성된 요소들의 순서있는 모임
 ∙연산:  
@@ -424,38 +392,23 @@ int main(void) {
     - add_front(D) == push(S)
     - delete_front(D) == pop(S) == dequeue(Q)
     - add_rear(D) == enqueue(Q)
-<br>
 - 덱이 추가적으로 가지고 있는 연산들
     - get_front(D)
     - get_rear(D)
     - delete_rear(D)
 
-**<span style="color:green">사용 연산에 따른 덱의 구조 변화</span>**
-<br><br>
-덱의 front() 관련 연산만 사용 = Stack 처럼 사용가능
-<br><br>
-덱의 삽입은 rear()연산, 삭제는 front()연산 만을 사용 = Queue 처럼 사용가능
+### 사용 연산에 따른 덱의 구조 변화
+- 덱의 front() 관련 연산만 사용 = Stack 처럼 사용가능
+- 덱의 삽입은 rear()연산, 삭제는 front()연산 만을 사용 = Queue 처럼 사용가능
 
+### 덱의 연산
 
+<img src="/assets/images/INU/caldeque.png" alt="caldeque_Procdess">`덱의 연산 과정`<br><br>
 
-<br><br>
+### 배열을 이용한 덱의 구현
+- 원형 큐와 덱은 공통점이 많다.
 
-## 덱의 연산
-
-```
-덱의 연산
-```
-
-> <img src="/assets/images/INU/caldeque.png" alt="caldeque_Procdess" width="100%" min-width="200px" itemprop="image">`덱의 연산 과정`<br><br>
-
-
-## 배열을 이용한 덱의 구현
-
-```
-배열을 이용하여 덱을 구현해보자.
-```
-> - 원형 큐와 덱은 공통점이 많다.
-- 원형 큐에서 그대로 사용할 수 있는 연산들 🔽
+**`원형 큐에서 그대로 사용할 수 있는 연산들 🔽`**
 
 ```c
     - is_empty()
@@ -467,7 +420,10 @@ int main(void) {
     - delete_front()
     - get_front()
 ```
-- 새롭게 추가된 연산들 🔽
+
+<br><br>
+
+**`새롭게 추가된 연산들 🔽`**
 
 ```c
     - delete_rear() // 원형 큐에서와 다르게 반대 방향으로의 회전이 필요하다.
@@ -476,24 +432,21 @@ int main(void) {
 ```
 
 
-> <h1><span style="color:red">🔥 add_front() & delete_rear(): 🔥</span></h1>
+#### 🔥 add_front() & delete_rear() 🔥
+
+<img src="/assets/images/INU/caldeque.png" alt="caldeque_Procdess">`배열을 이용한 덱의 구현`
+
 - 원형 큐에서와 다르게 반대 방향으로의 회전이 필요하다.
 - front 나 rear 를 감소시켜야 한다.
 - 만약 음수가 된다면 MAX_DEQUE_SIZE 를 더해주어야 한다.
 - 따라서 다음과 같이 변경된다.
-<br><br>
+
 ```c
 front ◀️ (front - 1 + MAX_DEQUE_SIZE) % MAX_DEQUE_SIZE;
 rear ◀️ (rear - 1 + MAX_DEQUE_SIZE) % MAX_DEQUE_SIZE;
 ```
---warning}
 
-> <img src="/assets/images/INU/caldeque.png" alt="caldeque_Procdess" width="100%" min-width="200px" itemprop="image">`배열을 이용한 덱의 구현`
-
-<br><br>
-```
-배열을 이용하여 원형 덱을 구현해보자. - C언어
-```
+#### Source Code
 
 ```c
 #include<stdio.h>
@@ -616,7 +569,7 @@ int main(void)
 }
 ```
 
-> <img src="/assets/images/INU/rsarrdeque.png" alt="rsarrdeque_Procdess" width="100%" min-width="200px" itemprop="image">`배열을 이용한 원형 덱 실행 결과`
+<img src="/assets/images/INU/rsarrdeque.png" alt="rsarrdeque_Procdess">`배열을 이용한 원형 덱 실행 결과`
 
 ## 큐의 응용: 시뮬레이션
 
@@ -624,28 +577,26 @@ int main(void)
 고객과 서비스를 제공하는 장소의 대기 행렬을 큐를 사용하여 시뮬레이션 해보자.
 ```
 
-> 요구 사항
-- 직원: 1명
-- 대기행렬: 큐(Queue)
-- 고객마다의 입장 간격: random
-- 고객마다의 서비스 시간: random
-- 고객들은 입장 순서대로 서비스를 받는다.
-- 시뮬레이션이 끝나면 고객들의 평균 대기시간을 출력.
+### 요구 사항
+  - 직원: 1명
+  - 대기행렬: 큐(Queue)
+  - 고객마다의 입장 간격: random
+  - 고객마다의 서비스 시간: random
+  - 고객들은 입장 순서대로 서비스를 받는다.
+  - 시뮬레이션이 끝나면 고객들의 평균 대기시간을 출력.
 
-> <h1><span style="color:green">알고리즘</span></h1>
-    - 시뮬레이션은 하나의 반복 루프.
-    - 현재 시각을 나타내는 clock 변수 하나 증가.
-    - is_customer_arrived() 함수 호출
-        - 랜덤 난수를 생성 후 시뮬레이션 파라미터 변수인 arrival_prov() 와 비교하여 작으면 새로운 고객의 입장으로 판단.
-    - 고객의 ID, 도착시간, 서비스 시간 등의 정보를 만들어 구조체에 복사
-    - 고객 정보 구조체를 파라미터로 큐의 삽입함수 enqueue() 호출.
+### 알고리즘
+  - 시뮬레이션은 하나의 반복 루프.
+  - 현재 시각을 나타내는 clock 변수 하나 증가.
+  - is_customer_arrived() 함수 호출
+    - 랜덤 난수를 생성 후 시뮬레이션 파라미터 변수인 arrival_prov() 와 비교하여 작으면 새로운 고객의 입장으로 판단.
+  - 고객의 ID, 도착시간, 서비스 시간 등의 정보를 만들어 구조체에 복사
+  - 고객 정보 구조체를 파라미터로 큐의 삽입함수 enqueue() 호출.
 
-
-
-## 원형 큐를 이용한 시뮬레이션 구현
+## 구현: 원형 큐
 
 ```
-원형 큐를 사용해서 비즈니스 시뮬레이션을 구현해보자. - C언어
+원형 큐를 사용해서 비즈니스 시뮬레이션을 구현해보자.
 ```
 
 ```c
@@ -758,24 +709,9 @@ int main(void) {
 }
 ```
 
-<br><br>
+<br><br><br>
 
-최대한의 설명을 코드 블럭 내의 주석으로 달아 놓았습니다.<br><br>
-혹시 이해가 안가거나 추가적인 설명이 필요한 부분, 오류 등의 피드백은 언제든지 환영합니다!<br><br>
-긴 글 읽어주셔서 감사합니다. 큐 (Queue) 포스팅을 마칩니다.<br>
-
-
-
-<br><br>
-
-[처음으로~](#)
-
-
-
-<span style="color:grey">`참고: C언어로 쉽게 풀어쓴 자료구조 <개정 3판> 천인국, 공용해, 하상국 지음`</span><br><br><br>
-
-
-### Task Lists
+## Task Lists
 > 
 - [x] Data Structure : 스택 (Stack) 이란?
 - [x] 스택의 특징, 스택의 구조, 스택의 추상 데이터 타입(ADT), 스택의 연산

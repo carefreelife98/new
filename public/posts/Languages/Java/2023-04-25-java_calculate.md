@@ -15,7 +15,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 - 연산 : 주어진 식을 계산하여 결과를 얻어내는 과정
 >
-<img src="/assets/images/INU/java/calc.png" alt="calc_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Java의 연산`<br><br>
+<img src="/assets/images/INU/java/calc.png" alt="calc_Procdess"><br>`Java의 연산`<br><br>
 
 <br><br>
 
@@ -78,7 +78,7 @@ public class ArithmeticOperator {
   - 1 증가 혹은 감소 시키는 연산
     - ++, --
     >
-    <img src="/assets/images/INU/java/addcal.png" alt="addcal_Procdess" width="100%" min-width="200px" itemprop="image"><br>`++, -- 연산`
+    <img src="/assets/images/INU/java/addcal.png" alt="addcal_Procdess"><br>`++, -- 연산`
 
 <br><br>
 
@@ -91,7 +91,7 @@ public class ArithmeticOperator {
   a += b; // a = a + b 의 연산이 이루어져, a = 6, b는 3 그대로
   ```
   >
-  <img src="/assets/images/INU/java/addcal2.png" alt="addcal2_Procdess" width="100%" min-width="200px" itemprop="image"><br>`주요 대입 연산자`
+  <img src="/assets/images/INU/java/addcal2.png" alt="addcal2_Procdess"><br>`주요 대입 연산자`
 
 <br><br>
 
@@ -153,7 +153,7 @@ public class AssignmentIncDecOperator {
 
 <br><br>
 
-[처음으로~](#)
+
 
 
 

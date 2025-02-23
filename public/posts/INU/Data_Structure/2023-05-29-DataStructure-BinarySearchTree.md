@@ -40,7 +40,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 # 이진 탐색 트리에서의 탐색 연산 (순환 / 반복)
 
 **1. 순환적인 탐색 연산**
-><img src="/assets/images/INU/datastructure/BSTree_find.png" alt="BSTree_find_Procdess" width="100%" min-width="200px" itemprop="image"><br>`이진 탐색 트리의 탐색 과정`<br>
+><img src="/assets/images/INU/datastructure/BSTree_find.png" alt="BSTree_find_Procdess"><br>`이진 탐색 트리의 탐색 과정`<br>
 > - 현재 노드의 key값과 원하는 노드의 key값을 비교한 결과가 같으면 탐색이 성공적으로 끝난다.
 > - 비교한 결과가,
 >   - 주어진 key값이 루트 노드의 key값보다 작으면 해당 루트 노드의 왼쪽 자식을 기준으로 다시 탐색 시작.
@@ -103,7 +103,7 @@ Why? 1. 이진 탐색 트리에서는 "같은 키 값을 갖는 노드" 가 없�
      2. 탐색을 수행하며 "탐색을 실패한 위치에 새로운 노드를 삽입" 하기 때문.
 ```
 
-><img src="/assets/images/INU/datastructure/BSTreeSearch.png" alt="BSTreeSearch_Procdess" width="100%" min-width="200px" itemprop="image"><br>`이진 탐색 트리에서의 삽입 연산`<br>
+><img src="/assets/images/INU/datastructure/BSTreeSearch.png" alt="BSTreeSearch_Procdess"><br>`이진 탐색 트리에서의 삽입 연산`<br>
 > - 루트 노드에서부터 단말 노드까지 9를 탐색하여 같은 key(9)값을 가진 노드가 있는지 확인한다.
 >   - 같은 key 값을 가진 노드가 있으면 삽입불가.
 >   - 없으면 단말 노드까지 탐색을 수행하다가 실패하는 지점에 key(9)를 가진 노드를 삽입.
@@ -151,7 +151,7 @@ Why? 1. 이진 탐색 트리에서는 "같은 키 값을 갖는 노드" 가 없�
 
 >**Case 1: 삭제하려는 노드가 단말 노드일 경우**
 >
-><img src="/assets/images/INU/datastructure/BSTreeDeleteLeaf.png" alt="BSTreeDeleteLeaf_Procdess" width="100%" min-width="200px" itemprop="image"><br>`이진 탐색 트리에서의 삭제 연산 - 단말 노드`<br>
+><img src="/assets/images/INU/datastructure/BSTreeDeleteLeaf.png" alt="BSTreeDeleteLeaf_Procdess"><br>`이진 탐색 트리에서의 삭제 연산 - 단말 노드`<br>
 >- 단말 노드는 자식 노드가 없기에 해당 단말 노드만 삭제하면 된다.<br><br>
 >**단말노드의 삭제 과정**
 >1. 해당 단말 노드의 부모를 찾는다.
@@ -162,7 +162,7 @@ Why? 1. 이진 탐색 트리에서는 "같은 키 값을 갖는 노드" 가 없�
 
 >**Case 2: 삭제하려는 노드가 하나의 서브 트리만 가지고 있는 경우**
 >
-><img src="/assets/images/INU/datastructure/BSTreeDelete1Subtree.png" alt="BSTreeDelete1Subtree_Procdess" width="100%" min-width="200px" itemprop="image"><br>`이진 탐색 트리에서의 삭제 연산 - 하나의 서브트리를 가지고 있는 경우`<br>
+><img src="/assets/images/INU/datastructure/BSTreeDelete1Subtree.png" alt="BSTreeDelete1Subtree_Procdess"><br>`이진 탐색 트리에서의 삭제 연산 - 하나의 서브트리를 가지고 있는 경우`<br>
 >- 삭제될 노드가 하나의 서브 트리를 가지고 있는 경우,<br>
 >  자기 자신(노드)을 삭제하고 자신의 서브 트리를 자신의 부모 노드에게 붙여주면 된다.<br>
 
@@ -170,7 +170,7 @@ Why? 1. 이진 탐색 트리에서는 "같은 키 값을 갖는 노드" 가 없�
 
 >**Case 3: 삭제하려는 노드가 두 개의 서브 트리 모두 가지고 있는 경우**
 >
-><img src="/assets/images/INU/datastructure/BSTreeDeleteBothSubtree.png" alt="BSTreeDeleteBothSubtree_Procdess" width="100%" min-width="200px" itemprop="image"><br>`이진 탐색 트리에서의 삭제 연산 - 두 개의 서브트리 모두 가지고 있는 경우`<br>
+><img src="/assets/images/INU/datastructure/BSTreeDeleteBothSubtree.png" alt="BSTreeDeleteBothSubtree_Procdess"><br>`이진 탐색 트리에서의 삭제 연산 - 두 개의 서브트리 모두 가지고 있는 경우`<br>
 >- 관건은 "두 개의 서브트리 중 어떤 노드를 삭제 노드 위치로 가져올 것인가" 이다.<br>
 >- 삭제되는 노드와 가장 값이 근접한 노드를 가져와야 한다.<br><br>
 >  <img src="/assets/images/INU/datastructure/BSTreeDeleteMostNear.png" alt="BSTreeDeleteMostNear_Procdess" width="70%" min-width="200px" itemprop="image"><br>`삭제될 노드와 가장 비슷한 값을 가진 노드 - 후계자 노드`<br>
@@ -389,7 +389,7 @@ int main(void) {
 
 # 이진 탐색 트리의 성능 분석
 
-><img src="/assets/images/INU/datastructure/BSTree_eval.png" alt="BSTree_eval_Procdess" width="100%" min-width="200px" itemprop="image"><br>`균형 이진 탐색 트리인 경우 최선의 시간 복잡도를 가진다.`<br><br>
+><img src="/assets/images/INU/datastructure/BSTree_eval.png" alt="BSTree_eval_Procdess"><br>`균형 이진 탐색 트리인 경우 최선의 시간 복잡도를 가진다.`<br><br>
 
 >- 이진 탐색 트리에서의 탐색삽입, 삭제 연산의 시간 복잡도는 트리의 높이에 비례한다.
 >  - 트리의 높이가 h이면, O(h) 가 된다.
@@ -422,9 +422,9 @@ int main(void) {
 
 <br><br>
 
-[처음으로~](#)
 
-<span style="color:grey">`참고: C언어로 쉽게 풀어쓴 자료구조 <개정 3판> 천인국, 공용해, 하상국 지음`</span><br><br><br>
+
+<br><br><br>
 
 ### Task Lists
 

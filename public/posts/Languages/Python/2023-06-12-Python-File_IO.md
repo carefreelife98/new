@@ -42,7 +42,7 @@ with open('파일명', '모드') as fileObj:
 # 파일 입출력 모드 & 내장 메소드
 
 > - 파일 입출력 모드<br>
-> <img src="/assets/images/INU/python/12_FileMode.png" alt="12_FileMode_Procdess" width="100%" min-width="200px" itemprop="image"><br>`파일 입출력 모드`<br><br>
+> <img src="/assets/images/INU/python/12_FileMode.png" alt="12_FileMode_Procdess"><br>`파일 입출력 모드`<br><br>
 > - 내장 메소드 (입력)<br>
 > ```python
 > // 세가지 메소드는 줄바꿈 문자("\n")을 포함한다.
@@ -123,7 +123,7 @@ with open('파일명', '모드') as fileObj:
 
 <br><br>
 
-[처음으로~](#)
+
 
 
 ### Task Lists

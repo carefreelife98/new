@@ -66,7 +66,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 <br><br>
 
 **하드웨어 관점에서의 추상화**<br>
-<img src="/assets/images/CloudWave/Kubernetes/hardwareAbstract.png" alt="hardwareAbstract_Procdess" width="100%" min-width="200px" itemprop="image"><br>`하드웨어 관점에서의 추상화`<br>
+<img src="/assets/images/CloudWave/Kubernetes/hardwareAbstract.png" alt="hardwareAbstract_Procdess"><br>`하드웨어 관점에서의 추상화`<br>
 **하드웨어와 소프트웨어가 만나는 경계선 - OS Kernel**<br>
 > **OS의 Kernel은 어떻게 추상화 해야 하는가?**
 
@@ -77,25 +77,25 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 **소프트웨어 관점에서의 추상화**<br>
 
-<img src="/assets/images/CloudWave/Kubernetes/softwareAbstrct.png" alt="softwareAbstrct_Procdess" width="100%" min-width="200px" itemprop="image"><br>`소프트웨어 관점에서의 추상화`<br>
+<img src="/assets/images/CloudWave/Kubernetes/softwareAbstrct.png" alt="softwareAbstrct_Procdess"><br>`소프트웨어 관점에서의 추상화`<br>
 - **Application을 이미지화 하는 것.**
   - 복잡한 내부 요소는 감추고, 컨테이너 위에서 사용자가 필요로 하는 기능만을 수행.
 
 <br><br>
 
 **관심사의 분리**<br>
-<img src="/assets/images/CloudWave/Kubernetes/SeperationOfConcern.png" alt="SeperationOfConcern_Procdess" width="100%" min-width="200px" itemprop="image"><br>`추상화는 결국 관심사의 분리`<br>
+<img src="/assets/images/CloudWave/Kubernetes/SeperationOfConcern.png" alt="SeperationOfConcern_Procdess"><br>`추상화는 결국 관심사의 분리`<br>
 
 <br><br>
 
 # [Kubernetes] 쿠버네티스(Kubernetes, K8s)란?
 
-<img src="/assets/images/CloudWave/Kubernetes/Kubernetes.png" alt="Kubernetes_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Kubernetes`<br>
+<img src="/assets/images/CloudWave/Kubernetes/Kubernetes.png" alt="Kubernetes_Procdess"><br>`Kubernetes`<br>
 **Kubernetes 는 컨테니어화된 Workload 및 Service를 관리하기 위한 Open Source Platform.**
 - 선언적 구성(Declarative configuration)과 자동화(Automation)를 모두 용이하게 한다.
 - Google Borg(현 Omega) 내부 시스템을 개발해 2014년 K8s로 공개됨.
 - CNCF에 인큐베이팅 되어 첫번째로 졸업.<br><br>
-<img src="/assets/images/CloudWave/Kubernetes/K8s.png" alt="K8s_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Kubernetes`<br>
+<img src="/assets/images/CloudWave/Kubernetes/K8s.png" alt="K8s_Procdess"><br>`Kubernetes`<br>
 - **Kubernetes 의 핵심 기능 세가지**
   - 어플리케이션 기능에 집중할 수 있도록 **서비스를 추상화**
   - 수천 ~ 수만개의 **서비스를 효과적으로 관리 가능**
@@ -134,7 +134,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 # [Kubernetes] K8s의 기본 구성 단위
 
-<img src="/assets/images/CloudWave/Kubernetes/K8sStruct.png" alt="K8sStruct_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Kubernetes's Default Structure`<br>
+<img src="/assets/images/CloudWave/Kubernetes/K8sStruct.png" alt="K8sStruct_Procdess"><br>`Kubernetes's Default Structure`<br>
 - **Control Plane (Master)**
   - etcd
   - controller manager
@@ -151,7 +151,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 <h2>Control Plane</h2>
 
-<img src="/assets/images/CloudWave/Kubernetes/ControlPlane.png" alt="ControlPlane_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Kubernetes's ControlPlane`<br>
+<img src="/assets/images/CloudWave/Kubernetes/ControlPlane.png" alt="ControlPlane_Procdess"><br>`Kubernetes's ControlPlane`<br>
 - **컨트롤 플레인은 쿠버네티스 전체 클러스터를 관리.**
 - Kubernetes의 머리 역할을 하며, Container가 올라가지 않는다.
 - 쿠버네티스 오브젝트의 레코드를 유지 및 관리 (제어 루프)
@@ -186,14 +186,14 @@ Visit my Programming blog: https://carefreelife98.github.io -->
     - **RAFT 알고리즘으로 Leader를 선출하여 모든 데이터는 Leader에 먼저 저장.**
       - **이후 나머지 노드에 Leader에 저장된 데이터가 복제된다.**
     - **ETCD의 고가용성을 위해서는 최소 3대의 ETCD가 구성되어야 한다.**<br>
-      <img src="/assets/images/CloudWave/Kubernetes/ETCD.png" alt="ETCD_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Kubernetes's ETCD`<br>
+      <img src="/assets/images/CloudWave/Kubernetes/ETCD.png" alt="ETCD_Procdess"><br>`Kubernetes's ETCD`<br>
       - ETCD는 Control Plane 내부 또는 외부에 구성 가능.
 
 <br><br>
 
 <h2> Nodes (Worker) </h2>
 
-<img src="/assets/images/CloudWave/Kubernetes/Nodes.png" alt="Nodes_Procdess" width="80%" min-width="200px" itemprop="image"><br>`Kubernetes's Nodes`<br>
+<img src="/assets/images/CloudWave/Kubernetes/Nodes.png" alt="Nodes_Procdess" /><br>`Kubernetes's Nodes`<br>
 - Worker 노드는 컨테이너 화된 Application을 실행하는 시스템
 - Application의 실행 및 Monitoring을 담당한다.
 - Worker Node의 구성요소
@@ -215,7 +215,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 <h2>Pod는 하나 이상의 컨테이너들이 모여있는 그룹</h2>
 
-<img src="/assets/images/CloudWave/Kubernetes/K8sPod.png" alt="K8sPod_Procdess" width="100%" min-width="200px" itemprop="image"><br><br>
+<img src="/assets/images/CloudWave/Kubernetes/K8sPod.png" alt="K8sPod_Procdess"><br><br>
 
 - Pod는 쿠버네티스 애플리케이션의 기본 실행 단위 - 만들고 배포할 수 있는 가장 작은 단위.
 - Docker는 K8s Pod에서 사용되는 가장 대표적인 Container Runtime이지만 Pod는 다른 Container Runtime(rtk, containerd)도 지원한다.
@@ -344,13 +344,13 @@ Container : 서비스 관점의 추상화
 
 따라서, 가장 이상적인 구조는 아래와 같다. (= 추상화 수준 높음)<br>
 **추상화의 극대화**<br>
-<img src="/assets/images/CloudWave/Kubernetes/Abstraction.png" alt="Abstraction_Procdess" width="100%" min-width="200px" itemprop="image"><br>`추상화의 끝`<br>
+<img src="/assets/images/CloudWave/Kubernetes/Abstraction.png" alt="Abstraction_Procdess"><br>`추상화의 끝`<br>
 - 결국 추상화가 극대화 되어 발생한것이 Kubernetes, Service Mesh(Istio) 이다.
 <br><br>
 
 # [Kubernetes] Network 기본
 
-<img src="/assets/images/CloudWave/Kubernetes/PodNetwork.png" alt="PodNetwork_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Flat Network`<br>
+<img src="/assets/images/CloudWave/Kubernetes/PodNetwork.png" alt="PodNetwork_Procdess"><br>`Flat Network`<br>
 - K8s에 있는 **Pod들은 단순하며 공유 가능한 Network Address** 값을 가진다. (Flat Network)
 - **각각의 Pod별로 고유 IP주소 값을 가지고 있으며 해당 IP를 이용하여 통신**을 허용.
 - NAT Gateway (Network Address Translation) 와 같은 장비없이 LAN(Local Area Network) 처럼 통신이 가능함.
@@ -372,7 +372,7 @@ Container : 서비스 관점의 추상화
 
 
 
-<img src="/assets/images/CloudWave/Kubernetes/.png" alt="_Procdess" width="100%" min-width="200px" itemprop="image"><br>``<br>
+<img src="/assets/images/CloudWave/Kubernetes/.png" alt="_Procdess"><br>``<br>
 
 
 `참고:`[나무위키](https://namu.wiki/w/%EC%95%A0%EC%9E%90%EC%9D%BC)<br><br>
@@ -390,7 +390,7 @@ Container : 서비스 관점의 추상화
 
 <br><br>
 
-[처음으로~](#)
+
 
 ### Task Lists
 

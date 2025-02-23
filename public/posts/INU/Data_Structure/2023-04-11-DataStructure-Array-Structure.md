@@ -3,62 +3,60 @@ title: "Data Structure : (3) 배열, 구조체 (Array & Structure)"
 date: 23. 04. 11
 categories:
   - INU-DataStructure
-  - C
 tags:
   - Data Structure
   - Array
   - Structure
   - C/C++
+teaser: "/assets/images/INU/arraydef.png"
+---
 
----
----
 # Data Structure :: 배열 (Array)
 
 ```
 배열(Array) 이란?
 ```
-> <img src="/assets/images/INU/arraydef.png" alt="recursion_Procdess" width="100%" min-width="200px" itemprop="image">`사진출처:`[laboputer](https://laboputer.github.io/ps/2017/09/05/array-and-list/)<br><br>
-**<span style="color:red">`"배열이란, 동일한 타입의 데이터를 연속으로 저장할 수 있는 자료구조이다."`</span>**<br>
-- 배열은 기본이 되는 중요한 자료형이며 많은 자료 구조들이 배열을 사용하여 구현된다.
-- 배열은 데이터마다 다른 이름을 부여하지 않고 쉽게 사용하기 위해<br>
-  각 데이터마다 인덱스(Index)를 대응시킨다.
-- 인덱스(Index)는 순차적인 숫자로 표현되며, 첫번째로부터 상대적인 위치를 나타낸다.<br><br>
+<img src="/assets/images/INU/arraydef.png" alt="recursion_Procdess">`사진출처:`[laboputer](https://laboputer.github.io/ps/2017/09/05/array-and-list/)<br><br>
+- **`"배열이란, 동일한 타입의 데이터를 연속으로 저장할 수 있는 자료구조이다."`**
+  - 배열은 기본이 되는 중요한 자료형이며 많은 자료 구조들이 배열을 사용하여 구현된다.
+  - 배열은 데이터마다 다른 이름을 부여하지 않고 쉽게 사용하기 위해 각 데이터마다 인덱스(Index)를 대응시킨다.
+- 인덱스(Index)는 순차적인 숫자로 표현되며, 첫번째로부터 상대적인 위치를 나타낸다.
+
+```
 📣 검색 연산은 빠르지만, 추가 및 삭제 연산이 느리다. 📣
---warning}
+```
 
 ## 배열 ADT
 
 ```
 배열 ADT 란?
 ```
-> - ADT(Abstract Data type)
-- 배열은 <인덱스, 요소> 쌍의 집합이다.
-- 인덱스가 주어지면 해당되는 요소(data)가 대응되는 구조이다.
-
-***배열 ADT의 연산:***<br>
-**create(n)** ::= n개의 요소를 가진 배열의 생성.<br>
-**retrieve(A, i)** ::= 배열 A의 i번째 요소 반환.<br>
-**store(A, i, item)** ::= 배열 A의 i번째 위치에 item 저장.<br>
-
-
+- **`ADT(Abstract Data type)`**
+  - 배열은 <인덱스, 요소> 쌍의 집합이다.
+  - 인덱스가 주어지면 해당되는 요소(data)가 대응되는 구조이다.
+- **`배열 ADT의 연산:`**
+  - **`create(n)`** ::= n개의 요소를 가진 배열의 생성.
+  - **`retrieve(A, i)`** ::= 배열 A의 i번째 요소 반환.
+  - **`store(A, i, item)`** ::= 배열 A의 i번째 위치에 item 저장.
 
 ## 배열의 응용 : 다항식 (1)
 
 ```
 C 의 배열을 사용하여 다항식을 풀어보자.
 ```
-> <img src="/assets/images/INU/poly.png" alt="poly_Procdess" width="50%" min-width="200px" itemprop="image">`다항식의 일반적인 형태`<br>
+<img src="/assets/images/INU/poly.png" alt="poly_Procdess"   />`다항식의 일반적인 형태`<br>
 - 위의 다항식에서, a: 계수, x:변수, n: 차수라 부른다.
 - 가장 큰 차수를 **다항식의 차수**라 부른다.
-- 다항식을 계산할 때, <span style="color:green">`어떤 자료구조가 가장 편리하고, 메모리를 적게 사용할 것인가?`</span>
+- 다항식을 계산할 때, `어떤 자료구조가 가장 편리하고, 메모리를 적게 사용할 것인가?`
 - 이것이 우리가 자료구조를 배우는 이유이자 목적이다.
-> **다항식의 계산 방법1.**<br>
+
+### 다항식의 계산 방법 1. 모든 차수의 계수값을 배열에 저장
 <img src="/assets/images/INU/poly1.png" alt="poly1_Procdess" width="70%" min-width="200px" itemprop="image">`다항식 계산 알고리즘 1`
-- 첫번째 방법은 <span style="color:blue">`모든 차수의 계수값을 배열에 저장`</span>하는 것이다.
+- 첫번째 방법은 `모든 차수의 계수값을 배열에 저장`하는 것이다.
 - 위와 같이 다항식을 다시 풀어 해석해보자.
 - 모든 차수에 대한 계수값의 리스트인 (10, 0, 0, 0, 6, 3) 을 배열 coef 에 저장한다.
-- 여기서 다항식의 차수는 degree에 저장된다.<br>
-<span style="color:green"><u>가장 높은 차수만 알면 index로 이루어져 순서를 가진 배열내에서 나머지 항들의 차수도 알 수 있다.</u></span><br>
+  - 여기서 다항식의 차수는 degree에 저장된다.
+  - 가장 높은 차수만 알면 index로 이루어져 순서를 가진 배열내에서 나머지 항들의 차수도 알 수 있다.
 - 아래 코드를 같이 보도록 하자.
 
 ```
@@ -75,9 +73,8 @@ typedef struct {          // 구조체의 정의
 
 polynomial a = { 5, {10, 0, 0, 0, 6, 3} };
 ```
-<br>
 
-## 다항식 덧셈 프로그램 #1
+### 다항식 덧셈 프로그램 #1
 ```
 polynomial : 다항식 덧셈 프로그램 #1
 ```
@@ -152,26 +149,25 @@ int main(void) {
 단점: 대부분의 항의 개수가 0이면 공간의 낭비가 심해진다.
 ```
 
-```
-결과..!
-```
+**`결과..!`**
 
-<img src="/assets/images/INU/Cpoly.png" alt="Cpoly_Procdess" width="100%" min-width="200px" itemprop="image">`C 언어로 구현한 Polynomial 다항식의 덧셈 결과`
+<img src="/assets/images/INU/Cpoly.png" alt="Cpoly_Procdess">`C 언어로 구현한 Polynomial 다항식의 덧셈 결과`
 
-위의 방법 1은 간단하고 쉽지만, 만약 대부분의 항의 계수가 0인 다항식의 계산에서는 메모리 낭비가 심하다는 단점이 있다.<br>
-(10x^100 + 6 과 같은 다항식에선 101개의 공간 중에서 오직 2개만 사용한다.)
---warning}
-
-
+- 위의 방법 1은 간단하고 쉽지만, 만약 대부분의 항의 계수가 0인 다항식의 계산에서는 메모리 낭비가 심하다는 단점이 있다.
+  - (10x^100 + 6 과 같은 다항식에선 101개의 공간 중에서 오직 2개만 사용한다.)
 
 ## 배열의 응용 2 : 다항식 (2)
 
 ```
 메모리의 절약
 ```
-> <img src="/assets/images/INU/poly2.png" alt="poly2_Procdess" width="80%" min-width="200px" itemprop="image"><br>**(A = 8x^3 + 7x + 1) , (B = 10x^3 + 3x^2 + 1)**<br>`하나의 배열로 여러 개의 다항식 저장`<br><br>
-**<span style="color:blue">"다항식의 0이 아닌 항들을 (계수, 차수) 형태로 구조체 배열에 저징"</span>**<br>
-<img src="/assets/images/INU/expoly2.png" alt="expoly2_Procdess" width="50%" min-width="200px" itemprop="image">
+<img src="/assets/images/INU/poly2.png" alt="poly2_Procdess" /><br>**(A = 8x^3 + 7x + 1) , (B = 10x^3 + 3x^2 + 1)**<br>`하나의 배열로 여러 개의 다항식 저장`<br><br>
+- **`다항식의 0이 아닌 항들을 (계수, 차수) 형태로 구조체 배열에 저장`**
+
+<br><br>
+
+<img src="/assets/images/INU/expoly2.png" alt="expoly2_Procdess"   />
+
 - 다항식의 0이 아닌 항들은 (계수, 차수) 형식으로 구조체 배열에 저장된다.
 - 이 방식으로 하나의 배열에 여러 개의 다항식을 저장 할 수 있다.
 - 먼저 (계수, 차수) 형식의 순서쌍을 구조체로 선언하고 이 구조체의 배열을 생성하여 저장한다.
@@ -185,19 +181,15 @@ struct {
 } terms[MAX_TERMS];
 int avail; // 현재 비어있는 요소의 인덱스를 가리킨다.
 ```
->
-<img src="/assets/images/INU/algopoly2.png" alt="algopoly2_Procdess" width="100%" min-width="200px" itemprop="image"><br>`다항식의 덧셈 전 과 후`
 
-🔥 알고리즘 🔥<br><br>
-두 개의 다항식 A, B를 더하여 다항식 C를 구하려고 한다.<br>
-A와 B의 각 항의 차수를 비교 후 같으면 계수를 더해 C의 첫번째 칸으로 보내고, 다르다면 더 큰 차수의 항을 C로 보낸다.<br>
-(각 배열의 첫번째 칸이 최고차 항)<br>
-이 과정을 어느 한 쪽의 다항식이 끝날 때까지 계속한다.
+<img src="/assets/images/INU/algopoly2.png" alt="algopoly2_Procdess"><br>`다항식의 덧셈 전 과 후`
 
+### 🔥 알고리즘 🔥
+- 두 개의 다항식 A, B를 더하여 다항식 C를 구하려고 한다.
+- A와 B의 각 항의 차수를 비교 후 같으면 계수를 더해 C의 첫번째 칸으로 보내고, 다르다면 더 큰 차수의 항을 C로 보낸다. (각 배열의 첫번째 칸이 최고차 항)
+- 이 과정을 어느 한 쪽의 다항식이 끝날 때까지 계속한다.
 
-
-
-## 다항식 덧셈 프로그램 #2
+### 다항식 덧셈 프로그램 #2
 
 ```
 polynomial : 다항식 덧셈 프로그램 #2
@@ -267,21 +259,18 @@ void main() {
 }
 ```
 
-```
-실행 결과..!
-```
-<img src="/assets/images/INU/rspoly2.png" alt="rspoly2_Procdess" width="100%" min-width="200px" itemprop="image">`잘 작동하는 것을 볼 수 있다.`<br><br><br>
+**`실행 결과..!`**
 
-
+<img src="/assets/images/INU/rspoly2.png" alt="rspoly2_Procdess">`잘 작동하는 것을 볼 수 있다.`<br><br><br>
 
 ## Data Structure :: 구조체 (Structure)
 
 ```
 구조체(Structure) 란?
 ```
-> <img src="/assets/images/INU/structure.png" alt="structure_Procdess" width="100%" min-width="200px" itemprop="image">`구조체와 배열의 모습`<br>
-**<span style="color:red">"타입이 다른 데이터를 하나로 묶는 방법."</span>**<br>
-구조체의 형식은 다음과 같이 정의한다.<br>
+<img src="/assets/images/INU/structure.png" alt="structure_Procdess">`구조체와 배열의 모습`<br>
+- **`"타입이 다른 데이터를 하나로 묶는 방법."`**
+  - 구조체의 형식은 다음과 같이 정의한다.
 
 ```c
 // 구조체의 형식
@@ -317,12 +306,14 @@ student s;
 //중괄호를 사용하여 선언시에 초기화도 가능하다.
 student s = {"kim", 20, 4.3};
 ```
+
 ## 자체 참조 구조체 ?
+
 ```
 자체 참조 구조체 (Self-referential Structure):
 ```
-- 필드 중에 <span style="color:blue">`자기 자신을 가리키는 포인터`</span>가 한 개 이상 존재 하는 구조체.
-- 연결리스트(Linked List) 나 트리(Tree)에 많이 등장.
+- 필드 중에 `자기 자신을 가리키는 포인터` 가 한 개 이상 존재 하는 구조체.
+- 연결리스트(Linked List) / 트리(Tree)에 많이 등장.
 
 ```c
 typedef struct ListNode {
@@ -331,26 +322,11 @@ typedef struct ListNode {
 } ListNode;
 ```
 
-- 후에 List 에 관해 포스팅 할 때 예제와 함께 더욱 자세하게 다뤄 보겠다.<br>
+**`📣 배열(Array)는 타입이 같은 데이터들을 하나로 묶는 방법이므로 구조체(Structure)과는 다르다 📣`**
 
+<br><br><br>
 
-📣 배열(Array)는 타입이 같은 데이터들을 하나로 묶는 방법이므로 구조체(Structure)과는 다르다 📣
---warning}
-
-
-이상으로 배열, 구조체 (Array & Structure) 포스팅을 마치겠다.
-
-
-
-
-[처음으로~](#)
-
-
-
-<span style="color:grey">`참고: C언어로 쉽게 풀어쓴 자료구조 <개정 3판> 천인국, 공용해, 하상국 지음`</span><br><br><br>
-
-
-### Task Lists
+## Task Lists
 > 
 - [x] Data Structure : 배열(Array) 이란?
 - [x] 배열 ADT 란?

@@ -782,7 +782,7 @@ Google Sheet API 를 사용하기 위한 계정 인증을 위한 JSON 파일을 
 
 <br><br>
 
-[처음으로~](#)
+
 
 ### Task Lists
 

@@ -67,10 +67,10 @@ Visit my Programming blog: https://carefreelife98.github.io -->
     ```
 <br><br>
 - 위와 같은 HTTP 축약 메서드의 내부를 보면 @RequestMapping 과 해당 method 형태가 지정되어 있는 것을 볼 수 있다.
-    - <img src="/assets/images/Spring/SpringMVC/getmapping.png" alt="getmapping_Procdess" width="100%" min-width="200px" itemprop="image"><br>`@GetMapping의 내부 모습`<br>
+    - <img src="/assets/images/Spring/SpringMVC/getmapping.png" alt="getmapping_Procdess"><br>`@GetMapping의 내부 모습`<br>
 <br>
 - 같은 URL을 지정 하더라도 HTTP 축약 애노테이션의 종류에 따라 다른 메서드를 호출 할 수 있다.
-  - <img src="/assets/images/Spring/SpringMVC/sameurl.png" alt="sameurl_Procdess" width="60%" min-width="200px" itemprop="image"><br>`같은 URL을 통해 요청하지만 GetMapping과 PostMapping은 각각 다른 메서드를 호출한다.`<br>
+  - <img src="/assets/images/Spring/SpringMVC/sameurl.png" alt="sameurl_Procdess" /><br>`같은 URL을 통해 요청하지만 GetMapping과 PostMapping은 각각 다른 메서드를 호출한다.`<br>
 
 <br><br>
 
@@ -278,7 +278,7 @@ HTTP Request Header 의 많은 정보를 받아올 수 있다.
 
 <br><br>
 
-[처음으로~](#)
+
 
 `참고:`[Inflearn - 김영한님_강의](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-mvc-1/dashboard)<br><br>
 

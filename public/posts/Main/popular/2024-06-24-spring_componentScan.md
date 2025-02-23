@@ -157,7 +157,7 @@ public class AutoAppConfig {
 
 
 
-[처음으로~](#)
+
 
 ### Task Lists
 

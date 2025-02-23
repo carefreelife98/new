@@ -117,7 +117,7 @@ for (i in 10 downTo  1 step 2) {
 
 <br><br>
 
-[처음으로~](#)
+
 
 ### Task Lists
 

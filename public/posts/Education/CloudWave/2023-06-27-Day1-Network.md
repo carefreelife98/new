@@ -19,7 +19,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 # [CJ OliveNetworks] - Cloud Wave 1기 합격 수기
 
-<img src="/assets/images/CloudWave/poster.png" alt="poster_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Cloud Wave 홍보 포스터`<br><br>
+<img src="/assets/images/CloudWave/poster.png" alt="poster_Procdess"><br>`Cloud Wave 홍보 포스터`<br><br>
 
 ```
 편입생에.. 고학년에.. 조금 늦은 감이 있었지만 컴퓨터 공학의 길을 복수전공과 함께 걷게된 나
@@ -56,7 +56,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 > 2. 기존에 알고있던 타 국비지원교육과 다르게 신청만 하면 교육을 받을 수 있는 것이 아닌, **테스트와 화상면접이 존재**한다.
 >    - 테스트는 총 50문항으로, **Network / Linux / Database / Python** 관련 테스트가 진행되었다.
 >    - 테스트는 컴퓨터 과학 관련 전공을 배웠거나, 해당 내용을 어느정도 학습했다면 크게 어렵지 않은 수준이었으며 **오픈북으로 진행**되었다.
->    - <img src="/assets/images/CloudWave/test.png" alt="test_Procdess" width="60%" min-width="200px" itemprop="image"><br>`1차 테스트 후 합/불 문자가 전송된다.`<br>
+>    - <img src="/assets/images/CloudWave/test.png" alt="test_Procdess" /><br>`1차 테스트 후 합/불 문자가 전송된다.`<br>
 > 3. **화상면접** - Zoom을 통해 진행되며, 본인은 기말고사 시험 중간에 약 10분간의 면접을 치뤘다.
 > - 면접관님들께서는 매우 친절하셨고, 편안한 분위기를 조성해주셨다.
 > - 대강 기억나는 면접 내용은 아래와 같다.
@@ -68,12 +68,12 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 >   - Cloud Wave를 통해 어떤 것을 얻어가고 싶은지
 >   - Cloud Wave에 선발된 후 학습 계획
 >   - CJ OliveNetworks송도 IDC와 거주지 사이의 거리 
->   - <img src="/assets/images/CloudWave/coffee.png" alt="coffee_Procdess" width="60%" min-width="200px" itemprop="image"><br>`머기업...면접 후 전원 커피 기프티콘을 보내주신다.`<br>
+>   - <img src="/assets/images/CloudWave/coffee.png" alt="coffee_Procdess" /><br>`머기업...면접 후 전원 커피 기프티콘을 보내주신다.`<br>
 > 4. 타 지원자 대비 눈에 띄는 스펙 / 경험이 부족하였기에,<br>
 >    **당시 본인의 열정과 절박함, 성의 등을 중점으로 강력하게 어필**했던 것이 큰 도움이 된 것 같다.
 > 
 > 5. 그리고, 최종 선발!!<br><br>
->   <img src="/assets/images/CloudWave/test2.png" alt="test2_Procdess" width="60%" min-width="200px" itemprop="image"><br>
+>   <img src="/assets/images/CloudWave/test2.png" alt="test2_Procdess" /><br>
 
 <br><br>
 
@@ -87,21 +87,21 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 > 
 > - 수업이 진행되는 곳은 IDC가 아닌, 바로 옆에 마련된 교육 전용 건물이었다.
 > 
-> - <img src="/assets/images/CloudWave/CjOliveNetworks.png" alt="CjOliveNetworks_Procdess" width="60%" min-width="200px" itemprop="image"><br>`CJ OliveNetworks 송도 IDC의 모습`<br>
+> - <img src="/assets/images/CloudWave/CjOliveNetworks.png" alt="CjOliveNetworks_Procdess" /><br>`CJ OliveNetworks 송도 IDC의 모습`<br>
 >
 > - 서둘러 해당 건물로 이동 후, 오리엔테이션 및 아이스 브레이킹을 위한 레크레이션 등을 오전에 진행했다.
 > 
-> - <img src="/assets/images/CloudWave/Orientation.png" alt="Orientation_Procdess" width="100%" min-width="200px" itemprop="image"><br>`OliveNetworks의 설명 및 소개도 함께 해주셨다`<br>
+> - <img src="/assets/images/CloudWave/Orientation.png" alt="Orientation_Procdess"><br>`OliveNetworks의 설명 및 소개도 함께 해주셨다`<br>
 > 
 > - 교육을 위해 마련된 공간도 일주일 전에 완공되어 그런지 전부 새 물건이었고 깔끔하며 상당히 넓었다.
 > 
-> - <img src="/assets/images/CloudWave/place.png" alt="place_Procdess" width="60%" min-width="200px" itemprop="image"><br>`사물이 보이는 것보다 규모가 매우 크다`<br>
+> - <img src="/assets/images/CloudWave/place.png" alt="place_Procdess" /><br>`사물이 보이는 것보다 규모가 매우 크다`<br>
 > 
 > - CJ OliveNetworks의 차인혁 대표님도 잠시 현장에 오셔서 환영해주시고 가셨다.
 > 
 > - 오후부터 바로 교육이 시작되었고, 첫 날 받은 느낌은 "내 선택이 헛되질 않았구나" 로 정의 할 수 있을 것 같다.
 > 
-> - <img src="/assets/images/CloudWave/gift.png" alt="gift_Procdess" width="60%" min-width="200px" itemprop="image"><br>`굿즈? 도 자주 나올 것이라고 하신다.`<br>
+> - <img src="/assets/images/CloudWave/gift.png" alt="gift_Procdess" /><br>`굿즈? 도 자주 나올 것이라고 하신다.`<br>
 
 <br><br>
 

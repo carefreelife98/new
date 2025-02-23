@@ -22,7 +22,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 > **함수의 호출 (Call) 시 입력되지 않은 매개변수에 대한 자동 초기화를 설정 할 수 있다.**
 > - Default Argument는 무조건 뒤에 위치해야 한다.<br><br>
 > 
-> <img src="/assets/images/INU/python/parameter_init.png" alt="parameter_init_Procdess" width="100%" min-width="200px" itemprop="image"><br>`함수 선언과 동시에 매개변수 초기화`<br><br>
+> <img src="/assets/images/INU/python/parameter_init.png" alt="parameter_init_Procdess"><br>`함수 선언과 동시에 매개변수 초기화`<br><br>
 > - 위와 같이 매개변수를 초기화 해두면 함수 호출시 프로그래머가 해당 매개변수를 "반드시 입력" 하지 않아도 된다.
 >   - 함수의 가장 마지막 매개변수로서 초기화 된 변수가 입력이 되지 않으면 자동으로 초기화 값이 입력된다.
 >   - 다양한 기능의 구현이 용이해진다.
@@ -78,7 +78,7 @@ arrEx2 = ('care', 'free', 'life')
 print(f"random.choice(arrEx2) = {random.choice(arrEx2)}")
 ```
 
-> <img src="/assets/images/INU/python/randmodule_rs.png" alt="randmodule_rs_Procdess" width="100%" min-width="200px" itemprop="image"><br>`random 모듈 사용 결과`<br><br>
+> <img src="/assets/images/INU/python/randmodule_rs.png" alt="randmodule_rs_Procdess"><br>`random 모듈 사용 결과`<br><br>
 
 <br><br>
 
@@ -99,9 +99,9 @@ Collection 자료형에 속하는 자료형
 > - 자료형 내에 순서가 존재하지 않으며, 중복을 허용하지 않음.
 > - 집합 자료형의 생성 : set() / {요소1, 요소2, ...}
 >   - index 를 사용하여 접근할 수 없음. (순서가 존재하지 않기 때문에)<br>
->   <img src="/assets/images/INU/python/set_err.png" alt="set_err_Procdess" width="100%" min-width="200px" itemprop="image"><br>`set() 자료형은 index 사용 불가`<br>
+>   <img src="/assets/images/INU/python/set_err.png" alt="set_err_Procdess"><br>`set() 자료형은 index 사용 불가`<br>
 >   - {} 안에 요소를 넣지 않고 초기화 하게 되면 set() 이 아닌 dict() 자료형으로 생성됨.<br>
->   <img src="/assets/images/INU/python/Set_Type.png" alt="Set_Type_Procdess" width="100%" min-width="200px" itemprop="image"><br>`set() / dict()`<br><br>
+>   <img src="/assets/images/INU/python/Set_Type.png" alt="Set_Type_Procdess"><br>`set() / dict()`<br><br>
     
 <br><br>
 
@@ -109,9 +109,9 @@ Collection 자료형에 속하는 자료형
 
 > - List 로부터의 set 생성
 >   - 중복 원소들이 제거된다.<br>
->   <img src="/assets/images/INU/python/Set_gen.png" alt="Set_gen_Procdess" width="100%" min-width="200px" itemprop="image"><br>`set()은 중복 요소를 허용하지 않는다.`<br><br>
+>   <img src="/assets/images/INU/python/Set_gen.png" alt="Set_gen_Procdess"><br>`set()은 중복 요소를 허용하지 않는다.`<br><br>
 > - 문자열로부터의 set 생성<br>
->   <img src="/assets/images/INU/python/Set_gen2.png" alt="Set_gen2_Procdess" width="100%" min-width="200px" itemprop="image"><br>`문자열을 set에 삽입 할 수 있다. 각 중복 문자는 삭제된다.`<br><br>
+>   <img src="/assets/images/INU/python/Set_gen2.png" alt="Set_gen2_Procdess"><br>`문자열을 set에 삽입 할 수 있다. 각 중복 문자는 삭제된다.`<br><br>
 
 <br><br>
 
@@ -121,22 +121,22 @@ Collection 자료형에 속하는 자료형
 > <br><br>
 > **1. 합집합: "|" , union() 을 사용**<br>
 >   - "|" != "or" : or 연산자는 합집합 연산과 관련이 없다.<br>
->   <img src="/assets/images/INU/python/Set_add.png" alt="Set_add_Procdess" width="50%" min-width="200px" itemprop="image"><br>`"|" 와 .union() 연산자를 통해 집합간의 합연산이 가능`<br><br>
+>   <img src="/assets/images/INU/python/Set_add.png" alt="Set_add_Procdess"   /><br>`"|" 와 .union() 연산자를 통해 집합간의 합연산이 가능`<br><br>
 > **2. 교집합: "&", intersection() 을 사용**<br>
 >   - "&" != "and" : and 연산자는 교집합 연산과 관련이 없다.<br>
->   <img src="/assets/images/INU/python/Set_intersection.png" alt="Set_intersection_Procdess" width="50%" min-width="200px" itemprop="image"><br>`"&" 와 .intersection() 연산자를 통해 교집합 연산이 가능`<br><br>
+>   <img src="/assets/images/INU/python/Set_intersection.png" alt="Set_intersection_Procdess"   /><br>`"&" 와 .intersection() 연산자를 통해 교집합 연산이 가능`<br><br>
 > **3. 차집합: "-" , difference() 를 사용**<br>
->   <img src="/assets/images/INU/python/Set_difference.png" alt="Set_difference_Procdess" width="50%" min-width="200px" itemprop="image"><br>`"-" 와 .difference() 연산자를 통해 차집합 연산이 가능`<br><br>
+>   <img src="/assets/images/INU/python/Set_difference.png" alt="Set_difference_Procdess"   /><br>`"-" 와 .difference() 연산자를 통해 차집합 연산이 가능`<br><br>
 
 <br><br>
 
 # 집합 자료형의 내장 Method
 
-> <img src="/assets/images/INU/python/Set_internal_method.png" alt="Set_internal_method_Procdess" width="100%" min-width="200px" itemprop="image"><br>`집합 자료형의 내장 Method`<br><br>
+> <img src="/assets/images/INU/python/Set_internal_method.png" alt="Set_internal_method_Procdess"><br>`집합 자료형의 내장 Method`<br><br>
 >
 > **1. in / not in**
 > - 요소의 존재 여부를 확인할 때 사용<br>
-> <img src="/assets/images/INU/python/Set_in_not_in.png" alt="Set_in_not_in_Procdess" width="50%" min-width="200px" itemprop="image"><br>`in / not in 사용 예제`<br><br>
+> <img src="/assets/images/INU/python/Set_in_not_in.png" alt="Set_in_not_in_Procdess"   /><br>`in / not in 사용 예제`<br><br>
 > - 리스트 자료형 에서도 사용 가능.
 >   - List : 순차 검색
 >   - Set : 해쉬(hash)기반 검색
@@ -151,7 +151,7 @@ Collection 자료형에 속하는 자료형
 >     - remove(e) : e를 set 에서 삭제한다. 만약 e가 set 에 존재하지 않으면 에러발생.
 >     - discard(e) : e를 set 에서 삭제한다. e가 set에 존재하지 않아도 실행됨. 아무튼 set에 e가 없으면 된다는 식.<br>
 >
-> <img src="/assets/images/INU/python/Set_add_remove.png" alt="Set_add_remove_Procdess" width="100%" min-width="200px" itemprop="image"><br>`set 자료형의 삽입 및 삭제 메소드`<br><br>
+> <img src="/assets/images/INU/python/Set_add_remove.png" alt="Set_add_remove_Procdess"><br>`set 자료형의 삽입 및 삭제 메소드`<br><br>
 > 
 > ---
 > 
@@ -160,7 +160,7 @@ Collection 자료형에 속하는 자료형
 >   - 비어있는 set 에서 pop()을 실행 시 에러 발생
 > - clear : set 에 속한 요소를 전부 삭제 (반환 x)<br>
 >
-> <img src="/assets/images/INU/python/Set_pop_clear.png" alt="Set_pop_clear_Procdess" width="100%" min-width="200px" itemprop="image"><br>`set 자료형의 pop() / clear() 메소드`<br><br>
+> <img src="/assets/images/INU/python/Set_pop_clear.png" alt="Set_pop_clear_Procdess"><br>`set 자료형의 pop() / clear() 메소드`<br><br>
 
 <br><br>
 
@@ -171,7 +171,7 @@ Collection 자료형에 속하는 자료형
 >   - 여러 종류의 데이터가 하나의 튜플에 존재 할 수 있다.
 >   - 한 튜플 자료형의 요소로서 다른 튜플 자료형이 존재 할 수 있다.<br>
 >
-> <img src="/assets/images/INU/python/Tuple.png" alt="Tuple_Procdess" width="100%" min-width="200px" itemprop="image"><br>`tuple 자료형의 기본 연산`<br><br>
+> <img src="/assets/images/INU/python/Tuple.png" alt="Tuple_Procdess"><br>`tuple 자료형의 기본 연산`<br><br>
 
 <br><br>
 
@@ -179,9 +179,9 @@ Collection 자료형에 속하는 자료형
 
 > - 인덱싱(indexing), 슬라이싱(slicing) 모두 가능
 >   - List와 동일<br>
->   <img src="/assets/images/INU/python/Tuple_access.png" alt="Tuple_access_Procdess" width="60%" min-width="200px" itemprop="image"><br>`튜플 자료형 - 인덱싱, 슬라이싱`<br><br>
+>   <img src="/assets/images/INU/python/Tuple_access.png" alt="Tuple_access_Procdess" /><br>`튜플 자료형 - 인덱싱, 슬라이싱`<br><br>
 >   - 함수에서 복수 개의 데이터를 반환할 때 사용하면 편리<br>
->   <img src="/assets/images/INU/python/Tuple_usage.png" alt="Tuple_usage_Procdess" width="60%" min-width="200px" itemprop="image"><br>`튜플 자료형 - 사용 예시`<br><br>
+>   <img src="/assets/images/INU/python/Tuple_usage.png" alt="Tuple_usage_Procdess" /><br>`튜플 자료형 - 사용 예시`<br><br>
 
 <br><br>
 
@@ -191,7 +191,7 @@ Collection 자료형에 속하는 자료형
 >   - 해당 자료형의 요소들이 변경되면 안되거나 변경할 이유가 없을 때 tuple 사용
 >   - (ex. 함수의 return 값)
 >   - 자료형의 요소가 변경 가능해야 한다면 list 사용<br>
-> <img src="/assets/images/INU/python/Tuple_Immute.png" alt="Tuple_Immute_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Tuple 자료형은 요소의 변경이 불가능`<br><br>
+> <img src="/assets/images/INU/python/Tuple_Immute.png" alt="Tuple_Immute_Procdess"><br>`Tuple 자료형은 요소의 변경이 불가능`<br><br>
 >
 > - 메모리 할당 (Memory Allocation) 의 차이
 >   - 요소의 개수나 크기가 작은 경우, list가 메모리를 적게 사용
@@ -249,7 +249,7 @@ if __name__ == '__main__':
         print('탐색 실패')
 ```
 
-> <img src="/assets/images/INU/python/11_1_1.png" alt="11_1_1_Procdess" width="50%" min-width="200px" itemprop="image"><br>`예제 - 1 실행 결과`<br><br>
+> <img src="/assets/images/INU/python/11_1_1.png" alt="11_1_1_Procdess"   /><br>`예제 - 1 실행 결과`<br><br>
 
 <br><br>
 
@@ -299,7 +299,7 @@ if __name__ == '__main__':
     rand_sum_to_target(n, tgt)
 ```
 
-> <img src="/assets/images/INU/python/11_2_3.png" alt="11_2_3_Procdess" width="50%" min-width="200px" itemprop="image"><br>`예제 - 2 실행 결과`<br><br>
+> <img src="/assets/images/INU/python/11_2_3.png" alt="11_2_3_Procdess"   /><br>`예제 - 2 실행 결과`<br><br>
 
 <br><br>
 
@@ -367,7 +367,7 @@ except Exception as e:
 
 
 
-> <img src="/assets/images/INU/python/11_2_3.png" alt="11_2_3_Procdess" width="100%" min-width="200px" itemprop="image"><br>`예제 - 3 실행 결과`<br><br>
+> <img src="/assets/images/INU/python/11_2_3.png" alt="11_2_3_Procdess"><br>`예제 - 3 실행 결과`<br><br>
 
 
 
@@ -381,7 +381,7 @@ except Exception as e:
 
 <br><br>
 
-[처음으로~](#)
+
 
 
 ### Task Lists

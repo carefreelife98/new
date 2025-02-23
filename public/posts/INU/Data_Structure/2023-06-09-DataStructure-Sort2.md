@@ -1,13 +1,9 @@
 ---
-title: "[Data Structure]<br>정렬(Sort)(2) - 쉘 정렬(Shell Sort) / 합병 정렬(Merge Sort) / 퀵 정렬(Quick Sort) / 기수 정렬(Radix Sort)"
+title: "[Data Structure] 정렬(Sort)(2) - 쉘 정렬(Shell Sort) / 합병 정렬(Merge Sort) / 퀵 정렬(Quick Sort) / 기수 정렬(Radix Sort)"
 date: 23. 06. 09
 categories:
-  - INU-DataStructure
-  - C
-tags:
   - DataStructure
-  - Tree
-
+teaser: "/assets/images/INU/datastructure/Shell_Sort_process.png"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 
@@ -31,7 +27,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 >   - 각 단계마다 k가 작아짐, 각 단계마다 부분리스트에 속하는 레코드들의 개수는 그에 상응하여 증가.
 >   - 마지막 단계에서는 간격 k의 값이 1이 된다.<br><br>
 > 
-> <img src="/assets/images/INU/datastructure/ShellSort.png" alt="ShellSort_Procdess" width="100%" min-width="200px" itemprop="image"><br>`쉘 정렬의 모습`<br><br>
+> <img src="/assets/images/INU/datastructure/ShellSort.png" alt="ShellSort_Procdess"><br>`쉘 정렬의 모습`<br><br>
 > 
 > k(gap) = 5
 > - 첫번째 부분 리스트 : {10, 3, 16}
@@ -47,7 +43,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 > - 추가적인 공간의 생성 X
 > 
 > 한번의 단계가 끝나면 k(gap)의 크기를 1/2 줄여 반복.<br>
-> <img src="/assets/images/INU/datastructure/Shell_Sort_process.png" alt="Shell_Sort_process_Procdess" width="100%" min-width="200px" itemprop="image"><br>`쉘 정렬의 과정`<br><br>
+> <img src="/assets/images/INU/datastructure/Shell_Sort_process.png" alt="Shell_Sort_process_Procdess"><br>`쉘 정렬의 과정`<br><br>
 > 
 > - 부분 리스트의 개수는 k(gap)이 된다.
 > - 간격 k는 홀수인 것이 좋기 때문에 짝수이면 +1을 해준다.
@@ -89,7 +85,7 @@ void shell_sort(int list[], int n){ // n = size
 }
 ```
 
-> <img src="/assets/images/INU/datastructure/ShellSort_rs.png" alt="ShellSort_rs_Procdess" width="50%" min-width="200px" itemprop="image"><br>`쉘 정렬 알고리즘 - 실행 결과`<br><br>
+> <img src="/assets/images/INU/datastructure/ShellSort_rs.png" alt="ShellSort_rs_Procdess"   /><br>`쉘 정렬 알고리즘 - 실행 결과`<br><br>
 > 
 > **쉘 정렬의 분석**
 > - 연속적이지 않은 부분 리스트에서 자료의 교환이 일어나면 한번에 더 큰 거리를 이동한다.
@@ -119,7 +115,7 @@ void shell_sort(int list[], int n){ // n = size
 >    - 만약 부분 배열의 크기가 충분히 작지 않다면 순환 호출을 이용하여 다시 분할.<br>
 > 3. 결합(Combine) : 정렬된 부분 배열들을 하나의 배열에 통합.<br>
 >
-> <img src="/assets/images/INU/datastructure/MergeSort.png" alt="MergeSort_Procdess" width="100%" min-width="200px" itemprop="image"><br>`합병 정렬 알고리즘의 모습`
+> <img src="/assets/images/INU/datastructure/MergeSort.png" alt="MergeSort_Procdess"><br>`합병 정렬 알고리즘의 모습`
 
 <br><br>
 
@@ -133,8 +129,8 @@ void shell_sort(int list[], int n){ // n = size
 3. 결합(Combine) : 2개의 정렬된 부분 배열 통합 (10 12 13 15 20 22 25 27)
 ```
 
-> <img src="/assets/images/INU/datastructure/MergeSortEx.png" alt="MergeSortEx_Procdess" width="100%" min-width="200px" itemprop="image"><br>`합병 정렬 예시`<br><br>
-> <img src="/assets/images/INU/datastructure/MergeSortProcess.png" alt="MergeSortProcess_Procdess" width="100%" min-width="200px" itemprop="image"><br>`합병 정렬의 전체 과정`
+> <img src="/assets/images/INU/datastructure/MergeSortEx.png" alt="MergeSortEx_Procdess"><br>`합병 정렬 예시`<br><br>
+> <img src="/assets/images/INU/datastructure/MergeSortProcess.png" alt="MergeSortProcess_Procdess"><br>`합병 정렬의 전체 과정`
 
 <br><br>
 
@@ -161,7 +157,7 @@ merge_sort(list, left, right)
 > 
 > <br><br>
 > 
-> <img src="/assets/images/INU/datastructure/Merge_sort_ process.png" alt="Merge_sort_ process_Procdess" width="100%" min-width="200px" itemprop="image"><br>`합병 정렬 알고리즘 - 과정`<br><br>
+> <img src="/assets/images/INU/datastructure/Merge_sort_ process.png" alt="Merge_sort_ process_Procdess"><br>`합병 정렬 알고리즘 - 과정`<br><br>
 
 <br><br>
 
@@ -195,7 +191,7 @@ merge(list, left, mid, right)
 > - 오른쪽 부분 리스트의 범위: mid+1 ~ right
 > - 합병된 부분 리스트를 임시 저장하기 위해 추가적인 배열 sorted[] 사용<br><br>
 >
-> <img src="/assets/images/INU/datastructure/MergeSort_mergeAl.png" alt="MergeSort_mergeAl_Procdess" width="100%" min-width="200px" itemprop="image"><br>`합병 정렬 알고리즘 - merge()`
+> <img src="/assets/images/INU/datastructure/MergeSort_mergeAl.png" alt="MergeSort_mergeAl_Procdess"><br>`합병 정렬 알고리즘 - merge()`
 
 <br><br>
 
@@ -257,7 +253,7 @@ void merge_sort(int list[], int left, int right){
 }
 ```
 
-> <img src="/assets/images/INU/datastructure/Merge_sort_rs.png" alt="Merge_sort_rs_Procdess" width="50%" min-width="200px" itemprop="image"><br>`합병 정렬 알고리즘 - 실행 결과`
+> <img src="/assets/images/INU/datastructure/Merge_sort_rs.png" alt="Merge_sort_rs_Procdess"   /><br>`합병 정렬 알고리즘 - 실행 결과`
 
 <br><br>
 
@@ -298,7 +294,7 @@ Divide and Conquer(분할 정복)에 근거하는 알고리즘.
 피벗을 제외한 왼쪽 리스트와 오른쪽 리스트를 정렬하게 되면 전체 리스트가 정렬됨.
 ```
 
-> <img src="/assets/images/INU/datastructure/quick_sort.png" alt="quick_sort_Procdess" width="100%" min-width="200px" itemprop="image"><br>`퀵 정렬 알고리즘`<br><br>
+> <img src="/assets/images/INU/datastructure/quick_sort.png" alt="quick_sort_Procdess"><br>`퀵 정렬 알고리즘`<br><br>
 > - 퀵 정렬 함수는 부분 리스트에 대하여 순환 호출.
 > - 부분 리스트 에서도 다시 피봇을 정하고 피봇을 기준으로 2개의 리스트로 분할하는 과정이 반복.
 > - 부분 리스트들이 더 이상 분할 되지 않을 때까지 분할.
@@ -335,7 +331,7 @@ void quick_sort(int list[], int left, int right)
 >   9. **이 때 high/low 의 경계선이 pivot을 기준으로 작은 값/큰 값 으로 나뉜 것**
 >   10. **pivot과 high의 요소 및 위치를 바꾸어주면 리스트는 pivot을 기준으로 (왼쪽 - 작은값) (오른쪽 - 큰값) 으로 분할됨.**
 
-> <img src="/assets/images/INU/datastructure/Quick_Sort_process.png" alt="Quick_Sort_process_Procdess" width="100%" min-width="200px" itemprop="image"><br>`퀵 정렬의 분할 과정 - partition()`<br><br>
+> <img src="/assets/images/INU/datastructure/Quick_Sort_process.png" alt="Quick_Sort_process_Procdess"><br>`퀵 정렬의 분할 과정 - partition()`<br><br>
 
 
 > <h2>‼️정리‼️</h2>
@@ -392,7 +388,7 @@ int partition(int list[], int left, int right){
 > - **따라서 pivot의 위치는 고정된다.**<br>
 > 이후 pivot을 제외한 좌 / 우 부분 리스트에 대해서만 퀵 정렬을 실행하면 전체 리스트가 정렬된다.<br>
 > 
-> <img src="/assets/images/INU/datastructure/Quick_sort_whole_process.png" alt="Quick_sort_whole_process_Procdess" width="100%" min-width="200px" itemprop="image"><br>`퀵 정렬 알고리즘 - 전체 과정`<br><br>
+> <img src="/assets/images/INU/datastructure/Quick_sort_whole_process.png" alt="Quick_sort_whole_process_Procdess"><br>`퀵 정렬 알고리즘 - 전체 과정`<br><br>
 
 <h2>퀵 정렬 전체 코드</h2>
 
@@ -444,7 +440,7 @@ void quick_sort(int list[], int left, int right){
 }
 ```
 
-> <img src="/assets/images/INU/datastructure/Quick_sort_rs.png" alt="Quick_sort_rs_Procdess" width="50%" min-width="200px" itemprop="image"><br>`퀵 정렬 알고리즘 - 실행 결과`<br><br>
+> <img src="/assets/images/INU/datastructure/Quick_sort_rs.png" alt="Quick_sort_rs_Procdess"   /><br>`퀵 정렬 알고리즘 - 실행 결과`<br><br>
 > 
 > **퀵 정렬의 복잡도 분석**
 > - 이진 트리의 높이가 낮을 때 교환 수가 최소.
@@ -474,7 +470,7 @@ void quick_sort(int list[], int left, int right){
 >   - 10개의 버킷을 만들어 입력 데이터를 각 자리수의 값에 상응하는 상자에 넣는다.
 >   - 첫 상자부터 담겨있는 데이터를 순차적으로 읽어 데이터를 정렬.<br><br>
 >
-> <img src="/assets/images/INU/datastructure/Radix_sort.png" alt="Radix_sort_Procdess" width="100%" min-width="200px" itemprop="image"><br>`한 자리수 기수 정렬의 모습`<br><br>
+> <img src="/assets/images/INU/datastructure/Radix_sort.png" alt="Radix_sort_Procdess"><br>`한 자리수 기수 정렬의 모습`<br><br>
 > 비교 연산을 사용하지 않으며, 단순히 각 자리수의 값에 맞춰 상자에 넣고 빼는 동작의 되풀이.<br><br>
 > 
 > 2개 이상의 자리수로 이루어진 수도 정렬이 가능하다.
@@ -483,7 +479,7 @@ void quick_sort(int list[], int left, int right){
 >   - 예) 1의 자리수를 기준으로 버킷 0~9 에 삽입하여 정렬.
 >   - 10의 자리수를 기준으로 버킷 0~9에 삽입하여 정렬.<br>
 >
-> <img src="/assets/images/INU/datastructure/RadixSort2.png" alt="RadixSort2_Procdess" width="100%" min-width="200px" itemprop="image"><br>`두 자리수 기수 정렬의 모습`<br><br>
+> <img src="/assets/images/INU/datastructure/RadixSort2.png" alt="RadixSort2_Procdess"><br>`두 자리수 기수 정렬의 모습`<br><br>
 
 # 기수 정렬의 알고리즘
 
@@ -552,7 +548,7 @@ void radix_sort(int list[], int n)
 <br><br>
 
 # 정렬 알고리즘의 비교
-<img src="/assets/images/INU/datastructure/comp_Sort_Al.png" alt="comp_Sort_Al_Procdess" width="100%" min-width="200px" itemprop="image"><br>`정렬 알고리즘의 비교`
+<img src="/assets/images/INU/datastructure/comp_Sort_Al.png" alt="comp_Sort_Al_Procdess"><br>`정렬 알고리즘의 비교`
 
 <br><br>
 
@@ -564,9 +560,9 @@ void radix_sort(int list[], int n)
 
 <br><br>
 
-[처음으로~](#)
 
-<span style="color:grey">`참고: C언어로 쉽게 풀어쓴 자료구조 <개정 3판> 천인국, 공용해, 하상국 지음`</span><br><br><br>
+
+<br><br><br>
 
 ### Task Lists
 

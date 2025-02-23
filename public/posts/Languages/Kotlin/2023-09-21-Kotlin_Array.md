@@ -175,7 +175,7 @@ fun main() { // Top-level Function
 
 <br><br>
 
-[처음으로~](#)
+
 
 ### Task Lists
 

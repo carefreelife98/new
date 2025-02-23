@@ -64,18 +64,18 @@ export default async function PostsByCategory({params}: PostsByCategoryPageProps
                                 postMetaDataList.map((postMetaData, index) => {
                                     return (
                                         <Link key={index} href={`/posts/${category}/${subCategory}/${postMetaData.filename.replace(".md", "")}`}>
-                                            <div className="flex flex-col gap-2 bg-gray-50 p-5 border border-gray-300 rounded-lg shadow-md hover:bg-black/10 cursor-pointer">
+                                            <div className="flex flex-col gap-2 bg-gray-50 p-5 border border-gray-300 rounded-lg shadow-md hover:bg-black/10 cursor-pointer h-[400px]"> {/* 고정 높이 추가 */}
                                                 {postMetaData.teaser && (
-                                                    <div className="flex-2 w-full flex items-center justify-center">
+                                                    <div className="flex-2 w-full h-1/2 flex items-center justify-center overflow-hidden rounded-t-2xl">
                                                         <img
-                                                            className="rounded-t-2xl rounded-b-2xl w-full h-full object-cover"
+                                                            className="w-full h-full object-cover"
                                                             src={postMetaData.teaser}
                                                             alt="teaser_image"
                                                         />
                                                     </div>
                                                 )}
                                                 <div className="flex-1 flex flex-col gap-1 items-center justify-around">
-                                                    <div className="font-gimhaegaya font-bold text-lg">
+                                                    <div className="font-gimhaegaya font-bold text-lg text-center line-clamp-2"> {/* 긴 제목 처리 */}
                                                         {postMetaData.title.toString()}
                                                     </div>
                                                     <div className="text-gray-500">{postMetaData.date}</div>
@@ -84,9 +84,8 @@ export default async function PostsByCategory({params}: PostsByCategoryPageProps
                                                             <CategoryList categoryList={postMetaData.categories}/>
                                                         )}
                                                     </div>
-                                                    <div
-                                                        className="w-full flex items-center justify-center overflow-x-auto gap-1 p-1">
-                                                        {postMetaData.tags.length > 0 && (
+                                                    <div className="w-full flex items-center justify-center overflow-x-auto gap-1 p-1">
+                                                        {postMetaData.tags?.length > 0 && (
                                                             <TagList tagList={postMetaData.tags}/>
                                                         )}
                                                     </div>

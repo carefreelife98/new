@@ -34,7 +34,7 @@ export default async function Post({ params }: PostPageProps) {
     const { content, data: metadata } = matter(fileContent);
 
     return (
-        <div className='flex w-fit flex-shrink'>
+        <div className='flex flex-shrink'>
             <Markdown content={content} metadata={metadata as FrontMatter} />
         </div>
     );

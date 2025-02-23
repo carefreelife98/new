@@ -385,7 +385,7 @@ void findAllBeanByType() {
 
 <br><br>
 
-[처음으로~](#)
+
 
 ### Task Lists
 

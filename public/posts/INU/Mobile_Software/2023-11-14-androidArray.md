@@ -389,7 +389,7 @@ binding.button.setOnClickListener {
 
 <br><br>
 
-[처음으로~](#)
+
 
 ### Task Lists
 

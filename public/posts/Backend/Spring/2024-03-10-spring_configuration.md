@@ -176,7 +176,7 @@ Process finished with exit code 0
 
 <br><br>
 
-[처음으로~](#)
+
 
 ### Task Lists
 

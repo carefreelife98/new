@@ -14,7 +14,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 # 신장 트리 (Spanning Tree) 란?
 
-> <img src="/assets/images/INU/datastructure/Spanning_Tree.png" alt="Spanning_Tree_Procdess" width="100%" min-width="200px" itemprop="image"><br>`신장 트리의 모습`<br>
+> <img src="/assets/images/INU/datastructure/Spanning_Tree.png" alt="Spanning_Tree_Procdess"><br>`신장 트리의 모습`<br>
 > 
 > **신장 트리(Spanning Tree)** : 그래프 내의 모든 정점을 포함하는 트리.
 > - 트리(Tree)의 특수한 형태이다.
@@ -39,12 +39,12 @@ depth_first_search(v):
 # 최소 비용 신장 트리 (MST : Minimum Spanning Tree) 란?
 
 > **최소 비용 신장 트리** : 신장 트리 중에서 사용된 간선들의 가중치 합이 최소인 신장 트리.
-> <img src="/assets/images/INU/datastructure/MST.png" alt="MST_Procdess" width="100%" min-width="200px" itemprop="image"><br>`최소 신장 트리의 모습`<br>
+> <img src="/assets/images/INU/datastructure/MST.png" alt="MST_Procdess"><br>`최소 신장 트리의 모습`<br>
 > - 네트워크에 있는 모든 정점들을 가장 적은 수의 간선과 비용으로 연결.
 > - MST의 응용
 >   - 도로 건설, 전기 회로, 통신, 배관<br>
 >
-> <img src="/assets/images/INU/datastructure/MST_EX.png" alt="MST_EX_Procdess" width="100%" min-width="200px" itemprop="image"><br>`최소 신장 트리의 예`<br>
+> <img src="/assets/images/INU/datastructure/MST_EX.png" alt="MST_EX_Procdess"><br>`최소 신장 트리의 예`<br>
 
 <br><br>
 
@@ -85,7 +85,7 @@ kruskal(G)
 > 5. 위 과정을 간선의 개수가 정점의 개수보다 하나 작을 때까지 반복한다. (간선의 개수 : n-1)
 >
 > <img src="/assets/images/INU/datastructure/Kruskal.png" alt="Kruskal_Procdess" width="49%" min-width="200px" itemprop="image">
-> <img src="/assets/images/INU/datastructure/Kruskal2.png" alt="Kruskal2_Procdess" width="50%" min-width="200px" itemprop="image"><br>`Kruskal Algorithm 의 과정`<br>
+> <img src="/assets/images/INU/datastructure/Kruskal2.png" alt="Kruskal2_Procdess"   /><br>`Kruskal Algorithm 의 과정`<br>
 
 <br><br>
 
@@ -94,14 +94,14 @@ kruskal(G)
 > - union(x, y) 연산은 원소 x와 y가 속해 있는 집합을 입력으로 받아 2개 집합의 합집합을 반환.
 > - find(x, y) 연산은 원소 x가 속해있는 집합을 반환한다.
 >
-> <img src="/assets/images/INU/datastructure/union_find.png" alt="union_find_Procdess" width="100%" min-width="200px" itemprop="image"><br>`union-find : 그림(a) a와 b가 같은 집합에 속함 / 그림(b) a와 b가 다른 집합에 속함`<br>
+> <img src="/assets/images/INU/datastructure/union_find.png" alt="union_find_Procdess"><br>`union-find : 그림(a) a와 b가 같은 집합에 속함 / 그림(b) a와 b가 다른 집합에 속함`<br>
 > 
-> <img src="/assets/images/INU/datastructure/u-f1.png" alt="u-f1_Procdess" width="100%" min-width="200px" itemprop="image"><br>`초기 모습. 처음엔 모든 노드들이 분리되어 있고 parent 배열은 -1 로 초기화 되어 있다.`<br>
+> <img src="/assets/images/INU/datastructure/u-f1.png" alt="u-f1_Procdess"><br>`초기 모습. 처음엔 모든 노드들이 분리되어 있고 parent 배열은 -1 로 초기화 되어 있다.`<br>
 > 
-> <img src="/assets/images/INU/datastructure/u-f2.png" alt="u-f2_Procdess" width="100%" min-width="200px" itemprop="image"><br>`union(A, B) 실행 후 모습.`<br>
+> <img src="/assets/images/INU/datastructure/u-f2.png" alt="u-f2_Procdess"><br>`union(A, B) 실행 후 모습.`<br>
 > - B는 A와 합쳐졌기 때문에 A의 인덱스인 0이 B의 자리에 저장된다.
 >
-> <img src="/assets/images/INU/datastructure/u-f3.png" alt="u-f3_Procdess" width="100%" min-width="200px" itemprop="image"><br>`union(C, H) 실행 후 모습.`<br>
+> <img src="/assets/images/INU/datastructure/u-f3.png" alt="u-f3_Procdess"><br>`union(C, H) 실행 후 모습.`<br>
 > - H는 C와 합쳐졌기 때문에 C의 인덱스인 2가 H의 자리에 저장된다.
 
 ```c
@@ -255,7 +255,7 @@ int main(void)
 
 ```
 
-> <img src="/assets/images/INU/datastructure/Kruskal_rs.png" alt="Kruskal_rs_Procdess" width="50%" min-width="200px" itemprop="image">
+> <img src="/assets/images/INU/datastructure/Kruskal_rs.png" alt="Kruskal_rs_Procdess"   />
 > <img src="/assets/images/INU/datastructure/kruskal_rs2.png" alt="kruskal_rs2_Procdess" width="30%" min-width="200px" itemprop="image"><br>`Kruskal 알고리즘 실행 결과`<br>
 > 
 > - **Kruskal 알고리즘의 시간 복잡도 분석**
@@ -266,14 +266,14 @@ int main(void)
 
 # Prim 의 MST 알고리즘
 
-> <img src="/assets/images/INU/datastructure/Prim.png" alt="Prim_Procdess" width="50%" min-width="200px" itemprop="image">
+> <img src="/assets/images/INU/datastructure/Prim.png" alt="Prim_Procdess"   />
 > <img src="/assets/images/INU/datastructure/Prim2.png" alt="Prim2_Procdess" width="45%" min-width="200px" itemprop="image"><br>`Prim's MST Algorithm`<br>
 > **시작 정점에서부터 출발하여 신장 트리 집합을 단계적으로 확장해나가는 방법**
 > - 시작 정점을 신장 트리 집합에 추가하여 시작한다.
 > - 앞 단계에서 만들어진 신장 트리 집합에 인접 정점 중 최저 가중치의 간선으로 연결된 정점을 선택 및 추가하여 트리를 확장.
 > - 트리가 n - 1개의 간선을 가질 때까지 반복.
 > 
-> <img src="/assets/images/INU/datastructure/Prim_proc.png" alt="Prim_proc_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Prim 알고리즘의 동작 과정`<br>
+> <img src="/assets/images/INU/datastructure/Prim_proc.png" alt="Prim_proc_Procdess"><br>`Prim 알고리즘의 동작 과정`<br>
 > 
 > 1. 정점 a에서 출발. - 신장 트리 집합 : {a}
 > 2. a의 인접 정점 중 최저 가중치 간선을 선택 (a, f) - 신장 트리 집합 : {a, f}
@@ -400,7 +400,7 @@ int main(void) {
 }
 ```
 
-> <img src="/assets/images/INU/datastructure/Prim_rs.png" alt="Prim_rs_Procdess" width="60%" min-width="200px" itemprop="image"><br>`Prim 알고리즘 실행 결과`<br>
+> <img src="/assets/images/INU/datastructure/Prim_rs.png" alt="Prim_rs_Procdess" /><br>`Prim 알고리즘 실행 결과`<br>
 >
 > **Prim 알고리즘의 분석**
 > - 주 반복문이 정점의 수 n 만큼 반복, 내부 반복문이 n번 반복하므로
@@ -436,9 +436,9 @@ int main(void) {
 
 <br><br>
 
-[처음으로~](#)
 
-<span style="color:grey">`참고: C언어로 쉽게 풀어쓴 자료구조 <개정 3판> 천인국, 공용해, 하상국 지음`</span><br><br><br>
+
+<br><br><br>
 
 ### Task Lists
 

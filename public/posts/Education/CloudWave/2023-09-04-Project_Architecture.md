@@ -11,14 +11,14 @@ teaser: "/assets/images/CloudWave/project/projectIntro.png"
 Visit my Programming blog: https://carefreelife98.github.io --> 
 ---
 
-<img src="/assets/images/CloudWave/project/projectIntro.png" alt="projectIntro_Procdess" width="100%" min-width="200px" itemprop="image"><br>`[CJ Olivenetworks - Cloud Wave 1기] 팀명: (주) 구름 건설`<br>
+<img src="/assets/images/CloudWave/project/projectIntro.png" alt="projectIntro_Procdess"><br>`[CJ Olivenetworks - Cloud Wave 1기] 팀명: (주) 구름 건설`<br>
 
 <br><br>
 
 # 프로젝트 일정 관리 및 나의 역할
 
 > 조 이름은 `Cloud Architecture` 에서 본따 `(주)구름 건설` 으로 설정했다.<br>
-> <img src="/assets/images/CloudWave/project/members.png" alt="members_Procdess" width="100%" min-width="200px" itemprop="image"><br>`(주)구름 건설 조직도`<br>
+> <img src="/assets/images/CloudWave/project/members.png" alt="members_Procdess"><br>`(주)구름 건설 조직도`<br>
 > 
 > **나의 역할** <br>
 > 1. **Terraform / Terraform Cloud** 를 사용한 CI/CD 환경을 통해 AWS 인프라 구축 자동화
@@ -128,7 +128,7 @@ CGV는 국내 멀티플렉스 극장 상영을 담당하는 CJ의 주요 계열�
 
 # 전체 Architecture 구성
 
-<img src="/assets/images/CloudWave/project/projectFullArchitecture.png" alt="projectFullArchitecture_Procdess" width="100%" min-width="200px" itemprop="image"><br>`프로젝트 전체 Architecture`<br>
+<img src="/assets/images/CloudWave/project/projectFullArchitecture.png" alt="projectFullArchitecture_Procdess"><br>`프로젝트 전체 Architecture`<br>
 
 > **(주)구름건설 에서 제안하는 사항을 추가하여 Architecture 구성**
 > 1. **MSA (Microservice Architecture)구조** 도입
@@ -181,7 +181,7 @@ CGV는 국내 멀티플렉스 극장 상영을 담당하는 CJ의 주요 계열�
 
 # Naming Rule
 
-<img src="/assets/images/CloudWave/project/naming.png" alt="naming_Procdess" width="100%" min-width="200px" itemprop="image"><br>`(주)구름 건설의 Naming Rule`<br>
+<img src="/assets/images/CloudWave/project/naming.png" alt="naming_Procdess"><br>`(주)구름 건설의 Naming Rule`<br>
 
 1. **운영환경** DEV / STG / PROD
 2. **시스템 명칭** pay / user / item
@@ -198,7 +198,7 @@ CGV는 국내 멀티플렉스 극장 상영을 담당하는 CJ의 주요 계열�
 
 <br><br>
 
-[처음으로~](#)
+
 
 ### Task Lists
 

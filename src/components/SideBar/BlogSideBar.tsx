@@ -1,7 +1,7 @@
 'use client';
 
 import './style.css';
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import config from '../../../tech_blog_config.json';
 import MarkdownFileCount from "@/interfaces/markdownFileCount";
 import {useRouter} from "next/navigation";
@@ -33,6 +33,7 @@ interface SideBarProps {
 export default function BlogSideBar({markdownFileCount}: SideBarProps) {
 
     const [totalPostCount] = useState<number>(markdownFileCount ? markdownFileCount.total : 0);
+    const countsBySubCategory = markdownFileCount.countsBySubCategory;
     const router = useRouter();
 
     const handleNavigate = (category: string, subCategory: string) => {
@@ -40,8 +41,12 @@ export default function BlogSideBar({markdownFileCount}: SideBarProps) {
         router.push(`/categories/${category}/${subCategory}`);
     };
 
+    useEffect(() => {
+        console.log(countsBySubCategory);
+    }, []);
+
     return (
-        <div className='flex'>
+        <div className='flex w-full'>
             <Sidebar variant='floating' collapsible='offcanvas'>
                 <SidebarHeader>
                     <div className='cfl-tech-blog-sidebar-author-info-box'>
@@ -66,17 +71,24 @@ export default function BlogSideBar({markdownFileCount}: SideBarProps) {
                     <SidebarGroup>
                         <SidebarGroupLabel className='flex text-center justify-between'>Total Posts <span className='text-blue-500'>{totalPostCount}</span></SidebarGroupLabel>
                         <SidebarGroupContent>
-                            <SidebarMenu>
+                            <SidebarMenu className='p-0'>
                                 {config.posts.categories.map((category, index) => (
                                     <Collapsible key={index} defaultOpen className="group/collapsible">
                                         <CollapsibleTrigger asChild>
                                             <SidebarMenuButton className='font-bold'>{category.category}</SidebarMenuButton>
                                         </CollapsibleTrigger>
                                         <CollapsibleContent>
-                                            <SidebarMenuSub>
-                                                {category.subcategories.map((subCategory, index) => (
-                                                    <SidebarMenuSubButton className='cursor-pointer' key={subCategory} onClick={() => handleNavigate(category.category, subCategory)}>{subCategory}</SidebarMenuSubButton>
-                                                ))}
+                                            <SidebarMenuSub className='p-0'>
+                                                {category.subcategories.map((subCategory, index) => {
+                                                    return (
+                                                        <SidebarMenuSubButton className='cursor-pointer'
+                                                                              key={subCategory}
+                                                                              onClick={() => handleNavigate(category.category, subCategory)}>
+                                                            {subCategory}
+                                                            <SidebarMenuBadge className='text-gray-400'>{countsBySubCategory[subCategory]}</SidebarMenuBadge>
+                                                        </SidebarMenuSubButton>
+                                                    )
+                                                })}
                                             </SidebarMenuSub>
                                         </CollapsibleContent>
                                     </Collapsible>

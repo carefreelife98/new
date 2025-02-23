@@ -14,12 +14,12 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 # 최단 경로 (Shortest path) 문제
 
-> <img src="/assets/images/INU/datastructure/ShortestPathEx.png" alt="ShortestPathEx_Procdess" width="100%" min-width="200px" itemprop="image"><br>`최단 경로 예시 - 정점은 도시, 도시 간 거리는 간선의 가중치가 될 수 있다.`<br>
+> <img src="/assets/images/INU/datastructure/ShortestPathEx.png" alt="ShortestPathEx_Procdess"><br>`최단 경로 예시 - 정점은 도시, 도시 간 거리는 간선의 가중치가 될 수 있다.`<br>
 > 최단 경로 (Shortest path) 문제는 네트워크의 정점 i와 정점 j를 연결하는 경로 중에서 
 > **각 간선마다의 가중치 합이 최소가 되는 경로를 찾는 문제**이다.
 > - 간선의 가중치는 비용, 거리, 시간 등을 나타낼 수 있다.
 >
-> <img src="/assets/images/INU/datastructure/edge_weight.png" alt="edge_weight_Procdess" width="100%" min-width="200px" itemprop="image"><br>`네트워크와 가중치를 인접행렬로 표현한 모습.`<br>
+> <img src="/assets/images/INU/datastructure/edge_weight.png" alt="edge_weight_Procdess"><br>`네트워크와 가중치를 인접행렬로 표현한 모습.`<br>
 > - 정점 0 -> 정점 3
 >   - 최단 거리 : (0, 4, 1, 2, 3) , 비용 : 3 + 2 + 4 + 2 = 11
 >   - (0, 1, 2, 3) : 정점을 거치는 횟수는 적지만, 비용이 (7 + 4 + 2 = 13) 으로 많이 든다.
@@ -32,7 +32,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 # Dijkstra의 최단 경로 알고리즘
 
-> <img src="/assets/images/INU/datastructure/Dijkstra.png" alt="Dijkstra_Procdess" width="100%" min-width="200px" itemprop="image"><br>`최단 경로 알고리즘`<br>
+> <img src="/assets/images/INU/datastructure/Dijkstra.png" alt="Dijkstra_Procdess"><br>`최단 경로 알고리즘`<br>
 > - 하나의 시작 정점으로부터 모든 다른 정점까지의 최단 경로를 탐색.
 > - 집합 S : 시작 정점 v로부터의 최단 경로가 이미 발견된 정점들의 집합
 > - distance[] : 시작 정점 v에서 집합 S에 포함되는 정점들만 거쳐 다른 정점으로 가는 최단거리를 기록.
@@ -50,7 +50,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 > 5. 따라서 매 단계의 집합 S에 속하지 않는 정점들 중에서 가장 작은 distance 값을 가진 정점들을 추가해<br>
 >    나가며 시작 정정메서 모든 정점 까지의 최단 거리를 구할 수 있다.
 > 
-> <img src="/assets/images/INU/datastructure/DijkstraAddNewVer.png" alt="DijkstraAddNewVer_Procdess" width="100%" min-width="200px" itemprop="image"><br>`최단 경로 알고리즘에서의 distance값 갱신`<br>
+> <img src="/assets/images/INU/datastructure/DijkstraAddNewVer.png" alt="DijkstraAddNewVer_Procdess"><br>`최단 경로 알고리즘에서의 distance값 갱신`<br>
 > - 새로운 정점 u가 추가되면 S에 속하지 않은 다른 정점들의 distance값을 갱신 해주어야 한다.
 >   - 새로 추가된 정점 u를 거쳐 갈 수 있게 된 거리와 기존 거리를 비교하여 더 작은 거리로 distance 값을 수정.
 >   - distance[w] = min(distance[w], distance[u] + weight[u][w])
@@ -76,25 +76,25 @@ shortest_path(G, V)
                 then distance[z] ← distance[u] + weight[u][z];
 ```
 
-> <img src="/assets/images/INU/datastructure/Dijkstra_process1.png" alt="Dijkstra_process1_Procdess" width="100%" min-width="200px" itemprop="image"><br>`각 단계에서의 distance 값 변화 1`<br>
+> <img src="/assets/images/INU/datastructure/Dijkstra_process1.png" alt="Dijkstra_process1_Procdess"><br>`각 단계에서의 distance 값 변화 1`<br>
 > - 시작 노드 : v = 0, v와 근접한 노드 1(w = 7), 4(w = 3), 5(w = 10) 값을 distance 배열에 저장.
 > 
-> <img src="/assets/images/INU/datastructure/Dijkstra_process2.png" alt="Dijkstra_process2_Procdess" width="100%" min-width="200px" itemprop="image"><br>`각 단계에서의 distance 값 변화 2`<br>
+> <img src="/assets/images/INU/datastructure/Dijkstra_process2.png" alt="Dijkstra_process2_Procdess"><br>`각 단계에서의 distance 값 변화 2`<br>
 > - 새로운 정점 1, 4 가 집합 s에 추가되었으므로, 해당 정점들을 통해 또 다른 정점에 도달 할 수 있게 된다.
 >   - 4 -> 6(w = 3 + 5) / 4 -> 3(w = 3 + 11) / 4 -> 1(w = 3 + 2)
 >   - S = {0, 4}
 > 
-> <img src="/assets/images/INU/datastructure/Dijkstra_process3.png" alt="Dijkstra_process3_Procdess" width="100%" min-width="200px" itemprop="image"><br>`각 단계에서의 distance 값 변화 3`<br>
+> <img src="/assets/images/INU/datastructure/Dijkstra_process3.png" alt="Dijkstra_process3_Procdess"><br>`각 단계에서의 distance 값 변화 3`<br>
 > - 1 -> 2(w = 3 + 2 + 4)
 > - S = {0, 4, 1}
 >
-> <img src="/assets/images/INU/datastructure/Dijkstra_process4.png" alt="Dijkstra_process4_Procdess" width="100%" min-width="200px" itemprop="image"><br>`각 단계에서의 distance 값 변화 4`<br>
+> <img src="/assets/images/INU/datastructure/Dijkstra_process4.png" alt="Dijkstra_process4_Procdess"><br>`각 단계에서의 distance 값 변화 4`<br>
 > - S = {0, 4, 1, 6}
-> <img src="/assets/images/INU/datastructure/Dijkstra_process5.png" alt="Dijkstra_process5_Procdess" width="100%" min-width="200px" itemprop="image"><br>`각 단계에서의 distance 값 변화 5`<br>
+> <img src="/assets/images/INU/datastructure/Dijkstra_process5.png" alt="Dijkstra_process5_Procdess"><br>`각 단계에서의 distance 값 변화 5`<br>
 > - S = {0, 4, 1, 6, 2}
-> <img src="/assets/images/INU/datastructure/Dijkstra_process6.png" alt="Dijkstra_process6_Procdess" width="100%" min-width="200px" itemprop="image"><br>`각 단계에서의 distance 값 변화 6`<br>
+> <img src="/assets/images/INU/datastructure/Dijkstra_process6.png" alt="Dijkstra_process6_Procdess"><br>`각 단계에서의 distance 값 변화 6`<br>
 > - S = {0, 4, 1, 6, 2, 5}
-> <img src="/assets/images/INU/datastructure/Dijkstra_process7.png" alt="Dijkstra_process7_Procdess" width="100%" min-width="200px" itemprop="image"><br>`각 단계에서의 distance 값 변화 7`<br>
+> <img src="/assets/images/INU/datastructure/Dijkstra_process7.png" alt="Dijkstra_process7_Procdess"><br>`각 단계에서의 distance 값 변화 7`<br>
 > - S = {0, 4, 1, 6, 2, 5, 3}
 
 <br><br>
@@ -199,7 +199,7 @@ int main(void)
 }
 ```
 
-> <img src="/assets/images/INU/datastructure/Dijkstra_rs.png" alt="Dijkstra_rs_Procdess" width="60%" min-width="200px" itemprop="image"><br>`Dijkstra 알고리즘 실행 결과`<br>
+> <img src="/assets/images/INU/datastructure/Dijkstra_rs.png" alt="Dijkstra_rs_Procdess" /><br>`Dijkstra 알고리즘 실행 결과`<br>
 
 > **Dijkstra 의 분석**
 > - 네트워크에 n개의 정점이 있다면,
@@ -237,7 +237,7 @@ Floyd(G):
 > - A(-1) == weight 배열의 값 -> A(0) -> A(1) -> A(2) -> A(n-1) 순서로 최단 경로를 구해간다.
 > - A(k-1)까지 구해진 상태에서 k번째 정점이 추가로 고려되는 상황 생각.
 >
-> <img src="/assets/images/INU/datastructure/Floyd_process.png" alt="Floyd_process_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Floyd 최단 경로 알고리즘 - k번째 정점의 추가`<br>
+> <img src="/assets/images/INU/datastructure/Floyd_process.png" alt="Floyd_process_Procdess"><br>`Floyd 최단 경로 알고리즘 - k번째 정점의 추가`<br>
 > - 0부터 k까지의 정점만을 사용하여 정점 i에서 정점 j로 가는 최단 경로는 2가지.
 >   - 정점 k를 거치지 않는 경우:
 >     - A(k)[i][j] 는 k보다 큰 정점은 통과하지 않으므로 최단거리는 그대로 A(k-1)[i][j].
@@ -335,7 +335,7 @@ int main(void)
 - 방향 그래프에 존재하는 각 정점들의 선행 순서를 위배하지 않으면서 모든 정점을 나열하는 것
 ```
 
-> <img src="/assets/images/INU/datastructure/topo_sort_ex.png" alt="topo_sort_ex_Procdess" width="100%" min-width="200px" itemprop="image"><br>`위상 정렬의 예`<br>
+> <img src="/assets/images/INU/datastructure/topo_sort_ex.png" alt="topo_sort_ex_Procdess"><br>`위상 정렬의 예`<br>
 >
 > - 위상 순서(topological order) : (0, 1, 2, 3, 4, 5) , (1, 0, 2, 3, 4, 5)
 >     - 위상 순서가 아닌 것 : (2, 0, 1, 3, 4, 5) -> 2번 정점이 0번 정점을 선행하고 있기 때문.
@@ -368,7 +368,7 @@ topo_sort(G)
         v와 v에서 나온 모든 간선들을 그래프에서 삭제;
 ```
 
-> <img src="/assets/images/INU/datastructure/topo_sort_process.png" alt="topo_sort_process_Procdess" width="100%" min-width="200px" itemprop="image"><br>`위상 정렬의 과정`<br>
+> <img src="/assets/images/INU/datastructure/topo_sort_process.png" alt="topo_sort_process_Procdess"><br>`위상 정렬의 과정`<br>
 > - 내차수가 0인 정점 1과 연결된 간선을 제거하면 내차수가 0인 정점은 {0, 4} 가 된다.
 > - 둘 중 정점 4를 선택, 삭제 한다면 다음 단계에서 내차수가 0인 정점은 {0} 만 남게 된다.
 > - 따라서 0을 선택, 삭제한 후 내차수가 0이 된 정점 2 제거 -> 정점 3 제거 -> 정점 5 제거 순으로 진행된다.
@@ -554,7 +554,7 @@ int main(void) {
 }
 ```
 
-> <img src="/assets/images/INU/datastructure/topological_sort_rs.png" alt="topological_sort_rs_Procdess" width="100%" min-width="200px" itemprop="image"><br>`위상 정렬 알고리즘 실행 결과`<br>
+> <img src="/assets/images/INU/datastructure/topological_sort_rs.png" alt="topological_sort_rs_Procdess"><br>`위상 정렬 알고리즘 실행 결과`<br>
 
 
 
@@ -573,9 +573,9 @@ int main(void) {
 
 <br><br>
 
-[처음으로~](#)
 
-<span style="color:grey">`참고: C언어로 쉽게 풀어쓴 자료구조 <개정 3판> 천인국, 공용해, 하상국 지음`</span><br><br><br>
+
+<br><br><br>
 
 ### Task Lists
 

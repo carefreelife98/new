@@ -185,7 +185,7 @@ kafka-console-producer.sh --topic Smart-Barricade --broker-list kafka:9092
 
 <br><br>
 
-[처음으로~](#)
+
 
 ### Task Lists
 

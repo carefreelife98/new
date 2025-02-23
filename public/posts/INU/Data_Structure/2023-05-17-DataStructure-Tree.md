@@ -20,7 +20,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 ```
 
 <img src="/assets/images/INU/datastructure/tree-in-data-structure.png" alt="tree-in-data-structure_Procdess" width="40%" min-width="200px" itemprop="image">
-<img src="/assets/images/INU/datastructure/treeandelse.png" alt="treeandelse_Procdess" width="50%" min-width="200px" itemprop="image"><br>[이미지 출처](https://www.scaler.com/topics/data-structures/tree-data-structure/)`자료 구조의 트리(Tree). 나무를 거꾸로 엎어놓은 것 같은 모습을 하고 있다.`<br><br>
+<img src="/assets/images/INU/datastructure/treeandelse.png" alt="treeandelse_Procdess"   /><br>[이미지 출처](https://www.scaler.com/topics/data-structures/tree-data-structure/)`자료 구조의 트리(Tree). 나무를 거꾸로 엎어놓은 것 같은 모습을 하고 있다.`<br><br>
 
 이전에 배운 선형 자료 구조와 달리 데이터 간의 계층이 존재한다면<br
 **우리는 트리(Tree)라는 자료구조를 사용해야 한다.**
@@ -43,7 +43,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 1-2. 트리의 용어
 ```
 
-<img src="/assets/images/INU/datastructure/treeWords.png" alt="treeWords_Procdess" width="80%" min-width="200px" itemprop="image"><br>`트리(Tree)의 모습.`<br><br>
+<img src="/assets/images/INU/datastructure/treeWords.png" alt="treeWords_Procdess" /><br>`트리(Tree)의 모습.`<br><br>
 - 트리는 한 개 이상의 노드로 이루어진 유한 집합.
 - 트리의 최상단에 위치하는 하나의 노드는 루트노드(Root Node)라고 불리며,<br>
 - 그 하위의 나머지 노드들은 서브트리(Sub Tree) 라고 불린다.
@@ -94,7 +94,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 > -----------------------------------------------------
 > ```
 
-<img src="/assets/images/INU/datastructure/Btreevalidation.png" alt="Btreevalidation_Procdess" width="100%" min-width="200px" itemprop="image"><br>`이진 트리의 검증` <br><br>
+<img src="/assets/images/INU/datastructure/Btreevalidation.png" alt="Btreevalidation_Procdess"><br>`이진 트리의 검증` <br><br>
 
 - 이진 트리 :
   - 모든 노드가 2개의 서브 트리를 가지고 있는 트리.
@@ -111,7 +111,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 2-1. 이진 트리의 성질
 ```
 
-> <img src="/assets/images/INU/datastructure/btreelogic.png" alt="btreelogic_Procdess" width="100%" min-width="200px" itemprop="image"><br>`이진 트리의 성질 1`<br>
+> <img src="/assets/images/INU/datastructure/btreelogic.png" alt="btreelogic_Procdess"><br>`이진 트리의 성질 1`<br>
 
 - 노드의 개수가 n개 이면 간선(edge)의 개수는 n-1 개.
   - [why ?]
@@ -120,7 +120,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 <br><br>
 
-> <img src="/assets/images/INU/datastructure/btreelogic2.png" alt="btreelogic2_Procdess" width="100%" min-width="200px" itemprop="image"><br>`이진 트리의 성질 2`<br>
+> <img src="/assets/images/INU/datastructure/btreelogic2.png" alt="btreelogic2_Procdess"><br>`이진 트리의 성질 2`<br>
 
 - **높이가 최대 h인 이진트리**의 경우, **최소 h개의 노드**를 가지며 **최대 2^h-1개의 노드**를 가진다.
   - [why ?]
@@ -133,7 +133,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 <br><br>
 
-> <img src="/assets/images/INU/datastructure/btreelogic3.png" alt="btreelogic3_Procdess" width="100%" min-width="200px" itemprop="image"><br>`이진 트리의 성질 3` <br>
+> <img src="/assets/images/INU/datastructure/btreelogic3.png" alt="btreelogic3_Procdess"><br>`이진 트리의 성질 3` <br>
 
 - n개의 노드를 가지는 이진 트리의 높이
   [why ?]
@@ -151,11 +151,11 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 2-2. 이진 트리의 분류
 ```
 
-> <img src="/assets/images/INU/datastructure/kindofbtree.png" alt="kindofbtree_Procdess" width="100%" min-width="200px" itemprop="image"><br>`이진 트리의 분류` <br>
+> <img src="/assets/images/INU/datastructure/kindofbtree.png" alt="kindofbtree_Procdess"><br>`이진 트리의 분류` <br>
 
 <h3>1. 포화 이진 트리 (full binary tree)</h3>
 
-> <img src="/assets/images/INU/datastructure/maxbtree.png" alt="maxbtree_Procdess" width="100%" min-width="200px" itemprop="image"><br>`이진 트리의 분류` <br>
+> <img src="/assets/images/INU/datastructure/maxbtree.png" alt="maxbtree_Procdess"><br>`이진 트리의 분류` <br>
 
 - 말 그대로 이진 트리의 각 레벨 마다의 최대 노드 만큼 꽉 채워져 있는 이진트리이다.
   - 높이가 k인 포화 이진트리는 정확히 2^k - 1 개의 노드를 가진다.
@@ -166,7 +166,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 <h3>2. 완전 이진 트리 (full binary tree)</h3>
 
-> <img src="/assets/images/INU/datastructure/completebtree.png" alt="completebtree_Procdess" width="100%" min-width="200px" itemprop="image"><br>`완전 이진 트리의 모습` <br>
+> <img src="/assets/images/INU/datastructure/completebtree.png" alt="completebtree_Procdess"><br>`완전 이진 트리의 모습` <br>
 
 - 완전 이진 트리는 높이가 k일때 레벨 1, 즉 루트 노드 부터 k-1 즉 leaf 노드 전 레벨까지 가능한 모든 노드가 채워져 있고,
   마지막 레벨 k에서는 왼쪽부터 오른쪽으로 노드가 순서대로 채워져 있는 이진트리이다.
@@ -194,7 +194,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 > 1. 저장하고자 하는 이진 트리를 완전이진트리라 가정.
 > 2. 이진트리의 깊이가 k이면 최대 2^k - 1 개의 공간을 연속적으로 할당한다.
 > 3. 완전이진트리의 번호대로 노드들을 저장한다.
-> <img src="/assets/images/INU/datastructure/btreewitharr.png" alt="btreewitharr_Procdess" width="100%" min-width="200px" itemprop="image"><br>`이진 트리의 배열 표현법` <br>
+> <img src="/assets/images/INU/datastructure/btreewitharr.png" alt="btreewitharr_Procdess"><br>`이진 트리의 배열 표현법` <br>
 > - 그림 a를 보면, 트리의 각 노드에 번호가 먼저 부여되고, 해당 번호를 index로 하여 배열에 순차적으로 저장된다.
 >   - 포화이진트리 및 완전이진트리의 경우에는 노드가 번호 순으로 전부 존재하므로 배열의 중간에 빈 공간이 생기지 않는다.
 >     - 간선의 밀도(density)가 높다면 배열 표현법을 사용하자.
@@ -218,7 +218,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 - 트리에서의 노드가 구조체로 표현되고, 각 노드가 포인터를 가지고 있다.
 - 해당 포인터를 이용하여 노드와 노드를 연결하는 방법이다.
 
-> <img src="/assets/images/INU/datastructure/btreewithlink.png" alt="btreewithlink_Procdess" width="100%" min-width="200px" itemprop="image"><br>`이진 트리 - 링크 표현법` <br>
+> <img src="/assets/images/INU/datastructure/btreewithlink.png" alt="btreewithlink_Procdess"><br>`이진 트리 - 링크 표현법` <br>
 
 - 각 노드의 모습을 보면, 노드마다 3개의 필드를 가지는 것을 볼 수 있다.
   - 데이터 필드 : 데이터를 저장
@@ -350,7 +350,7 @@ int main(void) {
 
 
 
-><img src="/assets/images/INU/datastructure/Btreetraversal.png" alt="Btreetraversal_Procdess" width="100%" min-width="200px" itemprop="image"><br>`이진 트리의 순회 방법`<br>
+><img src="/assets/images/INU/datastructure/Btreetraversal.png" alt="Btreetraversal_Procdess"><br>`이진 트리의 순회 방법`<br>
 
 - 이진트리에서 루트의 좌, 우 서브 트리도 마찬가지로 이진트리로 구성되어 있는 것을 알 것이다.
 - 따라서 각 서브 트리 방문시에도 같은 순회 방법을 계속해서 적용 해나가며 방문한다.
@@ -383,7 +383,7 @@ int main(void) {
 3. 오른쪽 서브트리를 방문한다.
 ```
 
-><img src="/assets/images/INU/datastructure/preorder.png" alt="preorder_Procdess" width="100%" min-width="200px" itemprop="image"><br>`이진 트리의 전위 순회` <br>
+><img src="/assets/images/INU/datastructure/preorder.png" alt="preorder_Procdess"><br>`이진 트리의 전위 순회` <br>
 
 - 전위 순회에서 루트 노드를 방문했다고 가정해보자.
   - 다음 차례는 왼쪽 서브트리인데, 왼쪽 서브트리의 어떤 노드를 먼저 방문해야 할까?
@@ -397,7 +397,7 @@ int main(void) {
 
 
 
-><img src="/assets/images/INU/datastructure/preorderusage.png" alt="preorderusage_Procdess" width="100%" min-width="200px" itemprop="image"><br><br>`전위 순회는 구조화된 문서와 같은 자료를 관리하는 것에 유용하게 사용된다.` <br>
+><img src="/assets/images/INU/datastructure/preorderusage.png" alt="preorderusage_Procdess"><br><br>`전위 순회는 구조화된 문서와 같은 자료를 관리하는 것에 유용하게 사용된다.` <br>
 
 <br><br>
 
@@ -411,11 +411,11 @@ int main(void) {
 3. 오른쪽 서브트리를 방문한다.
 ```
 
-><img src="/assets/images/INU/datastructure/inorder.png" alt="inorder_Procdess" width="100%" min-width="200px" itemprop="image"><br><br>`이진 트리의 중위 순회` <br>
+><img src="/assets/images/INU/datastructure/inorder.png" alt="inorder_Procdess"><br><br>`이진 트리의 중위 순회` <br>
 
 - 중위 순회도 전위 순회와 같은 방식의 알고리즘이나, 순서만 다르다.
 
-><img src="/assets/images/INU/datastructure/inorderusage.png" alt="inorderusage_Procdess" width="100%" min-width="200px" itemprop="image"><br><br>`중위 순회는 수식과 같은 자료를 관리하는 것에 유용하게 사용된다.` <br>
+><img src="/assets/images/INU/datastructure/inorderusage.png" alt="inorderusage_Procdess"><br><br>`중위 순회는 수식과 같은 자료를 관리하는 것에 유용하게 사용된다.` <br>
 
 <br><br>
 
@@ -429,13 +429,13 @@ int main(void) {
 3. 루트 노드를 방문한다.
 ```
 
-><img src="/assets/images/INU/datastructure/postorder.png" alt="postorder_Procdess" width="100%" min-width="200px" itemprop="image"><br><br>`이진 트리의 후위 순회` <br>
+><img src="/assets/images/INU/datastructure/postorder.png" alt="postorder_Procdess"><br><br>`이진 트리의 후위 순회` <br>
 
 - 후위 순회도 전위, 중위 순회와 같은 방식의 알고리즘이나, 순서만 다르다.
 - 아래에서부터 거슬러 올라가며 데이터를 쌓아 최종 데이터를 도출하는 방식에 유용하다.
   - 아래에서부터 데이터를 저장한 후 해당 노드를 지워가는 방식으로 구현.
 
-><img src="/assets/images/INU/datastructure/postorderusage.png" alt="postorderusage_Procdess" width="100%" min-width="200px" itemprop="image"><br><br>`후위 순회는 디렉터리의 용량 계산과 같은 알고리즘에 유용하게 사용된다.` <br>
+><img src="/assets/images/INU/datastructure/postorderusage.png" alt="postorderusage_Procdess"><br><br>`후위 순회는 디렉터리의 용량 계산과 같은 알고리즘에 유용하게 사용된다.` <br>
 
 <br><br>
 
@@ -527,7 +527,7 @@ int main(void) {
 - 동일한 레벨의 경우에는 좌 -> 우 순으로 방문한다.
 - 지금까지의 순회법이 스택(순환 호출)을 사용했던 것에 비해 레벨 순회는 큐(Queue)를 사용한다.
 
-><img src="/assets/images/INU/datastructure/leveltraversal.png" alt="leveltraversal_Procdess" width="100%" min-width="200px" itemprop="image"><br>`큐(queue)를 사용하는 레벨 순회의 모습`<br>
+><img src="/assets/images/INU/datastructure/leveltraversal.png" alt="leveltraversal_Procdess"><br>`큐(queue)를 사용하는 레벨 순회의 모습`<br>
 
 - 레벨 순회 코드는 큐에 노드가 하나라도 있으면 계속 반복하는 코드로 이루어짐.
 - 한번의 반복 : 큐에 있는 노드를 꺼내(dequeue) 방문(작업) 후 해당 노드의 자식 노드를 큐에 삽입(enqueue)
@@ -645,7 +645,7 @@ int main(void) {
 }
 ```
 
-><img src="/assets/images/INU/datastructure/leveltraversaltest.png" alt="leveltraversaltest_Procdess" width="100%" min-width="200px" itemprop="image"><br>`레벨 순회 실행 결과`<br>
+><img src="/assets/images/INU/datastructure/leveltraversaltest.png" alt="leveltraversaltest_Procdess"><br>`레벨 순회 실행 결과`<br>
 
 ><h1>그래서 어떤 순회를 사용해야 하는 건가요?</h1>
 >순서에 상관없이 모든 노드를 방문하기만 하면 되는 알고리즘에서는 3가지 순회 중 구현하기 편한 것을 사용하면 된다.<br><br>
@@ -665,10 +665,10 @@ int main(void) {
 피연산자들은 단말 노드(leaf node)가 되고, 연산자들은 비단말 노드가 된다.
 ```
 
-><img src="/assets/images/INU/datastructure/expressiontree.png" alt="expressiontree_Procdess" width="100%" min-width="200px" itemprop="image"><br>`이진 트리를 활용한 수식 트리 - a + b 를 수식 트리로 표현한 것`<br><br>
+><img src="/assets/images/INU/datastructure/expressiontree.png" alt="expressiontree_Procdess"><br>`이진 트리를 활용한 수식 트리 - a + b 를 수식 트리로 표현한 것`<br><br>
 > 위와 같은 수식 트리를 앞에서 배운 전위, 중위, 후위 순회를 사용하여 읽게 되면<br>
 > 각각 전위, 중위, 후위 표기 수식이 된다.<br><br>
-><img src="/assets/images/INU/datastructure/btreenumcal.png" alt="btreenumcal_Procdess" width="100%" min-width="200px" itemprop="image"><br>`어떤 순회 방법을 사용하냐에 따라 이진 수식 트리의 표기법을 바꿀 수 있다.`<br>
+><img src="/assets/images/INU/datastructure/btreenumcal.png" alt="btreenumcal_Procdess"><br>`어떤 순회 방법을 사용하냐에 따라 이진 수식 트리의 표기법을 바꿀 수 있다.`<br>
 
 - 수식 트리의 루트 노드는 연산자이고, 그 자식 노드들은 피연산자인 단말 노드부터 연산자인 해당 부모 노드와 만나 연산이 실행된다.<br>
 - 따라서, 연산자들의 피연산자인 양쪽의 자식 노드들을 먼저 꺼내 부모 노드의 연산자로 연산.
@@ -751,7 +751,7 @@ int main(void){
 
 # 트리의 응용 (2) : 디렉토리 용량 계산 - 후위 순회
 
-><img src="/assets/images/INU/datastructure/directoryCalEX.png" alt="directoryCalEX_Procdess" width="100%" min-width="200px" itemprop="image"><br>`이진 트리의 후위 순회를 이용하여 디렉토리 용량 계산하기`<br>
+><img src="/assets/images/INU/datastructure/directoryCalEX.png" alt="directoryCalEX_Procdess"><br>`이진 트리의 후위 순회를 이용하여 디렉토리 용량 계산하기`<br>
 >- 트리의 응용 : 디렉토리 용량 계산
 >  - 이진 트리를 사용하기 때문에 하나의 디렉토리 안에 2개를 초과하는 디렉토리가 존재하면 안된다.
 >  - 상위 디렉토리의 용량은 하위 디렉토리 용량의 합을 통해 구할 수 있다.
@@ -791,7 +791,7 @@ int main(void){
 >}
 >```
 >
-><img src="/assets/images/INU/datastructure/BTreeForDirc.png" alt="BTreeForDirc_Procdess" width="100%" min-width="200px" itemprop="image"><br>`디렉토리 용량 계산 결과`<br>
+><img src="/assets/images/INU/datastructure/BTreeForDirc.png" alt="BTreeForDirc_Procdess"><br>`디렉토리 용량 계산 결과`<br>
 
 <br><br>
 
@@ -925,9 +925,9 @@ void thread_inorder(TreeNode* root){
 
 <br><br>
 
-[처음으로~](#)
 
-<span style="color:grey">`참고: C언어로 쉽게 풀어쓴 자료구조 <개정 3판> 천인국, 공용해, 하상국 지음`</span><br><br><br>
+
+<br><br><br>
 
 
 ### Task Lists

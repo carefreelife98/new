@@ -14,7 +14,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 # 그래프 (graph) 란?
 
-><img src="/assets/images/INU/datastructure/graph_map.png" alt="graph_map_Procdess" width="100%" min-width="200px" itemprop="image"><br>`그래프의 예 : 서울 지하철 노선의 모습`<br>
+><img src="/assets/images/INU/datastructure/graph_map.png" alt="graph_map_Procdess"><br>`그래프의 예 : 서울 지하철 노선의 모습`<br>
 >
 > - 그래프는 연결되어 있는 객체 간의 관계를 표현하는 자료구조 이다.
 > - 인접 행렬이나 인접 리스트로 메모리에 표현되고 처리됨.
@@ -26,7 +26,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 # 그래프의 역사
 
-><img src="/assets/images/INU/datastructure/Konigsberg_bridge.png" alt="Konigsberg_bridge_Procdess" width="50%" min-width="200px" itemprop="image"><br>`Konigsberg의 다리 문제`<br>
+><img src="/assets/images/INU/datastructure/Konigsberg_bridge.png" alt="Konigsberg_bridge_Procdess"   /><br>`Konigsberg의 다리 문제`<br>
 > 
 > - 1800년대 수학자 오일러(Euler)에 의해 창안.
 > - 오일러 문제
@@ -44,7 +44,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 # 그래프(graph) 의 정의
 
-><img src="/assets/images/INU/datastructure/def_graph.png" alt="def_graph_Procdess" width="100%" min-width="200px" itemprop="image"><br>`정점(vertex) 과 간선(edge)`<br><br>
+><img src="/assets/images/INU/datastructure/def_graph.png" alt="def_graph_Procdess"><br>`정점(vertex) 과 간선(edge)`<br><br>
 > - 정점(Vertex) 과 간선(Edge) 들의 유한 집합이라 할 수 있다.
 > - 그래프 G는 (V, E)로 표시.
 > - 정점(Vertex)
@@ -60,7 +60,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 # 그래프 표현
 
-><img src="/assets/images/INU/datastructure/EX_graph.png" alt="EX_graph_Procdess" width="100%" min-width="200px" itemprop="image"><br>`그래프 표현의 예`<br><br>
+><img src="/assets/images/INU/datastructure/EX_graph.png" alt="EX_graph_Procdess"><br>`그래프 표현의 예`<br><br>
 > - 그래프는 다음과 같이 집합의 형태로 표현될 수 있다.
 > 
 >   - 무방향 그래프 : () 안에 정점을 표시. 
@@ -76,16 +76,16 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 >
 >   - 네트워크(가중치 그래프): 
 >     - 그래프의 간선에 가중치(weight)를 할당하여 두 정점간의 연결 유무 뿐만 아니라 연결 강도까지 나타낸 그래프<br>
->       <img src="/assets/images/INU/datastructure/graph_network.png" alt="graph_network_Procdess" width="50%" min-width="200px" itemprop="image"><br>`가중치 그래프(네트워크)의 예 - 지도`<br><br>
+>       <img src="/assets/images/INU/datastructure/graph_network.png" alt="graph_network_Procdess"   /><br>`가중치 그래프(네트워크)의 예 - 지도`<br><br>
 >
 >   - 부분 그래프(sub graph):
 >     - 어떤 그래프의 정점의 일부와 간선의 일부로 이루어진 그래프.<br>
->       <img src="/assets/images/INU/datastructure/graph_subgraph.png" alt="graph_subgraph_Procdess" width="50%" min-width="200px" itemprop="image"><br>`부분 그래프의 예 - 지도`<br><br>
+>       <img src="/assets/images/INU/datastructure/graph_subgraph.png" alt="graph_subgraph_Procdess"   /><br>`부분 그래프의 예 - 지도`<br><br>
 >   - 정점의 차수:
 >     - 인접 정점(adjacent vertex): 하나의 정점에서 간선에 의해 직접 연결된 정점.
 >     - 무방향 그래프의 차수(degree):
 >       - 하나의 정점에 연결된 다른 정점의 수.
->       <img src="/assets/images/INU/datastructure/nodirec_graph_degree.png" alt="nodirec_graph_degree_Procdess" width="50%" min-width="200px" itemprop="image"><br>`무방향 그래프의 차수`<br><br>
+>       <img src="/assets/images/INU/datastructure/nodirec_graph_degree.png" alt="nodirec_graph_degree_Procdess"   /><br>`무방향 그래프의 차수`<br><br>
 >       - G1 에서 정점 0의 인접 정점: 정점 1, 정점 2, 정점 3
 >       - G1 에서 정점 0의 차수: 3
 >     - 방향 그래프의 차수(degree):<br>
@@ -108,7 +108,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 >     - 사이클(cycle)
 >       - 단순 경로의 시작 정점과 종료 정점이 동일한 경로
 >     - 예)
->       - <img src="/assets/images/INU/datastructure/graph_path_ex.png" alt="graph_path_ex_Procdess" width="50%" min-width="200px" itemprop="image"><br>`그래프의 경로 예`<br>
+>       - <img src="/assets/images/INU/datastructure/graph_path_ex.png" alt="graph_path_ex_Procdess"   /><br>`그래프의 경로 예`<br>
 >         - G1의 0,1,2,3은 경로지만, 0,1,3,2 는 경로가 아님.
 >         - G1의 1,0,2,3은 단순 경로이지만 1,0,2,0은 단순 경로가 아니다.
 >         - G1의 0,1,2,0과 G3의 0,1,0은 사이클.
@@ -365,7 +365,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 # 그래프 탐색 - 깊이 우선 탐색(DFS: Depth First Search)
 
-> <img src="/assets/images/INU/datastructure/graph_search.png" alt="graph_search_Procdess" width="100%" min-width="200px" itemprop="image"><br>`그래프 탐색의 두 가지 원리`<br>
+> <img src="/assets/images/INU/datastructure/graph_search.png" alt="graph_search_Procdess"><br>`그래프 탐색의 두 가지 원리`<br>
 > - 그래프의 탐색?
 >   - 하나의 정점으로부터 시작하여 차례대로 모든 정점들을 한번씩 방문
 >   - 많은 문제들이 단순히 그래프의 노드를 탐색하는 것으로 해결.
@@ -465,7 +465,7 @@ void dfs_list(GraphType* g, int v){
 시작 정점으로부터 가까운 정점을 먼저 방문하고 멀리 떨어져 있는 정점을 나중에 방문하는 순회 방법.  
 ```
 
-> <img src="/assets/images/INU/datastructure/BFS.png" alt="BFS_Procdess" width="100%" min-width="200px" itemprop="image"><br>`너비 우선 탐색 (Breath First Search : BFS)`<br>
+> <img src="/assets/images/INU/datastructure/BFS.png" alt="BFS_Procdess"><br>`너비 우선 탐색 (Breath First Search : BFS)`<br>
 > - 시작 정점 A를 방문한다.
 > - 정점 A의 인접 정점인 {B, S}를 차례대로 방문한다.
 > - 정점 {B, S}의 인접 정점인 {C, G}를 방문한다.
@@ -474,8 +474,8 @@ void dfs_list(GraphType* g, int v){
 >   - 해당 정점의 인접 정점을 차례대로 큐에 넣는다.
 >   - 위 과정을 큐가 소진 될 때까지 반복한다.
 >
-> <img src="/assets/images/INU/datastructure/BFS_Al.png" alt="BFS_Al_Procdess" width="100%" min-width="200px" itemprop="image"><br>`너비 우선 탐색 알고리즘 1`<br>
-> <img src="/assets/images/INU/datastructure/BFS_Al2.png" alt="BFS_Al2_Procdess" width="100%" min-width="200px" itemprop="image"><br>`너비 우선 탐색 알고리즘 2`<br>
+> <img src="/assets/images/INU/datastructure/BFS_Al.png" alt="BFS_Al_Procdess"><br>`너비 우선 탐색 알고리즘 1`<br>
+> <img src="/assets/images/INU/datastructure/BFS_Al2.png" alt="BFS_Al2_Procdess"><br>`너비 우선 탐색 알고리즘 2`<br>
 > 
 > - 너비 우선 탐색의 특징: 시작 정점으로부터 거리가 가까운 정점의 순서로 탐색을 진행한다.
 >   - 거리가 d인 정점을 전부 방문 후, 거리가 (d+1)인 정점들을 모두 방문... 반복
@@ -735,9 +735,9 @@ int main(void)
 
 <br><br>
 
-[처음으로~](#)
 
-<span style="color:grey">`참고: C언어로 쉽게 풀어쓴 자료구조 <개정 3판> 천인국, 공용해, 하상국 지음`</span><br><br><br>
+
+<br><br><br>
 
 ### Task Lists
 

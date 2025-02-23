@@ -18,7 +18,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
  Cisco의 라우터, 스위치 등으로 네트워크를 가상으로 시뮬레이션 할 수 있는 프로그램
 ```
 
-> <img src="/assets/images/CloudWave/NetWork/Cisco.png" alt="Cisco_Procdess" width="100%" min-width="200px" itemprop="image"><br>[출처: Cisco](https://www.netacad.com/courses/packet-tracer)<br>
+> <img src="/assets/images/CloudWave/NetWork/Cisco.png" alt="Cisco_Procdess"><br>[출처: Cisco](https://www.netacad.com/courses/packet-tracer)<br>
 
 > <h1>주의 사항</h1>
 > ip를 잘못 부여하면 같은 (동일) 네트워크라도 통신이 되지 않는다.<br>
@@ -45,7 +45,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 <h2>라우터0 설치 및 설정</h2>
 
-> <img src="/assets/images/CloudWave/NetWork/cisco_2net_con1.png" alt="cisco_2net_con1_Procdess" width="100%" min-width="200px" itemprop="image"><br>`초기 상태`<br>
+> <img src="/assets/images/CloudWave/NetWork/cisco_2net_con1.png" alt="cisco_2net_con1_Procdess"><br>`초기 상태`<br>
 
 - 현재 PC 0과 1은 동일 네트워크(192.168.200.~)로 이루어져 스위치0를 통해 통신이 가능하다.
 - PC 2는 다른 네트워크(10.~)에 속하기 때문에 라우터0의 도움 없이는 PC 0, 1 (192.168.200.~) 네트워크와 통신이 불가능하다.
@@ -58,13 +58,13 @@ PC 0, 1 (192.168.200.~)과 PC 2 (10.~) 을 연결하기 위해 라우터0을 설
 라우터0에 PC 0, 1, 2의 네트워크 대역을 설정해준다.
 ```
 
-> <img src="/assets/images/CloudWave/NetWork/router_netconf1.png" alt="router_netconf1_Procdess" width="100%" min-width="200px" itemprop="image"><br>`라우터에 192 대역 네트워크 설정`<br>
+> <img src="/assets/images/CloudWave/NetWork/router_netconf1.png" alt="router_netconf1_Procdess"><br>`라우터에 192 대역 네트워크 설정`<br>
 
 - 라우터 0에 PC 0과 1이 사용하는 192.168.200.~ 대역의 네트워크 주소를 설정.
   - GigabitEthernet 0/0 에 설정해준다.
   - Port Status: `On`
 
-> <img src="/assets/images/CloudWave/NetWork/router_netconf2.png" alt="router_netconf2_Procdess" width="100%" min-width="200px" itemprop="image"><br>`라우터에 10 대역 네트워크 설정`<br>
+> <img src="/assets/images/CloudWave/NetWork/router_netconf2.png" alt="router_netconf2_Procdess"><br>`라우터에 10 대역 네트워크 설정`<br>
 
 - 라우터 0에 PC 2에서 사용하는 10.~ 대역의 네트워크 주소를 설정.
   - GigabitEthernet 0/1 에 설정해준다.
@@ -74,7 +74,7 @@ PC 0, 1 (192.168.200.~)과 PC 2 (10.~) 을 연결하기 위해 라우터0을 설
 
 <h2>Gateway 주소 설정</h2>
 
-> <img src="/assets/images/CloudWave/NetWork/gatewayConf.png" alt="gatewayConf_Procdess" width="100%" min-width="200px" itemprop="image"><br>`PC의 gateway 주소 설정`<br>
+> <img src="/assets/images/CloudWave/NetWork/gatewayConf.png" alt="gatewayConf_Procdess"><br>`PC의 gateway 주소 설정`<br>
 
 - gateway를 정확하게 설정해주지 않으면 한 서비스에서 다른 서비스(외부의 서비스)로의 통신이 불가하다.
   - default gateway를 10.0.0.1 로 설정 -> 해당 PC에서 외부로 나가는 요청은 전부 10.0.0.1로 나가게 됨.
@@ -88,26 +88,26 @@ PC 0, 1 (192.168.200.~)과 PC 2 (10.~) 을 연결하기 위해 라우터0을 설
 
 <br><br>
 
-> <img src="/assets/images/CloudWave/NetWork/routingTable.png" alt="routingTable_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Routing Table의 현재 Status`<br>
+> <img src="/assets/images/CloudWave/NetWork/routingTable.png" alt="routingTable_Procdess"><br>`Routing Table의 현재 Status`<br>
 >
 > - 현재 Router0 의 Routing Table을 보면, 두 네트워크의 정보가 존재하게 된다.
 > - 이로써 서로 다른 두 네트워크 (192.168.200.~ / 10.~) 의 통신이 가능해진다.
 
 <br><br>
 
-> <img src="/assets/images/CloudWave/NetWork/switchStatus.png" alt="switchStatus_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Switch의 동작 모습`<br>
+> <img src="/assets/images/CloudWave/NetWork/switchStatus.png" alt="switchStatus_Procdess"><br>`Switch의 동작 모습`<br>
 > 
 > - Switch(L2 장비)의 경우 Layer3(network)의 IP주소 정보는 알지 못하는 것을 볼 수 있다.
 >
 > <br><br>
 > 
-> <img src="/assets/images/CloudWave/NetWork/routerStatus.png" alt="routerStatus_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Router의 동작 모습`<br>
+> <img src="/assets/images/CloudWave/NetWork/routerStatus.png" alt="routerStatus_Procdess"><br>`Router의 동작 모습`<br>
 > 
 > - Router(L3 장비)의 경우 Layer3 의 정보인 IP 주소도 함께 알고 있는 것을 볼 수 있다.
 
 <br><br>
 
-> <img src="/assets/images/CloudWave/NetWork/NetworkConnStats.png" alt="NetworkConnStats_Procdess" width="100%" min-width="200px" itemprop="image"><br>`서버 설치 후 동작 과정`<br>
+> <img src="/assets/images/CloudWave/NetWork/NetworkConnStats.png" alt="NetworkConnStats_Procdess"><br>`서버 설치 후 동작 과정`<br>
 >
 > - 10.0.0.100 의 IP를 가진 서버를 설치 한 후 동작 과정을 살펴보자.
 >   - 10.0.0.100 의 서버 IP와 사용자(PC 0) IP주소인 192.168.200.10 간의 데이터 통신이 잘 이루어지는 것을 볼 수 있다.
@@ -245,7 +245,7 @@ IPv4 : x.x.x.x
 
 # [Cisco Packet Tracer] 정적(static) 주소 설정을 통한 라우터 추가
 
-> <img src="/assets/images/CloudWave/NetWork/NewRouterconn.png" alt="NewRouterconn_Procdess" width="100%" min-width="200px" itemprop="image"><br>`라우터 1 추가`<br>
+> <img src="/assets/images/CloudWave/NetWork/NewRouterconn.png" alt="NewRouterconn_Procdess"><br>`라우터 1 추가`<br>
 > 
 > <h2>라우터 추가 과정</h2>
 > 
@@ -259,7 +259,7 @@ IPv4 : x.x.x.x
 > **위와 같은 라우터 추가 과정이 끝나면 각 라우터는 자신 반대쪽 라우터가 알고 있는 네트워크를 모르게 된다.**
 > - **정적(static) 주소 설정을 통해 반대쪽 네트워크의 정보를 각 라우터에 설정 할 수 있다.**
 > <br>
-> <img src="/assets/images/CloudWave/NetWork/routerStaticAddress.png" alt="routerStaticAddress_Procdess" width="100%" min-width="200px" itemprop="image"><br>`정적 주소 설정`<br>
+> <img src="/assets/images/CloudWave/NetWork/routerStaticAddress.png" alt="routerStaticAddress_Procdess"><br>`정적 주소 설정`<br>
 > <h2>정적(static) 주소 설정</h2>
 > - **해당 네트워크(10.0.0.0/24)로 패킷이 오면 전부 Next Hop 으로 보내라.**
 > - **정적 주소(static)를 사용하여 관리자가 직접 경로를 명시, 설정할 수 있다.**
@@ -268,7 +268,7 @@ IPv4 : x.x.x.x
 
 # [Cisco Packet Tracer] 동적 주소 설정 (RIP : Routing Information Protocol)
 
-> <img src="/assets/images/CloudWave/NetWork/RIP.png" alt="RIP_Procdess" width="100%" min-width="200px" itemprop="image"><br>`동적 주소 설정`<br>
+> <img src="/assets/images/CloudWave/NetWork/RIP.png" alt="RIP_Procdess"><br>`동적 주소 설정`<br>
 > RIP를 사용하여 동적 주소 설정을 해보자.
 > 
 > - 간단하게 `RIP Routing` 에서 자신이 연결되어 있는 네트워크를 router 0, 1 모두 설정 후 Add 해주면 된다.
@@ -343,7 +343,7 @@ IPv4 : x.x.x.x
 
 <br><br>
 
-[처음으로~](#)
+
 
 ### Task Lists
 

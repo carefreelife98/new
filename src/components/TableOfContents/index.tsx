@@ -72,7 +72,7 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
 
     return (
         <Card className="w-64">
-            <CardHeader className="px-4 py-3 border-b">
+            <CardHeader className="px-4 py-3">
                 <div className="flex items-center justify-between">
                     <CardTitle className="text-lg font-semibold">목차</CardTitle>
                     <Button
@@ -87,7 +87,7 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
             </CardHeader>
 
             {isVisible && (
-                <CardContent className="p-0">
+                <CardContent className="p-0 border-t">
                     <ScrollArea className="h-[calc(90vh-8rem)] px-4 py-2">
                         <nav>{renderToc(tableOfContents.map)}</nav>
                     </ScrollArea>

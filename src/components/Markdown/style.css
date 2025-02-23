@@ -1,0 +1,6 @@
+/* Content wrapper - 마크다운 컨텐츠용 */
+.markdown-content {
+    @apply w-full max-w-[1200px] mx-auto px-4;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}

@@ -40,7 +40,7 @@ map()
 > print(a)
 > ```
 >
-> <img src="/assets/images/INU/python/12_map.png" alt="12_map_Procdess" width="60%" min-width="200px" itemprop="image"><br>`map() 함수 및 lambda 함수 적용`<br>
+> <img src="/assets/images/INU/python/12_map.png" alt="12_map_Procdess" /><br>`map() 함수 및 lambda 함수 적용`<br>
 
 <br><br>
 
@@ -67,7 +67,7 @@ filter()
 > print(b)
 > ```
 >
-> <img src="/assets/images/INU/python/12_filter.png" alt="12_filter_Procdess" width="60%" min-width="200px" itemprop="image"><br>`filter() 함수 및 lambda 함수 적용`<br>
+> <img src="/assets/images/INU/python/12_filter.png" alt="12_filter_Procdess" /><br>`filter() 함수 및 lambda 함수 적용`<br>
 
 <br><br>
 
@@ -92,7 +92,7 @@ zip()
 >     print(f'ele_C({ele_C}) + ele_D({ele_D}) = {ele_C + ele_D}')
 > ```
 > 
-> <img src="/assets/images/INU/python/12_zip.png" alt="12_zip_Procdess" width="60%" min-width="200px" itemprop="image"><br>`zip() 함수 및 lambda 함수의 적용`<br>
+> <img src="/assets/images/INU/python/12_zip.png" alt="12_zip_Procdess" /><br>`zip() 함수 및 lambda 함수의 적용`<br>
 
 <br><br>
 
@@ -117,7 +117,7 @@ from functools import reduce
 > b = reduce(lambda x, y: int((x + y) / 3), b)
 > print(a, b)
 > ```
-> <img src="/assets/images/INU/python/12_reduce.png" alt="12_reduce_Procdess" width="60%" min-width="200px" itemprop="image"><br>`reduce() 함수 및 lambda 함수의 적용`<br>
+> <img src="/assets/images/INU/python/12_reduce.png" alt="12_reduce_Procdess" /><br>`reduce() 함수 및 lambda 함수의 적용`<br>
 
 <br><br>
 
@@ -134,7 +134,7 @@ enumerate()
 >    print(idx, element)
 > ```
 > 
-> <img src="/assets/images/INU/python/12_enumerate.png" alt="12_enumerate_Procdess" width="60%" min-width="200px" itemprop="image"><br>`enumerate() 함수 및 lambda 함수의 적용`<br>
+> <img src="/assets/images/INU/python/12_enumerate.png" alt="12_enumerate_Procdess" /><br>`enumerate() 함수 및 lambda 함수의 적용`<br>
 
 <br><br>
 
@@ -169,7 +169,7 @@ if __name__ == '__main__':
     print(f'리스트의 제곱의 평균은 {mean_square(a)} 입니다.')
 ```
 
-> <img src="/assets/images/INU/python/12_1_1.png" alt="12_1_1_Procdess" width="60%" min-width="200px" itemprop="image"><br>`map(), reduce() 활용하여 리스트의 제곱의 평균 구하기`<br>
+> <img src="/assets/images/INU/python/12_1_1.png" alt="12_1_1_Procdess" /><br>`map(), reduce() 활용하여 리스트의 제곱의 평균 구하기`<br>
 
 <br><br>
 
@@ -195,7 +195,7 @@ if __name__ == '__main__':
 
 <br><br>
 
-[처음으로~](#)
+
 
 ### Task Lists
 > 

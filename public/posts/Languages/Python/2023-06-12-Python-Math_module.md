@@ -16,7 +16,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 > - 수학과 관련된 다양한 내장 함수 (log, pow 등) 들이 구현되어 있음.
 >   - Python 설치 시 자동으로 함께 설치된다.
 > - 수학 관련 내장 메소드<br>
-> <img src="/assets/images/INU/python/12_Math_Module.png" alt="12_Math_Module_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Python - Math 모듈`<br><br>
+> <img src="/assets/images/INU/python/12_Math_Module.png" alt="12_Math_Module_Procdess"><br>`Python - Math 모듈`<br><br>
 >   - iterable(연속 열) : __iter__ 내장 메소드가 구현된 모든 객체.
 >     - 리스트, 문자열 등의 순서열 및 집합, 튜플, 사전 자료형 등 거의 모든 자료형이 포함됨.
 
@@ -36,12 +36,12 @@ print(f'sum([2, 3, 5, 1, 4]) = {sum([2, 3, 5, 1, 4])}')
 print(f'pow(2, 10) = {pow(2, 10)}')
 ```
 
-<img src="/assets/images/INU/python/12_Math_use.png" alt="12_Math_use_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Math 모듈의 내장 메소드 사용 예시`<br><br>
+<img src="/assets/images/INU/python/12_Math_use.png" alt="12_Math_use_Procdess"><br>`Math 모듈의 내장 메소드 사용 예시`<br><br>
 
 
 
 
-<img src="/assets/images/INU/python/.png" alt="_Procdess" width="100%" min-width="200px" itemprop="image"><br>``<br><br>
+<img src="/assets/images/INU/python/.png" alt="_Procdess"><br>``<br><br>
 
 
 
@@ -62,7 +62,7 @@ print(f'pow(2, 10) = {pow(2, 10)}')
 
 <br><br>
 
-[처음으로~](#)
+
 
 
 ### Task Lists

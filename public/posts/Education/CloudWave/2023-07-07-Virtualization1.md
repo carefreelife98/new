@@ -43,7 +43,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 가상화 (Virtualization) 란?
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/Virtualization.png" alt="Virtualization_Procdess" width="100%" min-width="200px" itemprop="image"><br>`가상화의 개념`<br>
+<img src="/assets/images/CloudWave/Virtualization/Virtualization.png" alt="Virtualization_Procdess"><br>`가상화의 개념`<br>
 
 - **가상화 : 한 대의 시스템 하드웨어를 논리적으로 분할하여 가상의 시스템을 생성 및 활용하는 개념**
   - **논리적 : 얼마든지 생성 및 삭제가 가능한 것.**
@@ -73,7 +73,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
     <br>
 - 가상화에서 가장 중요한 개념 중 하나는 **하이퍼바이저 (Hypervisor)** 이다.
 - **하이퍼바이저 (Hypervisor)**<br>
-  <img src="/assets/images/CloudWave/Virtualization/hypervisor2.png" alt="hypervisor2_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Virtual Machine Monitor (=가상머신 생성 및 실행 프로세스) 이 곧 하이퍼바이저이다.`<br>
+  <img src="/assets/images/CloudWave/Virtualization/hypervisor2.png" alt="hypervisor2_Procdess"><br>`Virtual Machine Monitor (=가상머신 생성 및 실행 프로세스) 이 곧 하이퍼바이저이다.`<br>
   - 물리적 하드웨어에 설치된 소프트웨어 계층. -> 물리적 머신을 다수의 가상 머신으로 분할하여 사용
     - 동일한 하드웨어 내에서 여러 OS를 가상머신에 올려 사용할 수 있게 된다.
     - Guest OS / Instance : 가상 머신에 설치된 OS
@@ -91,7 +91,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 Protection Ring 은 시스템 아키텍쳐 내에서 둘 이상의 계층으로 권한을 나눈 매커니즘.
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/ProtectionRing.png" alt="ProtectionRing_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Protection Ring의 모습`<br>
+<img src="/assets/images/CloudWave/Virtualization/ProtectionRing.png" alt="ProtectionRing_Procdess"><br>`Protection Ring의 모습`<br>
 
 **Protection Ring 이란?**
 - 운영체제는 사용자 및 하드웨어와 소프트웨어 리소스를 공유.
@@ -112,14 +112,14 @@ Protection Ring 은 시스템 아키텍쳐 내에서 둘 이상의 계층으로 
 
 # (참고) Full Virtualization
 
-<img src="/assets/images/CloudWave/Virtualization/FullVirtual.png" alt="FullVirtual_Procdess" width="100%" min-width="200px" itemprop="image"><br>`전 가상화 (Full Virtualization)`<br>
+<img src="/assets/images/CloudWave/Virtualization/FullVirtual.png" alt="FullVirtual_Procdess"><br>`전 가상화 (Full Virtualization)`<br>
 
 - HostOS가 존재하지 않는다.
 - Hypervisor 만을 사용해서 가상화를 구현
   - 당연히 Hypervisor에는 Kernel이 존재하지 않는다.
   - GuestOS에는 Kernel 이 존재한다.
     - 이것이 GuestOS 가 Ring0인 이유이다.
-      <img src="/assets/images/CloudWave/Virtualization/FullVirtualRing.png" alt="FullVirtualRing_Procdess" width="100%" min-width="200px" itemprop="image"><br><br>
+      <img src="/assets/images/CloudWave/Virtualization/FullVirtualRing.png" alt="FullVirtualRing_Procdess"><br><br>
       
 <br><br>
 
@@ -167,7 +167,7 @@ Protection Ring 은 시스템 아키텍쳐 내에서 둘 이상의 계층으로 
 
 <h1>OpenStack</h1>
 
-> <img src="/assets/images/CloudWave/Virtualization/OpenStack.png" alt="OpenStack_Procdess" width="100%" min-width="200px" itemprop="image"><br>`OpenStack`<br>
+> <img src="/assets/images/CloudWave/Virtualization/OpenStack.png" alt="OpenStack_Procdess"><br>`OpenStack`<br>
 > **OpenStack은 오픈 소스 기반의 클라우드 컴퓨팅 플랫폼.**
 > - OpenStack은 **대규모의 프라이빗 클라우드 및 퍼블릭 클라우드 인프라를 구축하고 관리하기 위한 도구와 서비스를 제공.**
 >   - 컴퓨팅, 네트워킹, 스토리지, 식별 및 액세스 관리 등의 다양한 기능을 포함하고 있다.
@@ -177,7 +177,7 @@ Protection Ring 은 시스템 아키텍쳐 내에서 둘 이상의 계층으로 
 
 <h1>OpenShift(상용) - Redhat</h1>
 
-> <img src="/assets/images/CloudWave/Virtualization/OpenShift.png" alt="OpenShift_Procdess" width="100%" min-width="200px" itemprop="image"><br>`OpenShift`<br>
+> <img src="/assets/images/CloudWave/Virtualization/OpenShift.png" alt="OpenShift_Procdess"><br>`OpenShift`<br>
 > **Kubernetes의 상위 버전.** 
 >
 > **OpenShift는 Red Hat에서 개발한 오픈 소스 기반의 컨테이너 플랫폼**
@@ -189,7 +189,7 @@ Protection Ring 은 시스템 아키텍쳐 내에서 둘 이상의 계층으로 
 
 <h1>Kubernetes (Open Source)</h1>
 
-> <img src="/assets/images/CloudWave/Virtualization/Kubernetes.png" alt="Kubernetes_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Kubernetes`<br>
+> <img src="/assets/images/CloudWave/Virtualization/Kubernetes.png" alt="Kubernetes_Procdess"><br>`Kubernetes`<br>
 > Kubernetes는 컨테이너 오케스트레이션 및 관리를 위한 오픈 소스 플랫폼.<br>
 > - 컨테이너화된 애플리케이션을 효율적으로 배포, 확장 및 관리하기 위한 기능을 제공.
 > - Kubernetes는 애플리케이션을 여러 대의 컴퓨터 노드로 분산시키고, 컨테이너의 상태를 모니터링하며, 자원 할당과 스케줄링을 관리.
@@ -204,7 +204,7 @@ Protection Ring 은 시스템 아키텍쳐 내에서 둘 이상의 계층으로 
 
 <br><br>
 
-[처음으로~](#)
+
 
 ### Task Lists
 

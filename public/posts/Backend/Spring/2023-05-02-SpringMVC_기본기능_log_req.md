@@ -92,7 +92,7 @@ log.info("CarefreeLife")
   - 운영 단계에서는 <span style="color:forestgreen">info</span> 레벨까지만 로그를 출력하여 불필요한 단계에서의 로그 출력 제한
   - <span style="color:green">불필요한 자원(메모리 등)의 낭비를 막을 수 있다.
 
-<img src="/assets/images/Spring/SpringMVC/log.png" alt="log_Procdess" width="100%" min-width="200px" itemprop="image"><br>`로그 사용 모습`<br>
+<img src="/assets/images/Spring/SpringMVC/log.png" alt="log_Procdess"><br>`로그 사용 모습`<br>
 
 <br><br>
 
@@ -127,7 +127,7 @@ log.info("CarefreeLife")
 
 <br><br>
 
-[처음으로~](#)
+
 
 `참고:`[Inflearn - 김영한님_강의](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-mvc-1/dashboard)<br><br>
 

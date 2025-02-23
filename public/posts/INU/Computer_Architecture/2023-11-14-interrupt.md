@@ -149,7 +149,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 <br><br>
 
 
-[처음으로~](#)
+
 
 ### Task Lists
 

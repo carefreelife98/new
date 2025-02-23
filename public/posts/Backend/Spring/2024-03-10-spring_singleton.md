@@ -352,7 +352,7 @@ Process finished with exit code 0
 
 
 
-[처음으로~](#)
+
 
 ### Task Lists
 

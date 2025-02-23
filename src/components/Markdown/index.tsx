@@ -11,6 +11,7 @@ import TagList from "../TagList";
 import {MarkdownProps} from "@/app/posts/[category]/[subCategory]/[slug]/page";
 import {useState} from "react";
 import TableOfContents from "@/components/TableOfContents";
+import './style.css';
 
 export default function Markdown({metadata, content}: MarkdownProps) {
 
@@ -50,7 +51,7 @@ export default function Markdown({metadata, content}: MarkdownProps) {
                         <div className="divider pb-10"/>
                     </div>
                 )}
-                <div className="w-full max-w-full">
+                <div className="markdown-content">
                     <ReactMarkdown
                         className="w-full max-w-full"
                         rehypePlugins={[

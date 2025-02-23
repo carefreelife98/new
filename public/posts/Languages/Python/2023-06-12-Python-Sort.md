@@ -56,7 +56,7 @@ if __name__ == '__main__':
 > <img src="/assets/images/INU/python/13_SelectionSort.png" alt="13_SelectionSort_Procdess" width="70%" min-width="200px" itemprop="image"><br>`선택 정렬(Selection Sort)의 실행 결과`<br><br>
 >
 > **선택 정렬의 구현 및 동작 과정**
-> <img src="/assets/images/INU/python/13_SelectionSort_Process.png" alt="13_SelectionSort_Process_Procdess" width="100%" min-width="200px" itemprop="image"><br>`선택 정렬(Selection Sort)의 동작 과정`<br><br>
+> <img src="/assets/images/INU/python/13_SelectionSort_Process.png" alt="13_SelectionSort_Process_Procdess"><br>`선택 정렬(Selection Sort)의 동작 과정`<br><br>
 >
 > **꼬리 재귀 함수로의 변형**
 > 
@@ -113,7 +113,7 @@ if __name__ == '__main__':
 
 > **삽입 정렬의 구현 및 동작 과정**
 > 
-> <img src="/assets/images/INU/python/insertion_sort.png" alt="insertion_sort_Procdess" width="100%" min-width="200px" itemprop="image"><br>`삽입 정렬의 구현 및 동작 과정`<br>
+> <img src="/assets/images/INU/python/insertion_sort.png" alt="insertion_sort_Procdess"><br>`삽입 정렬의 구현 및 동작 과정`<br>
 
 <br><br>
 
@@ -121,7 +121,7 @@ if __name__ == '__main__':
 
 > 리스트를 요소가 하나가 될 때까지 반으로 분할.<br>
 > - 이후 요소들을 적절한 위치에 삽입하며 합병하여 정렬<br>
-> <img src="/assets/images/INU/python/Merge_sort.png" alt="Merge_sort_Procdess" width="100%" min-width="200px" itemprop="image"><br>`합병 정렬의 동작 과정`<br>
+> <img src="/assets/images/INU/python/Merge_sort.png" alt="Merge_sort_Procdess"><br>`합병 정렬의 동작 과정`<br>
 
 ```python
 # 합병 정렬에서 메인이 되는 merge 함수.
@@ -146,7 +146,7 @@ def msort(s):
 
 > **Merge 함수 동작 과정**<br>
 > 
-> <img src="/assets/images/INU/python/Merge_sort_process.png" alt="Merge_sort_process_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Merge 함수 동작 과정`<br>
+> <img src="/assets/images/INU/python/Merge_sort_process.png" alt="Merge_sort_process_Procdess"><br>`Merge 함수 동작 과정`<br>
 
 <br><br>
 
@@ -168,7 +168,7 @@ Step
 > 
 > **버블 정렬의 동작 과정**<br>
 > 
-> <img src="/assets/images/INU/python/Bubble_Sort.png" alt="Bubble_Sort_Procdess" width="100%" min-width="200px" itemprop="image"><br>`버블 정렬 동작 과정`<br>
+> <img src="/assets/images/INU/python/Bubble_Sort.png" alt="Bubble_Sort_Procdess"><br>`버블 정렬 동작 과정`<br>
 
 ```python
 # 버블 정렬의 구현
@@ -201,7 +201,7 @@ for k in range(len(l)):
 
 <br><br>
 
-[처음으로~](#)
+
 
 
 ### Task Lists

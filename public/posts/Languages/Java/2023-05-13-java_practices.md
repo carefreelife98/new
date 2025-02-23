@@ -57,7 +57,7 @@ public class _1_printDayAndTime {
 }
 ```
 
-<img src="/assets/images/INU/java/hw2/1_printDayAndTime.png" alt="1_printDayAndTime_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Practice 1 실행 결과`<br>
+<img src="/assets/images/INU/java/hw2/1_printDayAndTime.png" alt="1_printDayAndTime_Procdess"><br>`Practice 1 실행 결과`<br>
 
 </div>
 </details>
@@ -125,7 +125,7 @@ public class _2_StringToDay {
 ```
 
 > - 출력 예시:
-<img src="/assets/images/INU/java/hw2/3_outputEX.png" alt="3_outputEX_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Practice 3 출력 예시`<br>
+<img src="/assets/images/INU/java/hw2/3_outputEX.png" alt="3_outputEX_Procdess"><br>`Practice 3 출력 예시`<br>
 
 <details>
 <summary><span style="color:blue">Practice (3) 문자열 회전하기 - 소스 코드 (클릭)</span></summary>
@@ -271,7 +271,7 @@ public class _3_RollString {
 ```
 
 <img src="/assets/images/INU/java/hw2/3_rollstrForBlog.png" alt="3_rollstrForBlog_Procdess" width="40%" min-width="200px" itemprop="image">
-<img src="/assets/images/INU/java/hw2/3_rollstrForBlog3.png" alt="3_rollstrForBlog3_Procdess" width="50%" min-width="200px" itemprop="image">
+<img src="/assets/images/INU/java/hw2/3_rollstrForBlog3.png" alt="3_rollstrForBlog3_Procdess"   />
 <img src="/assets/images/INU/java/hw2/3_rollstrForBlog2.png" alt="3_rollstrForBlog2_Procdess" width="40%" min-width="200px" itemprop="image">`   `
 <img src="/assets/images/INU/java/hw2/3_rollstrForBlog4.png" alt="3_rollstrForBlog4_Procdess" width="40%" min-width="200px" itemprop="image">
 
@@ -297,7 +297,7 @@ public class _3_RollString {
 
 
 > - 출력 예시
-> - <img src="/assets/images/INU/java/hw2/4_inputStringCalculate.png" alt="4_inputStringCalculate_Procdess" width="60%" min-width="200px" itemprop="image"><br>`Practice 4 출력 예시 / 결과`<br>
+> - <img src="/assets/images/INU/java/hw2/4_inputStringCalculate.png" alt="4_inputStringCalculate_Procdess" /><br>`Practice 4 출력 예시 / 결과`<br>
 
 <details>
 <summary><span style="color:blue">Practice (4) 문자열 입력으로 계산 후 결과 출력 -  소스 코드 (클릭)</span></summary>
@@ -432,7 +432,7 @@ public class _4_inputStringCalculate {
 
 
 > - 출력 예시
-> - <img src="/assets/images/INU/java/hw2/5_lotto.png" alt="5_lotto_Procdess" width="50%" min-width="200px" itemprop="image"><br>`Practice 5 출력 예시`<br>
+> - <img src="/assets/images/INU/java/hw2/5_lotto.png" alt="5_lotto_Procdess"   /><br>`Practice 5 출력 예시`<br>
 
 <details>
 <summary><span style="color:blue">Practice (5) 로또 번호 생성기 -  소스 코드 (클릭)</span></summary>
@@ -531,7 +531,7 @@ public class _5_lotto {
 
 
 <!-- 
-> <img src="/assets/images/Spring/SpringMVC/springmvcstruct.png" alt="_Procdess" width="100%" min-width="200px" itemprop="image"><br>``<br>
+> <img src="/assets/images/Spring/SpringMVC/springmvcstruct.png" alt="_Procdess"><br>``<br>
 `참고:`[Inflearn - 김영한님_강의](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-mvc-1/dashboard)<br><br>
 
 
@@ -565,7 +565,7 @@ public class _5_lotto {
 
 <br><br>
 
-[처음으로~](#)
+
 
 
 ### Task Lists

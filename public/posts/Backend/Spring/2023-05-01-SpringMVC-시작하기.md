@@ -118,7 +118,7 @@ public class CarefreeLifeMemberControllerV3 {
 
 <br><br>
 
-[처음으로~](#)
+
 
 `참고:`[Inflearn - 김영한님_강의](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-mvc-1/dashboard)<br><br>
 

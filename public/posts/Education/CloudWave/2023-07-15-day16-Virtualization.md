@@ -28,7 +28,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 # Docker Architecture
 
-<img src="/assets/images/CloudWave/Virtualization/DockerArch.png" alt="DockerArch_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Docker Architecture`<br>
+<img src="/assets/images/CloudWave/Virtualization/DockerArch.png" alt="DockerArch_Procdess"><br>`Docker Architecture`<br>
 
 - Docker
   - Image : 애플리케이션을 구동하기 위한 FILE
@@ -52,7 +52,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 # [Docker] 명령어
 
-<img src="/assets/images/CloudWave/Virtualization/DockerClientCommands.png" alt="DockerClientCommands_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Docker Client Commands`<br>
+<img src="/assets/images/CloudWave/Virtualization/DockerClientCommands.png" alt="DockerClientCommands_Procdess"><br>`Docker Client Commands`<br>
 - **도커 명령어**
   - **직관적인 명령어**를 사용.
   - **기억할만한 명령어**
@@ -108,7 +108,7 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service 
 [root@servera ~]# systemctl status docker
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/Dockerinstall.png" alt="Dockerinstall_Procdess" width="80%" min-width="200px" itemprop="image"><br>`Serera - Docker 설치 및 실행된 모습`<br>
+<img src="/assets/images/CloudWave/Virtualization/Dockerinstall.png" alt="Dockerinstall_Procdess" /><br>`Serera - Docker 설치 및 실행된 모습`<br>
 - `systemctl enable` 명령을 사용하여 `docker` 서비스를 사용으로 설정.
 - `--now` 옵션을 사용하여 서비스를 사용으로 설정하는 동시에 시작할 수 있다.
 
@@ -120,7 +120,7 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service 
 [root@servera ~]# docker pull mariadb
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/Dpull.png" alt="Dpull_Procdess" width="80%" min-width="200px" itemprop="image"><br>`Docker Pull`<br>
+<img src="/assets/images/CloudWave/Virtualization/Dpull.png" alt="Dpull_Procdess" /><br>`Docker Pull`<br>
 - pull 할 이미지 뒤에 tag(version) 을 붙히지 않으면 Default 값인 가장 최근 버전(:latest)으로 다운로드 된다.
 <br><br>
 
@@ -128,7 +128,7 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service 
 [root@servera ~]# docker images
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/Dimages.png" alt="Dimages_Procdess" width="80%" min-width="200px" itemprop="image"><br>`Docker images`<br>
+<img src="/assets/images/CloudWave/Virtualization/Dimages.png" alt="Dimages_Procdess" /><br>`Docker images`<br>
 - 현재 docker 내에 다운로드 되어 있는 이미지 리스트를 보여준다.
 <br><br>
 
@@ -141,7 +141,7 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service 
 > -d mariadb:latest
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/Ddbrun.png" alt="Ddbrun_Procdess" width="80%" min-width="200px" itemprop="image"><br>`Docker 에서 maria db 생성 및 실행하는 모습`<br>
+<img src="/assets/images/CloudWave/Virtualization/Ddbrun.png" alt="Ddbrun_Procdess" /><br>`Docker 에서 maria db 생성 및 실행하는 모습`<br>
 - Docker 에서 데이터베이스 생성 시 환경변수를 초기화 해주어야 한다.
 - `-d` 옵션 : 백그라운드에서 실행하기
 - 위에서 지정해준 환경 변수는 컨테이너에 저장된다.
@@ -152,7 +152,7 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service 
 [root@servera ~]# docker ps
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/Dps.png" alt="Dps_Procdess" width="80%" min-width="200px" itemprop="image"><br>`Docker ps 명령어`<br>
+<img src="/assets/images/CloudWave/Virtualization/Dps.png" alt="Dps_Procdess" /><br>`Docker ps 명령어`<br>
 - 현재 가동중인 컨테이너 리스트를 반환.
 - `docker ps -a` : 현재 가동중인 컨테이너 뿐만 아니라 가동이 중지된 컨테이너 까지 모두 반환.
 
@@ -162,7 +162,7 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service 
 [root@servera ~]# docker exec -it mariadb-basic bash
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/Dexec.png" alt="Dexec_Procdess" width="80%" min-width="200px" itemprop="image"><br>`Docker exec 명령어`<br>
+<img src="/assets/images/CloudWave/Virtualization/Dexec.png" alt="Dexec_Procdess" /><br>`Docker exec 명령어`<br>
 - `mariadb-basic` 을
 - `-it` : 상호 입출력 설정(-i) / tty 활성화 하여 Bash Shell 사용 활성화(-t)
 - `-exec` : 컨테이너 내부의 Shell 사용 가능. `-it` 옵션을 통해 Bash Shell을 유지해준다.
@@ -175,7 +175,7 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service 
 root@9ec2cf06718b:/# mariadb -uroot –pr00tpassword
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/Dmariadbaccess.png" alt="Dmariadbaccess_Procdess" width="80%" min-width="200px" itemprop="image"><br>`Docker에 띄워진 mariadb에 접근하는 모습`<br>
+<img src="/assets/images/CloudWave/Virtualization/Dmariadbaccess.png" alt="Dmariadbaccess_Procdess" /><br>`Docker에 띄워진 mariadb에 접근하는 모습`<br>
 - mariaDB 생성 시 설정해준 `-e MYSQL_ROOT_PASSWORD=r00tpassword` 를 사용하여 접근.
 
 <br><br>
@@ -184,7 +184,7 @@ root@9ec2cf06718b:/# mariadb -uroot –pr00tpassword
 MariaDB [(none)]> show databases
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/Dmariadbuse.png" alt="Dmariadbuse_Procdess" width="80%" min-width="200px" itemprop="image"><br>`Docker에서 mariaDB를 사용하는 모습`<br>
+<img src="/assets/images/CloudWave/Virtualization/Dmariadbuse.png" alt="Dmariadbuse_Procdess" /><br>`Docker에서 mariaDB를 사용하는 모습`<br>
 - `show databses` 사용 시 DB테이블이 출력되는 것을 보아 정상적으로 잘 작동하는 것을 알 수 있다.
 
 <br><br>
@@ -199,7 +199,7 @@ docker ps
 docker ps -a
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/Dstop.png" alt="Dstop_Procdess" width="80%" min-width="200px" itemprop="image"><br>`Docker stop / ps (-a)`<br>
+<img src="/assets/images/CloudWave/Virtualization/Dstop.png" alt="Dstop_Procdess" /><br>`Docker stop / ps (-a)`<br>
 
 <br><br>
 
@@ -219,7 +219,7 @@ Docker Container 란?
   2. 변경 사항을 Layer 상태로 저장하는 파일 시스템(Union File System)
 - **간단하게, 격리된(독립된) 공간에서 프로세스가 동작하게 해주는 가상화 기술.**
 
-<img src="/assets/images/CloudWave/Virtualization/DContainer.png" alt="DContainer_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Docker Container 구조`<br>
+<img src="/assets/images/CloudWave/Virtualization/DContainer.png" alt="DContainer_Procdess"><br>`Docker Container 구조`<br>
 
 - **Container 개념에서 매우 중요한 것**
   - 여러가지 Container 의 **Image 들은 전부 Read-Only** 속성이다.
@@ -235,7 +235,7 @@ Docker Container 란?
 
 # [Docker] Container 생성
 
-<img src="/assets/images/CloudWave/Virtualization/DContainerGen.png" alt="DContainerGen_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Docker Container 생성`<br>
+<img src="/assets/images/CloudWave/Virtualization/DContainerGen.png" alt="DContainerGen_Procdess"><br>`Docker Container 생성`<br>
 
 Docker Client 가<br>
 
@@ -244,7 +244,7 @@ $docker container run ~
 ```
 
 하게 되면, **Docker server의 Docker Daemon**이 요청을 받게 된다.<br>
-<img src="/assets/images/CloudWave/Virtualization/DDaemon.png" alt="DDaemon_Procdess" width="100%" min-width="200px" itemprop="image"><br>`Docker Daemon이 일하고 있는 모습`<br>
+<img src="/assets/images/CloudWave/Virtualization/DDaemon.png" alt="DDaemon_Procdess"><br>`Docker Daemon이 일하고 있는 모습`<br>
 - **~/docker.service; enabled;**
   - 위 부분에서 Docker Daemon이 실행되었다는 것을 나타낸다.**(= dockerd)**
 
@@ -443,7 +443,7 @@ $ docker container prune
 
 # Virtual Machine vs Container
 
-<img src="/assets/images/CloudWave/Virtualization/VM_Container.png" alt="VM_Container_Procdess" width="80%" min-width="200px" itemprop="image"><br>`VM vs Container`<br>
+<img src="/assets/images/CloudWave/Virtualization/VM_Container.png" alt="VM_Container_Procdess" /><br>`VM vs Container`<br>
 
 Virtual Machine (Hypervisor : VSWare / OpenStack)
 - 결과물 : Virtual Machine
@@ -515,7 +515,7 @@ IaC (Infrastructuer as Code)
 
 <br><br>
 
-[처음으로~](#)
+
 
 ### Task Lists
 
