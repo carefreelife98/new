@@ -1,6 +1,8 @@
 import {generateStaticParams} from "@/app/posts/[category]/[subCategory]/[slug]/page";
 import {MetadataRoute} from "next";
 
+export const dynamic = 'force-static'
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://carefreelife98.github.io/new';
     try {
