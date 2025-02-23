@@ -75,7 +75,9 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
       - name: Create .env.production
-        run: echo "NEXT_PUBLIC_IMAGE_URL=/new/assets/images" > .env.production
+        run: |
+          echo "NEXT_PUBLIC_IMAGE_URL=/new/assets/images" > .env.production
+          echo "NEXT_PUBLIC_GOOGLE_ANALYTICS=G-HFDNM399EG" >> .env.production
 
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build

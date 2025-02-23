@@ -3,10 +3,11 @@ import './LayoutStyle.css';
 import Header from "@/components/Layouts/Header";
 import Footer from "@/components/Layouts/Footer";
 import BlogSideBar from "../components/SideBar/BlogSideBar";
-import { getMarkdownFileCount, getMarkdownFileCountByCategory } from "@/lib/MarkdownUtils";
-import MarkdownFileCount from "@/interfaces/markdownFileCount";
 import { SidebarProvider } from "@/components/ui/sidebar";
+import MarkdownFileCount from "@/interfaces/markdownFileCount";
+import { getMarkdownFileCount, getMarkdownFileCountByCategory } from "@/lib/MarkdownUtils";
 import {Metadata} from "next";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://carefreelife98.github.io/new'),
@@ -40,6 +41,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     </div>
                 </SidebarProvider>
             </body>
+            <GoogleAnalytics gaId="G-HFDNM399EG" />
         </html>
     );
 }
