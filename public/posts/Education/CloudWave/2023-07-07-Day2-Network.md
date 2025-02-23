@@ -275,13 +275,13 @@ IPv4 : x.x.x.x
 > 
 > <br><br>
 > 
-> <img src="/assets/images/CloudWave/NetWork/router0conf.png" alt="router0conf_Procdess" width="70%" min-width="200px" itemprop="image"><br>`Router 0의 연결 상태`<br>
+> <img src="/assets/images/CloudWave/NetWork/router0conf.png" alt="router0conf_Procdess" /><br>`Router 0의 연결 상태`<br>
 > - 명령어 : do show ip route
 > - 위와 같이 라우터 0에 반대쪽 네트워크인 10.0.0.0 IP 주소가 저장되어 있는 것을 볼 수 있다.
 > 
 > <br><br> 
 > 
-> <img src="/assets/images/CloudWave/NetWork/router1conf.png" alt="router1conf_Procdess" width="70%" min-width="200px" itemprop="image"><br>`Router 1의 연결 상태`<br>
+> <img src="/assets/images/CloudWave/NetWork/router1conf.png" alt="router1conf_Procdess" /><br>`Router 1의 연결 상태`<br>
 > - 마찬가지로 라우터 1에도 반대쪽 네트워크인 192.168.200.0이 저장되어 있는 것을 볼 수 있다.
 
 <br><br>

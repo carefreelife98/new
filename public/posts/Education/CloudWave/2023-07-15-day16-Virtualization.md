@@ -14,8 +14,8 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 
 # Docker 정의
 
-<img src="/assets/images/CloudWave/Virtualization/Docker.png" alt="Docker_Procdess" width="45%" min-width="200px" itemprop="image">
-<img src="/assets/images/CloudWave/Virtualization/DockerStruct.png" alt="DockerStruct_Procdess" width="45%" min-width="200px" itemprop="image"><br>`Docker / Docker Structure`<br>
+<img src="/assets/images/CloudWave/Virtualization/Docker.png" alt="Docker_Procdess" />
+<img src="/assets/images/CloudWave/Virtualization/DockerStruct.png" alt="DockerStruct_Procdess" /><br>`Docker / Docker Structure`<br>
 - 하이브리드 클라우드에서 애플리케이션을 컨테이너화하여 개발, 배포 및 실행하기 위한 **오픈 소스 컨테이너 플랫폼 제공자**
   - **운영체제 레벨에서 가상화를 제공**하는 컨테이너화 기술
 - 컨테이너는 애플리케이션을 실행하는 데 필요한 모든 요소(코드, 런타임, 라이브러리, 환경 변수 등)를 포함한 **독립적인 실행 환경을 제공.**
@@ -256,7 +256,7 @@ $docker container run ~
 $ docker container create --name (컨테이너 이름 지정) -p (사용할 포트번호 지정- Host : Container) (이미지 이름)
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/DContGen1.png" alt="DContGen1_Procdess" width="70%" min-width="200px" itemprop="image"><br>`Docker container create`
+<img src="/assets/images/CloudWave/Virtualization/DContGen1.png" alt="DContGen1_Procdess" /><br>`Docker container create`
 
 <br><br>
 
@@ -268,7 +268,7 @@ $ docker images
 $ docker container ls (-a)
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/DContGen2.png" alt="DContGen2_Procdess" width="70%" min-width="200px" itemprop="image"><br>`docker images / docker container ls (-a)`<br>
+<img src="/assets/images/CloudWave/Virtualization/DContGen2.png" alt="DContGen2_Procdess" /><br>`docker images / docker container ls (-a)`<br>
 
 <br><br>
 
@@ -277,7 +277,7 @@ $ docker container ls (-a)
 $ docker container start (Container 이름)
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/DContGen3.png" alt="DContGen3_Procdess" width="70%" min-width="200px" itemprop="image"><br>`docker container start`<br>
+<img src="/assets/images/CloudWave/Virtualization/DContGen3.png" alt="DContGen3_Procdess" /><br>`docker container start`<br>
 - STATUS 가 Up으로 변경되며 실행중인 것을 확인할 수 있다.
 
 <br><br>
@@ -288,7 +288,7 @@ $ docker container start (Container 이름)
 $ docker container run --name (컨테이너 이름 지정) -d(= 백그라운드에서 동작) -p (사용할 포트번호 지정- Host : Container) (이미지 이름)
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/DContainerRun.png" alt="DContainerRun_Procdess" width="70%" min-width="200px" itemprop="image"><br>`docker container run`<br>
+<img src="/assets/images/CloudWave/Virtualization/DContainerRun.png" alt="DContainerRun_Procdess" /><br>`docker container run`<br>
 - `run` 옵션은 local에 지정된 이미지 정보가 없을 시, 자동으로 해당 이미지를 docker library에서 pull 하여 다운로드 진행 후 컨테이너를 생성 및 실행한다.
   - 지정된 이미지 후미에 :(~버전)을 설정해주지 않을 시, default로 latest(가장 최근 버전) Tag를 달아 다운로드 / 실행한다.
   - create / start 보다 간편해서 자주 사용.
@@ -296,7 +296,7 @@ $ docker container run --name (컨테이너 이름 지정) -d(= 백그라운드�
   - Port Forwarding : Host의 8180 포트와 Container 의 80 포트를 연결.
     - Host 와 Container의 포트를 포트포워딩을 통해 연결 -> 컨테이너 생성 시 -p 옵션 주기
 - -d : Background 에서 동작하도록 한다. <br>
-<img src="/assets/images/CloudWave/Virtualization/DContainerRun2.png" alt="DContainerRun2_Procdess" width="70%" min-width="200px" itemprop="image"><br>`docker container run 실행 후 모습`<br>
+<img src="/assets/images/CloudWave/Virtualization/DContainerRun2.png" alt="DContainerRun2_Procdess" /><br>`docker container run 실행 후 모습`<br>
 - nginx 의 STATUS 가 Up으로 변경되며 잘 실행이 되었고, 포트 포워딩도 잘 되어 있는 모습을 볼 수 있다.
 
 <br><br>
@@ -308,14 +308,14 @@ $ docker container run --name (컨테이너 이름 지정) -d(= 백그라운드�
 $ docker container stop (컨테이너 이름)
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/DcontainerStop.png" alt="DcontainerStop_Procdess" width="70%" min-width="200px" itemprop="image"><br>`Docker Container Stop`<br>
+<img src="/assets/images/CloudWave/Virtualization/DcontainerStop.png" alt="DcontainerStop_Procdess" /><br>`Docker Container Stop`<br>
 
 ```shell
 # Docker Container 재실행
 $ docker container restart (컨테이너 이름)
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/DCRestart.png" alt="DCRestart_Procdess" width="70%" min-width="200px" itemprop="image"><br>`Docker Container Restart`<br>
+<img src="/assets/images/CloudWave/Virtualization/DCRestart.png" alt="DCRestart_Procdess" /><br>`Docker Container Restart`<br>
 
 ```shell
 # Docker Container 일시 중지
@@ -325,7 +325,7 @@ $ docker container pause (컨테이너 이름)
 $ docker container unpause (컨테이너 이름)
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/DCPause.png" alt="DCPause_Procdess" width="70%" min-width="200px" itemprop="image"><br>`Docker Container Pause / Unpause`<br>
+<img src="/assets/images/CloudWave/Virtualization/DCPause.png" alt="DCPause_Procdess" /><br>`Docker Container Pause / Unpause`<br>
 
 <br><br>
 
@@ -338,7 +338,7 @@ $ docker container exec -it (컨테이너 이름) /bin/bash
 #   -t : tty -> 터미널 띄우기
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/DConExec.png" alt="DConExec_Procdess" width="70%" min-width="200px" itemprop="image"><br>`Docker Container Execute`<br>
+<img src="/assets/images/CloudWave/Virtualization/DConExec.png" alt="DConExec_Procdess" /><br>`Docker Container Execute`<br>
 - **/bin/bash 명령어는 어디에서 실행되는 것인가?** - Container? Host?
   - **Container 에서 실행되는 명령어이다.**
   - 터미널을 사용해서 Kernel에 접근할 수 있게 된다.
@@ -348,7 +348,7 @@ $ docker container exec -it (컨테이너 이름) /bin/bash
     - **8180(host) --> 80 (container)**
       - host port 는 65535 개의 범위 내에서 단 하나만 사용이 가능.
     - IP가 모두 접속 가능한 (0.0.0.0) IP 이므로 local / 해당 네트워크에 속한 사용자의 브라우저를 사용해서 직접 해당 URL 에 접근하여 내부 정보 변경 확인을 할 수 있다.<br>
-      <img src="/assets/images/CloudWave/Virtualization/DConExecCurl.png" alt="DConExecCurl_Procdess" width="70%" min-width="200px" itemprop="image"><br>`Docker Container 내부 정보 변경 후 local을 통해 확인하는 모습`<br>
+      <img src="/assets/images/CloudWave/Virtualization/DConExecCurl.png" alt="DConExecCurl_Procdess" /><br>`Docker Container 내부 정보 변경 후 local을 통해 확인하는 모습`<br>
       
 <br><br>
 
@@ -359,7 +359,7 @@ $ docker container exec -it (컨테이너 이름) /bin/bash
 $ docker cp (복사 대상의 이름) (복사할 위치)
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/DockerCP.png" alt="DockerCP_Procdess" width="70%" min-width="200px" itemprop="image"><br>`Docker cp`<br>
+<img src="/assets/images/CloudWave/Virtualization/DockerCP.png" alt="DockerCP_Procdess" /><br>`Docker cp`<br>
 - **cp**
   - host 상에 있는 경로를 container 으로 복사.
   - container의 경로를 host로 복사.
@@ -390,7 +390,7 @@ $ docker container top (컨테이너 이름)
 $ docker container port (컨테이너 이름)
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/Dtop_port.png" alt="Dtop_port_Procdess" width="70%" min-width="200px" itemprop="image"><br>`docker container top / port`<br>
+<img src="/assets/images/CloudWave/Virtualization/Dtop_port.png" alt="Dtop_port_Procdess" /><br>`docker container top / port`<br>
 - top : 현재 실행되고 있는 컨테이너가 실행중인 프로세스를 확인 할 수 있다.
 - port : 현재 실행되고 있는 컨테이너와 연결된 포트 정보를 확인 할 수 있다.
 
@@ -402,7 +402,7 @@ $ docker container port (컨테이너 이름)
 $ docker container rename (기존 컨테이너 이름) (변경 후 이름)
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/DCrename.png" alt="DCrename_Procdess" width="70%" min-width="200px" itemprop="image"><br>`docker container rename`<br>
+<img src="/assets/images/CloudWave/Virtualization/DCrename.png" alt="DCrename_Procdess" /><br>`docker container rename`<br>
 - 컨테이너의 이름을 변경한 모습
 
 <br><br>
@@ -413,7 +413,7 @@ $ docker container rename (기존 컨테이너 이름) (변경 후 이름)
 $ docker container diff (컨테이너 이름)
 ```
 
-<img src="/assets/images/CloudWave/Virtualization/DCdiff.png" alt="DCdiff_Procdess" width="70%" min-width="200px" itemprop="image"><br>`docker container diff`<br>
+<img src="/assets/images/CloudWave/Virtualization/DCdiff.png" alt="DCdiff_Procdess" /><br>`docker container diff`<br>
 - A : 추가된 파일을 나타냄
 - B : 삭제된 파일을 나타냄
 - C : 수정된 파일을 나타냄

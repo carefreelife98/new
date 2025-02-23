@@ -123,7 +123,7 @@ ArrayMax(A,n){
   - 두 개의 함수 f(n)과 g(n)이 주어졌을 때, 모든 n ≥ n0에 대하여 <br>|f(n)| ≤ c|g(n)|을 만족하는 2개의 상수 c와 n0가 존재하면 f(n) = O(g(n)) 이다.
   - **위와 같이 불필요한 정보를 제거하여 알고리즘 분석을 쉽게 할 목적으로 시간복잡도 T(n)을 표시하는 방법이 바로 O(n)빅오표기법이다.**
 
-<img src="/assets/images/INU/BigO.png" alt="BigO_Procdess" width="70%" min-width="200px" itemprop="image"><br>
+<img src="/assets/images/INU/BigO.png" alt="BigO_Procdess" /><br>
 
 <details>
 <summary><span style="color:blue">빅오 표기법 O(n) 예제</span></summary>

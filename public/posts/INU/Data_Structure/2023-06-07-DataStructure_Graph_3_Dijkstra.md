@@ -7,57 +7,64 @@ categories:
 tags:
   - DataStructure
   - Tree
-
+teaser: "/assets/images/INU/datastructure/ShortestPathEx.png"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 
 
 # 최단 경로 (Shortest path) 문제
 
-> <img src="/assets/images/INU/datastructure/ShortestPathEx.png" alt="ShortestPathEx_Procdess"><br>`최단 경로 예시 - 정점은 도시, 도시 간 거리는 간선의 가중치가 될 수 있다.`<br>
-> 최단 경로 (Shortest path) 문제는 네트워크의 정점 i와 정점 j를 연결하는 경로 중에서 
-> **각 간선마다의 가중치 합이 최소가 되는 경로를 찾는 문제**이다.
-> - 간선의 가중치는 비용, 거리, 시간 등을 나타낼 수 있다.
->
-> <img src="/assets/images/INU/datastructure/edge_weight.png" alt="edge_weight_Procdess"><br>`네트워크와 가중치를 인접행렬로 표현한 모습.`<br>
-> - 정점 0 -> 정점 3
->   - 최단 거리 : (0, 4, 1, 2, 3) , 비용 : 3 + 2 + 4 + 2 = 11
->   - (0, 1, 2, 3) : 정점을 거치는 횟수는 적지만, 비용이 (7 + 4 + 2 = 13) 으로 많이 든다.
->   - 어떤 방법으로 최단 경로를 찾을 것인가?
->     - Dijkstra 알고리즘 : 하나의 시작 정점에서 다른 정점까지의 최단 경로를 구한다.
->     - Floyd 알고리즘 : 모든 정점에서 다른 모든 정점까지의 최단 경로를 구한다.
->   - 가중치 인접 행렬에서는 정점 간 간선이 존재하지 않으면 무한대(정수의 최대 값)를 행렬에 저장.
+<img src="/assets/images/INU/datastructure/ShortestPathEx.png" alt="ShortestPathEx_Procdess">`최단 경로 예시 - 정점은 도시, 도시 간 거리는 간선의 가중치가 될 수 있다.`<br>
+최단 경로 (Shortest path) 문제는 네트워크의 정점 i와 정점 j를 연결하는 경로 중에서 **`각 간선마다의 가중치 합이 최소가 되는 경로를 찾는 문제`** 이다.
+- **간선의 가중치는 비용, 거리, 시간** 등을 나타낼 수 있다.
 
 <br><br>
 
-# Dijkstra의 최단 경로 알고리즘
+<img src="/assets/images/INU/datastructure/edge_weight.png" alt="edge_weight_Procdess">`네트워크와 가중치를 인접행렬로 표현한 모습.`<br>
+- 정점 0 -> 정점 3
+  - 최단 거리 : (0, 4, 1, 2, 3) , 비용 : 3 + 2 + 4 + 2 = 11
+  - (0, 1, 2, 3) : 정점을 거치는 횟수는 적지만, 비용이 (7 + 4 + 2 = 13) 으로 많이 든다.
+  - 어떤 방법으로 최단 경로를 찾을 것인가?
+    - `Dijkstra 알고리즘:` 하나의 시작 정점에서 다른 정점까지의 최단 경로를 구한다.
+    - `Floyd 알고리즘:` 모든 정점에서 다른 모든 정점까지의 최단 경로를 구한다.
+  - 가중치 인접 행렬에서는 정점 간 간선이 존재하지 않으면 무한대(정수의 최대 값)를 행렬에 저장.
 
-> <img src="/assets/images/INU/datastructure/Dijkstra.png" alt="Dijkstra_Procdess"><br>`최단 경로 알고리즘`<br>
-> - 하나의 시작 정점으로부터 모든 다른 정점까지의 최단 경로를 탐색.
-> - 집합 S : 시작 정점 v로부터의 최단 경로가 이미 발견된 정점들의 집합
-> - distance[] : 시작 정점 v에서 집합 S에 포함되는 정점들만 거쳐 다른 정점으로 가는 최단거리를 기록.
-> - 매 단계에서 가장 distance 값이 작은 정점을 S에 추가.
->   - 시작 정점을 v라 하면, distance[v] = 0
->   - 다른 정점에 대한 distance 값은 시작 정점 v와 해당 정점 간의 가중치 값.
->   - 가중치 인접 행렬을 weight 이라 하면, distance[w] = weight[v][w]
->
-> <img src="/assets/images/INU/datastructure/DijkstraAlgorithm.png" alt="DijkstraAlgorithm_Procdess" width="70%" min-width="200px" itemprop="image"><br>`최단 경로 알고리즘에서 최단 경로의 증명`<br>
-> **최단 경로의 증명** 
-> 1. 각 단계에서 S안에 있지 않은 정점 중에서 가장 distance 값이 작은 정점을 S에 추가한다.
-> 2. 정점 w를 거쳐서 정점 u로 가는 더 짧은 경로가 있다고 가정.
-> 3. 정점 v -> u 까지의 거리 = (v -> w) + (w -> u)
-> 4. 하지만 현재 distance 값이 가장 작은 정점은 u이기 때문에, 경로 2는 경로 1보다 항상 길 수 밖에 없다.
-> 5. 따라서 매 단계의 집합 S에 속하지 않는 정점들 중에서 가장 작은 distance 값을 가진 정점들을 추가해<br>
->    나가며 시작 정정메서 모든 정점 까지의 최단 거리를 구할 수 있다.
-> 
-> <img src="/assets/images/INU/datastructure/DijkstraAddNewVer.png" alt="DijkstraAddNewVer_Procdess"><br>`최단 경로 알고리즘에서의 distance값 갱신`<br>
-> - 새로운 정점 u가 추가되면 S에 속하지 않은 다른 정점들의 distance값을 갱신 해주어야 한다.
->   - 새로 추가된 정점 u를 거쳐 갈 수 있게 된 거리와 기존 거리를 비교하여 더 작은 거리로 distance 값을 수정.
->   - distance[w] = min(distance[w], distance[u] + weight[u][w])
+<br><br>
+
+## Dijkstra의 최단 경로 알고리즘
+
+<img src="/assets/images/INU/datastructure/Dijkstra.png" alt="Dijkstra_Procdess">`최단 경로 알고리즘`<br>
+- `하나의 시작 정점으로부터 모든 다른 정점까지의 최단 경로를 탐색.`
+- 집합 S : 시작 정점 v로부터의 최단 경로가 이미 발견된 정점들의 집합
+- distance[] : 시작 정점 v에서 집합 S에 포함되는 정점들만 거쳐 다른 정점으로 가는 최단거리를 기록.
+- 매 단계에서 가장 distance 값이 작은 정점을 S에 추가.
+  - 시작 정점을 v라 하면, distance[v] = 0
+  - 다른 정점에 대한 distance 값은 시작 정점 v와 해당 정점 간의 가중치 값.
+  - 가중치 인접 행렬을 weight 이라 하면, distance[w] = weight[v][w]
+
+
+
+## Dijkstra의 최단 경로 증명
+
+<img src="/assets/images/INU/datastructure/DijkstraAlgorithm.png" alt="DijkstraAlgorithm_Procdess" />`최단 경로 알고리즘에서 최단 경로의 증명`<br>
 
 ```
-pseudo code 로 Dijkstra 알고리즘을 정리해보자.
+1. 각 단계에서 S안에 있지 않은 정점 중에서 가장 distance 값이 작은 정점을 S에 추가한다.
+2. 정점 w를 거쳐서 정점 u로 가는 더 짧은 경로가 있다고 가정.
+3. 정점 v -> u 까지의 거리 = (v -> w) + (w -> u)
+4. 하지만 현재 distance 값이 가장 작은 정점은 u이기 때문에, 경로 2는 경로 1보다 항상 길 수 밖에 없다.
+5. 따라서 매 단계의 집합 S에 속하지 않는 정점들 중에서 가장 작은 distance 값을 가진 정점들을 추가해나가며 
+   시작 정점에서 모든 정점 까지의 최단 거리를 구할 수 있다.
 ```
+
+<br><br>
+
+<img src="/assets/images/INU/datastructure/DijkstraAddNewVer.png" alt="DijkstraAddNewVer_Procdess"><br>`최단 경로 알고리즘에서의 distance값 갱신`<br>
+- **`새로운 정점 u가 추가되면 S에 속하지 않은 다른 정점들의 distance값을 갱신`** 해주어야 한다.
+  - 새로 추가된 정점 u를 거쳐 갈 수 있게 된 거리와 기존 거리를 비교하여 더 작은 거리로 distance 값을 수정.
+  - distance[w] = min(distance[w], distance[u] + weight[u][w])
+
+## Dijkstra 알고리즘: Pseudo Code
 
 ```c
 // 최단거리 알고리즘 - Dijkstra
@@ -76,34 +83,47 @@ shortest_path(G, V)
                 then distance[z] ← distance[u] + weight[u][z];
 ```
 
-> <img src="/assets/images/INU/datastructure/Dijkstra_process1.png" alt="Dijkstra_process1_Procdess"><br>`각 단계에서의 distance 값 변화 1`<br>
-> - 시작 노드 : v = 0, v와 근접한 노드 1(w = 7), 4(w = 3), 5(w = 10) 값을 distance 배열에 저장.
-> 
-> <img src="/assets/images/INU/datastructure/Dijkstra_process2.png" alt="Dijkstra_process2_Procdess"><br>`각 단계에서의 distance 값 변화 2`<br>
-> - 새로운 정점 1, 4 가 집합 s에 추가되었으므로, 해당 정점들을 통해 또 다른 정점에 도달 할 수 있게 된다.
->   - 4 -> 6(w = 3 + 5) / 4 -> 3(w = 3 + 11) / 4 -> 1(w = 3 + 2)
->   - S = {0, 4}
-> 
-> <img src="/assets/images/INU/datastructure/Dijkstra_process3.png" alt="Dijkstra_process3_Procdess"><br>`각 단계에서의 distance 값 변화 3`<br>
-> - 1 -> 2(w = 3 + 2 + 4)
-> - S = {0, 4, 1}
->
-> <img src="/assets/images/INU/datastructure/Dijkstra_process4.png" alt="Dijkstra_process4_Procdess"><br>`각 단계에서의 distance 값 변화 4`<br>
-> - S = {0, 4, 1, 6}
-> <img src="/assets/images/INU/datastructure/Dijkstra_process5.png" alt="Dijkstra_process5_Procdess"><br>`각 단계에서의 distance 값 변화 5`<br>
-> - S = {0, 4, 1, 6, 2}
-> <img src="/assets/images/INU/datastructure/Dijkstra_process6.png" alt="Dijkstra_process6_Procdess"><br>`각 단계에서의 distance 값 변화 6`<br>
-> - S = {0, 4, 1, 6, 2, 5}
-> <img src="/assets/images/INU/datastructure/Dijkstra_process7.png" alt="Dijkstra_process7_Procdess"><br>`각 단계에서의 distance 값 변화 7`<br>
-> - S = {0, 4, 1, 6, 2, 5, 3}
+<img src="/assets/images/INU/datastructure/Dijkstra_process1.png" alt="Dijkstra_process1_Procdess">`각 단계에서의 distance 값 변화 1`<br>
+- 시작 노드 : v = 0, v와 근접한 노드 1(w = 7), 4(w = 3), 5(w = 10) 값을 distance 배열에 저장.
 
 <br><br>
 
-# Dijkstra 알고리즘의 구현
+<img src="/assets/images/INU/datastructure/Dijkstra_process2.png" alt="Dijkstra_process2_Procdess">`각 단계에서의 distance 값 변화 2`<br>
+- 새로운 정점 1, 4 가 집합 s에 추가되었으므로, 해당 정점들을 통해 또 다른 정점에 도달 할 수 있게 된다.
+  - 4 -> 6(w = 3 + 5) / 4 -> 3(w = 3 + 11) / 4 -> 1(w = 3 + 2)
+  - S = {0, 4}
 
-```
-함수 호출 : shortest_path(0, MAX_VERTICES) (시작 정점이 0)
-호출 결과 : 배열 distance에 0번(시작 정점)으로부터 다른 모든 정점으로의 최단 경로 거리를 저장.
+<br><br>
+
+<img src="/assets/images/INU/datastructure/Dijkstra_process3.png" alt="Dijkstra_process3_Procdess">`각 단계에서의 distance 값 변화 3`<br>
+- 1 -> 2(w = 3 + 2 + 4)
+- S = {0, 4, 1}
+
+<br><br>
+
+<img src="/assets/images/INU/datastructure/Dijkstra_process4.png" alt="Dijkstra_process4_Procdess">`각 단계에서의 distance 값 변화 4`<br>
+- S = {0, 4, 1, 6}
+
+<br><br>
+
+<img src="/assets/images/INU/datastructure/Dijkstra_process5.png" alt="Dijkstra_process5_Procdess">`각 단계에서의 distance 값 변화 5`<br>
+- S = {0, 4, 1, 6, 2}
+
+<br><br>
+
+<img src="/assets/images/INU/datastructure/Dijkstra_process6.png" alt="Dijkstra_process6_Procdess">`각 단계에서의 distance 값 변화 6`<br>
+- S = {0, 4, 1, 6, 2, 5}
+
+<br><br>
+
+<img src="/assets/images/INU/datastructure/Dijkstra_process7.png" alt="Dijkstra_process7_Procdess">`각 단계에서의 distance 값 변화 7`<br>
+- S = {0, 4, 1, 6, 2, 5, 3}
+
+## Dijkstra 알고리즘: 구현
+
+```bash
+함수 호출: shortest_path(0, MAX_VERTICES) (시작 정점이 0)
+호출 결과: 배열 distance에 0번(시작 정점)으로부터 다른 모든 정점으로의 최단 경로 거리를 저장.
 ```
 
 ```c
@@ -199,14 +219,11 @@ int main(void)
 }
 ```
 
-> <img src="/assets/images/INU/datastructure/Dijkstra_rs.png" alt="Dijkstra_rs_Procdess" /><br>`Dijkstra 알고리즘 실행 결과`<br>
+## Dijkstra 알고리즘: 실행 결과 및 분석
 
-> **Dijkstra 의 분석**
-> - 네트워크에 n개의 정점이 있다면,
-> - 최단 경로 알고리즘은 주 반복문을 n번 반복, 내부 반복문을 2n번 반복
->   - 시간 복잡도 : O(n^2)
-
-<br><br>
+<img src="/assets/images/INU/datastructure/Dijkstra_rs.png" alt="Dijkstra_rs_Procdess" />`Dijkstra 알고리즘 실행 결과`<br>
+- 네트워크에 n개의 정점이 있다면, 최단 경로 알고리즘은 주 반복문을 n번 반복, 내부 반복문을 2n번 반복
+  - `시간 복잡도 : O(n^2)`
 
 # Floyd 의 최단 경로 알고리즘
 
@@ -216,10 +233,12 @@ Floyd의 최단 경로 알고리즘
 - 2차원 배열 A를 이용하여 3중 반복 루프로 구성
 ```
 
-> - 가중치 인접 행렬 weight[][] == A
->   - weight[i][j] 에서 i==j 이면, 즉 행렬의 대각선 부분은 0으로 만들어준다.
->   - 만약 두개의 정점 i, j 사이에 간선이 존재하지 않으면 weight[i][j] = ⚭
->   - 간선이 존재하면 weight[i][j] = 간선의 가중치
+- 가중치 인접 행렬 weight[][] == A
+  - weight[i][j] 에서 i==j 이면, 즉 행렬의 대각선 부분은 0으로 만들어준다.
+  - 만약 두개의 정점 i, j 사이에 간선이 존재하지 않으면 weight[i][j] = ⚭
+  - 간선이 존재하면 weight[i][j] = 간선의 가중치
+
+## Floyd 의 최단 경로 알고리즘: Pseudo Code
 
 ```c
 Floyd 의 최단 경로 알고리즘 - pseudo code
@@ -231,22 +250,26 @@ Floyd(G):
                 A[i][j] = min(A[i][j], A[i][k] + A[k][j])
 ```
 
-> **Floyd 최단 경로 알고리즘의 동작 원리**
-> - A(k)[i][j]:
->   - 0 부터 k까지의 정점 만을 이용한 정점 i에서 j까지의 최단 경로 길이
-> - A(-1) == weight 배열의 값 -> A(0) -> A(1) -> A(2) -> A(n-1) 순서로 최단 경로를 구해간다.
-> - A(k-1)까지 구해진 상태에서 k번째 정점이 추가로 고려되는 상황 생각.
->
-> <img src="/assets/images/INU/datastructure/Floyd_process.png" alt="Floyd_process_Procdess"><br>`Floyd 최단 경로 알고리즘 - k번째 정점의 추가`<br>
-> - 0부터 k까지의 정점만을 사용하여 정점 i에서 정점 j로 가는 최단 경로는 2가지.
->   - 정점 k를 거치지 않는 경우:
->     - A(k)[i][j] 는 k보다 큰 정점은 통과하지 않으므로 최단거리는 그대로 A(k-1)[i][j].
->   - 정점 K를 거치는 경우:
->     - i에서 k까지의 최단거리인 A(k-1)[i][k] + k에서 j까지의 최단거리인 A(k-1)[k][j].
+## Floyd 의 최단 경로 알고리즘: 과정
 
+```bash
+Floyd 최단 경로 알고리즘의 동작 원리
+
+- A(k)[i][j]:
+  - 0 부터 k까지의 정점 만을 이용한 정점 i에서 j까지의 최단 경로 길이
+- A(-1) == weight 배열의 값 -> A(0) -> A(1) -> A(2) -> A(n-1) 순서로 최단 경로를 구해간다.
+- A(k-1)까지 구해진 상태에서 k번째 정점이 추가로 고려되는 상황 생각.
+```
 <br><br>
 
-# Floyd의 최단 경로 프로그램 구현
+<img src="/assets/images/INU/datastructure/Floyd_process.png" alt="Floyd_process_Procdess">`Floyd 최단 경로 알고리즘 - k번째 정점의 추가`<br>
+- 0부터 k까지의 정점만을 사용하여 정점 i에서 정점 j로 가는 최단 경로는 2가지.
+  - `정점 k를 거치지 않는 경우:`
+    - A(k)[i][j] 는 k보다 큰 정점은 통과하지 않으므로 최단거리는 그대로 A(k-1)[i][j].
+  - `정점 K를 거치는 경우:`
+    - i에서 k까지의 최단거리인 A(k-1)[i][k] + k에서 j까지의 최단거리인 A(k-1)[k][j].
+
+## Floyd 의 최단 경로 알고리즘: 구현
 
 ```c
 #include <stdio.h>
@@ -317,16 +340,13 @@ int main(void)
 }
 ```
 
+## Floyd 의 최단 경로 알고리즘: 실행 결과 및 분석
 
-> <img src="/assets/images/INU/datastructure/Floyd_rs.png" alt="Floyd_rs_Procdess" width="45%" min-width="200px" itemprop="image">
-> <img src="/assets/images/INU/datastructure/Floyd_rs1.png" alt="Floyd_rs1_Procdess" width="45%" min-width="200px" itemprop="image"><br>`Floyd 최단 경로 알고리즘 - 실행 결과`<br>
+<img src="/assets/images/INU/datastructure/Floyd_rs.png" alt="Floyd_rs_Procdess" /><br>
+<img src="/assets/images/INU/datastructure/Floyd_rs1.png" alt="Floyd_rs1_Procdess" />`Floyd 최단 경로 알고리즘 - 실행 결과`<br>
 
-> **Floyd 최단 경로 알고리즘의 분석**
-> - 두 정점 사이의 최단 경로를 찾는 Dijkstra 알고리즘의 시간 복잡도는 O(n^2).
->   - 모든 정점 쌍의 최단 경로를 구하는 Floyd 알고리즘의 시간 복잡도는<br>
->     Dijkstra 알고리즘을 n번 반복해야 하므로, O(n^3)
-
-<br><br>
+- 두 정점 사이의 최단 경로를 찾는 `Dijkstra 알고리즘의 시간 복잡도는 O(n^2)`
+- 모든 정점 쌍의 최단 경로를 구하는 `Floyd 알고리즘의 시간 복잡도는 Dijkstra 알고리즘을 n번 반복해야 하므로, O(n^3)`
 
 # 위상 정렬 (Topological Sort) 이란?
 
@@ -335,11 +355,14 @@ int main(void)
 - 방향 그래프에 존재하는 각 정점들의 선행 순서를 위배하지 않으면서 모든 정점을 나열하는 것
 ```
 
-> <img src="/assets/images/INU/datastructure/topo_sort_ex.png" alt="topo_sort_ex_Procdess"><br>`위상 정렬의 예`<br>
->
-> - 위상 순서(topological order) : (0, 1, 2, 3, 4, 5) , (1, 0, 2, 3, 4, 5)
->     - 위상 순서가 아닌 것 : (2, 0, 1, 3, 4, 5) -> 2번 정점이 0번 정점을 선행하고 있기 때문.
-> 
+<br><br>
+
+<img src="/assets/images/INU/datastructure/topo_sort_ex.png" alt="topo_sort_ex_Procdess" />`위상 정렬의 예`<br>
+
+- 위상 순서(topological order) : (0, 1, 2, 3, 4, 5) , (1, 0, 2, 3, 4, 5)
+    - 위상 순서가 아닌 것 : (2, 0, 1, 3, 4, 5) -> 2번 정점이 0번 정점을 선행하고 있기 때문.
+
+## 위상 정렬 (Topological Sort): 알고리즘
 
 ```
 위상 정렬 알고리즘
@@ -352,6 +375,8 @@ int main(void)
 - 진입 차수가 0인 정점이 여러개 존재할 경우 아무거나 선택.
 - 위와 같은 경우 복수의 위상 순서 존재 가능.
 ```
+
+## 위상 정렬 (Topological Sort): Pseudo Code
 
 ```c
 위상 정렬 알고리즘 - pseudo code
@@ -368,15 +393,15 @@ topo_sort(G)
         v와 v에서 나온 모든 간선들을 그래프에서 삭제;
 ```
 
-> <img src="/assets/images/INU/datastructure/topo_sort_process.png" alt="topo_sort_process_Procdess"><br>`위상 정렬의 과정`<br>
-> - 내차수가 0인 정점 1과 연결된 간선을 제거하면 내차수가 0인 정점은 {0, 4} 가 된다.
-> - 둘 중 정점 4를 선택, 삭제 한다면 다음 단계에서 내차수가 0인 정점은 {0} 만 남게 된다.
-> - 따라서 0을 선택, 삭제한 후 내차수가 0이 된 정점 2 제거 -> 정점 3 제거 -> 정점 5 제거 순으로 진행된다.
-> - 결과로 1, 4, 0, 2, 3, 5 가 도출된다 (== 위상 순서). 
-
 <br><br>
 
-# 위상 정렬 알고리즘의 구현
+<img src="/assets/images/INU/datastructure/topo_sort_process.png" alt="topo_sort_process_Procdess">`위상 정렬의 과정`<br>
+- 내차수가 0인 정점 1과 연결된 간선을 제거하면 내차수가 0인 정점은 {0, 4} 가 된다.
+- 둘 중 정점 4를 선택, 삭제 한다면 다음 단계에서 내차수가 0인 정점은 {0} 만 남게 된다.
+- 따라서 0을 선택, 삭제한 후 내차수가 0이 된 정점 2 제거 -> 정점 3 제거 -> 정점 5 제거 순으로 진행된다.
+- 결과로 1, 4, 0, 2, 3, 5 가 도출된다 (== 위상 순서). 
+
+## 위상 정렬 (Topological Sort): 구현
 
 ```
 1. 각 정점의 진입 차수를 기록할 1차원 배열 in_degree 생성. -> 정점에 연결된 간선의 개수
@@ -554,33 +579,11 @@ int main(void) {
 }
 ```
 
-> <img src="/assets/images/INU/datastructure/topological_sort_rs.png" alt="topological_sort_rs_Procdess"><br>`위상 정렬 알고리즘 실행 결과`<br>
+## 위상 정렬 (Topological Sort): 실행 결과
 
+<img src="/assets/images/INU/datastructure/topological_sort_rs.png" alt="topological_sort_rs_Procdess">`위상 정렬 알고리즘 실행 결과`<br>
 
-
-
-
-
-
-
-<br><br>
-
-최대한의 설명을 코드 블럭 내의 주석으로 달아 놓았습니다.<br><br>
-혹시 이해가 안가거나 추가적인 설명이 필요한 부분, 오류 등의 피드백은 언제든지 환영합니다!<br><br>
-긴 글 읽어주셔서 감사합니다. 포스팅을 마칩니다.<br>
-
-
-
-<br><br>
-
-
-
-<br><br><br>
-
-### Task Lists
-
->
-
+# Task Lists
 - [x] 최단 경로 (Shortest path) 문제
 - [x] Dijkstra의 최단 경로 알고리즘
 - [x] Dijkstra 알고리즘의 구현

@@ -31,7 +31,7 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
         if (!node || !node.children) return null;
 
         return (
-            <div className={`flex flex-col space-y-1 ${depth === 0 ? '' : 'ml-4 mt-1'}`}>
+            <div className={`flex flex-col space-y-1 ${depth === 0 ? '' : 'ml-4'}`}>
                 {node.children.map((item: any, index: number) => {
                     const headingNode = item.children[0]?.children[0]?.children[0];
                     if (!headingNode || headingNode?.type !== 'text') {
@@ -87,8 +87,8 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
             </CardHeader>
 
             {isVisible && (
-                <CardContent className="p-0 border-t">
-                    <ScrollArea className="h-[calc(90vh-8rem)] px-4 py-2">
+                <CardContent className="px-4 py-2 border-t">
+                    <ScrollArea className="h-[calc(90vh-8rem)]">
                         <nav>{renderToc(tableOfContents.map)}</nav>
                     </ScrollArea>
                 </CardContent>

@@ -41,7 +41,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 **정렬 알고리즘의 안정성 (Stability)**
   - 동일 한 키 값을 갖는 레코드들의 상대적인 위치가 정렬 후에도 같은 것.
   - 안정하지 못한 정렬의 예
-  <img src="/assets/images/INU/datastructure/Sort_stability.png" alt="Sort_stability_Procdess" width="40%" min-width="200px" itemprop="image">
+  <img src="/assets/images/INU/datastructure/Sort_stability.png" alt="Sort_stability_Procdess" />
 
 <br><br>
 
@@ -286,7 +286,7 @@ void bubble_sort(int list[], int n){
 }
 ```
 
-<img src="/assets/images/INU/datastructure/BubbleSort_rs.png" alt="BubbleSort_rs_Procdess" width="70%" min-width="200px" itemprop="image"><br>`버블 정렬 알고리즘 - 실행 결과`<br><br>
+<img src="/assets/images/INU/datastructure/BubbleSort_rs.png" alt="BubbleSort_rs_Procdess" /><br>`버블 정렬 알고리즘 - 실행 결과`<br><br>
 
 **버블 정렬의 복잡도 분석**
 - 비교 횟수 : O(n^2) - 어떠한 경우(최선, 평균, 최악)에도 항상 일정하다.<br>

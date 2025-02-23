@@ -1,5 +1,5 @@
 ---
-title: "[Data Structure]<br>우선순위 큐(Priority Queue)"
+title: "[Data Structure] 우선순위 큐(Priority Queue)"
 date: 23. 06. 09
 categories:
   - INU-DataStructure
@@ -7,7 +7,7 @@ categories:
 tags:
   - DataStructure
   - Tree
-
+teaser: "/assets/images/INU/datastructure/herphman_code.png"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 
@@ -21,13 +21,11 @@ FIFO(First-In-First-Out) : 선입선출 순서가 아닌
 우선 순위(Priority)가 높은 데이터가 먼저 나가게 된다.
 ```
 
-> <img src="/assets/images/INU/datastructure/PriorityQueue_etc.png" alt="PriorityQueue_etc_Procdess"><br>`스택, 큐, 우선순위 큐`<br><br>
->
-> 사실 **가장 일반적인 큐는 우선순위 큐**이다.<br>
-> - 스택이나 큐도 우선순위 큐를 사용하여 구현이 가능하기 때문.
-> - 배열, 연결리스트 등 여러 형태로 구현이 가능하나 가장 효율적인 구조는 히프(heap)이다.
+<img src="/assets/images/INU/datastructure/PriorityQueue_etc.png" alt="PriorityQueue_etc_Procdess">`스택, 큐, 우선순위 큐`<br><br>
 
-<br><br>
+사실 **`가장 일반적인 큐는 우선순위 큐`** 이다.
+- 스택이나 큐도 우선순위 큐를 사용하여 구현이 가능하기 때문.
+- 배열, 연결리스트 등 여러 형태로 구현이 가능하나 `가장 효율적인 구조는 히프(heap)`이다.
 
 # 우선순위 큐 ADT
 
@@ -50,15 +48,14 @@ delete(q) // 우선 순위 큐로부터 가장 우선 순위가 높은 요소를
 find(q) // 우선 순위가 가장 높은 요소를 반환
 ```
 
-> 우선 순위 큐는 0개 이상의 요소 모임이며 각 요소들은 우선 순위 값을 가지고 있다.<br>
-> 가장 중요한 연산<br>
-> 1. insert() : 요소의 삽입<br>
-> 2. delete() : 요소의 삭제<br>
->   - 최소 우선 순위 큐: 가장 우선순위가 낮은 요소를 삭제.
->   - 최대 우선 순위 큐: 가장 우선순위가 높은 요소를 삭제.<br>
-> <img src="/assets/images/INU/datastructure/PriorityQueueEx.png" alt="PriorityQueueEx_Procdess"><br>`다양한 형태로 구현한 우선순위 큐`<br><br>
+<img src="/assets/images/INU/datastructure/PriorityQueueEx.png" alt="PriorityQueueEx_Procdess">`다양한 형태로 구현한 우선순위 큐`<br><br>
 
-<br><br>
+- 우선 순위 큐는 0개 이상의 요소 모임이며 각 요소들은 우선 순위 값을 가지고 있다.
+- 가장 중요한 연산
+  1. `insert():` 요소의 삽입
+  2. `delete():` 요소의 삭제
+     - `최소 우선 순위 큐:` 가장 우선순위가 낮은 요소를 삭제.
+     - `최대 우선 순위 큐:` 가장 우선순위가 높은 요소를 삭제.
 
 # 우선 순위 큐의 구현 - Heap
 
@@ -75,41 +72,36 @@ find(q) // 우선 순위가 가장 높은 요소를 반환
 - 연결리스트의 경우 첫째 노드를 삭제 (가장 우선순위가 높은 요소를 연결리스트의 첫번째 노드로 한다)
 ```
 
-> <img src="/assets/images/INU/datastructure/PriorityQueue_type.png" alt="PriorityQueue_type_Procdess" width="70%" min-width="200px" itemprop="image"><br>`우선 순위 큐의 다양한 구현 방법 및 시간복잡도`<br><br>
-
-<br><br>
+<img src="/assets/images/INU/datastructure/PriorityQueue_type.png" alt="PriorityQueue_type_Procdess" />`우선 순위 큐의 다양한 구현 방법 및 시간복잡도`<br><br>
 
 # heap 란?
+<img src="/assets/images/INU/datastructure/heap_priorityQueue.png" alt="heap_priorityQueue_Procdess" />`히프(Heap) 트리의 예`<br><br>
 
-> - 노드의 key들이 다음 식을 만족하는 완전 이진 트리
->   - key(부모노드) >= key(자식노드)
->   - **중복된 key 값을 허용.**
-> - Heap의 높이
->   - **n개의 노드를 가지고 잇는 히프의 높이는 O(log_2 n)**
->   - 히프는 완전 이진 트리.
->   - **마지막 레벨 h를 제외하고는 각 레벨 i에 2^(i-1) 개의 노드가 존재.**<br>
-> <img src="/assets/images/INU/datastructure/heap_height.png" alt="heap_height_Procdess"><br>`히프의 높이`<br><br>
-> <img src="/assets/images/INU/datastructure/heap_priorityQueue.png" alt="heap_priorityQueue_Procdess" width="70%" min-width="200px" itemprop="image"><br>`히프(Heap) 트리의 예`<br><br>
-> - 느슨한 정렬 상태를 유지. -> 완전히 정렬이 된 것은 아니지만 어느정도 정렬이 되어있다.
->   - 큰 값이 상위 레벨에 있고 작은 값이 하위 레벨에 있다는 정도.
->   - **히프의 목적은 삭제 연산이 수행될 때마다 가장 큰 값을 찾아내는 것. (가장 우선순위가 높은 것은 루트 노드에 있다.)**
-> - **Heap의 시간복잡도는 O(log_2 n)으로서 타 방법보다 상당히 효율적이다.**
+- 노드의 key들이 다음 식을 만족하는 `완전 이진 트리`
+  - key(부모노드) >= key(자식노드)
+  - **`중복된 key 값을 허용.`**
+- `Heap의 높이`
+  - **n개의 노드를 가지고 잇는 히프의 높이는 O(log_2 n)**
+  - 히프는 완전 이진 트리.
+  - **마지막 레벨 h를 제외하고는 각 레벨 i에 2^(i-1) 개의 노드가 존재.**
 
-<br><br>
+<img src="/assets/images/INU/datastructure/heap_height.png" alt="heap_height_Procdess">`히프의 높이`<br><br>
 
-# Heap의 종류
+- 느슨한 정렬 상태를 유지. -> 완전히 정렬이 된 것은 아니지만 어느정도 정렬이 되어있다.
+  - 큰 값이 상위 레벨에 있고 작은 값이 하위 레벨에 있다는 정도.
+  - **`히프의 목적은 삭제 연산이 수행될 때마다 가장 큰 값을 찾아내는 것. (가장 우선순위가 높은 것은 루트 노드에 있다.)`**
+- **Heap의 시간복잡도는 O(log_2 n)으로서 타 방법보다 상당히 효율적이다.**
 
-> 1. **최대 히프 (Max Heap)**:
->   - 부모 노드의 키 값이 자식 노드의 키 값보다 크거나 같은 완전 이진 트리.
->   - key(부모 노드) >= key(자식 노드)<br>
-> 2. **최소 히프 (Min Heap)**:
->   - 부모 노드의 키 값이 자식 노드의 키 값보다 작거나 같은 완전 이진 트리
->   - key(부모 노드) <= key(자식 노드)<br>
-> <img src="/assets/images/INU/datastructure/Heap_type.png" alt="Heap_type_Procdess"><br>`히프의 종류 두 가지`<br><br>
+# Heap 의 종류
+<img src="/assets/images/INU/datastructure/Heap_type.png" alt="Heap_type_Procdess">`최대 히프 & 최소 히프`<br><br>
+1. **`최대 히프 (Max Heap)`**:
+   - 부모 노드의 키 값이 자식 노드의 키 값보다 크거나 같은 완전 이진 트리.
+   - key(부모 노드) >= key(자식 노드)
+2. **`최소 히프 (Min Heap)`**:
+   - 부모 노드의 키 값이 자식 노드의 키 값보다 작거나 같은 완전 이진 트리
+   - key(부모 노드) <= key(자식 노드)
 
-<br><br>
-
-# Heap의 구현
+# Heap 의 구현
 
 ```
 Heap는 배열을 이용하여 구현
@@ -118,22 +110,22 @@ Heap는 배열을 이용하여 구현
 - index 로서 0을 사용하게 되면 계산이 복잡해지므로 index는 1부터 사용.
 ```
 
-> <img src="/assets/images/INU/datastructure/Heap_creation.png" alt="Heap_creation_Procdess"><br>`히프의 구현 방법`<br><br>
-> - 부모노드와 자식노드를 찾기 쉽다.
->   - 왼쪽 자식의 인덱스 : (부모의 인덱스) * 2
->   - 오른쪽 자식의 인덱스 : (부모의 인덱스) * 2 + 1
->   - 부모의 인덱스 : (자식의 인덱스) / 2<br>
-> <img src="/assets/images/INU/datastructure/Heap_character.png" alt="Heap_character_Procdess"><br>`히프의 특성`<br><br>
+<img src="/assets/images/INU/datastructure/Heap_creation.png" alt="Heap_creation_Procdess">`히프의 구현 방법`<br><br>
+- 부모노드와 자식노드를 찾기 쉽다.
+  - 왼쪽 자식의 인덱스 : (부모의 인덱스) * 2
+  - 오른쪽 자식의 인덱스 : (부모의 인덱스) * 2 + 1
+  - 부모의 인덱스 : (자식의 인덱스) / 2
 
-<br><br>
+<img src="/assets/images/INU/datastructure/Heap_character.png" alt="Heap_character_Procdess">`히프의 특성`<br><br>
 
-# Heap의 정의
+## Heap 초기화
 
-> 히프는 1차원 배열로 표현 될 수 있다.<br>
-> Heap의 각 요소들을 구조체 element로 정의, element의 1차원 배열을 만들어 Heap를 구현한다.<br>
-> - heap_size : 현재 히프안에 저장된 요소의 개수<br>
+```bash
+히프는 1차원 배열로 표현 될 수 있다.
 
-<br>
+Heap의 각 요소들을 구조체 element로 정의, element의 1차원 배열을 만들어 Heap를 구현한다.
+- heap_size : 현재 히프안에 저장된 요소의 개수
+```
 
 ```c
 #define MAX_ELEMENT 200
@@ -150,9 +142,7 @@ typedef struct {
 } HeapType;
 ```
 
-<br><br>
-
-# Heap의 삽입 연산 (Up Heap)
+## Heap의 삽입 연산 (Up Heap)
 
 ```
 히프의 삽입 연산은 다음의 과정과 비슷하다.
@@ -161,19 +151,21 @@ typedef struct {
 신입 사원의 능력을 봐서 점차 위로 승진 시킨다.
 ```
 
-> 1. 히프에 새로운 요소가 들어오면 일단 새로운 노드를 히프의 마지막 노드에 이어 삽입.<br>
-> 2. 삽입 후 해당 노드를 부모 노드들과 비교 및 교환하여 히프의 성질을 만족시킨다.<br>
-> 
-> **Up Heap 연산**<br>
-> <img src="/assets/images/INU/datastructure/upheap.png" alt="upheap_Procdess"><br>`UpHeap 연산 1`<br>
-> <img src="/assets/images/INU/datastructure/UpHeap2.png" alt="UpHeap2_Procdess"><br>`UpHeap 연산 2 `<br><br>
-> 
-> 1. 번호 순으로 가장 마지막 위치에 이어 새로운 요소 8이 삽입된다.<br>
-> 2. 부모 노드인 4와 비교하여 삽입된 노드 8이 더 크므로 교환.<br>
-> 3. 부모 노드 7과 비교하여 삽입 노드 8이 더 크므로 교환.<br>
-> 4. 삽입노드 8이 부모노드인 9보다 작으므로 교환을 멈추고 현재 위치에 머무른다.<br>
+1. 히프에 새로운 요소가 들어오면 일단 새로운 노드를 히프의 마지막 노드에 이어 삽입.
+2. 삽입 후 해당 노드를 부모 노드들과 비교 및 교환하여 히프의 성질을 만족시킨다.
 
-<br>
+**`Up Heap 연산`**
+<img src="/assets/images/INU/datastructure/upheap.png" alt="upheap_Procdess">`UpHeap 연산 1`<br>
+<img src="/assets/images/INU/datastructure/UpHeap2.png" alt="UpHeap2_Procdess">`UpHeap 연산 2 `<br><br>
+
+```bash
+1. 번호 순으로 가장 마지막 위치에 이어 새로운 요소 8이 삽입된다.
+2. 부모 노드인 4와 비교하여 삽입된 노드 8이 더 크므로 교환.
+3. 부모 노드 7과 비교하여 삽입 노드 8이 더 크므로 교환.
+4. 삽입노드 8이 부모노드인 9보다 작으므로 교환을 멈추고 현재 위치에 머무른다.
+```
+
+## Heap의 삽입 연산 (Up Heap): Pseudo Code
 
 ```c
 // Upheap(삽입) 알고리즘 - pseudo code
@@ -190,6 +182,8 @@ insert_max_heap(A, key):
         A[i] <-> A[PARENT]; // i번째 노드와 해당 노드의 부모 노드를 교환
         i ← PARENT(i); // 한 레벨 위로 올라감 (승진)
 ```
+
+## Heap의 삽입 연산 (Up Heap): Source Code
 
 ```c
 // Upheap(삽입) 알고리즘 - C code
@@ -209,8 +203,6 @@ void insert_max_heap(HeapType *h, element item){
 }
 ```
 
-<br><br>
-
 # Heap의 삭제 연산 (Down Heap)
 
 ```
@@ -219,19 +211,24 @@ void insert_max_heap(HeapType *h, element item){
 회사에서 사장의 자리가 비게 되면 제일 말단 사원을 사장 자리로 올린 후 능력에 따라 강등.
 ```
 
-> - 최대 히프에서의 삭제 : 가장 큰 키 값을 가진 노드를 삭제
->   - 루트 노드의 삭제<br>
-> 1. 루트 노드를 삭제한다. (가장 큰 key값 / 가장 높은 우선 순위)<br>
-> 2. 마지막 노드를 루트 노드로 이동.<br>
-> 3. 루트에서부터 단말 노드까지의 경로에 위치한 노드들과 비교 및 교환하며 내려가 히프의 성질을 만족.<br>
-> 
-> <img src="/assets/images/INU/datastructure/Heap_delete.png" alt="Heap_delete_Procdess"><br>`히프에서의 삭제 연산 (Down Heap)`<br><br>
-> <img src="/assets/images/INU/datastructure/DownHeap.png" alt="DownHeap_Procdess"><br>`히프에서의 삭제 연산 (Down Heap)`<br><br>
-> 1. 루트 노드를 삭제한다.<br>
-> 2. 빈 루트 노드 자리에 히프의 마지막 노드를 가져온다.<br>
-> 3. 새로운 루트인 3과 하위의 자식 노드들을 비교하며 위치 교환.<br>
-> 4. 이때 자식중 더 큰 값과 교환된다 (최대 히프이기 때문에, 최소 히프인 경우 더 작은 값이 루트노드로)<br>
-> 5. 적절한 위치를 찾을 때까지 반복.<br>
+- 최대 히프에서의 삭제 : 가장 큰 키 값을 가진 노드를 삭제
+  - 루트 노드의 삭제
+1. 루트 노드를 삭제한다. (가장 큰 key값 / 가장 높은 우선 순위)
+2. 마지막 노드를 루트 노드로 이동.
+3. 루트에서부터 단말 노드까지의 경로에 위치한 노드들과 비교 및 교환하며 내려가 히프의 성질을 만족.
+
+<img src="/assets/images/INU/datastructure/Heap_delete.png" alt="Heap_delete_Procdess">`히프에서의 삭제 연산 (Down Heap)`<br>
+<img src="/assets/images/INU/datastructure/DownHeap.png" alt="DownHeap_Procdess">`히프에서의 삭제 연산 (Down Heap)`<br><br>
+
+```bash
+1. 루트 노드를 삭제한다.
+2. 빈 루트 노드 자리에 히프의 마지막 노드를 가져온다.
+3. 새로운 루트인 3과 하위의 자식 노드들을 비교하며 위치 교환.
+4. 이때 자식중 더 큰 값과 교환된다 (최대 히프이기 때문에, 최소 히프인 경우 더 작은 값이 루트노드로)
+5. 적절한 위치를 찾을 때까지 반복.
+```
+
+## Heap의 삭제 연산 (Down Heap): Pseudo Code
 
 ```c
 // Heap의 삭제 연산 (Down Heap) - pseudo code
@@ -257,6 +254,8 @@ delete_max_heap(A):
         i ← CHILD(largest); // 한 레벨 밑으로 내려간다. (강등)
     return item;    // 최대값이었던 루트 노드의 값을 반환
 ```
+
+## Heap의 삭제 연산 (Down Heap): Source Code
 
 ```c
 // Heap의 삭제 연산 (Down Heap) - C code
@@ -351,32 +350,38 @@ int main(void) {
 }
 ```
 
-> <img src="/assets/images/INU/datastructure/Heap_rs.png" alt="Heap_rs_Procdess" /><br>`Upheap, Downheap (삽입, 삭제) 실행 결과`<br><br>
->
-> **히프의 복잡도 분석**
-> - 삽입 연산
->   - 최악의 경우, 루트 노드까지 올라가야 한다.
->   - 트리의 높이에 해당하는 비교 및 이동 연산이 필요.
->   - O(log_2 n)
-> - 삭제 연산
->   - 최악의 경우 말단 노드까지 내려가야 한다.
->   - 트리의 높이에 해당하는 비교 및 이동 연산이 필요.
->   - O(log_2 n)
+## Heap의 Upheap, Downheap (삽입, 삭제) 실행 결과
 
-<br><br>
+<img src="/assets/images/INU/datastructure/Heap_rs.png" alt="Heap_rs_Procdess" />`Upheap, Downheap (삽입, 삭제) 실행 결과`<br><br>
+
+## Upheap, Downheap (삽입, 삭제) 복잡도 분석
+- **`삽입 연산`**
+  - 최악의 경우, 루트 노드까지 올라가야 한다.
+  - 트리의 높이에 해당하는 비교 및 이동 연산이 필요.
+  - **O(log_2 n)**
+- **`삭제 연산`**
+  - 최악의 경우 말단 노드까지 내려가야 한다.
+  - 트리의 높이에 해당하는 비교 및 이동 연산이 필요.
+  - **O(log_2 n)**
 
 # 히프 정렬 (Heap Sort)
 
-> - 히프를 이용하면 정렬이 가능.<br>
-> 1. 정렬해야 할 n개의 요소들을 최대 히프에 삽입.<br>
-> 2. 한번에 하나씩 요소를 히프에서 삭제하여 저장.<br>
-> 3. 최소 히프인 경우 삭제되는 요소들은 값이 증가되는 순서.<br>
-> 4. 하나의 요소를 히프에 삽입 / 삭제하는 데에 O(log_2 n) 소요<br>
->    n개의 요소를 정렬하는데 O(n * log_2 n) 소요 (빠른 편)<br>
-> 히프 정렬이 최대로 유용한 경우: <br>
->    - 전체 자료를 정렬하는 것이 아닌 가장 큰 값 몇 개가 필요한 경우.<br><br>
-> 
-> <img src="/assets/images/INU/datastructure/Heap_sort.png" alt="Heap_sort_Procdess"><br>`히프 정렬`<br><br>
+<img src="/assets/images/INU/datastructure/Heap_sort.png" alt="Heap_sort_Procdess">`히프 정렬`<br><br>
+
+```bash
+히프를 이용하면 정렬이 가능.
+
+1. 정렬해야 할 n개의 요소들을 최대 히프에 삽입.
+2. 한번에 하나씩 요소를 히프에서 삭제하여 저장.
+3. 최소 히프인 경우 삭제되는 요소들은 값이 증가되는 순서.
+4. 하나의 요소를 히프에 삽입 / 삭제하는 데에 O(log_2 n) 소요 
+   - n개의 요소를 정렬하는데 O(n * log_2 n) 소요 (빠른 편)
+```
+
+**`히프 정렬이 최대로 유용한 경우:`**
+- 전체 자료를 정렬하는 것이 아닌 가장 큰 값 몇 개가 필요한 경우.
+
+## 히프 정렬 (Heap Sort): 구현
 
 ```c
 // HeapSort - C code
@@ -410,19 +415,19 @@ int main(void)
 }
 ```
 
-> <img src="/assets/images/INU/datastructure/HeapSort_rs.png" alt="HeapSort_rs_Procdess"><br>`히프 정렬 - 실행 결과`<br><br>
+## 히프 정렬 (Heap Sort): 실행 결과
 
-<br><br>
+<img src="/assets/images/INU/datastructure/HeapSort_rs.png" alt="HeapSort_rs_Procdess">`히프 정렬 - 실행 결과`<br><br>
 
 # 허프만 코드 (Huffman codes)
 
-```c
+```
 이진 트리는 각 글자의 빈도가 알려져 있는 메시지의 내용을 압축하는데 사용될 수 있다.
 
-이때 사용되는 이진 트리 : 허프만 코딩 트리
+이때 사용되는 이진 트리: 허프만 트리
 ```
 
-> <img src="/assets/images/INU/datastructure/herphman_code.png" alt="herphman_code_Procdess"><br>`허프만 코딩 트리`<br><br>
+<img src="/assets/images/INU/datastructure/herphman_code.png" alt="herphman_code_Procdess" />`허프만 트리`<br><br>
 
 ```
 주어진 텍스트가 e, t, n, i, s 의 5개 글자로만 이루어졌다고 가정
@@ -430,48 +435,48 @@ int main(void)
 - 각 글자는 3bit(1, 0 으로 이루어진 세 자릿수)로 표현이 가능하므로 (3 * 45 = 145 bit) 가 필요
 ```
 
-> <img src="/assets/images/INU/datastructure/herphman1.png" alt="herphman1_Procdess" /><br>`일반적인 텍스트의 표현 방법`<br><br>
+<img src="/assets/images/INU/datastructure/herphman1.png" alt="herphman1_Procdess" />`일반적인 텍스트의 표현 방법`<br><br>
 
-> 그러나 자주 나오는 글자는 2bit, 그렇지 않은 경우 3bit로 표현하는 경우 (아래 그림) 88bit 로 표현이 가능해짐.<br>
-> <img src="/assets/images/INU/datastructure/herphman2.png" alt="herphman2_Procdess" /><br>`허프만 코딩 트리를 사용하여 압축한 텍스트의 모습`<br><br>
-> 
-> - 이 경우 비트 코드는 혼동을 주면 안되며(중복 x), 글자의 비트 코드는 알려져 있어야 한다.
-> - 이러한 압축법을 **허프만 코딩**이라고 하고, 글자에 해당하는 비트 코드들을 **허프만 코드**라고 한다.
+그러나 자주 나오는 글자는 2bit, 그렇지 않은 경우 3bit로 표현하는 경우 (아래 그림) 88bit 로 표현이 가능해짐.
 
-<br><br>
+<img src="/assets/images/INU/datastructure/herphman2.png" alt="herphman2_Procdess" />`허프만 코딩 트리를 사용하여 압축한 텍스트의 모습`<br><br>
+- 이 경우 `비트 코드는 혼동을 주면 안되며(중복 x), 글자의 비트 코드는 알려져 있어야 한다.`
+- 이러한 압축법을 **`허프만 코딩`** 이라고 하고, 글자에 해당하는 비트 코드들을 **`허프만 코드`** 라고 한다.
 
-# 허프만 코드 예시
+## 허프만 코드 예시
 
-> 01000010 (2 or 3 bit)
-> - 어디서 끊을 것인가? 01 / 010
->   - 이 경우 테이블에 010이 존재하지 않으므로 01 임을 알 수 있다. 01 = t
-> - 다음 코드는 00 / 000 
->   - 마찬가지로 테이블에 000이 없으므로 00 임을 알 수 있다. 00 = e
-> - 나머지도 마찬가지로 00 = e, 10 = n
-> - 결과는 teen 임을 알 수 있다.
-> - 위의 조건이 성립하기 위해서 모든 허프만 코드는 다른 허프만 코드의 첫 부분이 될 수 없다.
->   - 한 코드가 다른 코드의 첫 부분(집합)이 된다면 경계선을 나눌 수 없어 코드의 판별이 불가능.<br>
-> <img src="/assets/images/INU/datastructure/herphmanCode.png" alt="herphmanCode_Procdess"><br>`*오류 : 't'의 비트수는 24(12 * 2).`
+`01000010 (2 or 3 bit)`
+- 어디서 끊을 것인가? `01 / 010`
+  - 이 경우 테이블에 **010이 존재하지 않으므로 01** 임을 알 수 있다. `01 = t`
+- 다음 코드는 `00 / 000`
+  - 마찬가지로 테이블에 **000이 없으므로 00** 임을 알 수 있다. `00 = e`
+- 나머지도 마찬가지로 `00 = e, 10 = n`
+- 결과는 teen 임을 알 수 있다.
+- 위의 조건이 성립하기 위해서 **모든 허프만 코드는 다른 허프만 코드의 첫 부분이 될 수 없다.**
+  - 한 코드가 다른 코드의 첫 부분(집합)이 된다면 경계선을 나눌 수 없어 코드의 판별이 불가능.
 
-<br><br>
-
-# 허프만 코드 생성 절차
-
-> 1. 모든 문자를 출현 빈도수에 따라 나열<br>
-> 2. 목록에서 가장 빈도가 낮은 문자를 두 개 골라 이진트리 생성. (최소 힙 사용)<br>
-> 3. 생성한 이진트리의 **루트는 두 문자의 빈도수의 합**<br>
-> 4. 목록에서 위의 이진트리에서 사용된 단말노드 두 개를 제외하고 루트 노드를 목록에 삽입.<br>
-> 5. 목록에 1개만 남을 때까지 반복.<br>
-> 6. 왼쪽 자식은 1, 오른쪽 자식은 0을 나타냄.<br>
-> 7. 완성된 이진트리의 루트 노드에서 각 단말노드 까지 내려가며 (1 / 0) 을 읽으면 해당 단말 노드의 허프만 코드가 된다.<br>
-> <img src="/assets/images/INU/datastructure/huffmanCode1.png" alt="huffmanCode1_Procdess" width="45%" min-width="200px" itemprop="image">
-> <img src="/assets/images/INU/datastructure/huffmanCode2.png" alt="huffmanCode2_Procdess" width="45%" min-width="200px" itemprop="image"><br>`허프만 코드 생성 절차 1, 2`<br>
-> <img src="/assets/images/INU/datastructure/huffmanCode3.png" alt="huffmanCode3_Procdess" width="45%" min-width="200px" itemprop="image">
-> <img src="/assets/images/INU/datastructure/huffmanCode4.png" alt="huffmanCode4_Procdess" width="45%" min-width="200px" itemprop="image"><br>`허프만 코드 생성 절차 3, 4`<br>
+<img src="/assets/images/INU/datastructure/herphmanCode.png" alt="herphmanCode_Procdess" />`*오류 : 't'의 비트수는 24(12 * 2).`
 
 <br><br>
 
-# 허프만 코드의 구현
+## 허프만 코드 생성 절차
+
+```bash
+1. 모든 문자를 출현 빈도수에 따라 나열
+2. 목록에서 가장 빈도가 낮은 문자를 두 개 골라 이진트리 생성. (최소 힙 사용)
+3. 생성한 이진트리의 **루트는 두 문자의 빈도수의 합**
+4. 목록에서 위의 이진트리에서 사용된 단말노드 두 개를 제외하고 루트 노드를 목록에 삽입.
+5. 목록에 1개만 남을 때까지 반복.
+6. 왼쪽 자식은 1, 오른쪽 자식은 0을 나타냄.
+7. 완성된 이진트리의 루트 노드에서 각 단말노드 까지 내려가며 (1 / 0) 을 읽으면 해당 단말 노드의 허프만 코드가 된다.
+```
+
+<img src="/assets/images/INU/datastructure/huffmanCode1.png" alt="huffmanCode1_Procdess" /><br>
+<img src="/assets/images/INU/datastructure/huffmanCode2.png" alt="huffmanCode2_Procdess" />`허프만 코드 생성 절차 1, 2`<br><br>
+<img src="/assets/images/INU/datastructure/huffmanCode3.png" alt="huffmanCode3_Procdess" /><br>
+<img src="/assets/images/INU/datastructure/huffmanCode4.png" alt="huffmanCode4_Procdess" />`허프만 코드 생성 절차 3, 4`<br>
+
+## 허프만 코드: 구현
 
 ```c
 #include <stdio.h>
@@ -644,36 +649,31 @@ int main(void)
 }
 ```
 
-<img src="/assets/images/INU/datastructure/Huffman_Codes_rs.png" alt="Huffman_Codes_rs_Procdess" /><br>`허프만 코드 - 실행 결과`
+## 허프만 코드: 실행 결과
 
-<br><br>
+<img src="/assets/images/INU/datastructure/Huffman_Codes_rs.png" alt="Huffman_Codes_rs_Procdess" />`허프만 코드 - 실행 결과`
 
-<img src="/assets/images/INU/datastructure/.png" alt="_Procdess"><br>`쉘`
-
-<br><br>
-
-최대한의 설명을 코드 블럭 내의 주석으로 달아 놓았습니다.<br><br>
-혹시 이해가 안가거나 추가적인 설명이 필요한 부분, 오류 등의 피드백은 언제든지 환영합니다!<br><br>
-긴 글 읽어주셔서 감사합니다. 포스팅을 마칩니다.<br>
-
-
-
-<br><br>
-
-
-
-<br><br><br>
-
-### Task Lists
-
->
-
-- [x] 
-- [x] 
-- [x] 
-- [x] 
-- [x] 
-- [x] 
-- [x] 
-- [x] 
-- [x] 
+# Task Lists
+- [x] 우선순위 큐(Priority Queue) 의 소개
+- [x] 우선순위 큐 ADT
+- [x] 우선 순위 큐의 구현 - Heap
+- [x] heap 란?
+- [x] Heap 의 종류
+- [x] Heap 의 구현
+- [x] Heap 초기화
+- [x] Heap의 삽입 연산 (Up Heap)
+- [x] Heap의 삽입 연산 (Up Heap): Pseudo Code
+- [x] Heap의 삽입 연산 (Up Heap): Source Code
+- [x] Heap의 삭제 연산 (Down Heap)
+- [x] Heap의 삭제 연산 (Down Heap): Pseudo Code
+- [x] Heap의 삭제 연산 (Down Heap): Source Code
+- [x] Heap의 Upheap, Downheap (삽입, 삭제) 실행 결과
+- [x] Upheap, Downheap (삽입, 삭제) 복잡도 분석
+- [x] 히프 정렬 (Heap Sort)
+- [x] 히프 정렬 (Heap Sort): 구현
+- [x] 히프 정렬 (Heap Sort): 실행 결과
+- [x] 허프만 코드 (Huffman codes)
+- [x] 허프만 코드 예시
+- [x] 허프만 코드 생성 절차
+- [x] 허프만 코드: 구현
+- [x] 허프만 코드: 실행 결과

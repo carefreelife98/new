@@ -50,7 +50,7 @@ log.info("CarefreeLife")
 ><br>
 > **로그 선언 시 다음과 같이 많은 라이브러리 중 SLF4J의 interface인 Logger(org.slf4j)를 선언해야 한다.**
 ><br><br>
-> <img src="/assets/images/Spring/SpringMVC/logger_slf4j.png" alt="logger_slf4j_Procdess" width="70%" min-width="200px" itemprop="image"><br>`SLF4J의 로거 인터페이스를 골라 선언하자.`<br>
+> <img src="/assets/images/Spring/SpringMVC/logger_slf4j.png" alt="logger_slf4j_Procdess" /><br>`SLF4J의 로거 인터페이스를 골라 선언하자.`<br>
 
 
 

@@ -131,7 +131,7 @@ int fib(int n)
 }    // 시간복잡도: 한 수가 한번 호출되면 다시 두 번 호출되므로, 
      // O(2^{n})으로 나타낼 수 있다.
 ```
-<img src="/assets/images/INU/recfib.jpeg" alt="recfib_Procdess" width="70%" min-width="200px" itemprop="image"><br>`피보나치 수열의 결과`<br>`사진출처:`[stackoverflow](https://stackoverflow.com/questions/49352049/how-do-i-trace-a-fibonacci-recursive-function-in-javascript)<br>
+<img src="/assets/images/INU/recfib.jpeg" alt="recfib_Procdess" /><br>`피보나치 수열의 결과`<br>`사진출처:`[stackoverflow](https://stackoverflow.com/questions/49352049/how-do-i-trace-a-fibonacci-recursive-function-in-javascript)<br>
 - 그러나 위 결과를 보아, 피보나치 수열에 순환을 사용했을 경우 매우 비효율적이다.
 - 같은 항이 중복하여 계산되고 있으며, 이 현상은 n이 커질수록 더욱 심각해진다.
 - 그렇다면 반복(Iterator)을 사용해보자.
@@ -155,7 +155,7 @@ fib_iter(int n) {
 
 ## 순환 사용의 예 - 하노이 탑
 
-<img src="/assets/images/INU/hanoi.jpeg" alt="hanoi_Procdess" width="70%" min-width="200px" itemprop="image"><br>`하노이 탑`<br>`사진출처:`[wikipedia](https://ko.wikipedia.org/wiki/%ED%95%98%EB%85%B8%EC%9D%B4%EC%9D%98_%ED%83%91)
+<img src="/assets/images/INU/hanoi.jpeg" alt="hanoi_Procdess" /><br>`하노이 탑`<br>`사진출처:`[wikipedia](https://ko.wikipedia.org/wiki/%ED%95%98%EB%85%B8%EC%9D%B4%EC%9D%98_%ED%83%91)
 - 순환의 사용 예로 가장 적절한 것은 바로 `"하노이 탑 문제"` 이다.
 - 문제는 첫번째 막대에서 세번째 막대로 원판을 옮기는 것이다.
 

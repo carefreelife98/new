@@ -53,7 +53,7 @@ if __name__ == '__main__':
     print(selection_sort([1, 5, 6, 7, 3, 5, 6, 4]))
 ```
 
-> <img src="/assets/images/INU/python/13_SelectionSort.png" alt="13_SelectionSort_Procdess" width="70%" min-width="200px" itemprop="image"><br>`선택 정렬(Selection Sort)의 실행 결과`<br><br>
+> <img src="/assets/images/INU/python/13_SelectionSort.png" alt="13_SelectionSort_Procdess" /><br>`선택 정렬(Selection Sort)의 실행 결과`<br><br>
 >
 > **선택 정렬의 구현 및 동작 과정**
 > <img src="/assets/images/INU/python/13_SelectionSort_Process.png" alt="13_SelectionSort_Process_Procdess"><br>`선택 정렬(Selection Sort)의 동작 과정`<br><br>

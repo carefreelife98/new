@@ -925,7 +925,7 @@ int main() {
 </div>
 </details>
 
-> <img src="/assets/images/INU/deletesamenodes.png" alt="deletesamenodes_Procdess"><br>`DeleteSameNodes 실행 결과` <br><br>
+<img src="/assets/images/INU/deletesamenodes.png" alt="deletesamenodes_Procdess"><br>`DeleteSameNodes 실행 결과` <br><br>
 
 <br><br><br>
 

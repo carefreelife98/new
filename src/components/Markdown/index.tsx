@@ -66,7 +66,7 @@ export default function Markdown({metadata, content}: MarkdownProps) {
                     </ReactMarkdown>
                 </div>
             </div>
-            <div className="sticky right-1 top-0 h-full w-[300px] overflow-y-auto">
+            <div className="sticky right-1 top-0 h-full w-[300px] z-100">
                 <TableOfContents content={content}/>
             </div>
         </div>

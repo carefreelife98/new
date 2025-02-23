@@ -82,6 +82,7 @@ ul { list-style-type: disc; }
 /* Images */
 img {
     @apply block w-auto max-w-[1200px] object-contain box-border;
+    border-radius: 15px 15px;
 }
 
 /* 일반 이미지 (마크다운 외) */

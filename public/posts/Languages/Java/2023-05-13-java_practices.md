@@ -109,7 +109,7 @@ public class _2_StringToDay {
 }
 ```
 
-<img src="/assets/images/INU/java/hw2/2_StringToDay.png" alt="2_StringToDay_Procdess" width="70%" min-width="200px" itemprop="image"><br>`Practice 2 실행 결과`<br>
+<img src="/assets/images/INU/java/hw2/2_StringToDay.png" alt="2_StringToDay_Procdess" /><br>`Practice 2 실행 결과`<br>
 
 </div>
 </details>
@@ -270,12 +270,12 @@ public class _3_RollString {
 }
 ```
 
-<img src="/assets/images/INU/java/hw2/3_rollstrForBlog.png" alt="3_rollstrForBlog_Procdess" width="40%" min-width="200px" itemprop="image">
+<img src="/assets/images/INU/java/hw2/3_rollstrForBlog.png" alt="3_rollstrForBlog_Procdess" />
 <img src="/assets/images/INU/java/hw2/3_rollstrForBlog3.png" alt="3_rollstrForBlog3_Procdess"   />
-<img src="/assets/images/INU/java/hw2/3_rollstrForBlog2.png" alt="3_rollstrForBlog2_Procdess" width="40%" min-width="200px" itemprop="image">`   `
-<img src="/assets/images/INU/java/hw2/3_rollstrForBlog4.png" alt="3_rollstrForBlog4_Procdess" width="40%" min-width="200px" itemprop="image">
+<img src="/assets/images/INU/java/hw2/3_rollstrForBlog2.png" alt="3_rollstrForBlog2_Procdess" />`   `
+<img src="/assets/images/INU/java/hw2/3_rollstrForBlog4.png" alt="3_rollstrForBlog4_Procdess" />
 
-<br><br><img src="/assets/images/INU/java/hw2/3_zero.png" alt="3_zero_Procdess" width="40%" min-width="200px" itemprop="image">`Practice 3 0 입력 시 종료`<br>
+<br><br><img src="/assets/images/INU/java/hw2/3_zero.png" alt="3_zero_Procdess" />`Practice 3 0 입력 시 종료`<br>
 
 </div>
 </details>
@@ -420,7 +420,7 @@ public class _4_inputStringCalculate {
 
 # 5. 로또 번호 생성기
 
-><img src="/assets/images/INU/java/hw2/lotto.png" alt="lotto_Procdess" width="70%" min-width="200px" itemprop="image"><br><br>
+><img src="/assets/images/INU/java/hw2/lotto.png" alt="lotto_Procdess" /><br><br>
 ><h1><span style="color: darkorange"> 로또번호는 자연수 1~45에서 총 7개 숫자를 중복없이 생성</span></h1><br><br>
 > **작업 순서**<br>
 > • 1) 숫자 6개를 랜덤으로 추출<br>

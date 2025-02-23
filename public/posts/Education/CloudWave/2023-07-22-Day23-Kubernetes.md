@@ -223,7 +223,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
   - 여러 개의 컨테이너가 포함되는 경우도 존재.
 - Pod내의 컨테이너는 오로지 하나의 Node내에서만 존재한다.
   - 노드를 걸쳐서 Pod가 존재하지 않는다.<br>
-    <img src="/assets/images/CloudWave/Kubernetes/PodInNode.png" alt="PodInNode_Procdess" width="30%" min-width="200px" itemprop="image"><br>`Pod는 두 개 이상의 Node를 걸쳐 존재할 수 없다.`<br>
+    <img src="/assets/images/CloudWave/Kubernetes/PodInNode.png" alt="PodInNode_Procdess" /><br>`Pod는 두 개 이상의 Node를 걸쳐 존재할 수 없다.`<br>
 - 동일 Pod내의 컨테이너는 Storage / Network 자원 및 Volume을 공유한다.
 - Pod이 가지고 있는 각 컨테이너들의 실행 방법이 명시되어 있음.
 - Pod 끼리의 통신은 무조건 가능하다. (Kube Proxy를 통해서)
