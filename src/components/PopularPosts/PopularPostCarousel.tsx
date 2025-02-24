@@ -29,40 +29,50 @@ export default function PopularPostCarousel({latestPosts}: PopularPostCarouselPr
             onMouseLeave={plugin.current.reset}
         >
             <CarouselContent>
-                {latestPosts.map((frontMatter, index) => (
-                    <CarouselItem key={index} >
-                        <Link key={index} href={frontMatter.filepath} onClick={() => sendGAEvent('event', 'buttonClicked', { value: frontMatter.filepath })}>
-                            <Card className="flex flex-col h-[720px]">
-                                <CardHeader className="flex-1 flex items-center justify-center h-[560px]">
-                                    {frontMatter.thumbnail && (
-                                        <div className="relative w-full h-full" aria-description="thumbnail">
-                                            <Image
-                                                className="object-cover w-full h-full"
-                                                src={frontMatter.thumbnail}
-                                                alt={`${frontMatter.title}-thumbnail`}
-                                                layout="fill" // 부모의 크기에 맞춤
-                                            />
-                                        </div>
-                                    )}
-                                </CardHeader>
-                                <CardContent className="flex-4 flex flex-col items-center justify-center h-[180px]">
-                                    <CardTitle className="text-center">{frontMatter.title}</CardTitle>
-                                    <CardDescription className="text-center">{frontMatter.date}</CardDescription>
-                                    {frontMatter.categories &&
-                                        frontMatter.categories.map((category, index) => (
-                                            <div key={index} className="text-center">
-                                                <Badge variant="outline">{category}</Badge>
+                {latestPosts.map((frontMatter, index) => {
+                    const filePath = frontMatter.filepath;
+
+                    // "/posts/" 이후의 경로를 추출
+                    const relativePath = filePath.substring(filePath.indexOf('/posts/'));
+
+                    // ".md" 확장자 제거
+                    const url = relativePath.replace(/\.md$/, '');
+
+                    return (
+                        <CarouselItem key={index}>
+                            <Link key={index} href={url} onClick={() => sendGAEvent('event', 'buttonClicked', {value: url})}>
+                                <Card className="flex flex-col h-[720px]">
+                                    <CardHeader className="flex-1 flex items-center justify-center h-[560px]">
+                                        {frontMatter.thumbnail && (
+                                            <div className="relative w-full h-full" aria-description="thumbnail">
+                                                <Image
+                                                    className="object-cover w-full h-full"
+                                                    src={frontMatter.thumbnail}
+                                                    alt={`${frontMatter.title}-thumbnail`}
+                                                    layout="fill" // 부모의 크기에 맞춤
+                                                />
                                             </div>
-                                        ))
-                                    }
-                                    {frontMatter.tags &&
-                                        <TagList tagList={frontMatter.tags} />
-                                    }
-                                </CardContent>
-                            </Card>
-                        </Link>
-                    </CarouselItem>
-                ))}
+                                        )}
+                                    </CardHeader>
+                                    <CardContent className="flex-4 flex flex-col items-center justify-center h-[180px]">
+                                        <CardTitle className="text-center">{frontMatter.title}</CardTitle>
+                                        <CardDescription className="text-center">{frontMatter.date}</CardDescription>
+                                        {frontMatter.categories &&
+                                            frontMatter.categories.map((category, index) => (
+                                                <div key={index} className="text-center">
+                                                    <Badge variant="outline">{category}</Badge>
+                                                </div>
+                                            ))
+                                        }
+                                        {frontMatter.tags &&
+                                            <TagList tagList={frontMatter.tags}/>
+                                        }
+                                    </CardContent>
+                                </Card>
+                            </Link>
+                        </CarouselItem>
+                    )
+                })}
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
