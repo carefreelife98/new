@@ -1,7 +1,7 @@
 'use client'
 
-import CategoryList from "@/components/CategoryList";
 import TagList from "@/components/TagList";
+import CategoryList from "@/components/Category/CategoryBadgeList";
 import Link from "next/link";
 import {FrontMatterWithFilePath} from "@/interfaces/frontmatter";
 import {sendGAEvent} from "@next/third-parties/google";

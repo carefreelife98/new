@@ -6,11 +6,11 @@ import rehypeRaw from "rehype-raw";
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import remarkGfm from "remark-gfm";
-import CategoryList from "../CategoryList";
 import TagList from "../TagList";
 import {MarkdownProps} from "@/app/posts/[category]/[subCategory]/[slug]/page";
 import TableOfContents from "@/components/TableOfContents";
 import './style.css';
+import CategoryList from "@/components/Category/CategoryBadgeList";
 
 export default function Markdown({metadata, content}: MarkdownProps) {
 
