@@ -19,12 +19,13 @@ export function getFrontMatterByPath(filePath: string) {
     return frontMatter;
 }
 
-export function getPopularPosts(): FrontMatter[] {
+export function getPopularPosts(): FrontMatterWithFilePath[] {
     const filePath = path.join(process.cwd(), 'public', 'posts', 'Main', 'popular');
     const popularPostPaths = getAllMarkdownFiles(filePath).map(filePath => {
         const fileContents = fs.readFileSync(filePath, "utf-8");
         const { data } = matter(fileContents); // Frontmatter 데이터 추출
-        const frontMatter: FrontMatter = {
+        const frontMatter: FrontMatterWithFilePath = {
+            filepath: filePath,
             title: data.title || "CarefreeLife98's Tech Post Title",
             author: data.author || "CarefreeLife98",
             description: data.description || data.title || "CarefreeLife98's Tech Post",

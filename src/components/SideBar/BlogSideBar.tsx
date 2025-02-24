@@ -1,7 +1,7 @@
 'use client';
 
 import './style.css';
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import config from '../../../tech_blog_config.json';
 import MarkdownFileCount from "@/interfaces/markdownFileCount";
 import {useRouter} from "next/navigation";
@@ -36,10 +36,6 @@ export default function BlogSideBar({markdownFileCount}: SideBarProps) {
         // 특정 경로로 이동
         router.push(`/categories/${category}/${subCategory}`);
     };
-
-    useEffect(() => {
-        console.log(countsBySubCategory);
-    }, []);
 
     return (
         <div className='flex w-full'>

@@ -9,17 +9,11 @@ import remarkGfm from "remark-gfm";
 import CategoryList from "../CategoryList";
 import TagList from "../TagList";
 import {MarkdownProps} from "@/app/posts/[category]/[subCategory]/[slug]/page";
-import {useState} from "react";
 import TableOfContents from "@/components/TableOfContents";
 import './style.css';
 
 export default function Markdown({metadata, content}: MarkdownProps) {
 
-    const [showToc, setShowToc] = useState(true);
-
-    const onTocShowButtonClickHandler = () => {
-        setShowToc(!showToc);
-    }
 
     return (
         <div className="w-full h-full flex justify-center relative">
