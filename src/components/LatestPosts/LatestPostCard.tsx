@@ -33,7 +33,7 @@ export default function LatestPostCard({frontMatter}: LatestPostCardProps) {
             <CardHeader className='flex-1 flex items-center justify-center'>
                 {frontMatter.thumbnail &&
                     <div className='relative' aria-description='thumbnail'>
-                        <Image className='min-h-20'
+                        <Image className='h-[200px]'
                                src={frontMatter.thumbnail}
                                alt={`${frontMatter.title}-thumbnail`}
                                width={0}
