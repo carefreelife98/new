@@ -7,7 +7,7 @@ tags:
   - Docker
   - Kafka
 
-thumbnail: "/assets/images/INU/CapstoneDesign/kafka_intro.png"
+thumbnail: "/new/assets/images/INU/CapstoneDesign/kafka_intro.png"
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
 Visit my Programming blog: https://carefreelife98.github.io --> 

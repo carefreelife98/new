@@ -19,7 +19,7 @@ Visit my Programming blog: https://carefreelife98.github.io -->
 더욱 편리하게 API Endpoint 별 Redis 캐싱을 수행하도록 한다.
 ```
 
-![path](/assets/images/backend/nestjs/nestjs-interceptor-caching1.png)
+![path](/new/assets/images/backend/nestjs/nestjs-interceptor-caching1.png)
 - `Interceptor` 는 `NestInterceptor` 인터페이스를 구현하며 `@Injectable()` 데코레이터가 적용된 `NestJS` 의 클래스이다.
 - `AOP (Aspect Oriented Programming)` 기술로부터 영감을 얻은 아래와 같은 기능들을 가지고 있다.
 	- **Method 실행 전/후 간의 부가 로직 수행 기능 제공 (전/후처리)**
@@ -272,7 +272,7 @@ export class CarefreeController {
 - 위처럼, `RedisInterceptor` 를 구현한 덕에 캐싱이 필요한 모든 컨트롤러 및 핸들러에서 `@UseInterceptors()` 데코레이터를 통해 동일한 캐싱 정책을 쉽고 빠르게 정의할 수 있게 되었으며, 변경에 용이하고 확장 가능한 형태의 아키텍쳐를 구축할 수 있게 된다.
 
 ## 결과
-![path](/assets/images/backend/nestjs/nestjs-interceptor-caching2.png)
+![path](/new/assets/images/backend/nestjs/nestjs-interceptor-caching2.png)
 - Winston 기반 로깅 Interceptor 를 통해 각 API 호출 별 실행 시간 또한 로깅하고 있다.
 - `209ms` 정도 소요되던 API Response time 이 `3ms` 정도로 `약 70배` 감소된 것을 확인 할 수 있다.
 
