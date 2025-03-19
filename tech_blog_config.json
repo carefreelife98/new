@@ -37,7 +37,7 @@
       },
       {
         "category": "Backend",
-        "subcategories": ["Spring", "Spring_JPA", "Node_js"]
+        "subcategories": ["Spring", "Spring_JPA", "Node_js", "NestJS"]
       },
       {
         "category": "Database_Storage",

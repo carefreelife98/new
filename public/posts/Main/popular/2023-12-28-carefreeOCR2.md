@@ -8,7 +8,7 @@ tags:
   - Java
   - Spring
   - API
-thumbnail: "/assets/images/Projects/ToyProjects/carefreeocrV2_thumbnail.png"
+thumbnail: "/assets/images/Projects/ToyProjects/carefreeocrV2_intro.png"
 youtubeurl: https://youtu.be/ZPrLB_rOsJY
 ---
 <!-- Created by Chae Seung Min - CarefreeLife
