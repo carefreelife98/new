@@ -8,7 +8,7 @@ tags:
   - NestJS
   - TypeScript
   - Cache
-thumbnail: "/assets/images/backend/nestjs/nestjs-interceptor-caching1.png"
+thumbnail: "/new/assets/images/backend/nestjs/nestjs-interceptor-caching1.png"
 ---
 
 <!-- Created by Chae Seungm Min - CarefreeLife

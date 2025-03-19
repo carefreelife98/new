@@ -131,7 +131,7 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
             publishedTime: metadata.date,
             images: metadata.thumbnail ? [
                 {
-                    url: metadata.thumbnail,
+                    url: `/new/${metadata.thumbnail}`,
                     alt: metadata.title,
                 }
             ] : [],
